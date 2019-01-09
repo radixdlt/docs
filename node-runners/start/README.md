@@ -2,6 +2,10 @@
 
 ## Introduction <a id="introduction"></a>
 
+{% hint style="danger" %}
+**Please note that the Node Client software is not yet available.**
+{% endhint %}
+
 This is a [Quick Start](./) guide to running a Radix DLT Node on your computer primarily aimed for non-technical users. The following steps will be covered: 
 
 1. [Installing Docker](./#installing-docker)
@@ -258,9 +262,11 @@ Number of shards that the target network is partition in. For the Alpha network 
 
 Universe identity and properties \(such as gossip port\). This string separates two Radix DLT networks from each other.
 
-## Next: [monitor your Radix Node](prometheus-metrics.md)
+## Next: monitor your Radix Node
 
 There are a bunch of frameworks for managing metrics. In the [next guide](prometheus-metrics.md), we extend the `basic-node.yml` to include the [Prometheus](https://prometheus.io/) service. Prometheus periodically collects metrics system, and application specific metrics and stores these in its local datastore.
+
+{% page-ref page="prometheus-metrics.md" %}
 
 ## Join the Radix Community
 
