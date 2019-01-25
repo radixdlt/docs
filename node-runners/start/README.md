@@ -270,7 +270,7 @@ There are a bunch of frameworks for managing metrics. In the [next guide](promet
 
 ## Join the Radix Community
 
-* ​[Telegram](https://t.me/radixdlt) for general chat
+* ​[Telegram](https://t.me/radix_dlt) for general chat
 * ​[Discord](https://discord.gg/7Q7HSZZ) for developer chat
 * ​[Reddit](https://reddit.com/r/radix) for general discussion
 * ​[Forum](https://forum.radixdlt.com/) for technical discussion

@@ -506,7 +506,7 @@ The public alpha node client will be released soon. Stay tuned on [Telegram](htt
 
 ## Join the Radix Community
 
-* ​[Telegram](https://t.me/radixdlt) for general chat
+* ​[Telegram](https://t.me/radix_dlt) for general chat
 * ​[Discord](https://discord.gg/7Q7HSZZ) for developer chat
 * ​[Reddit](https://reddit.com/r/radix) for general discussion
 * ​[Forum](https://forum.radixdlt.com/) for technical discussion

@@ -53,7 +53,7 @@ This is a living document, and we encourage discussion and debate on our [develo
 
 ## Join The Radix Community <a id="join-the-radix-community"></a>
 
-* [Telegram](https://t.me/radixdlt) for general chat
+* [Telegram](https://t.me/radix_dlt) for general chat
 * ​[Discord](https://discord.gg/7Q7HSZZ) for developer chat
 * ​[Reddit](https://reddit.com/r/radix) for general discussion
 * [Forum](https://forum.radixdlt.com) for technical discussion
