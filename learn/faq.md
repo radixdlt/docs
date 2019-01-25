@@ -18,24 +18,24 @@ It is new platform, similar to Bitcoin or Ethereum, but scalable and easy to bui
 
 Radix offers a novel distributed ledger architecture for decentralized applications, that is sharded to scale in an efficient, unbounded linear fashion combined with a secure consensus algorithm called ‘Tempo’.
 
-Radix scales linearly as new nodes join the network using the theory of sharding, but without compromising on decentralization or security. It enables resource-restricted devices to run a Radix node like on the Raspberry Pi. This enables inexpensive transactions at incredible speeds with near-instant finality.[ Read more here.](./#how-is-radix-different)
+Radix scales linearly as new nodes join the network using the theory of sharding, but without compromising on decentralization or security. It enables resource-restricted devices to run a Radix node like on the Raspberry Pi. This enables inexpensive transactions at incredible speeds with near-instant finality.[ Read more here.](platform/#how-is-radix-different)
 
 ### What is Tempo?
 
 Tempo is a combined data architecture and secure consensus algorithm that is both, sharded to scale linearly and secured by a novel consensus algorithm based on [Leslie Lamport's logical clock theory](https://en.wikipedia.org/wiki/Lamport_timestamps).  
-[Read more here](tempo.md).
+[Read more here](platform/tempo.md).
 
 ### What problems does it solve?
 
-Tempo solves the [trilemma of decentralization](https://github.com/ethereum/wiki/wiki/Sharding-FAQs#this-sounds-like-theres-some-kind-of-scalability-trilemma-at-play-what-is-this-trilemma-and-can-we-break-through-it). It scales without compromising on decentralization and security. [Read more here.](tempo.md#scaling-distributed-ledgers)
+Tempo solves the [trilemma of decentralization](https://github.com/ethereum/wiki/wiki/Sharding-FAQs#this-sounds-like-theres-some-kind-of-scalability-trilemma-at-play-what-is-this-trilemma-and-can-we-break-through-it). It scales without compromising on decentralization and security. [Read more here.](platform/tempo.md#scaling-distributed-ledgers)
 
 ### What features does it have?
 
-Radix is fast, scalable, efficient, secure and highly decentralized. [Read more about the Radix features](tempo.md#properties-of-tempo).
+Radix is fast, scalable, efficient, secure and highly decentralized. [Read more about the Radix features](platform/tempo.md#properties-of-tempo).
 
 ### How does it work?
 
-Radix works on Leslie Lamport's logical clock theory. [Read more here.](./#how-does-radix-work-simplified)
+Radix works on Leslie Lamport's logical clock theory. [Read more here.](platform/#how-does-radix-work-simplified)
 
 ### What is the Atom Model?
 
@@ -43,7 +43,7 @@ The atom model is an abstraction layer on top of the Tempo ledger designed to gi
 
 ### Why should I build on the Radix Public Network?
 
-Radix makes it easy for developers to build most use-cases without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../../developer/live-platform-overview.md)
+Radix makes it easy for developers to build most use-cases without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../developer/live-platform-overview.md)
 
 ### Who invented Radix?
 
@@ -299,13 +299,13 @@ Linearly scalability is the ability of Radix to process more transactions per se
 
 ### How does Radix achieve linear scaling?
 
-Radix is massively sharded to scale linearly. [Read more about our design philosophy here](tempo.md#scaling-distributed-ledgers).
+Radix is massively sharded to scale linearly. [Read more about our design philosophy here](platform/tempo.md#scaling-distributed-ledgers).
 
 ### What is sharding and how does it help Radix scale?
 
 Sharding is way to distribute network load by cutting up the distributed database into multiple manageable parts. We wrote a ELI5 blog post on [what is sharding](https://www.radixdlt.com/post/what-is-sharding) and an [introduction to sharding in Radix](https://www.radixdlt.com/post/sharding-in-radix).  
   
-[Read about our protocol design philosophy](tempo.md#scaling-distributed-ledgers) and how sharding will help us scale to millions of devices.
+[Read about our protocol design philosophy](platform/tempo.md#scaling-distributed-ledgers) and how sharding will help us scale to millions of devices.
 
 ### Can nodes maintain parts of the ledger?
 

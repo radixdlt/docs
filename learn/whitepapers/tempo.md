@@ -4,7 +4,7 @@ description: Dan Hughes - 25th September 2017
 
 # Tempo
 
-{% file src="../../../.gitbook/assets/radix\_tempo.pdf" caption="Download as PDF" %}
+{% file src="../../.gitbook/assets/radix\_tempo.pdf" caption="Download as PDF" %}
 
 ## Abstract
 
@@ -38,7 +38,7 @@ Atoms generally take the form of either Payload Atoms or Transfer Atoms. An exam
 
 Atoms may also contain other Atoms, as well as various other data, depending on their purpose. This extra data might include conditional destinations, owners, participants, associations and application meta-data. Exotic Atom variants can be created for specific application purposes if required.
 
-![Figure 1: Standard Atom types &amp; basic structure](../../../.gitbook/assets/fig1.png)
+![Figure 1: Standard Atom types &amp; basic structure](../../.gitbook/assets/fig1.png)
 
 Clients may create and submit Atoms to the network via any node it is connected to. A submitted Atom is then processed by the network and, if valid, a Temporal Proof is constructed for, and associated with, that Atom from that point forward.
 
@@ -66,7 +66,7 @@ To transfer ownership of an Item`(α)` contained in Atom`(α​n​​)` to Bob,
 
 She also creates a new Consumable`(α​X​​)`, which contains the Item`(α)` being transferred, along with the identity of the new owner: Bob. The Consumer and Consumable are packaged into a new Atom`(α​X​​)` and submitted to the network for verification.
 
-![Figure 2: Ownership Transfer](../../../.gitbook/assets/fig2.png)
+![Figure 2: Ownership Transfer](../../.gitbook/assets/fig2.png)
 
 Any node that receives Alice's Atom`(α​X​​)` can now trivially validate that Alice is indeed the current owner of Item`(α)`. This is performed by validating the signature of the submitted Consumer`(α​X​​)` against the owner information present in the last consumable for Item`(α)` held in the node's local ledger. If the signature successfully validates, then Alice must be the current owner. The transfer will then execute and Bob becomes the new owner.
 
@@ -92,7 +92,7 @@ Endpoint destinations provide the required routing information to ensure that At
 
 Consider the example of Alice transferring Item`(α)` to Bob. Alice included her endpoint destination, which indicates she is transferring _from_ Shard`(1)`, and included Bob's endpoint destination which indicates she is transferring to Shard`(3)`. Nodes storing Shard`(1∥3)` need to be aware of the event of; Alice's spend; Bob's receipt; and of the state of Item`(α)` in each shard. Post the event, nodes storing Shard`(1)` no longer need to be aware of any future changes to the state of Item`(α)` \(unless it is sent again to Shard`(1)`\). The responsibility of Item`(α)`'s state has transferred to any nodes storing Shard`(3)`. If Bob should then spend Item`(α)` to an owner in another shard, the responsibility of maintaining the state of Item`(α)` will once again change.
 
-![Figure 3: Gossip of Atom &#x3B1;X targeting Shards\(1,3\)](../../../.gitbook/assets/fig3.png)
+![Figure 3: Gossip of Atom &#x3B1;X targeting Shards\(1,3\)](../../.gitbook/assets/fig3.png)
 
 Processing only events that affect state within a node's subset of the global ledger, and the shifting responsibility of state maintenance, greatly reduces total state processing overhead. This is key to the scaling performance of Tempo.
 
@@ -116,11 +116,11 @@ Using Alice's transfer of Item`(α)` to Bob as an example, the process starts wi
 
 Upon receiving the request, Node`(N)` will, if it is storing either Alice's or Bob's shard, perform a validation of the Atom`(α​X​​)`. In the case of it having a copy of Shard`(1)` for Alice, it will ensure that Item`(α)` hasn't been already spent by Alice. If any provable discrepancy is found, such as Item`(α)` being already spent by Alice, or the Atom is badly constructed, processing of the Atom will fail. Otherwise, Node`(N)` will determine a set of directly connected nodes which are storing either Shard`(1∥3)`, select one at random, and forward it the submission request. If a suitable node is not found, Node`(N)` will search through its node graph and associated metadata to discover viable relay/s with connections to nodes maintaining Shard`(1∥3)`. After Node`(N)` discovers a suitable candidate, Node`(P)`, it will append a space-time coordinate `(l,e,o,n)` and a signature of Hash`(l,e,o,n)` to the Temporal Proof \(creating a new one if none is yet present\). Where ll is Node`(N)`'s logical clock value for the event, `o` is the ID of the observer Node`(N)`, `n` is the ID of Node`(P)`, and `e` is the event Hash`(Atom)`. Node`(N)`will then transmit the Atom`(α​X​​)` and the current Temporal Proof to Node`(P)`.
 
-![Figure 4: Temporal Proof](../../../.gitbook/assets/fig4.png)
+![Figure 4: Temporal Proof](../../.gitbook/assets/fig4.png)
 
 Upon receiving the submission from Node`(N)`, Node`(P)` will also validate Atom`(α​X​​)`, and if successful, will select a subsequent node to forward the submission to, append its `(l,e,o,n)` coordinate and signature to the Temporal Proof and transmit Atom`(α​X​​)` and the Proof to the next node. The process repeats until the required number of nodes have participated in the Temporal Proof or a provable discrepancy is discovered by any node involved in the process.
 
-![Figure 5: Temporal Proof provisioning and gossip of Atom\(&#x3B1;X&#x200B;\)](../../../.gitbook/assets/fig5.png)
+![Figure 5: Temporal Proof provisioning and gossip of Atom\(&#x3B1;X&#x200B;\)](../../.gitbook/assets/fig5.png)
 
 Temporal Provisioning of Atom`(α​X​​)` in the above example will produce the following coordinates:
 
@@ -217,11 +217,11 @@ To assist with total order determination of events, nodes declare to the network
 
 This commitment is produced either when a node takes part in Temporal Provisioning for an event, or at will over an arbitrary interval. A commitment is a Merkle Hash[⁵](tempo.md#references) constructed from the events a node has witnessed since submitting a previous commitment, with the first leaf being the last commitment a node submitted, producing a linked sequence of commitments over time.
 
-![Figure 6: Commitment Sequence](../../../.gitbook/assets/fig6.png)
+![Figure 6: Commitment Sequence](../../.gitbook/assets/fig6.png)
 
 If the node is taking part in a Temporal Provisioning process, the commitment is included in a node's Temporal Coordinate as cc, resulting in the extended space-time coordinate `(l,e,o,n,c)`. The commitment is tamperproof as the coordinates are signed by the producing nodes.
 
-![Figure 7: Temporal Proof with commitment](../../../.gitbook/assets/fig7.png)
+![Figure 7: Temporal Proof with commitment](../../.gitbook/assets/fig7.png)
 
 A node may be requested to provide information to enable verification of any commitments it has produced at any time. They should deliver all the relevant Atom hashes to the requesting node, allowing it to reconstruct the commitment hash and verify. Requesting nodes can then take appropriate action in the event of a fraudulent commitment being detected.
 
@@ -229,7 +229,7 @@ This uncertainty of when a commitment verification may be requested also prevent
 
 For example, if the value of `l` for Commitment`(1)` was 100 and the value of `l` for Commitment`(2)` was 200, then Commitment`(1)` should contain 100 items. If a requesting node is not returned 100 hashes when verifying, tampering of the logical clock may have occurred. Commitments are also used to provide a secondary mechanism to determine temporal order of events; Node`(N)` has received Atom`(α​Y​​)` that conflicts with an Atom`(α​X​​)`. Node`(N)` contacts one of its neighbours, Node`(P)`, and queries it for any commitment information corresponding to Atom`(α​X​​)`. Node`(P)` responds with: its commitment for Atom`(α​X​​)`; a set of Atoms`(β​S​​)` which were witnessed after Atom`(α​X​​)` within the same commitment; its logical clock values for Atom`(α​X​​)` and Atoms`(β​S​​)`; and the leaves of the Merkle Hash. With this information Node`(N)` can verify the logical clock values of the returned Atoms, the integrity of the commitment, and that the returned Atoms are part of it.
 
-![Figure 8: Commitment Validation](../../../.gitbook/assets/fig8.png)
+![Figure 8: Commitment Validation](../../.gitbook/assets/fig8.png)
 
 Once this information has been obtained from Node`(P)`, Node`(N)` can query Node`(Q)` which delivered Atom`(α​Y​​)`. It requests that Node`(Q)` return commitment and logical clock information for Atom`(α​Y​​)` and any of the Atoms`(β​S​​)`, as well as the leaves of the Merkle Hash allowing Node`(N)` to verify.
 
