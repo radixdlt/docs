@@ -53,7 +53,7 @@ Work is simply a matter of executing all Atoms submitted to the Universe, subjec
 
 For an Atom to be validated and recorded to the ledger, a Temporal Proof must be created \(see the Radix Tempo White Paper for more details\). In order to create a Temporal Proof the Nodes selected must perform all instructions contained within the Atom.
 
-![Figure 1: Temporal Proof](https://papers.radixdlt.com/incentives/latest/temporalproof.png)
+![Figure 1: Temporal Proof](../../../.gitbook/assets/fig4.png)
 
 Each Node involved in creating a Temporal Proof appends to the Atom their space-time coordinates `(l,e,o,n)` as well as a signature of Hash`(l,e,o,n)` using the Node's private key. Where ll is the Node's logical clock value for the event, `o` is the Node ID, `n` is the ID of next Node in the Temporal Proof, and `e` is the event Hash\(Atom\).
 
@@ -79,7 +79,7 @@ Initially the main reward for running a Node will be emission of new supply. As 
 
 When a fee is paid on the public network the fee portion of the Atom gets withheld once the Temporal Proof has been created. It is not collected by anyone at that stage, it simply disappears.
 
-![Figure 2: Transaction fees](https://papers.radixdlt.com/incentives/latest/transaction.png)
+![Figure 2: Transaction fees](../../../.gitbook/assets/transaction.png)
 
 The processing fee payment for an Atom is similar to the Bitcoin UTXO model[⁴](public-node-incentives.md#references): Alice's wallet address contains 10 tokens and she wants to send 9.25 to Bob. Alice will specify 9.25 to Bob, and the remainder, less the fee, back to herself. This creates:
 

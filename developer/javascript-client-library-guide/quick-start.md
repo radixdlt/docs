@@ -160,7 +160,7 @@ We will use the **ALPHANET** universe configuration since it's our main testing 
 Now, to initialize the universe we have to import the _radixUniverse_ singleton from the library, and call the bootstrap function with the _ALPHANET_ universe configuration:
 
 ```javascript
-import {radixUniverse, RadixUniverse} from 'radixdlt'​
+import {radixUniverse, RadixUniverse} from 'radixdlt'
 
 radixUniverse.bootstrap(RadixUniverse.ALPHANET)
 ```
@@ -182,7 +182,7 @@ const myIdentity = identityManager.generateSimpleIdentity()
 With it, we can easily get our own **Account** using the _account_ reference:
 
 ```javascript
-const myAccount = myIdentity.account​
+const myAccount = myIdentity.account
 
 console.log('My account address: ', myAccount.getAddress())
 ```
@@ -210,7 +210,7 @@ This call opens a connection to a **Node** from the _ALPHANET_ universe which se
 To get the Faucet's account, we resolve the address using the _fromAddress\(...\)_ method:
 
 ```javascript
-const faucetAddress = '9ey8A461d9hLUVXh7CgbYhfmqFzjzSBKHvPC8SMjccRDbkTs2aM'​
+const faucetAddress = '9ey8A461d9hLUVXh7CgbYhfmqFzjzSBKHvPC8SMjccRDbkTs2aM'
 
 const faucetAccount = RadixAccount.fromAddress(faucetAddress, true)
 ```
@@ -231,7 +231,7 @@ Now that we have the Faucet's account and our own account connected to the netwo
 We send the message using RadixTransactionBuilder's _createRadixMessageAtom\(...\)_ method, and signing the result **Atom** with our **Identity**:
 
 ```javascript
-const message = 'Dear Faucet, may I please have some money? (◕ᴥ◕)'​
+const message = 'Dear Faucet, may I please have some money? (◕ᴥ◕)'
 
 RadixTransactionBuilder
   .createRadixMessageAtom(myAccount, faucetAccount, message)
@@ -302,31 +302,29 @@ At this point, we have all the basic building blocks for our simple "Get Radix t
 import {radixUniverse, RadixUniverse} from 'radixdlt'
 import {RadixIdentityManager, RadixAccount} from 'radixdlt'
 import {RadixTransactionBuilder, radixTokenManager} from 'radixdlt'
-​
+
 radixUniverse.bootstrap(RadixUniverse.ALPHANET)
-​
+
 const identityManager = new RadixIdentityManager()
 const myIdentity = identityManager.generateSimpleIdentity()
 const myAccount = myIdentity.account
-​
+
 myAccount.openNodeConnection()
-​
+
 const faucetAddress = '9ey8A461d9hLUVXh7CgbYhfmqFzjzSBKHvPC8SMjccRDbkTs2aM'
 const faucetAccount = RadixAccount.fromAddress(faucetAddress, true)
 const message = 'Dear Faucet, may I please have some money? (◕ᴥ◕)'
-​
+
 RadixTransactionBuilder
   .createRadixMessageAtom(myAccount, faucetAccount, message)
   .signAndSubmit(myIdentity)
-  
-  
+
 const radixToken = radixTokenManager.getTokenByISO('TEST')  
 myAccount.transferSystem.balanceSubject.subscribe(balance => {
   // Convert balance from subunits to decimal point value
   const floatingPointBalance = radixToken.toTokenUnits(balance[radixToken.id.toString()])
   // do we have at least 5 tokens?
   if (floatingPointBalance > 5) {
-  
     // Put your friends' address here
     const toAddress = '9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM'
     const toAccount = RadixAccount.fromAddress(toAddress, true)
