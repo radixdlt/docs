@@ -26,6 +26,7 @@
   * [Certificates and DNS](node-runners/start/certificates-and-dns.md)
   * [Prometheus Metrics](node-runners/start/prometheus-metrics.md)
   * [Grafana Dashboards](node-runners/start/grafana-dashboards.md)
+  * [FAQ](node-runners/start/faq.md)
   * [GitHub - Node Client](https://github.com/radixdlt/node-runner)
 
 ## Use Radix
@@ -55,7 +56,11 @@
 * [Whitepapers](learn/whitepapers/README.md)
   * [Tempo](learn/whitepapers/tempo.md)
   * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
-* [FAQ](learn/faq.md)
+* [FAQ](learn/faq/README.md)
+  * [Technical](learn/faq/technical.md)
+  * [Sharding & scaling](learn/faq/sharding-and-scaling.md)
+  * [Transactions](learn/faq/transactions.md)
+  * [Economics](learn/faq/economics.md)
 * [Limitations of DLT](learn/radix-university.md)
 * [Team](https://www.radixdlt.com/team)
 * [Contact](learn/help.md)
