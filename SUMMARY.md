@@ -43,7 +43,7 @@
 ## Learn
 
 * [Radix Platform](learn/platform/README.md)
-  * [Tempo](learn/platform/tempo.md)
+  * [Consensus](learn/platform/tempo.md)
   * [Security](learn/platform/security.md)
   * [Economics](learn/platform/token.md)
   * [Buildability](learn/platform/buildability.md)

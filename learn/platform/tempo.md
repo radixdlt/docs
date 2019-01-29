@@ -2,7 +2,7 @@
 description: The Story Behind the Radix Design Philosophy
 ---
 
-# Tempo
+# Consensus
 
 ## Inventing Tempo
 
