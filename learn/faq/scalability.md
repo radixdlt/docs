@@ -1,4 +1,4 @@
-# Sharding & scaling
+# Scalability
 
 ## FAQ
 
