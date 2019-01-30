@@ -1,12 +1,12 @@
 # Buildability
 
-## Foundations of Radix
+## Building on Radix
 
-Radix is designed to be a decentralized protocol achieving three core principles:
+Radix is a decentralized ledger protocol designed to achieve three core objectives:
 
-1. Scalability
-2. Low volatility
-3. Buildability
+1. Scalability - making it possible for the world to use without bottlenecks
+2. Low volatility - ensuring the cost of using the platform is constrained and predictable
+3. Buildability - making it as easy as possible to build and deploy applications on
 
 Creating a scalable yet decentralized protocol is detailed within the [Tempo](../whitepapers/tempo.md) white paper, while the Economics white paper covers how XRD \(the ‘Rad’ token\) aims to avoid volatility. 
 
@@ -30,7 +30,7 @@ However, not all DApps are created equal. Their properties change heavily depend
 
 * Protocol-level DApps
 * Client-side DApps 
-* Smart Contract based DApp
+* Smart Contract based DApps
 
 ### Protocol level DApps
 
