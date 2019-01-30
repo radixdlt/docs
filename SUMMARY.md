@@ -19,7 +19,6 @@
 * [Alphanet Use Cases](developer/use-cases/README.md)
   * [Alias System](developer/use-cases/alias-system.md)
   * [File Notarization](developer/use-cases/file-notarization.md)
-* [Atom Model](developer/atom-model.md)
 
 ## Node Runners
 
