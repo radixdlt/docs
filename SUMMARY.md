@@ -47,7 +47,6 @@
   * [Consensus](learn/platform/tempo.md)
   * [Security](learn/platform/security.md)
   * [Economics](learn/platform/token.md)
-  * [Buildability](learn/platform/buildability.md)
   * [Decentralized Exchange](learn/platform/decentralized-exchange.md)
   * [Decentralized Identity](learn/platform/decentralized-identity.md)
   * [Radix Name Service](learn/platform/radix-name-service.md)

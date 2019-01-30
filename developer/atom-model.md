@@ -12,9 +12,9 @@ Creating a scalable yet decentralized protocol is detailed within the [Tempo](..
 
 The following article explains how Radix has been designed to be a platform for developers that is both easy and safe to build on.
 
-The platform buildability is achieved through the use of "_constraints_" and "_building blocks_." This combination allows developers to provide essentially the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden. The buildability also contributes to a more scalable protocol, as popular Decentralized Applications \(DApps\) will not impact on other network activities. These building blocks are layered upon Radix’s [Atom Model](../learn/platform/buildability.md#atom-model), which will also be explained in this article.
+The platform buildability is achieved through the use of "_constraints_" and "_building blocks_." This combination allows developers to provide essentially the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden. The buildability also contributes to a more scalable protocol, as popular Decentralized Applications \(DApps\) will not impact on other network activities. These building blocks are layered upon Radix’s [Atom Model](), which will also be explained in this article.
 
-We begin this article by providing an introduction on why we need to deliver buildability in our platform. We'll focus on how DApps have been built until now, and the three types of DApps \([protocol level](../learn/platform/buildability.md#protocol-level-dapps), [client-side](../learn/platform/buildability.md#client-side-dapps) and [smart contracts](../learn/platform/buildability.md#smart-contract-based-dapps)\) commonly used.
+We begin this article by providing an introduction on why we need to deliver buildability in our platform. We'll focus on how DApps have been built until now, and the three types of DApps \([protocol level](), [client-side]() and [smart contracts]()\) commonly used.
 
 ## What are DApps?
 
