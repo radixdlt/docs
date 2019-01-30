@@ -45,6 +45,7 @@
 * [Radix Platform](learn/platform/README.md)
   * [Consensus](learn/platform/tempo.md)
   * [Security](learn/platform/security.md)
+  * [Buildability](learn/platform/buildability.md)
   * [Economics](learn/platform/token.md)
   * [Decentralized Exchange](learn/platform/decentralized-exchange.md)
   * [Decentralized Identity](learn/platform/decentralized-identity.md)
