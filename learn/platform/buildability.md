@@ -12,7 +12,7 @@ We begin this article by providing an introduction on why we need to deliver bui
 
 Decentralized Applications are applications that are built to operate without a single point of failure and can \(once launched\) run without a centralized infrastructure. This stands in contrast to the traditional centralized systems that have been used for all types of enterprise applications, which require the use of servers and a centralized entity for payment processing.
 
-Combining distributed, decentralized networks with the benefits of a decentralized financial system, as initially created by Bitcoin, gives the ability to circumvent centralized entities that may:
+Combining distributed and decentralized networks with the benefits of a decentralized financial system, as initially created by Bitcoin, allows for the circumvention of centralized entities that may:
 
 * Charge excessive fees \(e.g., cross border money transfers\)
 * Prevent reaching a global audience \(e.g., an organization’s banking partner only accepts payment in selected countries\)
@@ -44,7 +44,7 @@ For example, if Alice sends 1 BTC to Bob, then the state of the ledger updates t
 * "Has she already spent that 1 BTC?"
 * "Has she signed with her private key?"
 
-As such, a person can manage one address with a small balance or millions of addresses with large balances, because the system of permissions and controls scales up and down according to what I can prove to control rather than granting permission to use by a central authority.
+As such, a person can manage one address with a small balance or millions of addresses with large balances, because the system of permissions and controls scales up and down according to what I can prove to control rather than granting permission for use by a central authority.
 
 Some of these constraints seem evident. However, it is essential to understand that on a traditional database it is extremely expensive to enforce any of them all the time \(and can never be fully attained\).
 
@@ -123,7 +123,7 @@ When the protocol used is versatile enough and offers adequate constraints nativ
 
 ### Constraints: a powerful tool
 
-Constraints ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.  
+The constraints ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.  
   
 Instead of a large application layer built on top of a thin protocol layer, Radix provides a large protocol layer upon which DApps can be easily and quickly deployed.
 
