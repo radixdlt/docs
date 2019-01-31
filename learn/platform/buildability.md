@@ -10,7 +10,9 @@ We begin this article by providing an introduction on why we need to deliver bui
 
 ## What are DApps?
 
-Decentralized Applications are applications that are built to operate without a single point of failure and can \(once launched\) run without a centralized infrastructure. This stands in contrast to the traditional centralized systems that have been used for all types of enterprise applications, which require the use of servers and a centralized entity for payment processing.
+Decentralized Applications are applications that are built to operate without a single point of failure and can \(once launched\) run without a centralized infrastructure. This stands in contrast to the traditional centralized systems that have been used for all types of enterprise applications, which require the use of servers and data centres. These servers and data centres receive and process requests from clients \(the user\), as well as store data and files.
+
+These centralized systems also have to rely upon financial service companies to process payments and hold the value they generate on their behalf.
 
 Combining distributed and decentralized networks with the benefits of a decentralized financial system, as initially created by Bitcoin, allows for the circumvention of centralized entities that may:
 
