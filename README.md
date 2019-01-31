@@ -1,9 +1,3 @@
----
-description: >-
-  This knowledge base is for developers, node operators, and those who want to
-  learn more about the Radix project.
----
-
 # Start Here
 
 ## **What is Radix**
@@ -20,15 +14,15 @@ It has been the result of 6 years of research and development into a number of u
 
 Radix uses the theory of database sharding to scale linearly and vector clocks for generating a partial ordering of events based on Leslie Lamport’s logical clock theory as the basic consensus mechanism. 
 
-## [Build with Radix](developer/live-platform-overview.md)
+## [Build with Radix](develop/live-platform-overview.md)
 
 If you are a **developer** who wants to learn how to build on the **Radix Test Network,** you can get started with your preferred choice of library:
 
-* [The Java Client Library](developer/java-client-library-guide/)
-* [The Kotlin Library](developer/kotlin-client-library-guide/)
-* [The JavaScript Library](developer/javascript-client-library-guide/quick-start.md)
+* [The Java Client Library](develop/java-client-library-guide/)
+* [The Kotlin Library](develop/kotlin-client-library-guide/)
+* [The JavaScript Library](develop/javascript-client-library-guide/quick-start.md)
 
-The [developer section](developer/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various use-cases that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
+The [developer section](develop/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various use-cases that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
 
 ## [Operate a Radix Node](node-runners/start/)
 

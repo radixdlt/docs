@@ -1,9 +1,3 @@
----
-description: >-
-  Learn how you can use the Radix ledger to create solutions for real world use
-  cases
----
-
 # Alphanet Use Cases
 
 The Radix Ledger is status is currently Alpha Net - this includes only the ability to send and receive transactions and send encrypted and unencrypted messages via the client libraries. These only represent a small number of the complete feature set that will be available on the full Radix network, however, with these simple features some interesting applications can already be built.

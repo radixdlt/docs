@@ -1,7 +1,3 @@
----
-description: Read the Radix white papers
----
-
 # Whitepapers
 
 Tempo White Paper: [https://papers.radixdlt.com/tempo/](https://papers.radixdlt.com/tempo/)  

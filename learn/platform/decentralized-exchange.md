@@ -1,7 +1,3 @@
----
-description: Introduction to the Radix decentralized exchange
----
-
 # Decentralized Exchange
 
 ## What is a decentralized exchange?

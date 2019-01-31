@@ -1,9 +1,3 @@
----
-description: >-
-  The developers guide to building on the Radix Test Network with the Java
-  Client Library
----
-
 # Java Client Library
 
 ## Features

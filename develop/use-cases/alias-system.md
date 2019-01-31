@@ -1,7 +1,3 @@
----
-description: Links and pointers on a public ledger
----
-
 # Alias System
 
 ### Overview

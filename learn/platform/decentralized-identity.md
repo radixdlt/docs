@@ -1,7 +1,3 @@
----
-description: Introduction to decentralized identities on the Radix Public Ledger
----
-
 # Decentralized Identity
 
 ## Abstract

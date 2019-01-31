@@ -1,7 +1,3 @@
----
-description: A complete list of videos about and by Radix
----
-
 # Videos
 
 ## Radix Explainer Videos

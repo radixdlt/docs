@@ -1,9 +1,3 @@
----
-description: >-
-  This knowledge base is for developers, node operators, and those who want to
-  learn more about the Radix project and distributed ledger technology.
----
-
 # Radix Platform
 
 ## History

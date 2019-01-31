@@ -1,7 +1,3 @@
----
-description: Connect with us on one of the following channels
----
-
 # Contact
 
 * [Telegram](https://t.me/radixdlt) for general chat

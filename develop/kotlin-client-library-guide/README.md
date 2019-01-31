@@ -1,9 +1,3 @@
----
-description: >-
-  The developers guide to building on the Radix Test Network with the Kotlin
-  Client Library
----
-
 # Kotlin Client Library
 
 The Kotlin Client library for interacting with a [Radix](https://www.radixdlt.com/) Distributed Ledger compatible with Kotlin/Java projects and maximizing compatibility with all versions of Android.

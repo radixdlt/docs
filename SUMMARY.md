@@ -4,21 +4,21 @@
 
 ## Develop
 
-* [Alpha](developer/live-platform-overview.md)
-* [Java Client Library](developer/java-client-library-guide/README.md)
+* [Alpha](develop/live-platform-overview.md)
+* [Java Client Library](develop/java-client-library-guide/README.md)
   * [GitHub - Java Library](https://github.com/radixdlt/radixdlt-java)
-* [Kotlin Client Library](developer/kotlin-client-library-guide/README.md)
+* [Kotlin Client Library](develop/kotlin-client-library-guide/README.md)
   * [GitHub - Kotlin Library](https://github.com/radixdlt/radixdlt-kotlin)
-* [JavaScript Client Library](developer/javascript-client-library-guide/README.md)
-  * [Get Started](developer/javascript-client-library-guide/quick-start.md)
-  * [Code examples](developer/javascript-client-library-guide/code-examples.md)
-  * [Example Applications](developer/javascript-client-library-guide/tutorials.md)
-  * [Saving dApp settings](developer/javascript-client-library-guide/saving-dapp-settings.md)
+* [JavaScript Client Library](develop/javascript-client-library-guide/README.md)
+  * [Get Started](develop/javascript-client-library-guide/quick-start.md)
+  * [Code examples](develop/javascript-client-library-guide/code-examples.md)
+  * [Example Applications](develop/javascript-client-library-guide/tutorials.md)
+  * [Saving dApp settings](develop/javascript-client-library-guide/saving-dapp-settings.md)
   * [GitHub JavaScript Library](https://github.com/radixdlt/radixdlt-js)
 * [Alphanet Explorer](https://alphanet.radixdlt.com)
-* [Alphanet Use Cases](developer/use-cases/README.md)
-  * [Alias System](developer/use-cases/alias-system.md)
-  * [File Notarization](developer/use-cases/file-notarization.md)
+* [Alphanet Use Cases](develop/use-cases/README.md)
+  * [Alias System](develop/use-cases/alias-system.md)
+  * [File Notarization](develop/use-cases/file-notarization.md)
 
 ## Node Runners
 
@@ -31,10 +31,10 @@
 
 ## Use Radix
 
-* [Android Wallet](wallets/android-wallet/README.md)
+* [Android Wallet](use-radix/android-wallet/README.md)
   * [Google Play Store](https://play.google.com/apps/testing/com.radixdlt.android)
   * [GitHub - Android Client](https://github.com/radixdlt/android-client)
-* [Desktop Wallet](wallets/desktop-wallet/README.md)
+* [Desktop Wallet](use-radix/desktop-wallet/README.md)
   * [Mac](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-1.1.1-alpha.dmg)
   * [Windows](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-Setup-1.1.1-alpha.exe)
   * [Linux](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/radix-wallet-1.1.1-alpha-x86_64.AppImage)

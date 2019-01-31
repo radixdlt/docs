@@ -1,7 +1,3 @@
----
-description: A simple method to deterministically notarize files on a public DLT
----
-
 # File Notarization
 
 ### Overview

@@ -1,9 +1,3 @@
----
-description: >-
-  The developers guide to building on the Radix Test Network with the JavaScript
-  Client Library
----
-
 # JavaScript Client Library
 
 A JavaScript client library for interacting with a [Radix](https://www.radixdlt.com/) Distributed Ledger.

@@ -2,25 +2,17 @@
 
 ## Building on Radix
 
-Radix is a decentralized ledger protocol designed to achieve three core objectives:
+Making Radix easy, fast and secure to build on is achieved through the use of "building blocks" that are strictly controlled by a flexible set of on ledger "constraints". This combination allows developers to provide much of the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden.
 
-1. Scalability - making it possible for the world to use without bottlenecks
-2. Low volatility - ensuring the cost of using the platform is constrained and predictable
-3. Buildability - making it as easy as possible to build and deploy applications on
+Buildability also contributes to a more scalable protocol, making sure that popular Decentralized Applications \(DApps\) on Radix will not have a negative impact on other network activities. These building blocks are layered upon the Radix Atom Model, which will also be explained in this article.
 
-Creating a scalable yet decentralized protocol is detailed within the [Tempo](../learn/whitepapers/tempo.md) white paper, while the Economics white paper covers how XRD \(the ‘Rad’ token\) aims to avoid volatility. 
-
-The following article explains how Radix has been designed to be a platform for developers that is both easy and safe to build on.
-
-The platform buildability is achieved through the use of "_constraints_" and "_building blocks_." This combination allows developers to provide essentially the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden. The buildability also contributes to a more scalable protocol, as popular Decentralized Applications \(DApps\) will not impact on other network activities. These building blocks are layered upon Radix’s [Atom Model](../learn/platform/buildability.md#atom-model), which will also be explained in this article.
-
-We begin this article by providing an introduction on why we need to deliver buildability in our platform. We'll focus on how DApps have been built until now, and the three types of DApps \([protocol level](../learn/platform/buildability.md#protocol-level-dapps), [client-side](../learn/platform/buildability.md#client-side-dapps) and [smart contracts](../learn/platform/buildability.md#smart-contract-based-dapps)\) commonly used.
+We begin this article by providing an introduction on why we need to deliver buildability in our platform. We'll focus on how DApps have been built until now, and the three types of DApps \(protocol level, client-side and smart contracts\) commonly used.
 
 ## What are DApps?
 
-Decentralized Applications are, as the name suggests, applications that are built to operate without a single point of failure and can \(once launched\) run without a centralized infrastructure. This stands in contrast to the traditional centralized systems that have been used for all types of enterprise applications, which require the use of servers and a centralized entity for payment processing.
+Decentralized Applications are applications that are built to operate without a single point of failure and can \(once launched\) run without a centralized infrastructure. This stands in contrast to the traditional centralized systems that have been used for all types of enterprise applications, which require the use of servers and a centralized entity for payment processing.
 
-Combining decentralized and distributed networks with the benefits of a decentralized financial system, as initially created by Bitcoin, gives the ability to circumvent centralized entities that may:
+Combining distributed, decentralized networks with the benefits of a decentralized financial system, as initially created by Bitcoin, gives the ability to circumvent centralized entities that may:
 
 * Charge excessive fees \(e.g., cross border money transfers\)
 * Prevent reaching a global audience \(e.g., an organization’s banking partner only accepts payment in selected countries\)
@@ -29,7 +21,7 @@ Combining decentralized and distributed networks with the benefits of a decentra
 However, not all DApps are created equal. Their properties change heavily depending on their architecture, with three main recognizable categories:
 
 * Protocol-level DApps
-* Client-side DApps 
+* Client-side DApps
 * Smart Contract based DApps
 
 ### Protocol level DApps
@@ -38,18 +30,18 @@ Protocol-level DApps work by building a set of constraints at the protocol level
 
 Bitcoin’s protocol, for example, provides several constraints:
 
-1. There will never be more than 21M BTC 
-2. Entries on the ledger are immutable 
-3. Only the owner\(s\) of a private key can sign transactions for a particular public key 
-4. Every transaction requires a fee 
-5. One can’t spend the same bitcoins twice 
-6. One can’t send more bitcoins than owned 
+1. There will never be more than 21M BTC
+2. Entries on the ledger are immutable
+3. Only the owner\(s\) of a private key can sign transactions for a particular public key
+4. Every transaction requires a fee
+5. One can’t spend the same bitcoins twice
+6. One can’t send more bitcoins than owned
 7. An N of M Multi-signature account can only transact if at least N of the co-signatories sign the transaction
 
-For example, if Alice sends 1 BTC to Bob, then the state of the ledger updates to reflect this transaction \(a "state change"\). To make this state change, Alice must comply with the protocol's constraints: 
+For example, if Alice sends 1 BTC to Bob, then the state of the ledger updates to reflect this transaction \(a "state change"\). To make this state change, Alice must comply with the protocol's constraints:
 
-* "Does she have 1 BTC or more in her account?" 
-* "Has she already spent that 1 BTC?" 
+* "Does she have 1 BTC or more in her account?"
+* "Has she already spent that 1 BTC?"
 * "Has she signed with her private key?"
 
 As such, a person can manage one address with a small balance or millions of addresses with large balances, because the system of permissions and controls scales up and down according to what I can prove to control rather than granting permission to use by a central authority.
@@ -58,11 +50,11 @@ Some of these constraints seem evident. However, it is essential to understand t
 
 Because of this, organizations can apply some of those benefits to their systems, such as:
 
-* Storage of value on a distributed ledger 
-* Immutable data storage 
-* User management \(with private keys used as passwords\) 
-* Notarization and timestamping of events 
-* Simple and safe permission management
+* Storage of value on a distributed ledger
+* Immutable data storage
+* User management \(with private keys used as passwords\)
+* Notarization and timestamping of events
+* Simple and safe permissions management
 
 ### Client-side DApps
 
@@ -78,23 +70,23 @@ Although cheaper than implementing smart contracts, it still requires applicatio
 
 ### Smart Contract based DApps
 
-Unlike the more simple protocol level DApps, smart contract based DApps offer the promise of unlimited scope. The excitement generated by smart contract protocols such as Ethereum lay in the vision of Web 3.0; a decentralized platform driven by combining the immutability of Bitcoin with smart contracts. Smart contracts allow the developer to build their own rules. This makes it versatile and enables the creation of new application protocols on top of the base protocol.
+Unlike the more simple protocol level DApps, smart contract based DApps offer the promise of unlimited scope. The excitement generated by smart contract protocols such as Ethereum lay in the vision of Web 3.0; a decentralized platform driven by combining the immutability of Bitcoin with smart contracts.  
+  
+Smart contracts allow the developer to build their own rules. This makes it versatile and enables the creation of new application protocols on top of the base protocol.
 
-Smart contracts work slightly different from ‘paper’ contracts. Essentially, a smart contract works by defining a series of actions. Once initiated, these actions unfold. In practice this could look like:
+However, Smart contracts work slightly different from ‘paper’ contracts. Essentially, a smart contract works by defining a series of actions. Once initiated, these actions unfold. In practice this could look like:
 
-1. A smart contract is initiated either manually \(e.g., a user clicks "`accept`" to start an action on a DApp\) or by pre-set conditions \(e.g., a flight delay insurance DApp begins if a flight is delayed more than 30 minutes\) 
-2. The specified conditions of the smart contract unfold \(e.g., if a user clicks to bet 1 ETH on Event X, 1 ETH is sent from user’s account to an escrow. If the bet is successful, then 1 ETH is returned to the user along with their winnings\) 
-3. The smart contract is written to a block on the network \(e.g., the state change records the ETH being reassigned from the user’s address to the escrow address, then in a subsequent block for the original ETH as well as winnings to be ascribed back to the original user’s address\) 
+1. A smart contract is initiated either manually \(e.g., a user clicks "accept" to start an action on a DApp\) or by pre-set conditions \(e.g., a flight delay insurance DApp begins if a flight is delayed more than 30 minutes\)
+2. The specified conditions of the smart contract unfold \(e.g., if a user clicks to bet 1 ETH on Event X, 1 ETH is sent from user’s account to an escrow. If the bet is successful, then 1 ETH is returned to the user along with their winnings\)
+3. The smart contract is written to a block on the network \(e.g., the state change records the ETH being reassigned from the user’s address to the escrow address, then in a subsequent block for the original ETH as well as winnings to be ascribed back to the original user’s address\)
 4. All nodes on the network update their ledgers to mirror this state change
 
 Smart contracts open up a wide range of opportunities for developers to build DApps and can automate a wide range of otherwise hard to enforce actions. This process works in conjunction with DLT. In this case, smart contract protocols allow developers to store business logic on the ledger and ensures that the code is executed by all the nodes in a network in a deterministic manner, producing the same output by every single node.
 
 However, it also introduces a new layer of complexity for developers and users. This means that Smart Contracts can:
 
-* Be difficult to create and secure 
-* Slow down the network 
-* Be unconducive to users 
-* Have a range of implementations
+* Be difficult to create and secure
+* Slow down the network
 
 #### Difficult to create and secure
 
@@ -102,35 +94,40 @@ Although live DApps are operating to great effect, poorly written smart contract
 
 This included the freezing of over 500,000 ETH \($300m+ at the time of the incident\) owing to an error in the Parity multi-signature contract. This contract was coded by a team with over 50 developers and included a Co-Founder of Ethereum and the creator of Ethereum’s programming language, Solidity, as well as the Ethereum Foundation’s original Chief of Security.
 
-For the same reason that it's hard to write contracts securely, audits are also tricky and can’t be wholly relied upon. For example, [the DAO](https://www.coindesk.com/understanding-dao-hack-journalists) had an external security audit – but as Christoph Jentzsch \(Founder and CEO of Slock.it and a Lead Tester of Ethereum since 2014\) explained “we believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for.” More recently, [$13.5m was stolen](https://twitter.com/Bancor/status/1016420621666963457) from the Bancor smart contract despite a prior security audit.
+For the same reason that it's hard to write contracts securely, audits are also tricky and can’t be wholly relied upon. For example,[ the DAO](https://www.coindesk.com/understanding-dao-hack-journalists) had an external security audit – but as Christoph Jentzsch \(Founder and CEO of Slock.it and a Lead Tester of Ethereum since 2014\) explained “we believe more security audits or more tests would have made no difference. The main problem was that reviewers did not know what to look for.” More recently,[ $13.5m was stolen](https://twitter.com/Bancor/status/1016420621666963457) from the Bancor smart contract despite a prior security audit.
 
 A typical application would be able to fix any bugs once discovered; an immutable smart contract does not have such luxury. Because of the fusion of service and tokens, errors simply cannot be allowed.
 
 This complexity means that building a DApp with smart contracts is time-consuming and requires significant expert knowledge. Given the infancy of the space, this is both expensive and in short supply.
 
-#### Slow down the network 
+#### Slow down the network
 
 Smart contracts must be processed on-chain so that the output is recorded. All nodes must execute the smart contract and update the chain with both the outcome and the transaction, slowing down the network, increasing fees and impairing regular transactional activity. The impact of this was fully exemplified when the popular DApp CryptoKitties brought the Ethereum network to a halt.
 
-#### Frustrate users
-
-The most basic transactions are usually simple. A given input \(e.g., an order to move X number of coins to address X\) results in the appropriate output.
-
-Complex smart contracts work differently, as they involve several other parameters. As such, they are intended to provide a step by step ‘if this then that’ process. However, this can result in unexpected outcomes.
-
-This can be avoided by using [declarative smart contracts](https://www.tokendaily.co/blog/declarative-smart-contracts). Actions that are not possible given the current state change are not available. These are known as ‘constraints’.
-
 ## How does Radix handle DApps?
 
+The most basic transactions are usually simple. A given input \(e.g., an order to move X number of coins to address X\) results in the appropriate output.   
+  
+Complex smart contracts work differently, as they involve several other parameters. They are intended to provide a step by step ‘if this then that’ process, but can sometimes not behave as expected. This can be avoided by using declarative smart contracts.   
+  
+Declarative programming is different from imperative programming. Rather than the ‘if this then that’ step by step process describing how something should be achieved, it instead describes what we want to be achieved.   
+  
+Declarative programming creates more reliable code with less potential for errors because it means that:  
+  
+• Rather than having to define all of the steps that lead to the desired outcome, the program instead can work in reverse from said outcome to ultimately arrive at it  
+• There is less onus on the developer to code many specific details/for all potential eventualities  
+  
+Declarative programming creates a default no-action permitted system, where actions only become possible at certain states. These are known as ‘constraints’.  
+  
 When the protocol used is versatile enough and offers adequate constraints natively, a combined architecture of protocol-level and client-side DApps can effectively remove most of the issues that DApps have. This is the Radix approach.
 
 ### Constraints: a powerful tool
 
-The constraints ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.
-
+Constraints ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.  
+  
 Instead of a large application layer built on top of a thin protocol layer, Radix provides a large protocol layer upon which DApps can be easily and quickly deployed.
 
-![Protocol and Application layers](../.gitbook/assets/screenshot-2019-01-30-11.56.00.png)
+![Source: Union Square Ventures - Fat Protocols](https://docs.google.com/drawings/u/1/d/stLOWXIDDeDVpQSfUsQVMnw/image?w=432&h=322&rev=2&ac=1&parent=1b6obt4jWwYhvVMdRJlEblSGcBBBBosGFYWR2uWTSpNw)
 
 By building and enforcing constraints at the protocol level, Radix allows developers to use these constraints as they would use frameworks and libraries.
 
@@ -139,9 +136,9 @@ Note that the term ‘constraints’ doesn't imply restrictions from a capabilit
 Furthermore, using constraints \(rather than smart contracts\) provides several benefits:
 
 * Empowers developers to create quicker and cheaper products
-* Removes duplicate code for common functionality 
-* Improves scalability and enables a faster ledger 
-* Enables declarative programming which is less error-prone and more readable 
+* Removes duplicate code for common functionality
+* Improves scalability and enables a faster ledger
+* Enables declarative programming which is less error-prone and more readable
 * Provides a simple overview of what can be done with the ledger
 
 #### Quicker and cheaper product development
@@ -164,17 +161,14 @@ With declarative programming, developers can program valid state transitions rat
 
 Radix aims to launch with these protocol level constraints so developers can use them to achieve much of the same functionality they currently have to implement themselves through smart contracts. These constraints will be initially hard-coded by the Radix team, with more and more added before moving to a state where anyone will be able to define their own constraints.
 
-![Computing state machine](../.gitbook/assets/screen-shot-2018-10-22-at-4.25.14-am.png)
-
-![Constraint machine](../.gitbook/assets/screen-shot-2018-10-22-at-4.25.23-am.png)
-
 ## Atom Model
 
 To explain how these concepts work in practice, we introduce the Atom Model, which enables our constraint system to work. This model allows to structure transactions and provides the mechanism by which the ledger state can be divided into smaller sub-states to facilitate sharding and scalability.
 
-To achieve this, state changes have to be both explicit and able to be accepted or rejected in batches. Particles act as these state changes and can be thought of as the sub-actions that make up an action \(the Particle Group\). These Particle Groups are then placed inside an Atom. The way this is structured is exemplified below:
+To achieve this, state changes have to be both explicit and able to be accepted or rejected in batches. Particles act as these state changes and can be thought of as the sub-actions that make up an action \(the Particle Group\). These Particle Groups are then placed inside an Atom. The way this is structured is exemplified below:  
 
-\[ pending image \]
+
+![Virtual representation of the ledger](https://docs.google.com/drawings/u/1/d/sQGvFiBo-HugslYGo8vcr-w/image?w=508&h=269&rev=48&ac=1&parent=1b6obt4jWwYhvVMdRJlEblSGcBBBBosGFYWR2uWTSpNw)
 
 ### Atoms
 
@@ -196,9 +190,13 @@ There are many types of ready-to-use Particles, and the extensible design makes 
 
 The Atom Model has been designed to be easy to upgrade and extend. It provides a flexible, composable system of constraints which is simple to use for developers and limits the ability to make mistakes. In short, it allows:
 
-Developers to build DApps with flexible and powerful building objects State changes to be known before execution, removing the issue of unknown state changes with smart contracts State to be divided into smaller pieces \(sub-states\) that can be validated without requiring all other states, aiding with scalability and sharding The provision of the bulk of functionality brought about by smart contracts while avoiding their pitfalls
+* Developers to build DApps with flexible and powerful building objects
+* State changes to be known before execution, removing the issue of unknown state changes with smart contracts
+* State to be divided into smaller pieces \(sub-states\) that can be validated without requiring all other states, aiding with scalability and sharding
+* The provision of the bulk of functionality brought about by smart contracts while avoiding their pitfalls
 
-This model operates on top of [Tempo](https://papers.radixdlt.com/tempo/latest/), Radix’s distributed database architecture and consensus algorithm. Tempo provides conflict resolution, ordering of events \(important for many types of DApps such as gaming, gambling, and fintech\) and fast finality, and it also provides a foundation of a decentralized network which can scale linearly without network bottlenecks. The Atom Model provides the structure on which to create, while Tempo provides the mechanism for that structure to work. Together they allow developers to create secure, scalable DApps.
+This model operates on top of[ Tempo](https://papers.radixdlt.com/tempo/latest/), Radix’s distributed database architecture and consensus algorithm. Tempo provides conflict resolution, ordering of events \(important for many types of DApps such as gaming, gambling, and fintech\) and fast finality, and it also provides a foundation of a decentralized network which can scale linearly without network bottlenecks. The Atom Model provides the structure on which to create, while Tempo provides the mechanism for that structure to work. Together they allow developers to create secure, scalable DApps.  
+
 
 ## Building blocks for developers
 
@@ -232,20 +230,20 @@ Illustrating how these building blocks can be used to create functional DApps, w
 
 At launch, Radix will provide the ability to:
 
-* Generate basic user accounts \(public key addresses and hash addresses\) 
-* Create fiat and crypto backed tokens \(single & multi-issuance fungible tokens\) 
-* Read & write data 
+* Generate basic user accounts \(public key addresses and hash addresses\)
+* Create fiat and crypto backed tokens \(single & multi-issuance fungible tokens\)
+* Read & write data
 * Encrypted messaging
 
 Relevant business use cases have been built on Radix with what is currently available, for example:
 
-* [File notarization ](use-cases/file-notarization.md)
-* [Alias System ](use-cases/alias-system.md)
-* [Peer-to-Peer transactions ](javascript-client-library-guide/quick-start.md)
-* [Secure messaging](javascript-client-library-guide/quick-start.md)
+* [Alias System](https://www.radixdlt.com/post/how-to-implement-an-alias-system-in-radix)
+* Peer-to-Peer transactions
+* Secure messaging
+* File notarization
 
-Our roadmap detailing progress on further functionality can be viewed [here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section [here](live-platform-overview.md).
+Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section here.  
+
 
 .
-
 

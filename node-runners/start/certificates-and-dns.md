@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The in-browser [radixdlt-js](../../developer/javascript-client-library-guide/) library requires a valid TLS certificate installed on the Radix nodes to work properly. As there is no way around this requirement, we are offering a simple certificate generation service by leveraging CloudFlare's infrastructure.
+The in-browser [radixdlt-js](../../develop/javascript-client-library-guide/) library requires a valid TLS certificate installed on the Radix nodes to work properly. As there is no way around this requirement, we are offering a simple certificate generation service by leveraging CloudFlare's infrastructure.
 
 {% hint style="danger" %}
 _**But wait, isn't this centralization?**_  

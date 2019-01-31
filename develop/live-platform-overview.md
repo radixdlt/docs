@@ -1,7 +1,3 @@
----
-description: Start building on the Radix Alpha Testnet
----
-
 # Alpha
 
 ## Introduction
