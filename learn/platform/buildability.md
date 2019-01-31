@@ -167,7 +167,8 @@ Radix aims to launch with these protocol level constraints so developers can use
 
 To explain how these concepts work in practice, we introduce the Atom Model, which enables our constraint system to work. This model allows to structure transactions and provides the mechanism by which the ledger state can be divided into smaller sub-states to facilitate sharding and scalability.
 
-To achieve this, state changes have to be both explicit and able to be accepted or rejected in batches. Particles act as these state changes and can be thought of as the sub-actions that make up an action \(the Particle Group\). These Particle Groups are then placed inside an Atom. The way this is structured is exemplified below:  
+To achieve this, state changes have to be both explicit and able to be accepted or rejected in batches. Particles act as these state changes and can be thought of as the sub-actions that make up an action \(the Particle Group\). These Particle Groups are then placed inside an Atom. The way this is structured is exemplified below:
+
 
 
 ![Virtual representation of the ledger](https://docs.google.com/drawings/u/1/d/sQGvFiBo-HugslYGo8vcr-w/image?w=508&h=269&rev=48&ac=1&parent=1b6obt4jWwYhvVMdRJlEblSGcBBBBosGFYWR2uWTSpNw)
