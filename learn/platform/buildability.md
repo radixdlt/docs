@@ -129,7 +129,7 @@ The constraints ultimately run against the ‘if this then that’ process expla
   
 Instead of a large application layer built on top of a thin protocol layer, Radix provides a large protocol layer upon which DApps can be easily and quickly deployed.
 
-![Source: Union Square Ventures - Fat Protocols](https://docs.google.com/drawings/u/1/d/stLOWXIDDeDVpQSfUsQVMnw/image?w=432&h=322&rev=2&ac=1&parent=1b6obt4jWwYhvVMdRJlEblSGcBBBBosGFYWR2uWTSpNw)
+![Source: Union Square Ventures - Fat Protocols](../../.gitbook/assets/captura-de-pantalla-2019-01-31-a-las-14.51.48.png)
 
 By building and enforcing constraints at the protocol level, Radix allows developers to use these constraints as they would use frameworks and libraries.
 
@@ -169,9 +169,7 @@ To explain how these concepts work in practice, we introduce the Atom Model, whi
 
 To achieve this, state changes have to be both explicit and able to be accepted or rejected in batches. Particles act as these state changes and can be thought of as the sub-actions that make up an action \(the Particle Group\). These Particle Groups are then placed inside an Atom. The way this is structured is exemplified below:
 
-
-
-![Virtual representation of the ledger](https://docs.google.com/drawings/u/1/d/sQGvFiBo-HugslYGo8vcr-w/image?w=508&h=269&rev=48&ac=1&parent=1b6obt4jWwYhvVMdRJlEblSGcBBBBosGFYWR2uWTSpNw)
+![Virtual representation of the ledger](../../.gitbook/assets/captura-de-pantalla-2019-01-31-a-las-14.50.40.png)
 
 ### Atoms
 
