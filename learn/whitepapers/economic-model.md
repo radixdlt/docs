@@ -6,6 +6,8 @@ description: >-
 
 # Economic Model
 
+{% file src="../../.gitbook/assets/2019-01-31-radix-economic-white-paper-v1.pdf" caption="Download as PDF" %}
+
 #### ISSUED BY RADIX DLT LIMITED
 
 **REG No: 10864928  
