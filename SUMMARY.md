@@ -57,6 +57,7 @@
 * [Whitepapers](learn/whitepapers/README.md)
   * [Tempo](learn/whitepapers/tempo.md)
   * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
+  * [Economic Model](learn/whitepapers/economic-model.md)
 * [FAQ](learn/faq/README.md)
   * [Technical](learn/faq/technical.md)
   * [Scalability](learn/faq/scalability.md)
