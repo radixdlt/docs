@@ -187,3 +187,7 @@ A machine will automatically maintain as many shards as are possible, given its 
 
 For more information, see: [https://papers.radixdlt.com/incentives/](https://papers.radixdlt.com/incentives/)
 
+{% hint style="info" %}
+Have more questions about the Radix Economic Model? [Ask them here! ](https://forum.radixdlt.com/t/economics-frequently-asked-questions/62)
+{% endhint %}
+
