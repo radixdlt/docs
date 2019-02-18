@@ -51,6 +51,18 @@ In Stage 1, after Technical Go Live and before Economic Go Live, you will be abl
 
 You will also be able to buy Rads from other users using their preferred currencies. Please see [this infographic for a simple guide on how to buy Rads](https://uploads-ssl.webflow.com/5a5a128611f84b0001e85b9f/5c5315b1d8fe7db52ca1e65b_How%20to%20buy%20or%20sell%20Rads.png).
 
+### **Can I buy Rads with BTC, ETH?**
+
+Not directly from the system. You may be able to buy Rads from other users using BTC, ETH and other tokens. We are also in discussions with potential Approved Minters and other service providers who are considering offering the service of :
+
+1. Accepting BTC and ETH
+2. Converting it to USD
+3. Creating USD-backed tokens
+4. Transferring USD-backed tokens to users
+
+Users could then use these tokens to by Rads and do not need to do the intermediate conversions themselves.  
+
+
 ### **Is the Rad a security?**
 
 The Rad is fundamentally required to use the system, to pay the fees for transactions across the network. It is how the Node Runners that maintain the network are paid and incentivised.
@@ -179,6 +191,10 @@ The exact mechanics are still being worked out but we are expecting that you wil
 
 ## Incentives
 
+{% hint style="info" %}
+Have more questions about the Radix Economic Model? [Ask them here! ](https://forum.radixdlt.com/t/economics-frequently-asked-questions/62)
+{% endhint %}
+
 ### What is the incentive to setup/run a full-node?
 
 Simply, the more services - which includes number of shards - that a node provides for the Radix network, the larger the potential earning base. Each node earns fees from any Temporal Proof's they create. The distribution of which nodes provide the temporal proofs is probabilistic, not resource intensive. In other words, you don't have to ‘mine a block’ to get TX fees, just confirm a transaction!
@@ -186,8 +202,4 @@ Simply, the more services - which includes number of shards - that a node provid
 A machine will automatically maintain as many shards as are possible, given its resources; very small machines will run only a few shards, large machines many more. 
 
 For more information, see: [https://papers.radixdlt.com/incentives/](https://papers.radixdlt.com/incentives/)
-
-{% hint style="info" %}
-Have more questions about the Radix Economic Model? [Ask them here! ](https://forum.radixdlt.com/t/economics-frequently-asked-questions/62)
-{% endhint %}
 
