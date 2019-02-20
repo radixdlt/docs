@@ -1,4 +1,4 @@
-# Get Started
+# Get started
 
 This tutorial is written for people who prefer to learn by doing. You might find this tutorial and the [GitHub wiki](https://github.com/radixdlt/radixdlt-js) complementary to each other.
 
