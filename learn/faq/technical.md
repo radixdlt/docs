@@ -22,7 +22,7 @@ Note: on their own, Vector Clocks only create a partial ordering - Node Commitme
 
 See the Tempo White Paper for more details: [https://papers.radixdlt.com/tempo/\#commitments](https://papers.radixdlt.com/tempo/#commitments)
 
-### What are merkle trees?
+### What are Merkle trees?
 
 Radix uses logical clocks to provide a simple and reliable method for nodes to record and recall events in the order they have witnessed them.  While these logical clocks are simple and reliable, they do not provide any security against nodes tampering with the logical clock values that it has assigned to events.
 
@@ -30,7 +30,7 @@ To ensure the assigned logical clock values are tamper-proof, nodes produce “C
 
 ### What are commitments?
 
-To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a merkle hash.
+To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a Merkle hash.
 
 ### How often does a node present commitments to the network?
 
@@ -53,14 +53,16 @@ Before an event can be presented to the entire network for global acceptance, an
 
 Distributed systems are subject to a variety of faults and attacks. A faulty/malicious node may exhibit arbitrary behavior. In particular, a faulty node may corrupt its local state and send arbitrary messages, including specific messages aimed at subverting the system. Many security attacks, such as censorship, freeloading, misrouting, and data corruption, can be modeled as Byzantine faults. Systems can be protected with Byzantine fault tolerance \(BFT\) techniques, which mask a bounded number of Byzantine faults, e.g. using state machine replication. BFT is a very powerful technique, but it has its costs. In a practical system that needs to tolerate up to f concurrent Byzantine faults, BFT cannot be implemented with less than 3f+1 replicas. Moreover, BFT scales poorly to large replica groups; as more servers are added, the throughput of the system may actually decrease.   
   
-Byzantine Fault Detection is an alternative approach that aims at detecting rather than masking faulty behavior. With this approach, the system does not make any attempt to hide the symptoms of Byzantine faults. Rather, each node is equipped with a detector that monitors other nodes for signs of faulty behavior. If the detector determines that some node has become faulty, it notifies the application software, which can then take appropriate action. For example, nodes can cease to communicate with the faulty node; once all correct nodes have followed suit, the faulty node is isolated and the fault is contained. Lies \(or faults\) in Radix can be detected using merkle trees of commitments. 
+Byzantine Fault Detection is an alternative approach that aims at detecting rather than masking faulty behavior. With this approach, the system does not make any attempt to hide the symptoms of Byzantine faults. Rather, each node is equipped with a detector that monitors other nodes for signs of faulty behavior. If the detector determines that some node has become faulty, it notifies the application software, which can then take appropriate action. For example, nodes can cease to communicate with the faulty node; once all correct nodes have followed suit, the faulty node is isolated and the fault is contained. Lies \(or faults\) in Radix can be detected using Merkle trees of commitments. 
 
-[Read more about the case for Byzantine Fault Detection in this whitepaper.](https://pdfs.semanticscholar.org/5c6d/70758691d8d15137794acadbc7742a801e2b.pdf)
+{% hint style="info" %}
+Read more about the case for Byzantine Fault Detection in this [whitepaper](https://pdfs.semanticscholar.org/5c6d/70758691d8d15137794acadbc7742a801e2b.pdf).
+{% endhint %}
 
 Radix uses both BFT to defend against network splits/attacks and BFD to defend against malicious behavior like double spends, transaction suppressing, etc.
 
-{% hint style="info" %}
-[Have questions about Byzantine Fault Detection? Ask them on our developer forum](https://forum.radixdlt.com/t/what-is-byzantine-fault-detection/53)
+{% hint style="success" %}
+Have questions about Byzantine Fault Detection? Ask them on our [developer forum](https://forum.radixdlt.com/t/what-is-byzantine-fault-detection/53).
 {% endhint %}
 
 ### What is mass?
@@ -87,17 +89,15 @@ Furthermore it's consensus friendly so that all nodes will output the same resul
 
 To put that in perspective, that's like 10k people voting on something and you have to ask just one person what they know of how a handful of other people voted and you can arrive at an accurate and agreeable prediction for all 10k people.
 
-It scales well too, for a 100k node network it's still around 1.05 messages per node average and the data cost per node is about 27kb  
-
+It scales well too, for a 100k node network it's still around 1.05 messages per node average and the data cost per node is about 27kb.
 
 ### **How is Mass calculated?**
 
-Mass = XRD \* \(consumable \(output\) universe planck - consumer \(input\) universe planck\). A universe planck period being an hour on mainnet because seconds are too granular to use and as our ledger wall clock time is only approximate, we need to have an adequate buffer to absorb drift, etc.  
-
+Mass = XRD \* \(consumable \(output\) universe planck - consumer \(input\) universe planck\). A universe planck period being an hour on mainnet because seconds are too granular to use and as our ledger wall clock time is only approximate, we need to have an adequate buffer to absorb drift, etc.
 
 ### Will other user generated tokens have mass?
 
-Probably yes. More details will follow in the upcoming security whitepaper
+Probably yes. More details will follow in the upcoming security whitepaper.
 
 ### Will Radix be interopable with other blockchains?
 
@@ -105,7 +105,7 @@ No. Radix has a
 
 ### Will Radix have smart contracts?
 
-Yes, Radix is developing a unique smart contracting language that can be learnt by even beginners. More details will follow as we progress through out [Roadmap milestones](https://radixdlt.com/roadmap).
+Yes, Radix is developing a unique smart contracting language that can be learnt even by beginners. More details will follow as we progress through out [Roadmap milestones](https://radixdlt.com/roadmap).
 
 ### Is Radix Quantum Computer Resistant?
 
@@ -118,15 +118,14 @@ Ideally we like option 1, but a lot of the algorithms available are stateful, or
 
 ### What are some benefits of Temporal Proofs?
 
-Temporal proofs help with Mass delivery, propagation information \(gossip verification\), logical clock information, commitment information \(for fault detection\), RTP \(time sync\) information. They do do all of that in 100 bytes per vertex.  
-
+Temporal proofs help with Mass delivery, propagation information \(gossip verification\), logical clock information, commitment information \(for fault detection\), RTP \(time sync\) information. They do do all of that in 100 bytes per vertex.
 
 ### **Is data encrypted where the node hosting the copies of data won’t be able to tell what’s in it?**
 
 It's my understanding that transactions are signed with the private key of the entity owning the radix, just as in bitcoin.  I have no idea about the message type atom.  
-When it comes to data/messages/payload, the sender decides what to encrypt and what keys to use for the encryption. For a Twitter-like dapp the data would be in clear text since it's supposed to be public. For a private message the data would typically be duplicated and encrypted with the sender's and the receiver's public keys, so that both sender and receiver can decrypt it later. For private data storage, the data would be encrypted only using the sender's public key since no one else is supposed to read it. A node can only read the data that is sent in clear text.
+When it comes to data/messages/payload, the sender decides what to encrypt and what keys to use for the encryption. For a Twitter-like DApp the data would be in clear text since it's supposed to be public. For a private message the data would typically be duplicated and encrypted with the sender's and the receiver's public keys, so that both sender and receiver can decrypt it later. For private data storage, the data would be encrypted only using the sender's public key since no one else is supposed to read it. A node can only read the data that is sent in clear text.
 
 ### **Which hashing algorithm is used in Tempo?**
 
-Yes, we use SHA126 to hash the history of work performed b the node. It’s a chained merkle tree also called as commitments.
+We use SHA256 as our hashing algorithm.
 

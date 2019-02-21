@@ -48,7 +48,7 @@ For this guide, we will assume that you have some familiarity with Java, but you
 If you need to review Java, we recommend reading [this guide](https://www.learnjavaonline.org/).
 {% endhint %}
 
-We’ll also assume that you’re familiar with programming concepts like functions, objects, arrays, and classes. Additionally, having an understanding of Reactive programming, RxJava and observable patterns is suggested for a better insight.
+We’ll also assume that you’re familiar with programming concepts like functions, objects, arrays, and classes. Additionally, knowledge of reactive and observable patterns is helpful but not required.
 
 ## Overview
 

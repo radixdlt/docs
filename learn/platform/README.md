@@ -86,7 +86,7 @@ On Tempo, we add the Node logical clocks, signed by the Nodes in question, to th
 
 To allow high scalability a Tempo ledger is split into a very large shard space, allowing a huge degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
 
-When combined with the logical clocks and gossip, this Tempo to always find the total ordering of related events, allowing double spends to be quickly detected and ignored.
+When combined with logical clocks and gossip protocols, the Tempo consensus algorithm will always find the total ordering of related events, allowing double spends to be quickly detected and ignored.
 
 {% hint style="info" %}
 [Discuss this topic on our developer forum](https://forum.radixdlt.com/t/how-does-radix-work/59?u=angad)
