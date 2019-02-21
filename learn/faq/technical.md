@@ -101,7 +101,7 @@ Probably yes. More details will follow in the upcoming security whitepaper.
 
 ### Will Radix be interopable with other blockchains?
 
-No. Radix has a
+No. The Radix ledger has a unique data structure and currently is not interoperable with bitcoin or other blockchains.
 
 ### Will Radix have smart contracts?
 
