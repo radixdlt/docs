@@ -321,6 +321,4 @@ As we reach the end of our DApp example, we want to share some extra code snippe
   * [Creating an Identity](code-examples.md#creating-an-identity)
 * **Manage transactions**
   * [Storing and retrieving data](code-examples.md#storing-and-retrieving-data)
-* **Manage Tokens**
-  * [Sending and retrieving Tokens](code-examples.md#sending-and-retrieving-tokens)
 

@@ -10,8 +10,6 @@ These code examples are divided into several topics:
   * [Creating an Identity](code-examples.md#creating-an-identity)
 * **Manage transactions**
   * [Storing and retrieving data](code-examples.md#storing-and-retrieving-data)
-* **Manage Tokens**
-  * [Sending and retrieving Tokens](code-examples.md#sending-and-retrieving-tokens)
 
 {% hint style="success" %}
 **Tip:** if you're new to our Java library, we suggest you to begin with our [Get Started guide](get-started.md).
@@ -86,28 +84,4 @@ readable.subscribe(data -> { ... });
 {% hint style="info" %}
 **Note:** data that can't be decrypted by the user's key is simply ignored.
 {% endhint %}
-
-## Manage tokens
-
-### Sending and retrieving Tokens
-
-To send an amount of TEST \(the Testnet native token\) from my account to another address:
-
-```java
-Result result = api.sendTokens(<to-address>, Amount.of(10, Asset.TEST));
-```
-
-To retrieve all of the token transfers which have occurred in my account:
-
-```java
-Observable<TokenTransfer> transfers = api.getMyTokenTransfers(Asset.TEST);
-transfers.subscribe(tx -> { ... });
-```
-
-To get a stream of the balance of TEST tokens in my account:
-
-```java
-Observable<Amount> balance = api.getMyBalance(Asset.TEST);
-balance.subscribe(bal -> { ... });
-```
 
