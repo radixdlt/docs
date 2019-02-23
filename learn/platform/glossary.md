@@ -1,10 +1,14 @@
 # Glossary
 
-## Distributed Ledger Technology
+## Distributed Ledger Technology \(DLT\)
 
-The distributed ledger \(also called a shared ledger, or referred to as distributed ledger technology\) is a consensus of replicated, shared, and synchronized digital data geographically spread across multiple sites, countries, or institutions. There is no central administrator or centralised data storage.Decentralized Applications
+A distributed ledger \(also called a shared ledger, or referred to as distributed ledger technology\) is a consensus of replicated, shared, and synchronized digital data geographically spread across multiple sites, countries, or institutions. There is no central administrator or centralised data storage.
 
-Decentralized applications \(dApps\) are applications that run on a P2P network of computers rather than a single computer. dApps, have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.Transaction Finality
+## Decentralized Applications
+
+Decentralized applications \(dApps\) are applications that run on a P2P network of computers rather than a single computer. dApps, have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.
+
+## Transaction Finality
 
 Transactional finality refers to the instant that a transaction is deemed immutable, irrevocable and thus completed.
 
@@ -16,7 +20,7 @@ An instance of the Radix Tempo ledger is called a Universe.
 
 ## Shard
 
-A public Radix network \(Universe\) is segmented into a very large shard space \(currently 18.4 quintillion shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
+A public Radix network \(Universe\) is segmented into a very large shard space \(currently $$2^{64}$$ shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
 
 For more information, see: [https://papers.radixdlt.com/incentives/\#shards](https://papers.radixdlt.com/incentives/#shards)
 
@@ -70,7 +74,7 @@ See the Tempo White Paper for more details: [https://papers.radixdlt.com/tempo/\
 
 ## Commitments
 
-To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a merkle hash.
+To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a Merkle hash.
 
 ## Gossip protocol
 
@@ -88,5 +92,27 @@ However, if `A` must happen before `C`, but you don't care when `B` happens, the
 
 DSON is a binary in-house serialisation format which is tuned specifically for Radix. At very high throughput, serialisation / deserialisation becomes a major bottleneck, and JSON / GSON were not performant enough. Optimisation to squeeze as much out of JSON/GSON made the code in those sections very complex and messy. A simpler solution was just to bake our own with much higher performance and that could be trans-coded to JSON for all our RPC/Restful needs.
 
+## Nodes
 
+A **Node** provides general computing and networking resources to the network. Nodes are responsible for validating events and transactions, relaying messages, resolving conflicts and executing scripts on the network. They also maintain a subset of the shard space, and get fees in proportion to their work.
+
+## Account
+
+An **Account** represents all the data stored for a user on the ledger. This includes tokens, but also arbitrary data, as well as more advanced types of transactions in the future such as multi-sig and Scrypto smart contracts.
+
+## Address
+
+An **Address** lives in a **Shard** and is the start and end point for any **Atom** in the Radix Universe. It's also a reference to an **Account** and allows a user to receive tokens and/or data from other users. A Radix address is generated from a public key and a **Universe** checksum.
+
+{% hint style="info" %}
+Keep in mind, the defined **Universe** affects the generated **Address**.
+{% endhint %}
+
+## Identity
+
+An **Identity** represents a private key which can sign **Atoms** and read encrypted data. This private key can be stored in the application, or in the future, it might live elsewhere such as the users wallet application or hardware wallet.
+
+{% hint style="info" %}
+The only type of **Identity** currently available is the _**Simple Identity,**_ and it has a private key stored in a local file.
+{% endhint %}
 

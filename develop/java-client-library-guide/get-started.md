@@ -52,47 +52,19 @@ We’ll also assume that you’re familiar with programming concepts like functi
 
 ## Overview
 
-Now that you’re set up, let’s dig a bit on the concepts that make Radix a unique distributed ledger technology, so we can share a common language.
+Now that you’re set up, feel free to review our glossary so we can share a common language:
 
-### Universe <a id="universe"></a>
-
-A **Universe** represents the Radix network. It maintains connections to **Nodes**, and you can ask it to give you a connection to a node that serves a specific **Shard**.
-
-{% hint style="info" %}
-Because Radix is built to be sharded from the ground up, it is not enough to have a single connection to the network - depending on what addresses you’re trying to work with, you might need a number of connections.
+{% hint style="success" %}
+**Tip:** if you're new to Radix we suggest to take a minute and dig into the concepts that make Radix a unique distributed ledger technology.
 {% endhint %}
 
-### Shards <a id="shards"></a>
-
-A **Shard** is simply a segment of a Universe. A public Radix network \(Universe\) is segmented into a very large shard space \(currently 2^64 shards\). The shard number of an address is deterministically calculated, so it's trivial for anyone to correctly calculate the shard a public key lives on.
-
-### Nodes <a id="nodes"></a>
-
-A **Node** provides general computing and networking resources to the network. Nodes are responsible for validating events and transactions, relaying messages, resolving conflicts and executing scripts on the network. They also maintain a subset of the shard space, and get fees in proportion to their work.
-
-### Atoms <a id="atoms"></a>
-
-An **Atom** is the fundamental unit of storage on Radix's distributed ledger. Its structure defines one or more actions which update the ledger's state as an atomic transaction, that is, all-or-nothing.
-
-### Account <a id="account"></a>
-
-An **Account** represents all the data stored for a user on the ledger. This includes tokens, but also arbitrary data, as well as more advanced types of transactions in the future such as multi-sig and Scrypto smart contracts.
-
-### Address <a id="address"></a>
-
-An **Address** lives in a **Shard** and is the start and end point for any **Atom** in the Radix Universe. It's also a reference to an **Account** and allows a user to receive tokens and/or data from other users. A Radix address is generated from a public key and a **Universe** checksum.
-
-{% hint style="info" %}
-Keep in mind, the defined **Universe** affects the generated **Address**.
-{% endhint %}
-
-### Identity <a id="identity"></a>
-
-An **Identity** represents a private key which can sign **Atoms** and read encrypted data. This private key can be stored in the application, or in the future, it might live elsewhere such as the users wallet application or hardware wallet.
-
-{% hint style="info" %}
-The only type of **Identity** currently available is the _**Simple Identity,**_ and it has a private key stored in a local file.
-{% endhint %}
+* [Universe](../../learn/platform/glossary.md#universe)
+* [Shards](../../learn/platform/glossary.md#shard)
+* Nodes
+* Atoms
+* Account
+* Address
+* Identity
 
 ## Building a ChatBot
 
