@@ -60,11 +60,11 @@ Now that you’re set up, feel free to review our glossary so we can share a com
 
 * [Universe](../../learn/platform/glossary.md#universe)
 * [Shards](../../learn/platform/glossary.md#shard)
-* Nodes
-* Atoms
-* Account
-* Address
-* Identity
+* [Nodes](../../learn/platform/glossary.md#nodes)
+* [Atoms](../../learn/platform/glossary.md#atoms)
+* [Account](../../learn/platform/glossary.md#account)
+* [Address](../../learn/platform/glossary.md#address)
+* [Identity](../../learn/platform/glossary.md#identity)
 
 ## Building a ChatBot
 
