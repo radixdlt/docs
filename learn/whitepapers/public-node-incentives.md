@@ -23,7 +23,7 @@ The the probability of a single hash \(guess\) successfully mining a block rewar
 * $$n$$ = the total number of hash iterations \(guesses\) required before block is mined
 * $$P$$ = the total number of blocks available to mine
 
-As `n` increases \(i.e. total hashing power of the network\), the probability of being rewarded for a single guess reduces towards zero. At very large numbers of $$n$$ , $$P$$ becomes statistically insignificant, especially when, as with bitcoin, $$n$$ follows an exponential growth curve, but the time between successive blocks stays roughly constant.
+As $$n$$ increases \(i.e. total hashing power of the network\), the probability of being rewarded for a single guess reduces towards zero. At very large numbers of $$n$$ , $$P$$ becomes statistically insignificant, especially when, as with bitcoin, $$n$$ follows an exponential growth curve, but the time between successive blocks stays roughly constant.
 
 In a winner takes all \(block reward + transaction fees\) race, during each period there is only one way to improve your chances of being successful: increase your hash power.
 
