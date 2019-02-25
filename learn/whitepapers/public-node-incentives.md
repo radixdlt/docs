@@ -1,3 +1,7 @@
+---
+description: 'Dan Hughes, Piers Ridyard - December 2017'
+---
+
 # Public Node Incentives
 
 {% file src="../../.gitbook/assets/radix\_pni.pdf" caption="Download as PDF" %}

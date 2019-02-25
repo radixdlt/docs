@@ -1,3 +1,7 @@
+---
+description: Dan Hughes - 25th September 2017
+---
+
 # Tempo
 
 {% file src="../../.gitbook/assets/radix\_tempo.pdf" caption="Download as PDF" %}
