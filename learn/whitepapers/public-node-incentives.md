@@ -14,12 +14,12 @@ With the Bitcoin Hashcash[¹](public-node-incentives.md#references) Proof of Wor
 
 However, a probabilistic distribution problem emerges from the Hashcash function: while the total number of miners and hashing power of the network increases, only one miner \(on average\) is rewarded for each block, and this also includes all transaction fees.
 
-The the probability of a single hash \(guess\) successfully mining a block reward is thus `1/n∗P` where:
+The the probability of a single hash \(guess\) successfully mining a block reward is thus $$\frac{1}{n} * P$$where:
 
-* `n` = the total number of hash iterations \(guesses\) required before block is mined
-* `P` = the total number of blocks available to mine
+* $$n$$ = the total number of hash iterations \(guesses\) required before block is mined
+* $$P$$ = the total number of blocks available to mine
 
-As `n` increases \(i.e. total hashing power of the network\), the probability of being rewarded for a single guess reduces towards zero. At very large numbers of `n`, `P` becomes statistically insignificant, especially when, as with bitcoin, `n` follows an exponential growth curve, but the time between successive blocks stays roughly constant.
+As `n` increases \(i.e. total hashing power of the network\), the probability of being rewarded for a single guess reduces towards zero. At very large numbers of $$n$$ , $$P$$ becomes statistically insignificant, especially when, as with bitcoin, $$n$$ follows an exponential growth curve, but the time between successive blocks stays roughly constant.
 
 In a winner takes all \(block reward + transaction fees\) race, during each period there is only one way to improve your chances of being successful: increase your hash power.
 
@@ -51,7 +51,7 @@ For an Atom to be validated and recorded to the ledger, a Temporal Proof must be
 
 ![Figure 1: Temporal Proof](../../.gitbook/assets/fig4.png)
 
-Each Node involved in creating a Temporal Proof appends to the Atom their space-time coordinates `(l,e,o,n)` as well as a signature of Hash`(l,e,o,n)` using the Node's private key. Where ll is the Node's logical clock value for the event, `o` is the Node ID, `n` is the ID of next Node in the Temporal Proof, and `e` is the event Hash\(Atom\).
+Each Node involved in creating a Temporal Proof appends to the Atom their space-time coordinates $$(l,e,o,n)$$ as well as a signature of Hash $$(l,e,o,n)$$ using the Node's private key. Where $$l$$ is the Node's logical clock value for the event, $$o$$ is the Node ID, $$n$$ is the ID of next Node in the Temporal Proof, and $$e$$ is the event Hash\(Atom\).
 
 This creates a tamper proof, public declaration of a Node's involvement in creating a Temporal Proof. As all Nodes on a shard receive and record all complete Temporal Proofs relevant to that shard, checking which Temporal Proofs a Node has participated in is a simple matter of checking the Temporal Proofs for that Node's ID.
 
@@ -63,7 +63,7 @@ The end user cost of processing an Atom is proportional to the complexity of its
 
 Public network incentives are split into two main components: execution fees and new emissions.
 
-An execution fee is earned by a Node when it participates in creating a valid Temporal Proof. In a Temporal Proof of path length `n`, the Node reward is calculated as: Atom Execution Fee / n.
+An execution fee is earned by a Node when it participates in creating a valid Temporal Proof. In a Temporal Proof of path length $$n$$ , the Node reward is calculated as: $$\frac{\text{Atom Execution Fee}}{n}$$ .
 
 That is, a Node in a Temporal Proof with a path length of 10 will get 10% of the total execution fee due for processing that Atom. This fee is available to spend almost immediately.
 
@@ -93,7 +93,7 @@ It is also important to note that the spending of fees owed has a causal relatio
 
 ## Shard space
 
-A public Radix network \(Universe\) is segmented into a very large shard space \(currently 18.4 quintillion shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
+A public Radix network \(Universe\) is segmented into a very large shard space \(currently 18.4 quintillion shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial for anyone to correctly calculate the shard a public key lives on.
 
 Due to the size of the shard space, the probability of two randomly generated addresses living on the same shard is very low. This means the majority of conventional transactions will be touching two \(or more\) shards.
 
