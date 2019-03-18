@@ -110,7 +110,7 @@ For an object to become a currency, it has to fulfill three roles: a medium of e
 
 The Radix Stable Token is a proposed relatively price stable cryptocurrency currently in R&D. It will sit as a module on top of the Radix Tempo protocol and will be controlled by an algorithmic monetary policy of expanding and contracting coin supply. Full details will follow in a future white paper.
 
-It is clear, mass adoption of cryptocurrencies is impossible without a means of achieving both transactional **scalability** and **price stability** - Radix is designed to solve all of these issues. [Learn how Radix eliminates all of these limitation as we](platform/) dive deep into the Radix platform and how it works under the hood.
+It is clear, mass adoption of cryptocurrencies is impossible without a means of achieving both transactional **scalability** and **price stability** - Radix is designed to solve all of these issues. [Learn how Radix eliminates all of these limitation as we](../platform/) dive deep into the Radix platform and how it works under the hood.
 
 {% hint style="info" %}
 [Share your problems with current decentralized ledgers and how can they be improved on our developer forum](https://forum.radixdlt.com/t/what-problems-do-current-deceentralized-ledgers-have/54)

@@ -264,9 +264,7 @@ Universe identity and properties \(such as gossip port\). This string separates 
 
 ## Next: monitor your Radix Node
 
-There are a bunch of frameworks for managing metrics. In the [next guide](prometheus-metrics.md), we extend the `basic-node.yml` to include the [Prometheus](https://prometheus.io/) service. Prometheus periodically collects metrics system, and application specific metrics and stores these in its local datastore.
-
-{% page-ref page="prometheus-metrics.md" %}
+There are a bunch of frameworks for managing metrics. In the [next guide](), we extend the `basic-node.yml` to include the [Prometheus](https://prometheus.io/) service. Prometheus periodically collects metrics system, and application specific metrics and stores these in its local datastore.
 
 ## Join the Radix Community
 
