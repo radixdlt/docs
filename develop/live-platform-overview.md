@@ -8,7 +8,7 @@ The current Radix Alpha Network helps you to
 * facilitate monetary transactions or transfer value, and
 * record immutable data like messages, hashes or meta-data.  
 
-Each node in the Radix network exposes a [JSON-RPC](https://www.radixdlt.com/post/json-rpc-vs-rest) interface to interact with the application layer using client libraries. Radix has open sourced these client libraries to easily build decentralized applications in your preferred choice of programming language starting with Java, Kotlin & JavaScript.
+Each node in the Radix network exposes a [JSON-RPC](https://www.radixdlt.com/post/json-rpc-vs-rest) interface to interact with the application layer using client libraries. Radix has open sourced these client libraries to easily build decentralized applications in your preferred programming language, starting with Java, Kotlin and JavaScript.
 
 ## Technical Architecture
 
@@ -24,11 +24,11 @@ Each node in the Radix network exposes a [JSON-RPC](https://www.radixdlt.com/pos
 
 ![](../.gitbook/assets/screen-shot-2018-10-26-at-6.43.02-pm.png)
 
-If this is your first time building decentralized applications on the Radix Alpha Network you can get started with the:
+If this is your first time building decentralized applications on the Radix Alpha Network you can get started with our client libraries:
 
-* [Java Client Library](java-client-library-guide/)
-* [Kotlin Client Library](kotlin-client-library-guide/)
-* [JavaScript Client Library](javascript-client-library-guide/quick-start.md) 
+* [Java library](java-client-library-guide/)
+* [Kotlin library](kotlin-client-library-guide/)
+* [JavaScript library](javascript-client-library-guide/quick-start.md) 
 
 
 

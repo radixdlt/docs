@@ -2,18 +2,18 @@
 
 ## Introduction
 
-In this guide we will build a small distributed App \(DApp\) from the ground up using the [Java client library](https://github.com/radixdlt/radixdlt-java). The techniques you’ll learn in this tutorial are fundamental to building any DApp on [Radix](http://www.radixdlt.com/), and mastering it will give you a better understanding of the Radix distributed ledger.
+In this guide, we'll build a small distributed App \(DApp\) from the ground up using the [Java client library](https://github.com/radixdlt/radixdlt-java). The techniques you’ll learn in this tutorial are fundamental to make any DApp on [Radix](http://www.radixdlt.com/), and mastering it will give you a better understanding of the Radix distributed ledger.
 
 The guide is divided into several sections:
 
 * **​**[**Basic Setup**](../javascript-client-library-guide/quick-start.md#basic-setup) will give you a starting point to follow the tutorial.
 * **​**[**Overview**](../javascript-client-library-guide/quick-start.md#overview) will teach you the fundamentals of Radix's architecture.
-* **​**[**Building a ChatBot**](get-started.md#building-a-chatbot) will show you how to build your first basic DApp.
+* **​**[**Building a ChatBot**](get-started.md#building-a-chatbot) will show you how to make your first basic DApp.
 * **​**[**Beyond the basics**](../javascript-client-library-guide/quick-start.md#beyond-the-basics) will give you additional examples to acquire a deeper understanding of the Java library.
 
 ### About our example DApp
 
-As our example DApp for this guide, we'll be building a simple ChatBot that receives and replies messages sent to the a specific Radix address. With our small ChatBot DApp you'll learn to:
+As our example DApp for this guide, we'll be building a simple ChatBot that receives and replies messages sent to a specific Radix address. With our small ChatBot DApp you'll learn to:
 
 * Bootstrap and connect to the Radix Distributed Ledger
 * Create a Radix Identity
@@ -24,7 +24,7 @@ Don't worry if you're new to Radix's concepts, as we will review the basic build
 
 ## Basic setup
 
-Our first step is to set you up so that you can start building your first Java DApp with Radix.
+Our first step is to set you up so you can start building your first Java DApp with Radix.
 
 ### Installation
 
@@ -114,7 +114,7 @@ public class ChatBot {
 
 ### Creating a Radix Address
 
-Now, using the public key of the identity we can generate a unique Radix address, which is the ChatBot's unique identifier in the Radix Universe.
+Now, using the public key of the identity, we can generate a unique Radix address, which is the ChatBot's unique identifier in the Radix Universe.
 
 ```java
 public class ChatBot {
@@ -135,7 +135,7 @@ public class ChatBot {
 
 ### Receiving messages
 
-Once we have created an address for the ChatBot, we can begin to receive messages. To receive a message we need to:
+Once we have created an address for the ChatBot, we can begin to receive messages. To get a message we need to:
 
 * Initialize Radix Messaging module
 * Subscribe a listener to our address
@@ -171,7 +171,7 @@ public class ChatBot {
 Now that the ChatBot can receive messages, we can make the bot reply by sending a message back to the sender. We do this by:
 
 * Subscribing another listener to our address
-* Filtering messages \(so we don't reply to our own messages\)
+* Filtering messages \(so we don't respond to our own messages\)
 * Creating and sending an encrypted echo message to the original sender
 
 ```java
@@ -211,7 +211,7 @@ public class ChatBot {
 At this point, we have all the basic building blocks for our simple ChatBot DApp. Now, to have a complete and functional DApp, let's add some finishing touches:
 
 * Use a `Function<String,String>` to represent the ChatBot algorithm to make it easily extensible
-* Build a `main` method to run and test by sending a message to it's address
+* Build a `main` method to run and test by sending a message to its address
 
 ```java
 import com.radixdlt.client.core.Bootstrap;
