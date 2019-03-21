@@ -118,6 +118,8 @@ services:
     restart: unless-stopped
     ports:
       - "443:443"
+      # Docker for Mac: cannot open privileged ports by default
+      #- "8443:443"
     environment:
       WIPE_ADMIN_PASSWORD: "no"
     volumes:
@@ -137,6 +139,7 @@ volumes:
   core_ledger:
   core_config:
   nginx_secrets:
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -146,7 +149,7 @@ volumes:
 3. Copy-and-paste the content above.
 
 {% hint style="success" %}
-**Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/docs/blob/master/node-runners/start/basic-node.yml).
+**Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/node-runner/blob/master/docker-compose/basic-node.yml).
 {% endhint %}
 
 ## Launching your Node   <a id="launching-your-node"></a>
