@@ -146,7 +146,7 @@ volumes:
 3. Copy-and-paste the content above.
 
 {% hint style="success" %}
-**Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/node-runner/blob/master/docs/basic-node.yml).
+**Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/docs/blob/master/node-runners/start/basic-node.yml).
 {% endhint %}
 
 ## Launching your Node  <a id="launching-your-node"></a>
