@@ -1,20 +1,20 @@
 # Node Client
 
-## Introduction <a id="introduction"></a>
+## Introduction  <a id="introduction"></a>
 
 {% hint style="danger" %}
 **Please note that the Node Client software is not yet available.**
 {% endhint %}
 
-This is a [Quick Start](./) guide to running a Radix DLT Node on your computer primarily aimed for non-technical users. The following steps will be covered: 
+This is a [Quick Start](./) guide to running a Radix DLT Node on your computer primarily aimed for non-technical users. The following steps will be covered:
 
 1. [Installing Docker](./#installing-docker)
 2. [Creating a configuration file](./#creating-a-docker-composeyml-configuration-file)
 3. [Launching your Radix DLT Node](./#launching-your-node)
 
-## Pre-requisites <a id="pre-requisites"></a>
+## Pre-requisites  <a id="pre-requisites"></a>
 
-### Hardware <a id="hardware"></a>
+### Hardware  <a id="hardware"></a>
 
 Your targeted node should have **at least**:
 
@@ -26,7 +26,7 @@ Your targeted node should have **at least**:
 The actual disk size requirement will grow over time as the ledger grows.
 {% endhint %}
 
-### Software <a id="software"></a>
+### Software  <a id="software"></a>
 
 You can run a Radix DLT node on any operative system that supports Docker and Docker Compose, including:
 
@@ -34,7 +34,7 @@ You can run a Radix DLT node on any operative system that supports Docker and Do
 * MacOS X
 * Windows 10
 
-### Forwarding incoming traffic to your Node <a id="forwarding-incoming-traffic-to-your-node"></a>
+### Forwarding incoming traffic to your Node  <a id="forwarding-incoming-traffic-to-your-node"></a>
 
 {% hint style="info" %}
 You can skip this if your node is directly connected to the Internet \(has a public IP address\).
@@ -54,7 +54,7 @@ These are rather straight forward changes that most consumer Routers support. Pl
 These ports might change for _Beta_ - please check back later.
 {% endhint %}
 
-## Installing Docker <a id="installing-docker"></a>
+## Installing Docker  <a id="installing-docker"></a>
 
 You can download the right Docker Engine \(Community Edition\) for your system here: [https://hub.docker.com/search/?type=edition&offering=community](https://hub.docker.com/search/?type=edition&offering=community)
 
@@ -68,9 +68,9 @@ If you are running Linux, after you completed the Docker setup you need to insta
 **Tip:** Docker Compose is bundled with Docker CE for the Mac and Windows versions.
 {% endhint %}
 
-## Creating a configuration file <a id="creating-a-docker-composeyml-configuration-file"></a>
+## Creating a configuration file  <a id="creating-a-docker-composeyml-configuration-file"></a>
 
-The Radix DLT software stack is composed of a set of specialised docker images, with different roles. The minimal \(basic\) radixdlt system contains the following components \(docker images\):
+The Radix DLT software stack is composed of a set of specialised docker images, with different roles. The minimal \(basic\) `radixdlt` system contains the following components \(docker images\):
 
 1. `radixdlt/radixdlt-core:alpha2`
 2. `radixdlt/radixdlt-nginx:alpha2`
@@ -137,7 +137,6 @@ volumes:
   core_ledger:
   core_config:
   nginx_secrets:
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -150,7 +149,7 @@ volumes:
 **Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/node-runner/blob/master/docs/basic-node.yml).
 {% endhint %}
 
-## Launching your Node <a id="launching-your-node"></a>
+## Launching your Node  <a id="launching-your-node"></a>
 
 Open up Terminal \(Mac/Linux\) or CMD on Windows. Navigate to the directory that you put your `docker-composer.yml` file in. Launch the Docker containers with:
 
@@ -216,11 +215,11 @@ If it is working correctly, you should have around a full browser page of peer i
 
 Congratulations, you are now successfully running a Radix Node!
 
-### Kitematic <a id="kitematic"></a>
+### Kitematic  <a id="kitematic"></a>
 
 This is optional, but if you are running your Node on a Mac or Windows computer you can download [Kitematic](https://kitematic.com/) to add a UI to your Docker container: If you want access to nice buttons and a live log view; this is definitely for you!
 
-### Node configuration options <a id="node-configuration-options"></a>
+### Node configuration options  <a id="node-configuration-options"></a>
 
 Changing the configuration below in your docker compose file requires that your re-run docker compose:
 
@@ -228,53 +227,53 @@ Changing the configuration below in your docker compose file requires that your 
 docker-compose -p radixdlt -f basic-node.yml up -d
 ```
 
-#### WIPE\_ADMIN\_PASSWORD <a id="wipe_admin_password"></a>
+#### WIPE\_ADMIN\_PASSWORD  <a id="wipe_admin_password"></a>
 
 Setting this to `yes` and restarting the `nginx` service will wipe and regenerate the `admin` user’s password.
 
-#### WIPE\_LEDGER <a id="wipe_ledger"></a>
+#### WIPE\_LEDGER  <a id="wipe_ledger"></a>
 
 Setting this to `yes` and restarting the `core` service will wipe the local ledger and re-sync it from other nodes in the Radix DLT network.
 
-#### WIPE\_NODE\_KEY <a id="wipe_node_key"></a>
+#### WIPE\_NODE\_KEY  <a id="wipe_node_key"></a>
 
 Setting this to `yes` and restarting the `core` service will wipe the `node.key` file, which is your RadixDLT identity on the network. Hence, you will get a new identity and probably end up in a different shard.
 
-#### CORE\_GOSSIP\_PORT <a id="core_gossip_port"></a>
+#### CORE\_GOSSIP\_PORT  <a id="core_gossip_port"></a>
 
 This is `20000` for the Alpha network and needs to match the port encoded in the `CORE_UNIVERSE` string.
 
-#### CORE\_NETWORK\_SEEDS <a id="core_network_seeds"></a>
+#### CORE\_NETWORK\_SEEDS  <a id="core_network_seeds"></a>
 
 Concrete IP address for discovering other nodes on the Radix DLT network.
 
 Either `CORE_NETWORK_SEEDS` or `CORE_NETWORK_DISCOVERY_URLS` or both need to be set.
 
-#### CORE\_NETWORK\_DISCOVERY\_URLS <a id="core_network_discovery_urls"></a>
+#### CORE\_NETWORK\_DISCOVERY\_URLS  <a id="core_network_discovery_urls"></a>
 
 The URL to a simple web service, which returns an IP address to a random node on the Radix DLT network. This IP address will be used for discovering other nodes on the network.
 
 Either `CORE_NETWORK_DISCOVERY_URLS` or `CORE_NETWORK_SEEDS` or both need to be set.
 
-#### CORE\_PARTITION\_FRAGMENTS <a id="core_partition_fragments"></a>
+#### CORE\_PARTITION\_FRAGMENTS  <a id="core_partition_fragments"></a>
 
-Number of shards that the target network is partition in. For the Alpha network is partitioned into `1`shards.
+Number of shards that the target network is partition in. For the Alpha network is partitioned into `1`shard.
 
-#### CORE\_UNIVERSE <a id="core_universe"></a>
+#### CORE\_UNIVERSE  <a id="core_universe"></a>
 
 Universe identity and properties \(such as gossip port\). This string separates two Radix DLT networks from each other.
 
-### CORE\_SECURE\_RANDOM\_SOURCE <a id="core_secure_random_source"></a>
+#### CORE\_SECURE\_RANDOM\_SOURCE 
 
-Secure random number device used by the JVM. The default device is [/dev/urandom](https://linux.die.net/man/4/urandom).
-However, power users might want to switch to `/dev/random`, in which case a decent a entropy generator side-car container
-is needed (e.g [haveged](https://linux.die.net/man/8/haveged)).
-**NOTE**: Switching to `/dev/random` without an decent entropy generator might cause unexpected periodical stalls (hanging).
+Secure random number device used by the JVM. The default device is [/dev/urandom](https://linux.die.net/man/4/urandom). However, power users might want to switch to `/dev/random`, in which case a decent entropy generator side-car container is needed \(e.g [haveged](https://linux.die.net/man/8/haveged)\). 
 
+{% hint style="danger" %}
+**Note:** Switching to `/dev/random` without a decent entropy generator might cause unexpected periodical stalls \(hanging\).
+{% endhint %}
 
 ## Next: monitor your Radix Node
 
-There are a bunch of frameworks for managing metrics. In the [next guide](), we extend the `basic-node.yml` to include the [Prometheus](https://prometheus.io/) service. Prometheus periodically collects metrics system, and application specific metrics and stores these in its local datastore.
+There are a bunch of frameworks for managing metrics. In the [next guide](./), we extend the `basic-node.yml` to include the [Prometheus](https://prometheus.io/) service. Prometheus periodically collects metrics system, and application specific metrics and stores these in its local datastore.
 
 ## Join the Radix Community
 
