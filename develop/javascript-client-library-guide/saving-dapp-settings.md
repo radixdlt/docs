@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this short tutorial you'll learn how a distributed App \(dApp\) can save and load settings directly to the Radix distributed ledger using our [JavaScript library](./).
+In this short tutorial, you'll learn how a distributed App \(dApp\) can save and load settings directly to the Radix distributed ledger using our [JavaScript library](./).
 
 {% hint style="success" %}
 **Tip:** If you're new to our JavaScript library, we recommend reading [this guide](quick-start.md).
@@ -10,11 +10,11 @@ In this short tutorial you'll learn how a distributed App \(dApp\) can save and 
 
 ## Manage settings
 
-Loading and saving settings are fundamental activities in the workflow of any software application. When we are building a dApp, we can take advantage of the distributed ledger and store those settings directly on it. In this section we present basic JavaScript examples to **Save** and **Load** settings to the Radix ledger.
+Loading and saving settings are basic activities in the workflow of any software application. When we are building a dApp, we can take advantage of the distributed ledger and store those settings directly on it. In this section, we present basic JavaScript examples to **Save** and **Load** settings to the Radix ledger.
 
 ### Saving
 
-Before we start, your application needs to have an **identity** in the ledger. Let's assume that your dApp has an identity `appIdentity` already available, and that we have the following settings to save:
+Before we start, your application needs to have an **identity** in the ledger. Let's assume that your dApp has an identity `appIdentity` already available and that we have the following settings to save:
 
 ```javascript
 const mySettings = {
@@ -34,7 +34,7 @@ To save the application settings to the ledger, you have to...
 * open a **node** connection to the network,
 * prepare the payload \(`appSettings`\) by encoding `mySettings`,
 * build a transaction using `RadixTransactionBuilder`,
-* sign and submit the trasaction with the `appIdentity` identity.
+* sign and submit the transaction with the `appIdentity` identity.
 
 {% hint style="info" %}
 **Note:** you can also subscribe to get transaction status updates and validate if settings were saved correctly.

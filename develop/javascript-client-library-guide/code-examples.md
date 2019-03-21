@@ -1,6 +1,6 @@
 # Code examples
 
-In this article we demonstrate a few implementation examples to execute basic tasks with our JavaScript library.
+In this article, we demonstrate a few implementation examples to execute basic tasks with our JavaScript library.
 
 These code examples are divided into several topics:
 
@@ -25,7 +25,7 @@ These code examples are divided into several topics:
   * [Loading private keys](code-examples.md#loading-private-keys)
 
 {% hint style="success" %}
-**Tip:** if you're new to our JS library, we suggest you to begin with our [Get Started guide](quick-start.md).
+**Tip:** if you're new to our JS library, we suggest you begin with our [Get Started guide](quick-start.md).
 {% endhint %}
 
 ## General
@@ -35,7 +35,7 @@ These code examples are divided into several topics:
 
 ### Initializing a universe
 
-There are different Universes available, such as _ALPHANET_, _HIGHGARDEN_ and _SUNSTONE_. Typically, for development purposes we use **ALPHANET**.
+There are different Universes available, such as `ALPHANET`, `HIGHGARDEN`_,_ and `SUNSTONE`. Typically, for development purposes we use **ALPHANET**.
 
 To bootstrap to a network we call:
 
@@ -67,7 +67,7 @@ Let's review some code examples on how to manage **Atoms**:
 
 ### Reading atoms from a public address
 
-In the following code snippet we read **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by opening a **Node** connection and subscribing to the transaction updates.
+In the following code snippet, we read **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by opening a **Node** connection and subscribing to the transaction updates.
 
 ```javascript
 const account = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM')
@@ -89,7 +89,7 @@ account.transferSystem.getAllTransactions().subscribe(transactionUpdate => {
 
 ### Reading and decrypting atoms from an owned address
 
-In the following code snippet we read and decrypt **Atoms** from an owned address, by opening a **Node** connection and getting the application data from `my-test-application`.
+In the following code snippet, we read and decrypt **Atoms** from an owned address, by opening a **Node** connection and getting the application data from `my-test-application`.
 
 ```javascript
 const identityManager = new RadixIdentityManager()
@@ -127,7 +127,7 @@ account.dataSystem.getApplicationData('my-test-application', ['9iKq87ZvC1pdYC26q
 
 ### Caching atoms
 
-In the following code snippet we cache **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by defining a `'path/to/file'` and enabling the account's cache.
+In the following code snippet, we cache **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by defining a `'path/to/file'` and enabling the account's cache.
 
 ```javascript
 import {RadixNEDBAtomCache} from 'radixdlt'
@@ -147,7 +147,7 @@ Let's review some code examples on how to manage **Accounts**:
 
 ### Creating a custom account system
 
-In the following code snippet we create a custom **Account system**, that enables us to process **Atoms** in any way we might see fit.
+In the following code snippet, we create a custom **Account system**, that enables us to process **Atoms** in any way we want.
 
 ```javascript
 import { RadixAccountSystem, RadixAtomUpdate, RadixAtom } from 'radixdlt'
@@ -165,7 +165,7 @@ export default class CustomAccountSystem implements RadixAccountSystem {
 ```
 
 {% hint style="info" %}
-**Note:** the _atomUpdate_ has an action field, which can be **STORE** or **DELETE**.
+**Note:** the `atomUpdate` has an action field, which can be **STORE** or **DELETE**.
 
 A **DELETE** can occur when an **Atom** fails to validate or is rejected by the consensus. It's crucial to handle it correctly in the particular context of the application.
 {% endhint %}
@@ -188,7 +188,7 @@ Let's review some code examples on how to manage **Identities**:
 * [Creating a simple identity](code-examples.md#creating-a-simple-identity)
 
 {% hint style="success" %}
-**Tip:** using a _RemoteIdentity_ allows the JavaScript application to access an existing account that the user already has on a Wallet, while keeping the private keys secure.
+**Tip:** using a _RemoteIdentity_ allows the JavaScript application to access an existing account that the user already has on a Wallet while keeping the private keys secure.
 {% endhint %}
 
 ### Creating a simple identity
@@ -261,7 +261,7 @@ identityManager.generateRemoteIdentity('my dApp', 'my dApp description').then(id
 
 ## Manage transactions
 
-Let's review a few code examples related to _RadixTransactionBuilder_, and see how we can handle transactions, messages and payloads:
+Let's review a few code examples related to _RadixTransactionBuilder_, and see how we can handle transactions, messages, and payloads:
 
 * [Sending a transaction](code-examples.md#sending-a-transaction)
 * [Sending a message](code-examples.md#sending-a-message)
@@ -269,7 +269,7 @@ Let's review a few code examples related to _RadixTransactionBuilder_, and see h
 
 ### Sending a transaction
 
-In the following code snippet we send a transaction from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a transfer **Atom** and signing it with our **Identity**. Finally we get the results by subscribing to the transaction updates.
+In the following code snippet, we send a transaction from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a transfer **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -299,7 +299,7 @@ transactionStatus.subscribe({
 
 ### Sending a message
 
-In the following code snippet we send a **Message** from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a message **Atom** and signing it with our **Identity**. Finally we get the results by subscribing to the transaction updates.
+In the following code snippet, we send a **Message** from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a message **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -329,7 +329,7 @@ transactionStatus.subscribe({
 
 ### Storing an application payload
 
-In the following code snippet we store a **Payload** to the application _my-test-app_ for an owned address and the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a payload **Atom** and signing it with our **Identity**. Finally we get the results by subscribing to the transaction updates.
+In the following code snippet, we store a **Payload** to the application _my-test-app_ for an owned address and the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a payload **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -370,7 +370,7 @@ Finally, let's review two code examples on how to store and load private keys:
 
 ### Storing private keys
 
-In the following code snippet we encrypt the private key of an identity using the password `SuperDuperSecretPassword`. The resulting JSON object can be stored to a file, or in a browser's local storage.
+In the following code snippet, we encrypt the private key of an identity using the password `SuperDuperSecretPassword`. The resulting JSON object can be saved to a file, or in a browser's local storage.
 
 ```javascript
 const identity = identityManager.generateSimpleIdentity()
@@ -389,7 +389,7 @@ The key storage format is compatible with the Radix Desktop and Android wallet a
 
 ### Loading private keys
 
-In the following code snippet we decrypt a private key using `SuperDuperSecretPassword` as the decryption password.
+In the following code snippet, we decrypt a private key using `SuperDuperSecretPassword` as the decryption password.
 
 ```javascript
 const encryptedKey = loadKeyFromStorage() // This object is what you get from RadixKeyStore.encryptKey(...)

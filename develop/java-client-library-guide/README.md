@@ -13,7 +13,7 @@
 
 ## Gradle
 
-Include the following Gradle dependency
+Include the following Gradle dependency:
 
 ```java
 repositories {

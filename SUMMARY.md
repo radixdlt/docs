@@ -14,7 +14,7 @@
 * [JavaScript Client Library](develop/javascript-client-library-guide/README.md)
   * [Get started](develop/javascript-client-library-guide/quick-start.md)
   * [Code examples](develop/javascript-client-library-guide/code-examples.md)
-  * [Example Applications](develop/javascript-client-library-guide/tutorials.md)
+  * [Example applications](develop/javascript-client-library-guide/tutorials.md)
   * [Saving dApp settings](develop/javascript-client-library-guide/saving-dapp-settings.md)
   * [GitHub JavaScript Library](https://github.com/radixdlt/radixdlt-js)
 * [Alphanet Explorer](https://alphanet.radixdlt.com)

@@ -1,44 +1,50 @@
 # Kotlin Client Library
 
-The Kotlin Client library for interacting with a [Radix](https://www.radixdlt.com/) Distributed Ledger compatible with Kotlin/Java projects and maximizing compatibility with all versions of Android.
+## Introduction
 
-Compatibility with lower versions of Android is achieved by avoiding the use of any Java 8 APIs e.g. Stream, Optional, Function, etc and using Kotlin built in alternatives.
+This library provides access to a [Radix](https://www.radixdlt.com/) Distributed Ledger from Kotlin/Java projects while maximizing compatibility with all versions of Android.
+
+Compatibility with lower versions of Android is achieved by avoiding the use of any Java 8 APIs, e.g. Stream, Optional, Function, etc. and using Kotlin built-in alternatives.
 
 ### Code style
 
-This project uses [ktlint](https://github.com/shyiko/ktlint) via [Gradle](https://gradle.org/) dependency.  
+The project uses [ktlint](https://github.com/shyiko/ktlint) via [Gradle](https://gradle.org/) dependency.  
 To check code style - `gradle ktlint` \(it's also bound to `gradle check`\).
 
 ### Features
 
 * Connection to the Alphanet test network
-* Fee-less transactions for testnets
+* Fee-less transactions for Testnets
 * Identity Creation
 * Native token transfers
 * Immutable data storage
-* Instant Messaging and TEST token wallet Dapp implementation
+* Instant Messaging and TEST token wallet DApp implementation
 * RXJava 2 based
 * Utilizes JSON-RPC over Websockets
 
 ## Gradle <a id="gradle"></a>
 
-Include the following Gradle dependency
+Include the following Gradle dependency:
 
-```text
-repositories {    maven { url 'https://jitpack.io' }}​
+```kotlin
+repositories {
+    maven { url 'https://jitpack.io' }
+}​
 ```
 
-```text
-dependencies {    implementation 'com.radixdlt:radixdlt-kotlin:0.11.3'}
+```kotlin
+dependencies {
+    implementation 'com.radixdlt:radixdlt-kotlin:0.11.3'
+}
 ```
 
 ## Identities <a id="identities"></a>
 
-An Identity is the user's credentials \(or more technically the manager of the public/private key pair\) into the ledger, allowing a user to own tokens and send tokens as well as decrypt data.
+An Identity is the user's credentials \(or more technically the manager of the public/private key pair\) into the ledger, allowing a user to own and send tokens as well as decrypt data.
 
 To create/load an identity from a file:
 
-```text
+```kotlin
 val identity: RadixIdentity = RadixIdentities.loadOrCreateEncryptedFile("filename.key", "password")
 ```
 
@@ -50,20 +56,23 @@ A Universe is an instance of a Radix Distributed Ledger which is defined by a ge
 
 To bootstrap to the Alphanet test network:
 
-```text
+```kotlin
 RadixUniverse.bootstrap(Bootstrap.ALPHANET)
 ```
 
-NOTE: No network connections will be made yet until it is required.
+{% hint style="info" %}
+**Note:** No network connections will be made yet until it is required.
+{% endhint %}
 
-## Radix Dapp API <a id="radix-dapp-api"></a>
+## Radix DApp API <a id="radix-dapp-api"></a>
 
-The Radix Application API is a client side API exposing high level abstractions to make DAPP creation easier.
+The Radix Application API is a client-side API exposing high-level abstractions to make DApp creation easier.
 
 To initialize the API:
 
-```text
-RadixUniverse.bootstrap(Bootstrap.ALPHANET) // This must be called before RadixApplicationAPI.create()val api: RadixApplicationAPI = RadixApplicationAPI.create(identity)
+```kotlin
+RadixUniverse.bootstrap(Bootstrap.ALPHANET) // This must be called before RadixApplicationAPI.create()
+val api: RadixApplicationAPI = RadixApplicationAPI.create(identity)
 ```
 
 ### Addresses <a id="addresses"></a>
@@ -72,13 +81,13 @@ An address is a reference to an account and allows a user to receive tokens and/
 
 You can get your own address by:
 
-```text
+```kotlin
 val myAddress: RadixAddress = api.myAddress
 ```
 
 Or from a base58 string:
 
-```text
+```kotlin
 val anotherAddress: RadixAddress = RadixAddress.fromString("JHB89drvftPj6zVCNjnaijURk8D8AMFw4mVja19aoBGmRXWchnJ")
 ```
 
@@ -88,48 +97,56 @@ Immutable data can be stored on the ledger. The data can be encrypted so that on
 
 To store the encrypted string `Hello` which only the user can read:
 
-```text
-val myPublicKey: ECPublicKey = api.myPublicKeyval data: Data = Data.DataBuilder()    .bytes("Hello".toByteArray())    .addReader(myPublicKey)    .build()result: Result = api.storeData(data, <address>)
+```kotlin
+val myPublicKey: ECPublicKey = api.myPublicKeyval
+data: Data = Data.DataBuilder().bytes("Hello".toByteArray()).addReader(myPublicKey).build()
+result: Result = api.storeData(data, <address>)
 ```
 
 To store unencrypted data:
 
-```text
-val data: Data = Data.DataBuilder()    .bytes("Hello World".toByteArray())    .unencrypted()    .build()val result: Result = api.storeData(data, <address>)
+```kotlin
+val data: Data = Data.DataBuilder().bytes("Hello World".toByteArray()).unencrypted().build()
+val result: Result = api.storeData(data, <address>)
 ```
 
 The returned `Result` object exposes RXJava interfaces from which you can get notified of the status of the storage action:
 
-```text
+```kotlin
 result.toCompletable().subscribe(<on-success>, <on-error>)
 ```
 
 To then read \(and decrypt if necessary\) all the readable data at an address:
 
-```text
-val readable: Observable<UnencryptedData> = api.getReadableData(<address>)readable.subscribe { data ->  ...  }
+```kotlin
+val readable: Observable<UnencryptedData> = api.getReadableData(<address>)
+readable.subscribe { data ->  ...  }
 ```
 
-NOTE: data which is not decryptable by the user's key is simply ignored
+{% hint style="info" %}
+**Note:** data which is not decryptable by the user's key is simply ignored
+{% endhint %}
 
 ### Sending and Retrieving Tokens <a id="sending-and-retrieving-tokens"></a>
 
 To send an amount of TEST \(the testnet native token\) from my account to another address:
 
-```text
+```kotlin
 val result: Result = api.sendTokens(<to-address>, Amount.of(10, Asset.TEST))
 ```
 
 To retrieve all of the token transfers which have occurred in my account:
 
-```text
-val transfers: Observable<TokenTransfer> = api.getMyTokenTransfers(Asset.TEST)transfers.subscribe { tx -> ... }
+```kotlin
+val transfers: Observable<TokenTransfer> = api.getMyTokenTransfers(Asset.TEST)
+transfers.subscribe { tx -> ... }
 ```
 
 To get a stream of the balance of TEST tokens in my account:
 
-```text
-val balance: Observable<Amount> = api.getMyBalance(Asset.TEST)balance.subscribe { bal -> ... }
+```kotlin
+val balance: Observable<Amount> = api.getMyBalance(Asset.TEST)
+balance.subscribe { bal -> ... }
 ```
 
 ## Join the Radix Community
