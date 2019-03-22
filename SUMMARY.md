@@ -19,8 +19,8 @@
   * [GitHub JavaScript Library](https://github.com/radixdlt/radixdlt-js)
 * [Alphanet Explorer](https://alphanet.radixdlt.com)
 * [Alphanet Use Cases](develop/use-cases/README.md)
-  * [Alias System](develop/use-cases/alias-system.md)
-  * [File Notarization](develop/use-cases/file-notarization.md)
+  * [Alias system](develop/use-cases/alias-system.md)
+  * [File notarization](develop/use-cases/file-notarization.md)
 
 ## Node Runners
 

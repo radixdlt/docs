@@ -1,12 +1,12 @@
 # Node Client
 
-## Introduction    <a id="introduction"></a>
-
 {% hint style="danger" %}
 **Please note that the Node Client software is not yet available.**
 {% endhint %}
 
-This is a [Quick Start](./) guide to running a Radix DLT Node on your computer primarily aimed for non-technical users. The following steps will be covered:
+## Introduction    <a id="introduction"></a>
+
+This is a quick start guide aimed for non-technical users, to run a Radix DLT Node on your computer. The following steps are covered:
 
 1. [Installing Docker](./#installing-docker)
 2. [Creating a configuration file](./#creating-a-docker-composeyml-configuration-file)
@@ -28,7 +28,7 @@ The actual disk size requirement will grow over time as the ledger grows.
 
 ### Software    <a id="software"></a>
 
-You can run a Radix DLT node on any operative system that supports Docker and Docker Compose, including:
+You can run a Radix DLT node on any operating system that supports Docker and Docker Compose, including:
 
 * Linux
 * MacOS X
@@ -36,22 +36,22 @@ You can run a Radix DLT node on any operative system that supports Docker and Do
 
 ### Forwarding incoming traffic to your Node    <a id="forwarding-incoming-traffic-to-your-node"></a>
 
-{% hint style="info" %}
-You can skip this if your node is directly connected to the Internet \(has a public IP address\).
+{% hint style="success" %}
+**Tip:** you can skip this step if your node is directly connected to the Internet \(it has a public IP address\).
 {% endhint %}
 
-If you are behind a firewall/NAT \(typically `192.168.*`, `10.*` IP address\), then you need to forward traffic to your node including:
+If you are behind a firewall/NAT \(typically `192.168.*`, `10.*` IP address\), then you need to forward incoming traffic to your node, including:
 
 1. Incoming Gossip traffic on **TCP port 20000**.
 2. Incoming Gossip traffic on **UDP port 20000**.
 3. Incoming HTTPS traffic on **TCP port 443**.
 
-Furthermore, you need to make sure your DHCP server is assigning a **static IP address** to your node, otherwise forwarded traffic will fail if your node’s IP address changes later on.
+Furthermore, you need to make sure your DHCP server is assigning a **static IP address** to your node; otherwise, forwarded traffic will fail if your node’s IP address changes later on.
 
-These are rather straight forward changes that most consumer Routers support. Please refer to the user guide of your Router for how to do this.
+These are rather straight forward changes that most consumer routers support. Please refer to the user guide of your Router for instructions on how to do these changes.
 
 {% hint style="info" %}
-These ports might change for _Beta_ - please check back later.
+**Note:** these ports might change for _Beta_ - please check back later.
 {% endhint %}
 
 ## Installing Docker    <a id="installing-docker"></a>
@@ -76,7 +76,7 @@ The Radix DLT software stack is composed of a set of specialized docker images, 
 2. `radixdlt/radixdlt-nginx:alpha2`
 3. `radixdlt/nns-client:alpha2`
 
-Your `docker-compose.yml` determines the software components you will run. In particular the following is specified:
+Your `docker-compose.yml` determines the software components you will run. In particular, the following settings are specified:
 
 * One or more Docker images to download and start
 * The configuration \(see [environment variables](./#node-configuration-options)\) for each Docker image
@@ -143,9 +143,9 @@ volumes:
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-1. Create a directory on your computer for storing docker compose files \(e.g. `radixdlt`\).
+1. Create a directory on your computer for storing docker compose files \(e.g., `radixdlt`\).
 2. Use your favorite text editor to create the `basic-node.yml`.
-3. Copy-and-paste the content above.
+3. Copy and paste the content above.
 
 {% hint style="success" %}
 **Tip:** you can also download the latest version of the file here: [`basic-node.yml`](https://github.com/radixdlt/node-runner/blob/master/docker-compose/basic-node.yml).
@@ -153,7 +153,7 @@ volumes:
 
 ## Launching your Node    <a id="launching-your-node"></a>
 
-Open up Terminal \(Mac/Linux\) or CMD on Windows. Navigate to the directory that you put your `basic-node.yml` file in. Launch the Docker containers with:
+Open up a Terminal \(Mac/Linux\) or a Command Prompt \(on Windows\). Navigate to the directory where you've placed your `basic-node.yml` file. Launch the Docker containers with:
 
 ```bash
 cd ~/radixdlt
@@ -183,18 +183,18 @@ Check that you have 3 \(`radixdlt_nginx_1`, `nns_client_1`, and `radixdlt_core_1
 docker ps
 ```
 
-Make note and write down the `admin` password - its written in the `radixdlt_nginx_1` container logs the **first time** it starts:
+Make a note and write down the `admin` password - it's written in the `radixdlt_nginx_1` container logs the **first time** it starts:
 
 ```bash
 docker logs radixdlt_nginx_1
 ```
 
-This password is used for accessing administrative APIs on your node. If you forget, you can re-generate this at any time by setting the `WIPE_ADMIN_PASSWORD` environment variable.
+This password is used for accessing administrative API endpoints on your node. If you forget, you can re-generate this at any time by setting the `WIPE_ADMIN_PASSWORD` environment variable.
 
 You can also check if the Node is up and running at [https://localhost/api/system](https://localhost/api/system)
 
 {% hint style="warning" %}
-**Note**: Since it is a self-signed certificate browsers are expected to warn you that this link is unsafe - you can disregard this for Alpha/Beta.
+**Note**: Since it is a self-signed certificate, browsers are expected to warn you that this link is unsafe - you can disregard this for Alpha/Beta.
 {% endhint %}
 
 If running correctly you should get a bunch of metrics - it should look something like this:
@@ -219,11 +219,11 @@ Congratulations, you are now successfully running a Radix Node!
 
 ### Kitematic    <a id="kitematic"></a>
 
-This is optional, but if you are running your Node on a Mac or Windows computer you can download [Kitematic](https://kitematic.com/) to add a UI to your Docker container: If you want access to nice buttons and a live log view; this is definitely for you!
+This is optional, but if you are running your Node on a Mac or Windows computer, you can download [Kitematic](https://kitematic.com/) to add a UI to your Docker container. If you want access to nice buttons and a live log view this is definitely for you!
 
 ### Node configuration options    <a id="node-configuration-options"></a>
 
-Changing the configuration below in your docker compose file requires that your re-run docker compose:
+Changing the configuration below in your docker compose file requires that you re-run docker compose:
 
 ```bash
 docker-compose -p radixdlt -f basic-node.yml up -d
@@ -259,7 +259,7 @@ Either `CORE_NETWORK_DISCOVERY_URLS` or `CORE_NETWORK_SEEDS` or both need to be 
 
 #### CORE\_PARTITION\_FRAGMENTS    <a id="core_partition_fragments"></a>
 
-Number of shards that the target network is partition in. For the Alpha network is partitioned into `1`shard.
+The number of shards that the target network is partitioned in. For the Alpha, the network is partitioned into `1`shard.
 
 #### CORE\_UNIVERSE    <a id="core_universe"></a>
 

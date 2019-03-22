@@ -11,7 +11,7 @@ Yes, it is, and that's why we recommend using this solution only for testing pur
 
 ### Acquiring a certificate
 
-For production environments, we strongly advise to acquire a valid DNS and the corresponding TLS certificate. A free service that provides TLS certificates free of charge is [Let's Encrypt](https://letsencrypt.org/). 
+For production environments, we strongly advise acquiring a valid DNS and the corresponding TLS certificate. A free service that provides TLS certificates free of charge is [Let's Encrypt](https://letsencrypt.org/). 
 
 {% hint style="info" %}
 Unfortunately, _Let's Encrypt_ ****service **is rate-limited to 50 certificates/week** so Radix cannot leverage it on behalf of our nodes**.**
