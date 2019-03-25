@@ -22,8 +22,8 @@ Your targeted node should have **at least**:
 * 8 GB memory
 * 256 GB disk
 
-{% hint style="warning" %}
-The actual disk size requirement will grow over time as the ledger grows.
+{% hint style="info" %}
+**Note:** the actual disk size requirement will grow over time as the ledger grows.
 {% endhint %}
 
 ### Software    <a id="software"></a>
@@ -216,6 +216,22 @@ If it is working correctly, you should have around a full browser page of peer i
 ```
 
 Congratulations, you are now successfully running a Radix Node!
+
+### Managing your node
+
+Once you've your node running, you can stop or refresh \(upgrade\) your node using the following commands:
+
+#### Stop the node
+
+```bash
+docker-compose -p radixdlt -f basic-node.yml down
+```
+
+#### Refresh the node
+
+```bash
+docker-compose -p radixdlt -f basic-node.yml pull
+```
 
 ### Kitematic    <a id="kitematic"></a>
 
