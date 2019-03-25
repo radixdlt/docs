@@ -2,8 +2,7 @@
 
 ## Radix Security Model Basics
 
-During the final leg of our alpha launch event, Dan gives a quick primer on the Radix Security Model.  
-Anybody who wants to learn more Radix security should start by watching the following video:
+During the final leg of our alpha launch event, Dan gives a quick primer on the Radix Security Model. Anybody who wants to learn more Radix security should start by watching the following video:
 
 {% embed url="https://www.youtube.com/watch?v=7xc9TNKMNLY&t=2201s" %}
 
@@ -11,7 +10,7 @@ Anybody who wants to learn more Radix security should start by watching the foll
 
 _Radix uses logical clocks for generating a causal ordering of events to detect and prevent double spends._
 
-Essentially the first event to gain a temporal proof will become the valid event, the second event will be automatically discarded by the nodes as soon as an earlier temporal proof is presented. As this will happen within the time it takes for both transactions to be gossiped to all Nodes in a shard, certainty of a transaction can be generally reached within 5 seconds or less.  
+The first event to gain a temporal proof will become the valid event, the second event will be automatically discarded by the nodes as soon as an earlier temporal proof is presented. As this will happen within the time it takes for both transactions to be gossiped to all Nodes in a shard, the certainty of a transaction can be generally reached within 5 seconds or less.  
 
 
 ## Preventing Sybil Attacks
@@ -25,7 +24,7 @@ When thinking about Sybil in Radix, you need to consider where Sybil would give 
 1\) Eclipse attacks   
 2\) Consensus attacks
 
-Neither of these are easy or cheap to pull off....
+Neither of these is easy or cheap to pull off...
 
 {% hint style="info" %}
 [Blog post on Eclipse attacks](https://www.radixdlt.com/post/what-is-an-eclipse-attack)
@@ -33,33 +32,29 @@ Neither of these are easy or cheap to pull off....
 
 ### Sybil protection for Eclipse Attacks
 
-All nodes have a NID \(Node Identifier\) which is produced by creating a POW hash of sufficient difficulty using its public key and some ledger meta data. I won't detail the algorithm used to decide which ledger data is used for the POW here, but its results in ASIC resistance.
+All nodes have a NID \(Node Identifier\) which is produced by creating a POW hash of sufficient difficulty using its public key and some ledger meta-data. We won't detail the algorithm used to decide which ledger data is used for the POW here, but it results in ASIC resistance. 
 
-If I want to eclipse a node \(or set of nodes\), then due to the fact that connections and gossip are driven by NIDs and NID distance, I need to calculate my NID to be as close to the NID of the node I wish to attack as possible.
+If I want to eclipse a node \(or set of nodes\), then because NIDs and NID distance drive connections and gossip, I need to calculate my NID to be as close to the NID of the node I wish to attack as possible. 
 
-If I don't, I cant have any strong guarantees that I can eclipse them, or that my eclipse is temporary \(another new node joins that has a NID closer to my target than I do, therefore the eclipse is broken and the target node has access to the truth\).
+If I don't, I can't have any strong guarantees that I can eclipse them, or that my eclipse is temporary \(another new node joins that has a NID closer to my target than I do. Therefore the eclipse is broken, and the target node has access to the truth\). 
 
-Generally for me to create a NID in acceptable range of a target NID requires me to generate as many POWs for my public key as there are nodes in the network. In a healthy network of 10,000 nodes \(similar to BTC and ETH\), thats 10,000 hours of work for a NID that is in range.
+Generally for me to create a NID in an acceptable range of a target NID requires me to generate as many POWs for my public key as there are nodes in the network. In a healthy network of 10,000 nodes \(similar to BTC and ETH\), that's 10,000 hours of work for a NID that is in range. 
 
-The target node probably holds more than 1 TCP connection, the default is 8, but node operators can configure however many they would like.
+The target node probably holds more than 1 TCP connection, the default is 8, but node operators can configure however many they would like. To entirely eclipse that node via its TCP connections, I would need 8 NIDs in range, so about 80,000 hours of work. 
 
-In order to fully eclipse that node via its TCP connections, I would need 8 NIDs in range, so about 80,000 hours of work.
+Exaggerating the problem further is that I never actually know if I have eclipsed that node. Say I create 8 NIDs for my target, but only 6 of them can connect. Does that mean that the node only has 6 connections in total and is eclipsed? Or are 2 of its connections already occupied by other NIDs that I don't control. 
 
-Exaggerating the problem further is that I never actually know if I have eclipsed that node. Say I create 8 NIDs for my target, but only 6 of them can connect. Does that mean that the node only has 6 connections in total and is eclipsed? Or are 2 of its connections already occupied by other NIDs that I don't control.
+My only option here is to continue trying to connect to it, in the hope that the nodes I don't control disconnect from it, and I can connect to it before a connection to another node is established. Maybe all 8 of my nodes connect, but I still don't know the status of the eclipse, maybe that node is configured to hold 9+ TCP connections. 
 
-My only option here is to continue trying to connect to it, in the hope that the nodes I don't control disconnect from it, and I can connect to it before a connection to another node is established.
+Finally, nodes use TCP for sync and UDP for gossip. UDP doesn't have any connection limit, and I as an attacker can not prevent any node in the network talking to my target over UDP, nor can I prevent my target from talking to any other node over UDP. 
 
-Maybe all 8 of my nodes connect, but I still don't know the status of the eclipse, maybe that node is configured to hold 9+ TCP connections.
+My target can still receive truthful statements, from anywhere in the network, and there is nothing I can do about that as an attacker. Even if I have managed to eclipse them from a TCP/Sync perspective, they will likely receive truthful information over UDP that conflicts with whatever it is I am telling it. 
 
-Finally, nodes use TCP for sync, and UDP for gossip. UDP doesn't have any connection limit, and I as an attacker can not prevent any node in the network talking to my target over UDP, nor can I prevent my target from talking to any other node over UDP.
-
-My target can still receive truthful statements, from anywhere in the network, and there is nothing I can do about that as an attacker. Even if I have managed to eclipse them from a TCP/Sync perspective, they will likely receive truthful information over UDP that conflicts with whatever it is I am telling it.
-
-Full eclipse attacks in Radix are pretty much impossible as far as I can tell.
+Full eclipse attacks in Radix are pretty much impossible .
 
 ### Sybil Protection for Consensus Attacks
 
-POW in Bitcoin mining is used to ensure that only one vote can be made every 10 mins \(on average\). Its a very simple Sybil protection mechanism that means no matter how many machines I have, or miners, or identies, the probability is that I can only vote \(create a block\) once every 10 mins.
+POW in Bitcoin mining is used to ensure that only one vote can be made every 10 mins \(on average\). It's a very simple Sybil protection mechanism that means no matter how many machines I have, or miners, or identities, the probability is that I can only vote \(create a block\) once every 10 mins.
 
 The issue is that POW vote Sybil is not very scalable or efficient.
 
@@ -81,7 +76,7 @@ In order to have enough mass to mount an attack, I as an attacker would have to 
 
 I can produce my own Atoms, which would require a HUGE amount of funds at my disposal, which I then need to manage to extract the maximum amount of mass from them \(which generally means I would have to hold 50%+ of ALL XRD in existence at all times\), not to mention the fees.
 
-A better option is probably to be the initial validator for as many of everyone elses Atoms as possible.
+A better option is probably to be the initial validator for as many of everyone else's Atoms as possible.
 
 To do that I need to create an equal amount of nodes in the network as there were before I started. If there were 10,000 nodes before I started, I need to create 10,000 nodes of my own.
 
@@ -89,7 +84,7 @@ I need to generate 10,000 NIDs, distributed as evenly as possible throughout the
 
 Finally, I need my 10,000 to be connected to as many transaction producing clients as possible. If a client holds 8 connections to the network, I need at LEAST 4 of those in order to catch my 50%+ mass, for EVERY connected client.
 
-As with eclipsing though, even if I do all that, theres a final nail that kills me dead.
+As with eclipsing though, even if I do all that, there's a final nail that kills me dead.
 
 50% of the mass from now isn't enough, as all the nodes that were in the network before me already have mass. I actually need 50%+ of all the mass ever generated in order to be sure my 51% attack will actually be near successful, which in turn means that I need to control much more than 10,000 nodes to do so in a reasonable amount of time.
 
@@ -125,7 +120,7 @@ These mechanisms will be covered in more detail in the forthcoming v2 Tempo Whit
 
 The cost of sending transactions across the Radix network is currently set at $0.01, while the cost of validating a transaction is almost negligible in terms of computer resources. 
 
-This makes the attack highly asymmetric in favour of Nodes, meaning that an attacker would have to spend a very high amount in fees to create any kind of stress on the network. If an attacker spams the network, nodes are immediately incentivized to validate them and collect fees for work done, in extreme cases, attracting more nodes to the shard being attacked due to the strong, positive economic incentives.
+This makes the attack highly asymmetric in favor of Nodes, meaning that an attacker would have to spend a very high amount in fees to create any kind of stress on the network. If an attacker spams the network, nodes are immediately incentivized to validate them and collect fees for work done, in extreme cases, attracting more nodes to the shard being attacked due to the strong, positive economic incentives.
 
 ## How does Radix prevent nodes from suppressing transaction announcements?
 
@@ -175,9 +170,9 @@ In most scenarios, no further action is required by the Node. A Node hears about
 
 A simple example of a conflict would be two spends of the same consumable \(e.g. a double spend\). In 95% of cases, this is simply a matter of comparing the collected logical clock values from all the nodes both transactions touched, and the transactions that came before and after that specific transaction.
 
-For example, event X and Y conflict. If a node knows transaction X took place before transaction Z, but does not know when Y occured. It simply has to find a node that saw both Y and Z. If Y is found to have occured after Z, then Y may be discarded as the later transaction and the invalid second spend.
+For example, event X and Y conflict. If a node knows transaction X took place before transaction Z, but does not know when Y occurred. It simply has to find a node that saw both Y and Z. If Y is found to have occurred after Z, then Y may be discarded as the later transaction and the invalid second spend.
 
-If Z does not exist, or Y occured before Z, then the second stages of Radix consensus are engaged. This second stage is called Mass, and will be the subject of future blog posts, but a brief introduction can be found at the end of our Alpha launch video here:  
+If Z does not exist, or Y occurred before Z, then the second stages of Radix consensus are engaged. This second stage is called Mass, and will be the subject of future blog posts, but a brief introduction can be found at the end of our Alpha launch video here:  
 
 {% embed url="https://www.youtube.com/watch?time\_continue=2201&v=7xc9TNKMNLY" %}
 
@@ -250,7 +245,7 @@ As such, we need a new means to quickly and fairly resolve these more exotic con
 
 We label events within the network \(such as messages or transactions\) as ‘[atoms’](https://www.radixdlt.com/faq/atoms). These atoms carry mass if they are transferring value, for example transactions or payloads with fees. This mass is calculated in a very simple manner, simply being the quantity \(e.g. the amount of Radix being transferred\) multiplied by the amount of time it has been static for. For example, if I transferred 10 Radix to Bob which I had held for 10 days then the mass of the atom being sent would be 100. If I had 5 Radix but had held for 20 days then the mass would similarly be 100.
 
-The first node in the[ temporal proof](https://www.radixdlt.com/faq/temporal-proof) for a valid transaction receives this mass. Nodes then build up mass across the multiple transactions they validate. The record of this mass is stored by nodes serving the same shards as said recipient node, as they store temporal proofs from completed transactions \(known as finality\). It is important to remember that transactions don’t just have a single gossip path through the network but rather have multiple routes due to the nature of our gossip protocol, which sees nodes ‘talk’ to all of their neighbouring nodes. This means that transactions are seen by a large majority of nodes.
+The first node in the[ temporal proof](https://www.radixdlt.com/faq/temporal-proof) for a valid transaction receives this mass. Nodes then build up mass across the multiple transactions they validate. The record of this mass is stored by nodes serving the same shards as said recipient node, as they store temporal proofs from completed transactions \(known as finality\). It is important to remember that transactions don’t just have a single gossip path through the network but rather have multiple routes due to the nature of our gossip protocol, which sees nodes ‘talk’ to all of their neighboring nodes. This means that transactions are seen by a large majority of nodes.
 
 This mass allows us to resolve conflicts which cannot be solved by simple resolution by letting us use mass as the determining factor. We add up the mass of all nodes involved in the temporal proof for the conflicting transactions and the atom with the most total mass associated with it is accepted. The losing transaction is meanwhile discarded.
 
@@ -260,7 +255,7 @@ Expanding upon this logically, in the event of a network split whichever network
 
 For conflicting transactions on the subnet to ‘win’, the malicious actor would have to outrace the naturally much larger mass of the mainnet. This is both difficult and expensive and can be thought of as similar as to how Bitcoin or other Proof of Work networks resolve splits – whichever chain has the higher hashrate and thus the greater amount of mined blocks becomes the primary chain, with the other\(s\) discarded.
 
-The obvious issue would be that someone could ‘fake’ mass on the subnet. However, this is impractical. Whereas hashrate can be increased by purchasing more mining equipment, mass in Radix is partially decided by the unbuyable commodity of time. Even if a malicious actor was to repeatedly spam their own nodes, the mass of each event would be low because the calculation of mass includes time held.
+The obvious issue would be that someone could ‘fake’ mass on the subnet. However, this is impractical. Whereas hashrate can be increased by purchasing more mining equipment, mass in Radix is partially decided by the un-buyable commodity of time. Even if a malicious actor was to repeatedly spam their own nodes, the mass of each event would be low because the calculation of mass includes time held.
 
 Equally, a malicious actor trying to acquire more Radix to make more transactions would find such a pursuit prohibitively expensive, even for the most well-resourced of actors, as they either have to lock up funds for extensive periods of time \(over which time the total mass of the network continues to increase naturally\) or they must get a very, very large number of funds and try and spam the network at a slow but continuous rate. This both eats away at the balance in fees, and the network continues to gather mass naturally, creating a very difficult to beat mass race condition.
 

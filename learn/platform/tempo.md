@@ -6,19 +6,19 @@ To achieve speed, scalability, efficiency, Radix has created a combined distribu
 
 ### Scaling distributed ledgers
 
-To solve the problem of scalability, Radix started with the data architecture required for that kind of scale. We realized that to serve the world you needed a data architecture that could allow billions of people and even more devices to use it simultaneously. That would need to be both incredibly easy to index \(to make the data structure usable\), and [massively sharded](https://www.radixdlt.com/post/what-is-sharding) \(cut into fragments\) so as the demand of the network grew, more computers could be added to increase the throughput of the network.
+To solve the problem of scalability, Radix started with the data architecture required for that kind of scale. We realized that to serve the world, you needed a data architecture that could allow billions of people and even more devices to use it simultaneously. That would need to be both incredibly easy to index \(to make the data structure usable\), and [massively sharded](https://www.radixdlt.com/post/what-is-sharding) \(cut into fragments\) so as the demand of the network grows, more computers could be added to increase the throughput of the network.
 
 {% hint style="info" %}
 [Learn what is sharding in this explainer blog post](https://www.radixdlt.com/post/what-is-sharding)
 {% endhint %}
 
-We realized that cutting up the data ad-hoc would not work. Instead you need to already know how the data will be cut up. You should be able to look at any piece of data and know where it lives in the data structure without having to re-index every time large amounts of new data is added. This feature of Radix is achieved through a deterministic process \(a process that, given a set of inputs, always outputs the same answer, no matter when it is computed\). We achieve that by [pre-cutting up the data structure of the platform into 18.4 quintillion shards ](https://papers.radixdlt.com/incentives/#shards)\(2^64\). We then use key reference fields, such as a public key, as a way of determining where in that shard space a particular piece of data lives.
+We realized that cutting up the data ad-hoc would not work. Instead, you need to know already how the data will be cut up. You should be able to look at any piece of data and know where it lives in the data structure without having to re-index every time large amounts of new data is added. This feature of Radix is achieved through a deterministic process \(a process that, given a set of inputs, always outputs the same answer, no matter when it is computed\). We achieve that by [pre-cutting up the data structure of the platform into 18.4 quintillion shards ](https://papers.radixdlt.com/incentives/#shards)\(2^64\). We then use key reference fields, such as a public key, as a way of determining where in that shard space a particular piece of data lives.
 
 {% hint style="info" %}
 [Read about sharding in Radix in this explainer blog post](https://www.radixdlt.com/post/sharding-in-radix)
 {% endhint %}
 
-The result of this innovation is a data structure that is sharded and able to scale linearly, without overhead, from tiny data sets to ones large enough to service every person and business in the world. The total throughput of the network is only limited by the number of participating nodes in the network.
+The result of this innovation is a data structure that is sharded and able to scale linearly, without overhead, from tiny data sets to ones large enough to serve every person and business in the world. The total throughput of the network is only limited by the number of participating nodes in the network.
 
 {% hint style="info" %}
 [Discuss how Radix scale linearly on our developer forum](https://forum.radixdlt.com/t/how-does-radix-scale-linearly/38)
@@ -26,19 +26,19 @@ The result of this innovation is a data structure that is sharded and able to sc
 
 ### Designing an efficient and secure consensus algorithm
 
-Dealing with large amounts of data efficiently is only one part of the problem that must be solved for true mainstream use of Distributed Ledger Technology \(DLT\) - the other part of this is making sure that no conflicting data can exist in the system without it being quickly flagged and removed. This system of comparing, ordering and agreeing on data conflicts is broadly referred to as “consensus”.
+Dealing with large amounts of data efficiently is only one part of the problem that must be solved for true mainstream use of Distributed Ledger Technology \(DLT\) - the other part of this is making sure that no conflicting data can exist in the system without it being quickly flagged and removed. This system of comparing, ordering and agreeing on data conflicts is broadly referred to as “consensus.”
 
-Consensus systems can be loosely grouped into permissioned and permissionless consensus. Permissioned consensus is where all parties that are involved in deciding between conflicting entries are identifiable \(e.g. a specific business\) and are given express permission to amend and reject information in the system. These systems have been around for a long time to manage distributed databases and are still used in a number of new permissioned systems such as Hyperledger and R3’s Corda, and are built on permissioned consensus systems from the 1970’s such as PBFD and Raft.
+Consensus systems can be loosely grouped into permissioned and permissionless consensus. Permissioned consensus is where all parties that are involved in deciding between conflicting entries are identifiable \(e.g., a specific business\) and are given express permission to amend and reject information in the system. These systems have been around for a long time to manage distributed databases and are still used in a number of new permissioned systems such as Hyperledger and R3’s Corda, and are built on permissioned consensus systems from the 1970’s such as PBFD and Raft. 
 
 Their flaw is that the consensus is not secure, it simply relies on securing the process of selecting the parties who are allowed to manage the data, rather than making the method of reaching consensus itself secure and fault tolerant.
 
-[Permissionless consensus](https://www.radixdlt.com/post/why-consensus-algorithms-are-like-military-generals) was the innovation that created Bitcoin in 2008/2009. Instead of securing the selection of the parties that would be involved in making the consensus, it worked out a way of making the process of consensus secure; meaning no central authority was needed to select and vet network participants. Instead computer power was used as a way of allowing everyone to work out what the majority of the network believed to be the correct version of the truth, organized it into blocks of transactions and then chaining those together with each new block referring to the last, forming the blockchain.
+[Permissionless consensus](https://www.radixdlt.com/post/why-consensus-algorithms-are-like-military-generals) was the innovation that created Bitcoin in 2008/2009. Instead of securing the selection of the parties that would be involved in making the consensus, it worked out a way of making the process of consensus secure; meaning no central authority was needed to select and vet network participants. Instead, computer power was used as a way of allowing everyone to work out what the majority of the network believed to be the correct version of the truth, organized it into blocks of transactions and then chaining those together with each new block referring to the last, forming the blockchain.
 
-The use of computer power to secure this process is called [Proof of Work \(PoW\),](https://www.radixdlt.com/post/what-is-proof-of-work) and is both massively inefficient, and only as secure as half the total amount of computing power being used to decide what data to accept and what data to reject. This can be effective for very large networks where there are clear crypto economic incentives to provide ever increasing amounts of computing power, such as Bitcoin, but do not function well for small or private networks where getting more than 50% of the computing power of the network is trivial.
+The use of computer power to secure this process is called [Proof of Work \(PoW\),](https://www.radixdlt.com/post/what-is-proof-of-work) and only as secure as half the total amount of computing power being used to decide what data to accept and what data to reject. This can be effective for very large networks where there are clear crypto economic incentives to provide ever-increasing amounts of computing power, such as Bitcoin, but do not function well for small or private networks where getting more than 50% of the computing power of the network is trivial.
 
-It has however, one very important feature - it does not rely on the security of the individual network members, only the security of the network as a whole. This feature makes the entire system much more resilient and secure than a permissioned system, if deployed in the correct way.
+It has, however, one very important feature - it does not rely on the security of the individual network members, only the security of the network as a whole. This feature makes the entire system much more resilient and secure than a permissioned system if deployed in the correct way.
 
-Radix also solves these problems by creating a permissionless consensus system that can be used securely in both small and large networks, but secured by a property that cannot be trivially bought or faked within Radix: the passage of logical time. In addition to this, unlike other DLT systems, it does not apply consensus to every event, only to those that conflict. This allows the entire system to be incredibly efficient, even at massive scale.
+Radix also solves these problems by creating a permissionless consensus system that can be used securely in both small and large networks but secured by a property that cannot be trivially bought or faked within Radix: the passage of logical time. In addition to this, unlike other DLT systems, it does not apply consensus to every event, only to those that conflict. This allows the entire system to be incredibly efficient, even at massive scale.
 
 The passage of logical time relies on a concept called [logical clocks](https://youtu.be/wfsZuN6NaJo) - It uses these clocks for generating a partial ordering of events in a distributed system to detect and prevent causality violations based on [Leslie Lamport's logical clock theory](https://lamport.azurewebsites.net/pubs/time-clocks.pdf). In very simple terms, a logical clock is a counter. Each node on the Radix network \(a node is a computer that maintains some or all of the state data the network contains\) has its own logical clock that it maintains. The only rule it must follow that it must strictly count upwards only, and may only ever increment by 1 each time. 
 
@@ -54,7 +54,7 @@ Due to the data structure, this simple and reliable consensus mechanism now only
 
 ### Fast & Scalable
 
-Tempo is both “**asynchronous**”, meaning there is no block time, and byzantine fault detective, meaning that it can detect and stop protocol violations within a permissionless system with 99% Fault Tolerant Consensus. Tempo does this by preserving the total order of events, allowing for the trustless transfer of value, time-stamping and other functionality. It limits state transition information to only those members \(shards\) of the network that need it. This reduces overhead and enables fast finality times fulfilling the [first two properties](./#how-is-radix-different) of being **fast**, and **scalable** required for mass adoption.
+Tempo is both “**asynchronous**”, meaning there is no block time, and Byzantine fault detective, meaning that it can detect and stop protocol violations within a permissionless system with 99% Fault-Tolerant Consensus. Tempo does this by preserving the total order of events, allowing for the trustless transfer of value, time-stamping and other functionality. It limits state transition information to only those members \(shards\) of the network that need it. This reduces overhead and enables fast finality times fulfilling the [first two properties](./#how-is-radix-different) of being **fast**, and **scalable** required for mass adoption.
 
 ### Efficient & Secure
 
@@ -78,21 +78,21 @@ To incentivise a network of economic participants in powering the decentralized 
 
 ### Ease of use
 
-The Radix Network is a peer to peer network of computers that together make up a decentralized state machine. The major difference as compared to other public networks like Ethereum/EOS is that nodes validate state transitions instead of computing it. This reduces errors and allows for protocol programmability. Developers build applications using their preferred choice of popular programming language like Java, Kotlin and JavaScript to interact with the Radix Alpha Network using native protocol API calls, without using a smart contract language or needing a Turing complete computational machine.
+The Radix Network is a peer to peer network of computers that together make up a decentralized state machine. The significant difference as compared to other public networks like Ethereum/EOS is that nodes validate state transitions instead of computing it. This reduces errors and allows for protocol programmability. Developers build applications using their preferred choice of programming language like Java, Kotlin and JavaScript to interact with the Radix Alpha Network using native protocol API calls, without using a smart contract language or needing a Turing complete computational machine.
 
-Thus, the Radix platform is what Bitcoin and Ethereum should have been; fast, scalable, secure, completely decentralized and powered by a cryptocurrency which is usable and relatively stable.
+Thus, the Radix platform is what Bitcoin and Ethereum should have been; fast, scalable, secure, wholly decentralized and powered by a cryptocurrency which is usable and relatively stable.
 
 ## How does it work? \(simplified\)
 
 _Radix is built on a combined architecture and consensus algorithm called Tempo, which is fully outlined in the Tempo white paper that can be found here:_ [_http://bit.ly/2ADK8LA_](http://bit.ly/2ADK8LA)
 
-The aim of Tempo is to create a trustless, decentralized consensus algorithm that can work reliably as a public network. To do this it must be:
+The aim of Tempo is to create a trustless, decentralized consensus algorithm that can work reliably as a public network. To do this, it must be:
 
-* Asynchronous - any process on the network can start or end whenever it needs to - e.g. it does not need to wait for a “block” to be mined.
-* Highly concurrent - many processes can be done simultaneously, without bottlenecks - e.g. there is not a limit to the number of transactions that can be fit into a “block”
+* Asynchronous - any process on the network can start or end whenever it needs to - e.g., it does not need to wait for a “block” to be mined.
+* Highly concurrent - many processes can be done simultaneously, without bottlenecks - e.g. there is not a limit to the number of transactions that can be fit into a “block”.
 * Scalable - there is not an upper limit restricting the total throughput of the network, such as the limits CAP Theorem puts on Blockchains and DAGs.
 
-To achieve this, Tempo relies on a two simple ideas, and one logical leap:
+To achieve this, Tempo relies on two simple ideas, and one logical leap:
 
 1. The use of a basic digital clock called a “logical clock”
 2. Telling your neighbors what has been happening, a process called “Gossip”
@@ -104,7 +104,7 @@ Gossip protocols are well established in computer science and are one of the fas
 
 On Tempo, we add the Node logical clocks, signed by the Nodes in question, to the gossip they are spreading around the network. This allows everyone to see both new information, and at what logical clock time that information was seen by other members of the network.
 
-To allow high scalability a Tempo ledger is split into a very large shard space, allowing a huge degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
+To allow high scalability a Tempo ledger is split into a very large shard space, allowing a massive degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
 
 When combined with the logical clocks and gossip, Tempo is able to create a total ordering of all related events, allowing double spends to be quickly detected and dismissed by the network.
 
