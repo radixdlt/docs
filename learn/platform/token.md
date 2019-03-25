@@ -1,10 +1,18 @@
+---
+description: Radix Economics
+---
+
 # Economics
+
+{% hint style="info" %}
+[Link to Economics Whitepaper](http://bit.ly/EconomicsWP-KB-ECONOMICS1)
+{% endhint %}
 
 ## Introduction
 
-Understanding the design mechanics of decentralized systems can be challenging – especially if you don’t come from a computer science background. Most people continue to struggle to comprehend [how a blockchain works](https://www.youtube.com/watch?v=sW8nWeUnkK0) and that doesn’t bode well for the industry.
+Understanding the design mechanics of decentralized systems can be challenging – especially if you don’t come from a computer science background. Most people struggle to comprehend [how a blockchain works](https://www.youtube.com/watch?v=sW8nWeUnkK0) and that doesn’t bode well for the industry.
 
-Having worked in the space for several years now we believe it’s fundamental to educate yourself on all the key elements that enable a decentralized network to run – particularly if you are professionally involved in the industry.
+Having worked in the space for several years now, we believe it’s fundamental to educate yourself on all the key elements that enable a decentralized network to run – particularly if you are professionally involved in the industry.
 
 Out of everything you will need to learn, mastering what is known as the token economics or crypto economics of a network is perhaps the most critical element. 
 
@@ -18,7 +26,7 @@ In its simplest form, crypto economics refers to the use of economics \(through 
 
 – The **economic** incentives defined inside the system encourages all actors to behave in a way that holds desired properties and enables the network to operate smoothly, deter malicious behavior and thrive over time.
 
-Designing  favorable incentives that is both the genesis and the goal for a system to become a robust decentralized network that can prevail and thrive against malicious actors attempting to disrupt the network.
+It is designing  favorable incentives that are both the genesis and the goal for a system to become a robust decentralized network to thrive against malicious actors attempting to disrupt the network.
 
 When Satoshi Nakamoto developed the Bitcoin blockchain, the first decentralized digital currency, and implemented a Proof of Work \(PoW\) protocol to the system he/she/they were doing so to secure the network through cryptography and using an incentive system for settlement.
 
@@ -34,7 +42,7 @@ Building sound incentive mechanisms into a decentralized system that has no trus
 
 Crypto economics of a token is a hybrid between programmatic rules implemented and the entire world of interactions real human beings have with it.
 
-The differences between crypto economics and traditional economics is that the latter is a product of centuries of research, governance, and observations of social dynamics. It is more appropriate  to talk about partly designed, partly discovered, partly self-evolved economies than talking about designed economies.
+The difference between crypto economics and traditional economics is that the latter is a product of centuries of research, governance, and observations of social dynamics. It is more appropriate  to talk about partly designed, partly discovered, partly self-evolved economies than talking about designed economies.
 
 In contrast, thinking \(or designing\) the crypto economics elements of a network demands that most of its characteristics be designed from inception. It requires designing predefined rules based on all the possible ways human beings can interact with the system. Accordingly, designing good rules entails understanding and predicting the way humans will interact within a decentralized system.
 
@@ -44,7 +52,7 @@ At the same time, this is the reason why crypto economics is so essential. If ru
 
 ### **What role do tokens have in a decentralized protocol?**
 
-At the core of crypto economics, a token exists as the primary tool to control a protocol’s micro-economy. A well-designed system properly manages the incentives and distribution of tokens within the corresponding network of participants. When tokenized incentives are accurately aligned a decentralized system thrives.
+At the core of crypto economics, a token exists as the primary tool to control a protocol’s micro-economy. A well-designed system properly manages the incentives and distribution of tokens within the corresponding network of participants. Decentralized systems thrive when tokenized incentives are accurately aligned.
 
 Crypto economics is helping us create systems where those who adhere to and protect the rules of the game receive rewards, while those attempting to break the rules face financial walls which disincentivize their behavior thus safeguarding the network. In Bitcoin, for example, miners who are honest and verify transactions receive block rewards \(currently 12.5 new minted bitcoin plus fees\) for their work, while those who are dishonest face wasting their computing power, energy, and money, making it an expensive, unprofitable and fruitless endeavor.
 
@@ -56,44 +64,17 @@ Conversely, decentralized networks that effectively utilize crypto economic prin
 
 ## Radix Node Incentives
 
-The Radix core is designed to be fast, fair, and simple. Due to its highly efficient consensus mechanism, anyone can run a node on standard commercial hardware. Every network participant is a first class citizen of the network and you don't require high computing power or starting capital to be a helpful participant of the network. Moreover, due to its highly sharded nature, any type of device, depending on its computational and storage capacity will support the network as much as it can manage to. This reduces barrier to entry massively, creating a fair participating ground everyone and effectively eliminating miner centralization and thus enabling conditions for maximum decentralization.  
+The Radix core is designed to be fast, fair, and simple. Due to its highly efficient consensus mechanism, anyone can run a node on standard commercial hardware. Every network participant is a first-class citizen of the network, and you don't require high computing power or starting capital to be a helpful participant of the network. Moreover, due to its highly sharded nature, any type of device, depending on its computational and storage capacity will support the network as much as it can manage to. This reduces the barrier to entry massively, creating a fair participating ground everyone and effectively eliminating miner centralization and thus enabling conditions for maximum decentralization.  
 
-In the Radix network each node keep a full/partial copy of the ledger known as shards. Each node communicates and collaborates with each other to validate, secure and maintain the distributed ledger.
+In the Radix network, each node keeps a full/partial copy of the ledger known as shards. Each node communicates and collaborates with each other to validate, secure and maintain the distributed ledger.
 
-If you are the submission node and you did the useful work of validating, storing and communicating a new transaction along with the other neighboring nodes in your shard then you get the transaction fee.
+If you are the submission node and you did the useful work of validating, storing and communicating a new transaction along with the other neighboring nodes in your shard, then you get the transaction fee.
 
-Moreover, all nodes that generate valid temporal proofs in supporting the network, are also chosen to earn a partial reward out of the new token supply minted by the monetary supply policy.
+Moreover, all nodes that generate valid temporal proofs in supporting the network are also chosen to earn a partial reward out of the new token supply minted by the monetary supply policy.
 
 Thus, Reward is a function of adding both fees earned by validating transactions and funds earned from total supply inflation.
 
 Read the [Node Incentive White paper](https://papers.radixdlt.com/incentives/latest/) for a detailed explanation on node incentives.   
-
-
-## Low Volatility Token \(XRD\) 
-
-Bitcoin paved the way for building decentralized currencies. They fulfill all properties of a modern day nation backed state currency, and also eliminate it's highly centralized nature, avoiding the mismanagement of money and thus financial crisis.   
-  
-Traditional crypto currencies \(bitcoin/ether etc.\) have been a lot of fun to date; but for long term personal or business dealings, they suffer from high degrees of value fluctuation \(often called volatility\) which makes working out future costs of things in a fixed amount of crypto **hard**. E.g. To paint my house next month, I agree to pay you 10 Bitcoin on completion. 
-
-Agreeing to get paid in a specified amount of Bitcoin 1 year, 1 month, 1 day or even 1 hour from now involves at least one \(or both\) parties taking a bet on the future value of Bitcoin, in addition to whatever risk might be associated with the reason for the payment in the first place. To the avid bitcoiner, that may look like a good bet. To the average man on the street/business; they just want to know whether they can pay their rent with it when they get it. You can read more about the [importance of value stability](https://www.radixdlt.com/post/value-stability) on our blog.  
-  
-Various solutions are being tested, one of them being price stable coins that are pegged to an underlying asset or basket of goods to stabilize the price curve. This goes against the very nature of decentralization as token value is ultimately governed by the  nation-state or a basket of highly volatile goods. This stability mechanism is prone to economical shocks as they are just mere digital representations current fiat currencies.
-
-Thus, it has quickly become evident that a decentralized currency to be truly usable and thus mass adopted, it will have to compete with the speed and stability of fiat currencies. 
-
-Transactional speed of cryptocurrencies is based on technological advancement of decentralized ledgers while price stability of the currency is a combined function of the network utility and the monetary policy that governs it. 
-
-The Tempo ledger allows for having very low finality time of transaction settlement \(&lt;5 seconds\). This is within the acceptable range of usable currencies and rival the VISA/MasterCard settlement time. This allows for businesses to accept cryptocurrencies for day to day transactions. Fixed fees of up to 1¢ enable new business models which require micro transactions rivaling fiat currencies.   
-  
-Radix will introduce a decentralized exchange built on top of the tempo protocol that will feed the monetary supply policy demand-data in real-time allowing for adjustment of the total currency supply.   
-  
-This elasticity helps the decentralized monetary policy dampen volatility using various economic tools at its disposal while at the same time preserving the long term trend of its price value curve.   
-  
-This allows for creating a truly stable coin that is not pegged to any asset\(s\). This also eliminates the dependency on external assets or basket of goods current stable coins rely on. 
-
-More details will be published in the upcoming economics whitepaper.   
-  
-  
 
 
 ## 

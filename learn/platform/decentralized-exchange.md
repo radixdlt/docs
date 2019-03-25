@@ -2,24 +2,23 @@
 
 ## What is a decentralized exchange?
 
-Technically, decentralized exchange is a market structure made up of a network of computers without relying on a  central authority like Nasdaq which hold the customers funds. Instead, trades occur directly between users \([peer to peer](https://en.wikipedia.org/wiki/Peer-to-peer)\) through an automated process without the need of a central authority. 
+Technically, the decentralized exchange is a market structure made up of a network of computers without relying on a  central authority like Nasdaq which holds the customer's funds. Instead, trades occur directly between users \([peer to peer](https://en.wikipedia.org/wiki/Peer-to-peer)\) through an automated process without the need for a central authority. 
 
-Because users do not need to transfer their assets to the exchange, decentralized exchanges reduce the risk of theft from [hacking of exchanges](https://en.wikipedia.org/wiki/Cryptocurrency_and_security). Decentralized exchanges can also prevent price manipulation or faked trading volume through [wash trading](https://en.wikipedia.org/wiki/Wash_trade), and are more anonymous than exchanges which implement [know your customer](https://en.wikipedia.org/wiki/Know_your_customer) requirements.
+Because users do not need to transfer their assets to the exchange, decentralized exchanges reduce the risk of theft from the [hacking of exchanges](https://en.wikipedia.org/wiki/Cryptocurrency_and_security). Decentralized exchanges can also prevent price manipulation or faked trading volume through [wash trading](https://en.wikipedia.org/wiki/Wash_trade), and are more anonymous than exchanges which implement [know your customer](https://en.wikipedia.org/wiki/Know_your_customer) requirements.
 
 There are some signs that decentralized exchanges have been suffering from low trading volumes and [market liquidity](https://en.wikipedia.org/wiki/Market_liquidity). On the other hand, some decentralized exchanges have proven instrumental in enhancing liquidity. Central to achieving this is by working with [fiat](https://en.wikipedia.org/wiki/Fiat_money) pegged cryptocurrencies. 
 
-In a decentralized system the technology provides investors with access to various bid/ask prices and makes it possible for them to deal directly with other investors/dealers. This system can be achieved by creating proxy assets or through a decentralized multi-signature escrow system, among other solutions that are currently being developed.
+In a decentralized system, the technology provides investors with access to various bid/ask prices and makes it possible for them to deal directly with other investors/dealers. This system can be achieved by creating proxy assets or through a decentralized multi-signature escrow system, among other solutions that are currently being developed.
 
 A **decentralized exchange** has some combination of decentralized properties. At the moment this most likely means some mix of 
 
 * on-blockchain trade clearing, 
-* ability for users to retain control of their funds, and 
-* hosting an orderbook in some decentralized manner \(this is currently inefficient with current levels of blockchain scaling\). 
+* the ability for users to retain control of their funds, and 
+* hosting an order-book in some decentralized manner \(this is currently inefficient with current levels of blockchain scaling\). 
 
-They are mostly frontend apps for now. They may run on a decentralized exchange protocol. In the future they may not be a frontend, but rather nodes in a p2p network which relay orders to others, and have only programmatic interfaces. Early examples of decentralized exchanges with frontends include EtherDelta and OasisDEX. Neither currently use an underlying decentralized exchange protocol. They are small at the moment— EtherDelta does about 2% of the largest centralized exchange’s volume per day.
+They are mostly frontend apps for now. They may run on a decentralized exchange protocol. In the future, they may not be a frontend, but rather nodes in a p2p network which relay orders to others, and have only programmatic interfaces. Early examples of decentralized exchanges with frontends include EtherDelta and OasisDEX. Neither currently use an underlying decentralized exchange protocol. They are small at the moment— EtherDelta does about 2% of the largest centralized exchange’s volume per day.
 
-For a decentralized exchange to be successful, it has to be developed on a high-throughput protocol like Radix which have fast settlement time and can scale to support millions of transactions per second.  
-
+For a decentralized exchange to be successful, it has to be developed on a high-throughput protocol like Radix which has fast settlement time and can scale to rival modern centralized exchanges and clearing houses.
 
 ## How does it differ from centralized exchanges?
 
@@ -31,22 +30,21 @@ On an architectural level, decentralization means that there is no centrally-con
 
 ## Why do we require a decentralized exchange?
 
-There are a few obvious benefits to decentralized exchanges. First, they **allow you to remain in control of your funds**. So no risk of the exchange being [hacked](https://steemit.com/bitcoin/@michaelmatthews/list-of-bitcoin-hacks-2012-2016) or [going insolvent](https://magoo.github.io/Blockchain-Graveyard/). This can lead to higher liquidity, as users may be willing to leave orders open on the orderbook for longer when counterparty risk is gone. Second, they create global order books. Decentralized exchanges are borderless and can serve anyone from any country.Third, they are **low friction. No signup required, just trade**.
+There are a few obvious benefits to decentralized exchanges. First, they **allow you to remain in control of your funds**. So no risk of the exchange being [hacked](https://steemit.com/bitcoin/@michaelmatthews/list-of-bitcoin-hacks-2012-2016) or [going insolvent](https://magoo.github.io/Blockchain-Graveyard/). This can lead to higher liquidity, as users may be willing to leave orders open on the order book for longer when counter-party risk is gone. Second, they create global order books. Decentralized exchanges are borderless and can serve anyone from any country.Third, they are **low friction. No signup required, just trade**.
 
-Finally, they avoid the double on boarding problem that of buying bitcoins to trade between two different pairs of decentralized assets. Decentralized exchanges allow atomic swaps and some even let you exchange assets between multiple assets. 
+Finally, they avoid the double on-boarding problem that of buying bitcoins to trade between two different pairs of decentralized assets. Decentralized exchanges allow atomic swaps, and some even let you exchange assets between multiple assets. 
 
-For example if you want to buy dogecoin, you will have to first buy bitcoins with a fiat currency and then buy dogecoins. Moreover, you cannot trader dogecoin for cheesecoin both of which are registered on the same platform/protocol like ERC-20 tokens.
+For example, if you want to buy dogecoin, you will have to first buy bitcoins with a fiat currency and then buy dogecoins. Moreover, you cannot trader dogecoin for cheesecoin both of which are registered on the same platform/protocol like ERC-20 tokens.
 
 ## Radix Decentralized Exchange
 
-The Radix decentralized exchange is an application that is served by each node in the public network.  
-It is a part of the tempo ledger and the exchange mechanism is defined at the protocol level.
+The Radix decentralized exchange is an application that is served by each node in the public network. It is a part of the tempo ledger, and the exchange mechanism is defined at the protocol level.
 
-It features a full set of functions like capital deposits, order books, order matching engine, and asset exchange. Assets are exchanged atomically instead as opposed to aggregated exchange.
+It features a full set of functions like capital deposits, order books, order matching engine, and asset exchange. Assets are exchanged atomically instead as opposed to the aggregated exchange.
 
 ### **Fund Management**
 
-Radix leaves control of funds completely in control of the users. That said, in order to trade with other Radix assets you do not need to be move them into a smart contract. Funds are traded atomically at the protocol level, completely on-chain. Confusing I know. The bottom line is that at any point in time a user can withdraw or deposit Radix based tokens and assets without any third party intervention.
+Radix leaves control of funds completely in control of the users. That said, in order to trade with other Radix assets you don't need to move them into a smart contract. Funds are traded atomically at the protocol level, completely on-chain. Confusing I know. The bottom line is that at any point in time a user can withdraw or deposit Radix based tokens and assets without any third party intervention.
 
 ### **Trading Logic**
 
@@ -60,12 +58,12 @@ At a high-level, this is how it works:
 
 1. Maker creates a new order: Radix token, the amount,  and whether it’s a buy or sell order.
 2. Maker creates a cryptographic hash of that order
-3. Maker then uses their private key to sign the order hash
+3. Maker then uses its private key to sign the order hash
 4. Maker sends order to shard together with the signature
-5. When Taker wants to trade against the order, the signature and order information is send to the order books trade function.
+5. When Taker wants to trade against the order, the signature and order information is sent to the order books trade function.
 6. Validators serving the order-book shard verify that the signature originated from Maker
-7. The validators makes sure order is not expired or filled.
-8. Funds are transferred and fees are taken by updating the state transition.
+7. The validators make sure order is not expired or filled.
+8. Funds are transferred, and fees are taken by updating the state transition.
 
 
 

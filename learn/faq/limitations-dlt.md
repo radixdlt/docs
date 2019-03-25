@@ -10,7 +10,7 @@ More commonly known as the blockchain technology, DLT which was first introduced
 
 Contracts, transactions, and the records of them are among the defining structures in our economic, legal, and political systems. They protect assets and set organizational boundaries. They establish and verify identities and chronicle events. They govern interactions among nations, organizations, communities, and individuals. They guide managerial and social action. And yet these critical tools and the bureaucracies formed to manage them have not kept up with the economy’s digital transformation. They’re like a rush-hour gridlock trapping a Formula 1 race car. In a digital world, the way we regulate and maintain administrative control has to change.
 
-Distributed Ledgers promise to solve these problems. The technology at the heart of bitcoin and other decentralized protocols, blockchain, is an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. The ledger itself can also be programmed to trigger transactions automatically.
+Distributed Ledgers promise to solve these problems. The technology at the heart of bitcoin and other decentralized protocols, the blockchain, is an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way. The ledger itself can also be programmed to trigger transactions automatically.
 
 Cryptocurrencies such as Bitcoin and Ethereum are beginning to attract the attention of mainstream media thanks largely to their massive rise in value over the past year. The world is starting to realize the potential of blockchains. It has become increasingly evident that decentralized networks, running on distributed ledgers and token economics, will radically change industries over the coming decades.
 
@@ -24,13 +24,13 @@ Despite these innovations, the low scalability of the current breed of technolog
 
 ## What problems do current distributed ledger architectures have?
 
-Current distributed ledger architectures like Blockchains and Directed Acyclic Graphs  do not  live up to the hype. They do not scale without adding some form of central authority. It is difficult and expensive to build and deploy secure applications. They are difficult for consumers to use, with a steep learning curve for even simple tokens. They are inefficient and consume massive electric power, are prone to miner centralization and the high volatility of their token/coin have delayed adoption, either for mainstream applications or as a useful currency.
+Current distributed ledger architectures like Blockchains and Directed Acyclic Graphs  do not  live up to the hype. They do not scale without adding some form of central authority. It is difficult and expensive to build and deploy secure applications. They are difficult for consumers to use, with a steep learning curve for even simple tokens. They are inefficient and consume massive electric power, are prone to miner centralization, and the high volatility of their token/coin have delayed adoption, either for mainstream applications or as a useful currency.
 
 ### Existing protocols cannot scale to meet demand
 
 Present blockchain based distributed ledgers do not scale well under load. This is because they are vertical architectures where all nodes participating in the network are required to have the complete global state of the system. The global state requires that all events are delivered and replicated on all nodes - this global requirement to always stay in sync gives an upper limit to the total throughput possible - often referred to as the CAP Theorem limit - of around 500 transactions per second, assuming no other limits.
 
-* Late last year crypto kitties managed to completely overwhelm Ethereum
+* Late last year crypto kitties managed to completely jam and halt the Ethereum network
 * With 100,000 users and 20,000 kitties sold the network slowed from seconds to minutes to process transactions
 * Transactions settlement takes anything between 2.5 minutes to 10 minutes.
 * Directed acyclic graphs \(DAGs\) such as IOTA and Hashgraph offer scaling but at the expense of decentralization
@@ -82,7 +82,7 @@ One way or the other, PoS will lead to centralization the same way PoW does due 
 
 Some cryptocurrency architectures introduce the requirement for trust in a trustless network by using coordinator nodes.
 
-A coordinator node has three principle problems:
+A coordinator node has three principal problems:
 
 1. All other Nodes must trust the coordinator nodes to be honest; making the % of the network you need to corrupt much smaller
 2. Much more DDoS susceptible: attack the coordinators, bring down the network
@@ -100,7 +100,7 @@ This process already consumes more electricity than the entire power consumption
 
 #### **Processing Inefficiency**
 
-Smart Contract Execution on an un-sharded DLT \(such as the current Ethereum network\) becomes more expensive as the network gets bigger. This is because each Node on the network is required to execute every line of code in every Smart Contract submitted with sufficient gas.
+As the network gets bigger Smart Contract Execution on an un-sharded DLT \(such as the current Ethereum network\) becomes more expensive. This is because each Node on the network is required to execute every line of code in every Smart Contract submitted with sufficient gas.
 
 As more Nodes join the network the lower the chances any given Node has to be rewarded with the gas fee for executing a Smart Contract. This means that each Node must anticipate needing to run a larger and larger number of Smart Contract before successfully earning a reward. As a result, it is likely that as the network grows, the higher the gas fee is likely to become once the mining rewards are taken into account.
 
@@ -110,7 +110,7 @@ For an object to become a currency, it has to fulfill three roles: a medium of e
 
 The Radix Stable Token is a proposed relatively price stable cryptocurrency currently in R&D. It will sit as a module on top of the Radix Tempo protocol and will be controlled by an algorithmic monetary policy of expanding and contracting coin supply. Full details will follow in a future white paper.
 
-It is clear, mass adoption of cryptocurrencies is impossible without a means of achieving both transactional **scalability** and **price stability** - Radix is designed to solve all of these issues. [Learn how Radix eliminates all of these limitation as we](../platform/) dive deep into the Radix platform and how it works under the hood.
+It is clear, mass adoption of cryptocurrencies is impossible without a means of achieving both transactional **scalability** and **price stability** - Radix is designed to solve all of these issues. [Learn how Radix eliminates all of these limitations as we](../platform/) dive deep into the Radix platform and how it works under the hood.
 
 {% hint style="info" %}
 [Share your problems with current decentralized ledgers and how can they be improved on our developer forum](https://forum.radixdlt.com/t/what-problems-do-current-deceentralized-ledgers-have/54)

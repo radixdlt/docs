@@ -9,20 +9,20 @@ An **Account** represents all the data stored for a user on the ledger. This inc
 An **Address** lives in a **Shard** and is the start and end point for any **Atom** in the Radix Universe. It's also a reference to an **Account** and allows a user to receive tokens and/or data from other users. A Radix address is generated from a public key and a **Universe** checksum.
 
 {% hint style="info" %}
-Keep in mind, the defined **Universe** affects the generated **Address**.
+Note: The defined **Universe** affects the generated **Address**.
 {% endhint %}
 
 ## Atoms
 
-An Atom is a collection of Particles whose properties are defined by the Quarks they are composed from. The Atom is actually nothing more than a container which contains a collection of Particles to be atomically committed to the ledger, and also acts as a receiver and carrier of consensus information relating to that Atom to be used in the event of a conflict.
+An Atom is a collection of Particles whose properties are defined by the Quarks they are composed of. The Atom is actually nothing more than a container which contains a collection of Particles to be atomically committed to the ledger, and also acts as a receiver and carrier of consensus information relating to that Atom to be used in the event of a conflict.
 
 Particles are instructions about a state change with certain properties, defined by its Quarks. In order to solve the state-sharding problem, the components of the state change need to be discrete elements that can hold independent state and tracked within the ledger, which the Particles assist in allowing. When a Particle is created, it is in the UP state, when it is consumed, or superseded, it is in the DOWN state. The concept is similar in its most basic operation to the Bitcoin UTXO.
 
-To create a tokenized asset on the Radix ledger, first create an Atom with a TokenClassParticle in it that describes your token's properties. The TokenClassParticle itself has the OwnableQuark \(i.e. it has an owner with special privileges\), AccountableQuark \(the particle is stored in an account / at an address\) and NonFungibleQuark \(the particle is unique and only one of it can exist\). Put this TokenClassParticle in an Atom with an UP spin, add a TimestampParticle \(to provide a wall clock time of submission\), sign the Atom, submit it to the ledger. Assuming a multi-issuance supply model has been chosen for the token, the owner can now mint tokens by creating OwnedTokensParticle \(which itself has the Ownable, Accountable and Fungible quarks\) in the UP state.
+To create a tokenized asset on the Radix ledger, first create an Atom with a TokenClassParticle in it that describes your token's properties. The TokenClassParticle itself has the OwnableQuark \(i.e., it has an owner with special privileges\), AccountableQuark \(the particle is stored in an account / at an address\) and NonFungibleQuark \(the particle is unique, and only one of it can exist\). Put this TokenClassParticle in an Atom with an UP spin, add a TimestampParticle \(to provide a wall clock time of submission\), sign the Atom, submit it to the ledger. Assuming a multi-issuance supply model has been chosen for the token, the owner can now mint tokens by creating OwnedTokensParticle \(which itself has the Ownable, Accountable and Fungible quarks\) in the UP state.
 
-Another example is being able to pack many token transfers \(multi-sender, multi-receiver events\) into a single Atom by including many OwnedTokensParticles which are then in the DOWN state for senders, and UP state for receivers when. The entire collection of transfers is committed atomically, and is much more efficient across storage, communication and IO/CPU costs.
+Another example is being able to pack many token transfers \(multi-sender, multi-receiver events\) into a single Atom by including many OwnedTokensParticles which are then in the DOWN state for senders, and UP state for receivers when. The entire collection of transfers is committed atomically and is much more efficient across storage, communication and IO/CPU costs.
 
-Additionally, the Particles become very powerful over the long term road map, first by allowing 3rd party Particles to be composed from the initial Quark set easily, and ultimately resulting in definable 3rd party state machines & schemas to allow 3rd party Quarks to be created with defined constrains, from which very exotic Particles can be created from the composition of those.
+Additionally, the Particles become very powerful over the long term road map, first by allowing 3rd party Particles to be composed from the initial Quark set easily, and ultimately resulting in definable 3rd party state machines & schemas to allow 3rd party Quarks to be created with defined constraints, from which very exotic Particles can be created from the composition of those.
 
 For more information, see the [Tempo white paper](../whitepapers/tempo.md#radix-tempo).
 
@@ -32,7 +32,7 @@ To assist with total order determination of events, nodes declare to the network
 
 ## Decentralized Applications
 
-Decentralized applications \(dApps\) are applications that run on a P2P network of computers rather than a single computer. dApps, have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.
+Decentralized applications \(dApps\) are applications that run on a P2P network of computers rather than a single computer. dApps have existed since the advent of P2P networks. They are a type of software program designed to exist on the Internet in a way that is not controlled by any single entity.
 
 ## Distributed Ledger Technology \(DLT\)
 
@@ -40,13 +40,13 @@ A distributed ledger \(also called a shared ledger, or referred to as distribute
 
 ## DSON
 
-DSON is a binary in-house serialisation format which is tuned specifically for Radix. At very high throughput, serialisation / deserialisation becomes a major bottleneck, and JSON / GSON were not performant enough. Optimisation to squeeze as much out of JSON/GSON made the code in those sections very complex and messy. A simpler solution was just to bake our own with much higher performance and that could be trans-coded to JSON for all our RPC/Restful needs.
+DSON is a binary in-house serialisation format which is tuned specifically for Radix. At very high throughput, serialisation / deserialisation becomes a major bottleneck, and JSON / GSON were not performant enough. Optimisation to squeeze as much out of JSON/GSON made the code in those sections very complex and messy. A simpler solution was just to bake our own with much higher performance, and that could be trans-coded to JSON for all our RPC/Restful needs.
 
 ## Gossip protocol
 
-A gossip protocol is a highly effective, well established way of getting information to be quickly spread through a network. In essence any Node that receives a new piece of information, tells two \(or more\) neighboring nodes about it. They then tell two or more each \(2\*2\) and so on. This follows an exponential pattern until all Nodes in the network have been told.
+A gossip protocol is a highly effective, well-established way of getting information to be quickly spread through a network. In essence, any Node that receives a new piece of information tells two \(or more\) neighboring nodes about it. They then tell two or more each \(2\*2\) and so on. This follows an exponential pattern until all Nodes in the network have been told.
 
-This is how Radix ensures any new transactions are quickly shared with all relevant nodes in a highly reliable, fast and fault tolerant way.
+This is how Radix ensures any new transactions are quickly shared with all relevant nodes in a highly reliable, fast and fault-tolerant way.
 
 ## Identity
 
@@ -62,7 +62,7 @@ Within Tempo, all Nodes have a local logical clock; an ever-increasing integer v
 
 ## Nodes
 
-A **Node** provides general computing and networking resources to the network. Nodes are responsible for validating events and transactions, relaying messages, resolving conflicts and executing scripts on the network. They also maintain a subset of the shard space, and get fees in proportion to their work.
+A **Node** provides general computing and networking resources to the network. Nodes are responsible for validating events and transactions, relaying messages, resolving conflicts and executing scripts on the network. They also maintain a subset of the shard space and get fees in proportion to their work.
 
 ## Partial Ordering of Events
 
@@ -94,7 +94,7 @@ For more information, see the [Tempo white paper](../whitepapers/tempo.md#radix-
 
 Transactional finality refers to the instant that a transaction is deemed immutable, irrevocable and thus completed.
 
-On Radix, transaction finality is the time it takes for a new transaction to be gossiped to the furtherest side of the relevant Shard from the starting Node, and then back again. As long as no conflicts are found, this transaction is then deemed to have reached finality.
+On Radix, transaction finality is the time it takes for a new transaction to have gossiped to the furthermost side of the relevant Shard from the starting Node, and then back again. As long as no conflicts are found, this transaction is then deemed to have reached finality.
 
 ## Transfer Atoms
 

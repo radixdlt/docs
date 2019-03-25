@@ -6,17 +6,17 @@ This document is a compilation of questions that have been asked by the Radix co
 
 ### Why does Radix use a UTXO model instead of a balance model?
 
-Short answer - because if you store balances you cannot do state sharding without making the transactions non-atomic. A UTXO type system of consumables allow you to state shard with zero destination overhead, whereas a balance model ends up having a significant destination overhead, making sharding inefficient and only secure through a form of centralised orchestration.
+Short answer - because if balances are stored, we cannot state shard without making the transactions non-atomic. A UTXO type system of consumables allow us to state shard with zero destination overhead, whereas a balance model ends up having a significant destination overhead, making sharding inefficient and only secure through a form of centralized orchestration.
 
-Long answer - to answer this question we need to first establish that sharding is necessary - generally speaking there are two constraints with a DLT:
+Long answer - to answer this question we must first establish that sharding is necessary - generally speaking there are two constraints with a DLT:
 
 1. Transaction throughput
 
 2. Storage throughput
 
-With a DAG your transaction throughput is higher than on a blockchain as the transport can be optimized  - you are dealing with transactions individually rather than as a block. However, those transactions still need to be validated, and at around 2,000 transactions per second on a single shard \(assuming standard servers\) you will see the performance of the full nodes on a network start to drop significantly. Pruning the ledger does nothing to reduce this load as this is a throughput constraint, not a storage constraint.
+With a directed acyclic graph \(DAG\), transaction throughput is higher than on a blockchain as the transport can be optimized  - you are dealing with transactions individually rather than as a block. However, those transactions still need to be validated, and at around 2,000 transactions per second on a single shard \(assuming standard servers\) you will see the performance of the full nodes on a network start to drop significantly. Pruning the ledger does nothing to reduce this load as this is a throughput constraint, not a storage constraint.
 
-To scale beyond the 2,000 transactions per second mark you will therefore need to start splitting the throughput load; this requires sharding the network, splitting the work amongst the nodes, rather than requiring all the nodes to do all the same work.
+To scale beyond the 2,000 transactions per second mark, it is necessary to start splitting the throughput load; this requires sharding the network, splitting the work amongst the nodes, rather than requiring all the nodes to do all the same work.
 
 Now that you are splitting up the ledger into parts, you need a method of dealing with transactions between shards.
 
@@ -24,7 +24,7 @@ Using balances, rather than UTXO can certainly reduce the storage requirements o
 
 There are four shards - A, B, C, D and I start with a balance of 50 on shard A and send 10 to wallet X on Shard B.
 
-My balance is now recorded as 40, and at some unknown time in the future wallet X will have a balance of 10 \(lets disregard the mechanics of how wallet X becomes aware of the spend in shard A\).
+My balance is now recorded as 40, and at some unknown time in the future wallet X will have a balance of 10 \(let's disregard the mechanics of how wallet X becomes aware of the spend in shard A\).
 
 However, I also send the same 10 to wallet Y on Shard C, and wallet Z on Shard D.
 
@@ -50,11 +50,11 @@ Yes.
 
 ### Are transactions private and/or anonymous?
 
-Radix is as private as private as bitcoin. It does not support complete anonymous transactions, but will support pseudo-anonymous transactions in the medium term. The ledger is design as such that in the future it will be very easy to create an anonymity layer on top of it. The team will not focus on it until the basic features are stable.
+Radix is as private as bitcoin. It does not support complete anonymous transactions but will support pseudo-anonymous transactions in the medium term. The ledger is design as such that in the future it will be very easy to create an anonymity layer on top of it. The team will not focus on it until the basic features are stable.
 
-### Are all Tokens first class citizens on the Radix platform?
+### Are all Tokens first-class citizens on the Radix platform?
 
-Yes - essentially this means you can pay the transaction fee with the token you are sending, e.g. “Coffee Token” rather than Rads.
+Yes - essentially this means you can pay the transaction fee with the token you are sending, e.g., “Coffee Token” rather than Rads.
 
 This is to make sure that anyone who creates tokens on our system is not forced to also make sure their customers and coin holders must also use Rads if they want to use the system. This was specifically designed into the Radix protocol to make sure all tokens are first class citizens.
 
@@ -64,20 +64,19 @@ This does, however, rely on:
 
 2. That the token you want to pay the fee with, and the Radix token, have liquidity as a traded pair on the DEX.
 
-Once these two facts are live; it is then possible for anyone who pays the transaction fee with their own token as the tx fee will be converted to Radix tokens on the DEX; allowing the node to confirm any token transaction and receive XRD instead, without the sender requiring to hold XRD to send their tokens.
+Once these two facts are live; it is then possible for anyone who pays the transaction fee with their own token as the transaction fee will be converted to Radix tokens on the DEX; allowing the node to confirm any token transaction and receive XRD instead, without the sender requiring to hold XRD to send their tokens.
 
-However, if your Coffee Token is not popular enough to have a trading pair on the DEX, then you will still need to pay the TX fee in Rads.
+However, if your Coffee Token is not popular enough to have a trading pair on the DEX, then you will still need to pay the transaction fee in Rads.
 
 ### How do I receive test radix tokens?
 
-Download, install and take the alphanet wallets for a test drive on your desktop or android phone.   
-[Download here.](https://radixdlt.com/wallet)
+Download, install and take the Alphanet wallets for a test drive on your desktop or Android phone. [Download here.](https://radixdlt.com/wallet)
 
-### As explained, Radix can scale normal transactions because the inputs of a transaction will always be stored on the shard of their destination address, so value-sending transactions are a special case where you can strictly limit the scope of the state needed to make the calculation. But how does this generalize to a smart contract which might need to make use of information stored across many shards? Or, alternately, if all transactions directed to a smart contract are stored on one shard \(the shard matching the address of the contract\), how can they against this one smart contract scale beyond the expected computational power of any given computer on that shard range?
+### If all transactions directed to a smart contract are stored on one shard \(the shard matching the address of the contract\), how can nodes serving this one smart contract scale beyond the expected computational power of any given computer on that shard range?
 
-Yes, your upper bound for a smart contract is indeed the fastest nodes that serve the shard within which it lives but that is the same for transactions too, a shard cannot process more transactions than the fastest machines which serve it \(which right now is about 3000 tps for a commodity machine\). If a particular smart contract is very popular, then it is generating a lot of fee revenue for the nodes that serve it....so I expect to see those nodes contract their serving shard group around that particular shard as much as possible allowing them to free up CPU from serving other shards, and allowing them to process more in the smart contract shard.
+Yes, your upper bound for a smart contract is indeed the fastest nodes that serve the shard within which it lives, but that is the same for transactions too, a shard cannot process more transactions than the fastest machines which serve it \(which right now is about 3000 transactions per second for a commodity machine\). If a particular smart contract is very popular, then it is generating a lot of fee revenue for the nodes that serve it; so we expect to see those nodes contract their serving shard group around that particular shard as much as possible allowing them to free up CPU from serving other shards, and allowing them to process more in the smart contract shard.
 
 ### **What's the cost of running smart contracts on radix? Will there be a gas system?**
 
-Kind of, but its called "Joules" and works a little differently than how Eth manages it....also the stable and scalable aspect of Radix will make it a much more predictable unit cost.
+Kind of, but its called "Joules" and works a little differently than how Ethereum manages it. The stable and scalable aspect of Radix will make it a much more predictable unit cost.
 
