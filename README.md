@@ -26,7 +26,7 @@ The [developer section](develop/live-platform-overview.md) will get you started 
 
 ## [Operate a Radix Node](node-runners/start/)
 
-If you want to run a Radix Node and connect to the Testnet **go to the** [node runner section](node-runners/start/).  
+If you want to run a Radix Node and connect to the Testnet go to the [node runner section](node-runners/start/).  
 It will walk you through the system requirements and dependencies of the docker container, as well as comprehensive step-by-step instructions which outline how to configure your network environment for running a Radix node and connecting to the Radix Testnet. 
 
 {% hint style="warning" %}
