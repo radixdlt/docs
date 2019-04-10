@@ -6,7 +6,6 @@
 
 * [Radix Platform](learn/platform/README.md)
   * [Scalability](learn/platform/tempo.md)
-  * [Security](learn/platform/security.md)
   * [Buildability](learn/platform/buildability.md)
   * [Predictability](learn/platform/token.md)
 * [Use Cases](learn/use-cases/README.md)
@@ -21,6 +20,7 @@
   * [Scalability](learn/faq/scalability.md)
   * [Transactions](learn/faq/transactions.md)
   * [Economics](learn/faq/economics.md)
+  * [Security](learn/faq/security.md)
   * [Limitations of DLT](learn/faq/limitations-dlt.md)
 * [Roadmap](https://www.radixdlt.com/roadmap)
 * [Videos](learn/videos.md)
