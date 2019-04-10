@@ -14,7 +14,7 @@ It has been the result of 6 years of research and development into a number of u
 
 Radix uses the theory of database sharding to scale linearly and vector clocks for generating a partial ordering of events based on Leslie Lamport’s logical clock theory as the primary consensus mechanism. 
 
-## [Build with Radix](develop/live-platform-overview.md)
+## [Build with Radix](develop/network/live-platform-overview.md)
 
 If you are a **developer** who wants to learn how to build on the **Radix Test Network,** you can get started with your preferred library of choice:
 
@@ -22,7 +22,7 @@ If you are a **developer** who wants to learn how to build on the **Radix Test N
 * [Kotlin library](develop/kotlin-client-library-guide/)
 * [JavaScript library](develop/javascript-client-library-guide/quick-start.md)
 
-The [developer section](develop/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various use-cases that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
+The [developer section](develop/network/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various use-cases that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
 
 ## [Operate a Radix Node](node-runners/start/)
 

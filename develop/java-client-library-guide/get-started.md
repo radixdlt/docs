@@ -58,13 +58,13 @@ Now that you’re set up, feel free to review our glossary so we can share a com
 **Tip:** if you're new to Radix we suggest to take a minute and dig into the concepts that make Radix a unique distributed ledger technology.
 {% endhint %}
 
-* [Universe](../../learn/platform/glossary.md#universe)
-* [Shards](../../learn/platform/glossary.md#shard)
-* [Nodes](../../learn/platform/glossary.md#nodes)
-* [Atoms](../../learn/platform/glossary.md#atoms)
-* [Account](../../learn/platform/glossary.md#account)
-* [Address](../../learn/platform/glossary.md#address)
-* [Identity](../../learn/platform/glossary.md#identity)
+* [Universe](../../learn/glossary.md#universe)
+* [Shards](../../learn/glossary.md#shard)
+* [Nodes](../../learn/glossary.md#nodes)
+* [Atoms](../../learn/glossary.md#atoms)
+* [Account](../../learn/glossary.md#account)
+* [Address](../../learn/glossary.md#address)
+* [Identity](../../learn/glossary.md#identity)
 
 ## Building a ChatBot
 

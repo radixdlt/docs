@@ -1,4 +1,4 @@
-# Alpha
+# Alpha Network
 
 ## Introduction
 
@@ -22,13 +22,13 @@ Each node in the Radix network exposes a [JSON-RPC](https://www.radixdlt.com/pos
 
 ### Atom Model
 
-![](../.gitbook/assets/screen-shot-2018-10-26-at-6.43.02-pm.png)
+![](../../.gitbook/assets/screen-shot-2018-10-26-at-6.43.02-pm.png)
 
 If this is your first time building decentralized applications on the Radix Alpha Network you can get started with our client libraries:
 
-* [Java library](java-client-library-guide/)
-* [Kotlin library](kotlin-client-library-guide/)
-* [JavaScript library](javascript-client-library-guide/quick-start.md) 
+* [Java library](../java-client-library-guide/)
+* [Kotlin library](../kotlin-client-library-guide/)
+* [JavaScript library](../javascript-client-library-guide/quick-start.md) 
 
 
 

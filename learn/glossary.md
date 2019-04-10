@@ -24,7 +24,7 @@ Another example is being able to pack many token transfers \(multi-sender, multi
 
 Additionally, the Particles become very powerful over the long term road map, first by allowing 3rd party Particles to be composed from the initial Quark set easily, and ultimately resulting in definable 3rd party state machines & schemas to allow 3rd party Quarks to be created with defined constraints, from which very exotic Particles can be created from the composition of those.
 
-For more information, see the [Tempo white paper](../whitepapers/tempo.md#radix-tempo).
+For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tempo).
 
 ## Commitments
 
@@ -74,13 +74,13 @@ However, if `A` must happen before `C`, but you don't care when `B` happens, the
 
 Payload Atom are transactional messages, sent to one or more parties, like an email or an instant message.
 
-For more information, see the [Tempo white paper](../whitepapers/tempo.md#radix-tempo).
+For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tempo).
 
 ## Shard
 
 A public Radix network \(Universe\) is segmented into a very large shard space \(currently $$2^{64}$$ shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
 
-For more information, check the Public Node Incentives [white paper](../whitepapers/public-node-incentives.md#shard-space).
+For more information, check the Public Node Incentives [white paper](whitepapers/public-node-incentives.md#shard-space).
 
 ## Temporal Proof
 
@@ -88,7 +88,7 @@ A temporal proof is a cryptographically secure record of ordered events.
 
 Before an event can be presented to the entire network for global acceptance, an initial validation of the event is performed by a subset of nodes which, if successful, results in: A Temporal Proof being constructed and associated with the Atom, and a network-wide broadcast of the Atom and its Temporal Proof.
 
-For more information, see the [Tempo white paper](../whitepapers/tempo.md#radix-tempo).
+For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tempo).
 
 ## Transaction Finality
 
@@ -100,7 +100,7 @@ On Radix, transaction finality is the time it takes for a new transaction to hav
 
 Transfer Atoms are used to transfer the ownership of an item, such as currency, to another party.
 
-For more information see the [Tempo white paper](../whitepapers/tempo.md#radix-tempo).
+For more information see the [Tempo white paper](whitepapers/tempo.md#radix-tempo).
 
 ## Universe
 
@@ -114,5 +114,5 @@ These Logical Clocks can then be made into Vector Clocks, where the Logical Cloc
 
 Note: on their own, Vector Clocks only create a partial ordering - Node Commitments are also necessary to complete the ordering of events.
 
-See the Tempo white paper for [more details](../whitepapers/tempo.md#commitments).
+See the Tempo white paper for [more details](whitepapers/tempo.md#commitments).
 

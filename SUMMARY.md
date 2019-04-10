@@ -2,9 +2,38 @@
 
 * [Start Here](README.md)
 
+## Learn
+
+* [Radix Platform](learn/platform/README.md)
+  * [Scalability](learn/platform/tempo.md)
+  * [Security](learn/platform/security.md)
+  * [Buildability](learn/platform/buildability.md)
+  * [Predictability](learn/platform/token.md)
+* [Use Cases](learn/use-cases/README.md)
+  * [Alias system](learn/use-cases/alias-system.md)
+  * [File notarization](learn/use-cases/file-notarization.md)
+* [Whitepapers](learn/whitepapers/README.md)
+  * [Tempo](learn/whitepapers/tempo.md)
+  * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
+  * [Economic Model](learn/whitepapers/economic-model.md)
+* [FAQ](learn/faq/README.md)
+  * [Technical](learn/faq/technical.md)
+  * [Scalability](learn/faq/scalability.md)
+  * [Transactions](learn/faq/transactions.md)
+  * [Economics](learn/faq/economics.md)
+  * [Limitations of DLT](learn/faq/limitations-dlt.md)
+* [Roadmap](https://www.radixdlt.com/roadmap)
+* [Videos](learn/videos.md)
+* [Glossary](learn/glossary.md)
+* [Future developments](learn/future-developments/README.md)
+  * [Decentralized Identity](learn/future-developments/decentralized-identity.md)
+  * [Radix Name Service](learn/future-developments/radix-name-service.md)
+
 ## Develop
 
-* [Alpha](develop/live-platform-overview.md)
+* [Network](develop/network/README.md)
+  * [Alpha Network](develop/network/live-platform-overview.md)
+  * [Network Explorer](https://alphanet.radixdlt.com)
 * [Java Client Library](develop/java-client-library-guide/README.md)
   * [Get started](develop/java-client-library-guide/get-started.md)
   * [Code examples](develop/java-client-library-guide/code-examples.md)
@@ -17,10 +46,18 @@
   * [Example applications](develop/javascript-client-library-guide/tutorials.md)
   * [Saving dApp settings](develop/javascript-client-library-guide/saving-dapp-settings.md)
   * [GitHub JavaScript Library](https://github.com/radixdlt/radixdlt-js)
-* [Alphanet Explorer](https://alphanet.radixdlt.com)
-* [Alphanet Use Cases](develop/use-cases/README.md)
-  * [Alias system](develop/use-cases/alias-system.md)
-  * [File notarization](develop/use-cases/file-notarization.md)
+
+## Applications
+
+* [Android Wallet](applications/android-wallet/README.md)
+  * [Google Play Store](https://play.google.com/apps/testing/com.radixdlt.android)
+  * [GitHub - Android Client](https://github.com/radixdlt/android-client)
+* [Desktop Wallet](applications/desktop-wallet/README.md)
+  * [Mac](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-1.1.1-alpha.dmg)
+  * [Windows](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-Setup-1.1.1-alpha.exe)
+  * [Linux](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/radix-wallet-1.1.1-alpha-x86_64.AppImage)
+  * [GitHub - Desktop Client](https://github.com/radixdlt/desktop-wallet)
+* [Decentralized Exchange](applications/decentralized-exchange.md)
 
 ## Node Runners
 
@@ -29,41 +66,9 @@
   * [FAQ](node-runners/start/faq.md)
   * [GitHub - Node Client](https://github.com/radixdlt/node-runner)
 
-## Use Radix
+## Links
 
-* [Android Wallet](use-radix/android-wallet/README.md)
-  * [Google Play Store](https://play.google.com/apps/testing/com.radixdlt.android)
-  * [GitHub - Android Client](https://github.com/radixdlt/android-client)
-* [Desktop Wallet](use-radix/desktop-wallet/README.md)
-  * [Mac](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-1.1.1-alpha.dmg)
-  * [Windows](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/Radix-Wallet-Setup-1.1.1-alpha.exe)
-  * [Linux](https://github.com/radixdlt/desktop-wallet/releases/download/1.1.1-alpha/radix-wallet-1.1.1-alpha-x86_64.AppImage)
-  * [GitHub - Desktop Client](https://github.com/radixdlt/desktop-wallet)
-
-## Learn
-
-* [Radix Platform](learn/platform/README.md)
-  * [Consensus](learn/platform/tempo.md)
-  * [Security](learn/platform/security.md)
-  * [Buildability](learn/platform/buildability.md)
-  * [Economics](learn/platform/token.md)
-  * [Decentralized Exchange](learn/platform/decentralized-exchange.md)
-  * [Decentralized Identity](learn/platform/decentralized-identity.md)
-  * [Radix Name Service](learn/platform/radix-name-service.md)
-  * [Glossary](learn/platform/glossary.md)
-  * [Roadmap](https://www.radixdlt.com/roadmap)
-  * [Videos](learn/platform/videos.md)
-  * [Blog](https://radixdlt.com/blog)
-* [Whitepapers](learn/whitepapers/README.md)
-  * [Tempo](learn/whitepapers/tempo.md)
-  * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
-  * [Economic Model](learn/whitepapers/economic-model.md)
-* [FAQ](learn/faq/README.md)
-  * [Technical](learn/faq/technical.md)
-  * [Scalability](learn/faq/scalability.md)
-  * [Transactions](learn/faq/transactions.md)
-  * [Economics](learn/faq/economics.md)
-  * [Limitations of DLT](learn/faq/limitations-dlt.md)
+* [Blog](https://radixdlt.com/blog)
 * [Team](https://www.radixdlt.com/team)
-* [Contact](learn/help.md)
+* [Contact](links/help.md)
 

@@ -2,7 +2,7 @@
 description: Radix Economics
 ---
 
-# Economics
+# Predictability
 
 {% hint style="info" %}
 [Link to Economics Whitepaper](http://bit.ly/EconomicsWP-KB-ECONOMICS1)

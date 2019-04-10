@@ -37,7 +37,7 @@ The atom model is an abstraction layer on top of the Tempo ledger designed to gi
 
 ### Why should I build on the Radix Public Network?
 
-Radix makes it easy for developers to build most use-cases without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../../develop/live-platform-overview.md)
+Radix makes it easy for developers to build most use-cases without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../../develop/network/live-platform-overview.md)
 
 ### Who invented Radix?
 

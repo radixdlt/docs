@@ -59,7 +59,7 @@ In this scenario, the process is simplified, and the first match we find in the 
 
 Learn the basics of interacting with the Radix ledger, and build a decentralized alias system using your preferred client library from below:
 
-* [JavaScript Client Library](../javascript-client-library-guide/quick-start.md) 
-* [Java Client Library](../java-client-library-guide/)
-* [Kotlin Client Library](../kotlin-client-library-guide/)
+* [JavaScript Client Library](../../develop/javascript-client-library-guide/quick-start.md) 
+* [Java Client Library](../../develop/java-client-library-guide/)
+* [Kotlin Client Library](../../develop/kotlin-client-library-guide/)
 
