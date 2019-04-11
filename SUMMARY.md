@@ -11,6 +11,7 @@
 * [Use Cases](learn/use-cases/README.md)
   * [Alias system](learn/use-cases/alias-system.md)
   * [File notarization](learn/use-cases/file-notarization.md)
+  * [Fiat tokens](learn/use-cases/fiat-tokens.md)
 * [Whitepapers](learn/whitepapers/README.md)
   * [Tempo](learn/whitepapers/tempo.md)
   * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
