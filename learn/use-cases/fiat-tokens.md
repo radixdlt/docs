@@ -7,7 +7,7 @@ In this document, we present a detailed description of the Fiat Token \(FT\) ref
 This sample FT system showcases how simple is to enable bridging between fiat currency and user-defined tokens using the Radix distributed ledger.
 
 {% hint style="info" %}
-For this integration, we’ve chosen PrimeTrust as our technology partner since they’re a trusted actor in the industry and they could provide us with a powerful, sandboxed custodial bank API and [detailed documentation](https://primetrust.com/api_docs.html).
+For this integration, we’ve chosen PrimeTrust as our technology partner since they’re a trusted actor in the industry and they could provide us with a powerful, sandboxed custodial bank API and [detailed technical documentation](https://primetrust.com/api_docs.html).
 {% endhint %}
 
 ## Main components
