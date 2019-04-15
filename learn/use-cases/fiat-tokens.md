@@ -23,7 +23,7 @@ The Fiat token system was designed as a modular solution, consisting of several 
 * Radix service wallet
 * Radix mobile/desktop wallet
 
-![](../../.gitbook/assets/how-it-works-diagram.png)
+![Fiat token service](../../.gitbook/assets/system.de94a8a8.png)
 
 ### Web server
 
