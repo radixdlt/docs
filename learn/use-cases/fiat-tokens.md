@@ -1,13 +1,13 @@
 # Fiat tokens
 
-## Overview
+## Introduction
 
-In this document, we present a detailed description of the Fiat Token \(FT\) reference implementation, and we will discuss the minting, burning, and sending processes behind it.
+In this document, we present a detailed description of a Fiat Token \(FT\) reference implementation, and we review the minting, burning, and sending processes behind it.
 
-This sample FT system showcases how simple is to enable bridging between fiat currency and user-defined tokens using the Radix distributed ledger.
+This sample FT system showcases how simple is to enable bridging between fiat currencies and user-defined tokens using the Radix distributed ledger.
 
 {% hint style="info" %}
-For this integration, we’ve chosen PrimeTrust as our technology partner since they’re a trusted actor in the industry and they could provide us with a powerful, sandboxed custodial bank API and [detailed technical documentation](https://primetrust.com/api_docs.html).
+For this use case scenario, we’ve chosen PrimeTrust as our technology partner since they’re a trusted actor in the industry and they could provide us with a powerful, sandboxed custodial bank API and [detailed technical documentation](https://primetrust.com/api_docs.html).
 {% endhint %}
 
 ## Main components
@@ -217,10 +217,6 @@ If we're too eager to act on a successful result, we may - theoretically - end u
 We have seen how easily you can create a service to mint, burn and send Fiat tokens using the Radix distributed ledger and the provided Radix open-source libraries. We've also explained the basic workflows for the FT service, and how they interact with an external Custodian system \(PrimeTrust\) that holds the user's fiat assets. Additionally, we shared some code snippets to demonstrate how straightforward it is to burn, mint and transfer tokens with our Java client library.
 
 {% hint style="success" %}
-**Tip:** to continue learning about Radix technology and how you can create more DApps on it, check our [Java](../../develop/java-client-library-guide/), [JavaScript](../../develop/javascript-client-library-guide/) and [Kotlin](../../develop/kotlin-client-library-guide/) documentation.
+**Tip:** to continue learning about Radix's technology and how you can create more DApps on it, check our [Java](../../develop/java-client-library-guide/), [JavaScript](../../develop/javascript-client-library-guide/) and [Kotlin](../../develop/kotlin-client-library-guide/) documentation.
 {% endhint %}
-
-
-
-
 
