@@ -13,7 +13,7 @@
   * [File notarization](learn/use-cases/file-notarization.md)
   * [Fiat tokens](learn/use-cases/fiat-tokens.md)
   * [Card payment system](learn/use-cases/card-payment-system.md)
-  * [Temperature controlled logistics](learn/use-cases/temperature-controlled-logistics.md)
+  * [Internet of Things](learn/use-cases/internet-of-things.md)
 * [Whitepapers](learn/whitepapers/README.md)
   * [Tempo](learn/whitepapers/tempo.md)
   * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
