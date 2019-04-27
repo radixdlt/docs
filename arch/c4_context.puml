@@ -40,10 +40,11 @@ System_Boundary(core_nodes, "Core Nodes") {
         SystemDb_Ext(core_noden, "Core Node", "Core Node hosted by external node-runner. Static entrypoint into the network.")
         Rel_Sync(core_node2, core_noden, "<-UP->")
     }
-    Rel_Gossip(core_noden, boot_node2, "-RIGHT->")
-    Rel_Gossip(core_noden, boot_noden, "-RIGHT->")
-    Rel_Gossip(core_node2, boot_node1, "-RIGHT->")
+    Rel_Gossip(core_noden, boot_node2, "<-RIGHT-")
+    Rel_Gossip(core_noden, core_node1, "-RIGHT->")
+    Rel_Gossip(core_noden, boot_node1, "-RIGHT->")
     Rel_Gossip(boot_node1, boot_node2, "-RIGHT->")
+    Rel_Gossip(boot_noden, core_node1, "-RIGHT->")
 }
 
 Rel_Submit(desk_wallet1, core_noden, "-DOWN->")
