@@ -1,6 +1,6 @@
 # Level 1: Radix System Context
 
-This page implement the first "C" in the [C4Model](https://c4model.com/#coreDiagrams): the (System) **C**ontext.
+This page implement the first "C" in the [C4Model](https://c4model.com/#coreDiagrams): the **C**ontext Model.
 
 All production Systems (External and Radix) and Users that are commonly found on Radix networks are introduced on this page.
 

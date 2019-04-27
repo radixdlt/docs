@@ -1,0 +1,43 @@
+@startuml c4_node_container
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+!define Rel_Gossip(e_from, e_to, e_rel) Rel_(e_from, e_to, "gossips to", "UDP port 10000", e_rel)
+!define Rel_Sync(e_from, e_to, e_rel) Rel_(e_from, e_to, "syncs from", "UDP port 10000", e_rel)
+!define Rel_Client(e_from, e_to, e_rel) Rel_(e_from, e_to, "submits atoms to and recieves events from", "WebSocket port 443", e_rel)
+
+LAYOUT_WITH_LEGEND
+
+System_Ext(ws_app1, "WebSocket Client", "Custom Application that uses the WebSocket API directly or indirectly (lib).")
+
+System_Ext(inter_shard_node1, "Inter-Shard Node", "Other Core Node in the a **different** Shard space")
+System_Ext(intra_shard_node1, "Intra-Shard Node 1", "Other Core Node in the **same** Shard space")
+System_Ext(intra_shard_node2, "Intra-Shard Node 2", "Other Core Node in the **same** Shard space")
+System_Ext(ntp1, "NTP Server", "Standard Network Time Protocol Server on the internet.")
+
+System_Boundary(core_node1, "Core Node") {
+    Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious nodes")
+    Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
+    Container(core, "RadixCore", "Container: Java in Docker", "Gossips and Syncs Atoms with other Nodes and serves light-clients in a Radix Network")
+    ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
+    ContainerDb(secrets, "Secrets", "Container: Docker Volume", "stores node keys, certificates, and API passwords.")
+}
+
+Rel(core, ntp1, "periodically syncs time from", "NTP port 123")
+
+Rel(core, ledger, "reads from and writes to")
+Rel(core, secrets, "reads from", "nodes.key")
+
+Rel(nginx, secrets, "reads from", "htpasswd.admin, dhparam.pem, server.key, server.pem")
+Rel(nginx, core, "proxies connections to", "HTTP port 8080")
+Rel(iptables, core, "rate limits traffic to", "UDP port 10000")
+
+Rel_Client(ws_app1, nginx, "-LEFT->")
+
+Rel_Gossip(inter_shard_node1, iptables, "-->")
+Rel_Gossip(core, intra_shard_node1, "-->")
+Rel_Gossip(core, inter_shard_node1, "-->")
+Rel_Sync(intra_shard_node1, iptables, "-->")
+Rel_Sync(core, intra_shard_node2, "-->")
+
+@enduml
