@@ -1,0 +1,91 @@
+@startuml c4_node_component
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+LAYOUT_WITH_LEGEND
+
+System_Ext(ws_app1, "WebSocket Client", "Custom Application that uses the WebSocket API directly or indirectly (lib).")
+System_Ext(inter_shard_node1, "Inter-Shard Node", "Other Core Node in the a **different** Shard space")
+System_Ext(intra_shard_node1, "Intra-Shard Node", "Other Core Node in the **same** Shard space")
+System_Ext(ntp1, "NTP Server", "Standard Network Time Protocol Server on the internet.")
+
+Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious nodes")
+Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
+ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
+ContainerDb(secrets, "Secrets", "Container: Docker Volume", "stores node keys, certificates, and API passwords.")
+
+Boundary(core_nodes, "RadixCore", "Container") {
+    Boundary(app_layer, "Application Layer") {
+        Component(api, "HTTP/WebSocket Service", "Component: Undertow", "[[http://undertow.io/ Undertow]] is the HTTP/WebSocket server Component.")
+        Component(atoms, "Atom Model", "Component: Atoms", "API entities that can be queried and submitted to a RadixCore Container.")
+    }
+    Boundary(val_layer, "Validation Layer") {
+        Component(atomos, "Security Boundary", "Component: AtomOS", "Inspired by Linux syscalls all Atoms have to be submitted through this restrictive and well-defined API.")
+        Component(cm, "Validation Service", "Component: Constraint Machine", "[[https://barrgroup.com/Embedded-Systems/How-To/Introduction-Hierarchical-State-Machines Heirarchical State Machine]] validates Atoms (events) and performs state transitions (Ledger change) in a controlled/correct way.")
+        Component(cscrypt1, "Constraint 1", "Component: Scrypt", "Ruleset 1 applicable for certain Atoms.")
+        Component(cscrypt2, "Constraint 2", "Component: Scrypt", "Ruleset 2 applicable for certain Atoms.")
+        Component(cscryptn, "Constraint N", "Component: Scrypt", "Ruleset N applicable for certain Atoms.")
+        Component(crypto, "Crypto Engine", "Component: Bouncy Castle", "[[https://www.bouncycastle.org/ Bouncy Castle]] is used for cryptograthic operations.")
+    }
+    Boundary(tempo_layer, "Consensus Layer") {
+        Component(tempo_api, "Tempo API", "Component: Tempo", "Consensus Engine API for the Constraint Machine.")
+        Component(mass, "Mass Consensus Engine", "Component: Tempo", "Fundamental Consensus engine, which detects and prevents all conflicts incl. double-spends.")
+        Component(vc, "Vector Clocks Consensus Engine", "Component: Tempo", "Optimised Conscensus engine, which detects and prevents certain conflicts **faster** than the Mass Consensus Engine.")
+    }
+    Boundary(network_layer, "Networking Layer") {
+        Component(rtp, "Time Sync Service", "Component: Radix Time Protocol", "Service that synchronises wall-clock time between nodes in the network.")
+        Component(atomsync, "Atom Sync Service", "Component: AtomSync", "Service that synchronises atoms between nodes in the **same** shard space.")
+        Component(network, "Network Service", "Component: Network", "Service that sends/receives Gossip about Atoms and System State to random nodes in the network.")
+        Component(discovery, "Node Discovery Service", "Component: Discovery", "Provides methods for discovering nodes in the network.")
+        Component(peermanager, "Peer Management Service", "Component: Peers", "Knows everything about how to find and connect to remote nodes in the network.")
+        Component(system, "System State Manager", "Component: System", "Manages the local system state, which is queried by clients and gossiped to peers.")
+    }
+    Boundary(storage_layer, "Storage Layer") {
+        Component(db, "Key/Value Store", "Component: Berkley DB Java Edition", "[[https://docs.oracle.com/cd/E17277_02/html/index.html Berkley DB]] stores Atoms and various metadata.")
+        Component(atomstore, "Storage Optimiser", "Component: AtomStore", "Optimises DB access for Radix (e.g. through Bloomfilters)")
+    }
+}
+
+
+
+
+
+Rel_(ws_app1, nginx, "uses", "-->")
+Rel_(nginx, api, "uses", "-->")
+
+
+Rel_(api, atoms, "serialises/deserialises Atoms to/from", "-->")
+Rel_(api, atomos, "queries/submits Atoms to/from", "-->")
+
+Rel_(atomos, cm, "queries/submits Atoms to/from", "-->")
+Rel_(cm, cscrypt1, "evaluates with Atom", "-->")
+Rel_(cm, cscrypt2, "evaluates with Atom", "-->")
+Rel_(cm, cscryptn, "evaluates with Atom", "-->")
+Rel_(cm, tempo_api, "write/read Atoms to/from", "-->")
+Rel_(cm, crypto, "uses", "-->")
+
+Rel_(tempo_api, vc, "write/read Atoms to/from", "-->")
+Rel_(tempo_api, mass, "write/read Atoms to/from", "-->")
+Rel_(vc, atomstore, "write/read Atoms to/from", "-->")
+Rel_(mass, atomstore, "write/read Atoms to/from", "-->")
+
+Rel_(atomstore, db, "write/read Atoms to/from", "-->")
+Rel_(db, ledger, "write/read data and index to/from", "-->")
+Rel_(atomstore, ledger, "write/read bloomfilter to/from", "-->")
+Rel_(atomstore, system, "sends event to ???", "-->")
+Rel_(atomstore, atomsync, "sends event to ???", "-->")
+
+Rel(crypto, secrets, "write/read node.key")
+Rel(rtp, ntp1, "syncs time from")
+Rel(rtp, network, "uses")
+Rel(discovery, network, "uses")
+Rel(atomsync, network, "uses")
+Rel(network, system, "queries")
+Rel(network, peermanager, "queries and updates")
+Rel(peermanager, db, "write/read peer info to")
+
+Rel(inter_shard_node1, iptables, "gossips to")
+Rel(iptables, network, "gossips to")
+Rel(network, intra_shard_node1, "gossips to, syncs from")
+
+@enduml
