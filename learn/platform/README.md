@@ -164,7 +164,7 @@ The Radix platform is now in our Alpha stage of development, with a live Alpha t
 **Tip:** start building with our GitHub projects: [https://github.com/radixdlt/](https://github.com/radixdlt/)
 {% endhint %}
 
-All our libraries are open source. The core code is not currently open-sourced, as we have not yet launched the main net and are not doing an ICO. Since our [Roadmap is still quite a long one](https://www.radixdlt.com/roadmap), we have made the difficult decision not to open source immediately as we do not believe someone would not fork before we even get a chance to launch ourselves.
+All our libraries are open source. The core code is not currently open-sourced, as we have not yet launched the main net. Since our [Roadmap is still quite a long one](https://www.radixdlt.com/roadmap), we have made the difficult decision not to open source immediately as we do not believe someone would not fork before we even get a chance to launch ourselves.
 
 However, once launched, all the Radix code will absolutely be 100% open source. We believe that to build a platform for the world to build on, it must be an open one.
 

@@ -78,9 +78,9 @@ Radix will be open source after launch. Right now the team is focused on testing
 
 Our internal tests show that we scale beyond 25,000 tx/s, the average number of transactions processed by VISA. Combined with a fast transaction settlement time of less than 5 seconds, we already rival the current payment network rails and fiat transaction settlement times. 
 
-### When is the ICO?
+### When will the tokens be available for purchase?
 
-Radix is NOT doing an ICO. Radix is well funded to deliver the product. We strongly believe in delivering a stable product before we announce the token sale. The Radix MainNet will launch with an integrated decentralized exchange, which will allow and govern the creation of Radix tokens. You can buy the Radix tokens on launch.
+Tokens will be available when we go live in Q4 2019; you can register your interest here - [https://radixdlt.typeform.com/to/nyKvMV?source=HomePage](https://radixdlt.typeform.com/to/nyKvMV?source=HomePage) and we will send out details closer to the time.
 
 ### What is the starting price of the token?
 
