@@ -4,8 +4,13 @@ The Radix Ledger is currently in _Alpha_: the network includes only the ability 
 
 This section of the Knowledge Base will take you through some basic ideas of how you can use the encrypted and unencrypted data particles with the Radix address space to make some simple decentralized applications:
 
-* [An Alias System](alias-system.md)
-* [File Notarization](file-notarization.md)
+{% page-ref page="alias-system.md" %}
 
+{% page-ref page="file-notarization.md" %}
 
+{% page-ref page="fiat-tokens.md" %}
+
+{% page-ref page="card-payment-system.md" %}
+
+{% page-ref page="internet-of-things.md" %}
 
