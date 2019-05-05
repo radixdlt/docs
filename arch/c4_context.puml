@@ -26,13 +26,13 @@ Rel_Use(pers_ext3, ios_wallet1, "-DOWN->")
 
 System_Boundary(core_nodes, "Core Nodes") {
     Boundary(shard1, "Shard 1") {
-        SystemDb(boot_node1, "Boot Node", "Core Node (non-privileged) hosted by Radix DLT. Static entrypoint into the network.")
+        SystemDb(boot_node1, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
         SystemDb_Ext(core_node1, "Core Node", "Core Node hosted by external node-runner. Static entrypoint into the network.")
         Rel_Sync(boot_node1, core_node1, "<-UP->")
     }
     Boundary(shard2, "Shard 2") {
-        SystemDb(boot_node2, "Boot Node", "Core Node (non-privileged) hosted by Radix DLT. Static entrypoint into the network.")
-        SystemDb(boot_noden, "Boot Node", "Core Node (non-privileged) hosted by Radix DLT. Static entrypoint into the network.")
+        SystemDb(boot_node2, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
+        SystemDb(boot_noden, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
         Rel_Sync(boot_node2, boot_noden, "<-UP->")
     }
     Boundary(shardn, "Shard N") {
