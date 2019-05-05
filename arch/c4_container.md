@@ -12,9 +12,9 @@ One of the most important architectural benefits with OCI Containers is modulari
 
 # Security
 
-Our belowed RadixCore is implemented in Java. Java is great and all that but it is not the best tool for all problems and purposes. To protect the RadixCore, we have introduced some specialised Containers (Reverse Proxy, Rate Limiter) in front of it.
+Our beloved RadixCore is implemented in Java. To protect the RadixCore, we have introduced some specialised Containers (Reverse Proxy, Rate Limiter) in front of it.
 
-Correctly implemented OCI Containers improves security vs. running the app directly on the host machine. It is also possible to run OCI Containers on hypervisors with tools like [Kata Containers](https://katacontainers.io/), which improves isolation between Containers and Host even further.
+Correctly implemented OCI Containers improve security vs. running the app directly on the host machine. It is also possible to run OCI Containers on hypervisors with tools like [Kata Containers](https://katacontainers.io/), which improves isolation between Containers and Host even further.
 
 # Core Node System Containers
 
@@ -29,7 +29,7 @@ This Container is designed to offload/protect the RadixCore API with:
 1. TLS (1.2) Termination
 2. DDoS mitigation through
    * Rate-limiting of Connections/bandwidth
-   * Caching Requests
+   * Caching API Requests
 3. HTTPS (L7) Filtering of Requests
 4. Authentication to protected end-points
 

@@ -10,17 +10,21 @@ LAYOUT_WITH_LEGEND
 
 System_Ext(ws_app1, "WebSocket Client", "Custom Application that uses the WebSocket API directly or indirectly (lib).")
 
-System_Ext(inter_shard_node1, "Inter-Shard Node", "Other Core Node in the a **different** Shard space")
-System_Ext(intra_shard_node1, "Intra-Shard Node 1", "Other Core Node in the **same** Shard space")
-System_Ext(intra_shard_node2, "Intra-Shard Node 2", "Other Core Node in the **same** Shard space")
 System_Ext(ntp1, "NTP Server", "Standard Network Time Protocol Server on the internet.")
 
-System_Boundary(core_node1, "Core Node") {
-    Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious nodes")
-    Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
-    Container(core, "RadixCore", "Container: Java in Docker", "Gossips and Syncs Atoms with other Nodes and serves light-clients in a Radix Network")
-    ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
-    ContainerDb(secrets, "Secrets", "Container: Docker Volume", "stores node keys, certificates, and API passwords.")
+Boundary(shard2, "Shard 2") {
+    System_Ext(node3, "Core Node 3", "Other Core Node in the a **different** Shard space")
+}
+Boundary(shard1, "Shard 1") {
+    System_Ext(node1, "Core Node 1", "Other Core Node in an **overlapping** Shard space")
+    System_Ext(node2, "Core Node 2", "Other Core Node in an **overlapping** Shard space")
+    System_Boundary(core_node1, "Core Node") {
+        Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious nodes")
+        Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
+        Container(core, "RadixCore", "Container: Java in Docker", "Gossips and Syncs Atoms with other Nodes and serves light-clients in a Radix Network")
+        ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
+        ContainerDb(secrets, "Secrets", "Container: Docker Volume", "stores node keys, certificates, and API passwords.")
+    }
 }
 
 Rel(core, ntp1, "periodically syncs time from", "NTP port 123")
@@ -34,10 +38,10 @@ Rel(iptables, core, "rate limits traffic to", "UDP port 10000")
 
 Rel_Client(ws_app1, nginx, "-LEFT->")
 
-Rel_Gossip(inter_shard_node1, iptables, "-->")
-Rel_Gossip(core, intra_shard_node1, "-->")
-Rel_Gossip(core, inter_shard_node1, "-->")
-Rel_Sync(intra_shard_node1, iptables, "-->")
-Rel_Sync(core, intra_shard_node2, "-->")
+Rel_Gossip(node3, iptables, "-->")
+Rel_Gossip(core, node1, "-->")
+Rel_Gossip(core, node3, "-->")
+Rel_Sync(node1, iptables, "-->")
+Rel_Sync(core, node2, "-->")
 
 @enduml

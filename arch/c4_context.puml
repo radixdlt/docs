@@ -4,7 +4,7 @@
 !define Rel_Sync(e_from, e_to, e_rel) Rel_(e_from, e_to, "sync", e_rel)
 !define Rel_Gossip(e_from, e_to, e_rel) Rel_(e_from, e_to, "gossip", e_rel)
 !define Rel_Use(e_from, e_to, e_rel) Rel_(e_from, e_to, "use", e_rel)
-!define Rel_Submit(e_from, e_to, e_rel) Rel_(e_from, e_to, "pubsub", e_rel)
+!define Rel_Submit(e_from, e_to, e_rel) Rel_(e_from, e_to, "WebSocket", e_rel)
 
 LAYOUT_TOP_DOWN
 'LAYOUT_AS_SKETCH
