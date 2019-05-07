@@ -10,16 +10,16 @@ All production Systems (External and Radix) and Users that are commonly found on
 
 Described in detail in the Radix [Whitepaper v2](https://papers.radixdlt.com/tempo/v2/).
 
-From an architectural point of view, a Universe identifies and overlay network on top of Internet or in a LAN.
+From an architectural point of view, a Universe identifies an overlay network on top of Internet or in a LAN.
 Core/Boot nodes can be configured to be part of a specific universe.
 
 # Atoms and Particles
 
 Described in detail in the Radix [Whitepaper v2](https://papers.radixdlt.com/tempo/v2/).
 
-On an Architectural level an Atom is totally ordered sequence of Transactions (Particles) that must be validated as a unit and committed to the Ledger (DB) atomically. 
+On an Architectural level an Atom is a database transaction containing a totally ordering sequence of state transitions (i.e. Particles), which must be validated as a unit and committed to the Ledger (DB) atomically. 
 
-The minimal unit of transactional data transferred over wire (sync/gossip/WebSocket) is thus an Atom.
+The minimal unit of transactional data transferred over wire (sync/gossip/WebSocket) and persisted in nodes is thus an Atom.
 
 # Shards and Chunks
 
@@ -27,7 +27,7 @@ Described in detail in the Radix [Whitepaper v2](https://papers.radixdlt.com/tem
 
 Sharding enable Radix Networks to have unlimited scalability.
 This is achieved by splitting up global state (Ledger) to different nodes in a deterministic way.
-The goal with this sharding scheme is to be able to tell where certain Particle (transaction) goes just by looking at it, so that we can check double spends (and other attack vectors) efficiently.
+The key of this sharding scheme is to be able to tell where in the shard space a certain state transition (i.e. Particle, transaction) is located, rendering double-spends and other attack vectors on "opposite sides" of the network impossible because e.g. a certain spend can only come from a single place i.e. shard.
 
 The minimal Shard space that a nodes can serve is one Chunk. The number of Chunks served depends on the hardware configuration (CPU, MEM, I/O) of
 a specific node. Each node has advanced algorithms for monitoring its own performance and dynamically - to other nodes non-deterministically - scale up and down
@@ -39,7 +39,7 @@ Nodes in an overlapping Shard space are redundant to each other, which means tha
 
 [Whitepaper v2](https://papers.radixdlt.com/tempo/v2/)
 
-Mass is a Node property. Well-behaved Nodes of a Radix Network gain mass over time. Mass determines the power each node has in a Consensus agreement at a given time.
+Mass is a Node property. Well-behaved Nodes of a Radix Network gain mass over time. Mass determines the power each node has in a Consensus agreement where temporal resolution is not possible.
 
 # Boot and Core Nodes
 

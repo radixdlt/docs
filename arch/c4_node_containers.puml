@@ -3,8 +3,8 @@
 !includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
 
 !define Rel_Gossip(e_from, e_to, e_rel) Rel_(e_from, e_to, "gossips to", "UDP port 10000", e_rel)
-!define Rel_Sync(e_from, e_to, e_rel) Rel_(e_from, e_to, "syncs from", "UDP port 10000", e_rel)
-!define Rel_Client(e_from, e_to, e_rel) Rel_(e_from, e_to, "submits atoms to and recieves events from", "WebSocket port 443", e_rel)
+!define Rel_Sync(e_from, e_to, e_rel) Rel_(e_from, e_to, "syncs to", "UDP port 10000", e_rel)
+!define Rel_Client(e_from, e_to, e_rel) Rel_(e_from, e_to, "submits/recieves Atoms to/from", "WebSocket port 443", e_rel)
 
 LAYOUT_WITH_LEGEND
 
@@ -13,13 +13,13 @@ System_Ext(ws_app1, "WebSocket Client", "Custom Application that uses the WebSoc
 System_Ext(ntp1, "NTP Server", "Standard Network Time Protocol Server on the internet.")
 
 Boundary(shard2, "Shard 2") {
-    System_Ext(node3, "Core Node 3", "Other Core Node in the a **different** Shard space")
+    System_Ext(node3, "Core Node 3", "Other Core Node")
 }
 Boundary(shard1, "Shard 1") {
     System_Ext(node1, "Core Node 1", "Other Core Node in an **overlapping** Shard space")
     System_Ext(node2, "Core Node 2", "Other Core Node in an **overlapping** Shard space")
     System_Boundary(core_node1, "Core Node") {
-        Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious nodes")
+        Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious/faulty nodes")
         Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
         Container(core, "RadixCore", "Container: Java in Docker", "Gossips and Syncs Atoms with other Nodes and serves light-clients in a Radix Network")
         ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
