@@ -1,0 +1,68 @@
+@startuml c4_node_component
+
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+LAYOUT_WITH_LEGEND
+
+System_Ext(ws_app1, "WebSocket Client", "Custom Application that uses the WebSocket API directly or indirectly (lib).")
+System_Ext(node1, "Core Node 1", "Other Core Node")
+System_Ext(node2, "Core Node 2", "Other Core Node in an **overlapping** Shard space")
+System_Ext(node3, "Core Node 3", "Other Core Node")
+
+System_Ext(ntp1, "NTP Server", "Standard Network Time Protocol Server on the internet.")
+
+Container(iptables, "Rate Limiter", "Container: Linux Kernel", "DDoS mitigation of Gossip/Sync from malicious/faulty nodes")
+Container(nginx, "Reverse Proxy", "Container: NGINX/HAProxy in Docker", "TLS termination, DDoS mitigation, authentication, and filtering of API requests")
+ContainerDb(ledger, "Ledger Data", "Container: Docker Volume", "stores ledger data, metadata, index, and bloom filter.")
+ContainerDb(secrets, "Secrets", "Container: Docker Volume", "stores node keys, certificates, and API passwords.")
+
+Boundary(core_nodes, "RadixCore", "Container") {
+    Component(api, "HTTP/WebSocket Service", "Component: Undertow", "[[http://undertow.io/ Undertow]] is the HTTP/WebSocket server Component.")
+    Component(atom_controller, "Real-time Atom Controller", "Component: Radix", "[[https://barrgroup.com/Embedded-Systems/How-To/Introduction-Hierarchical-State-Machines Heirarchical State Machine]] validates Atoms (local state). Multiple HFSMs are running concurrently.")
+    Component(cm, "UTXO Constraint Machine", "Component: Radix", "[[https://barrgroup.com/Embedded-Systems/How-To/Introduction-Hierarchical-State-Machines Heirarchical State Machine]] validates Atoms (local state). Multiple HFSMs are running concurrently.")
+
+    Component(crypto, "Crypto Engine", "Component: Bouncy Castle", "[[https://www.bouncycastle.org/ Bouncy Castle]] is used for cryptograthic operations.")
+    Component(tempo, "Tempo", "Component: Radix", "Proprietary Consensus Engine responsible for maintaining a conflict free global state.")
+
+    Component(rtp, "Time Sync Service", "Component: Radix", "Service that synchronises wall-clock time between nodes in the network.")
+    Component(atomsync, "Atom Sync Service", "Component: Radix", "Service that synchronises Ledger state between nodes in the **same** shard space.")
+    Component(gossip_service, "Gossip Service", "Component: Radix", "Service that sends/receives Gossip about Atoms and other data (e.g. RTP) to random nodes in the network.")
+    Component(peermanager, "Peer Manager", "Component: Radix", "Peer Discovery and Management service")
+
+    Component(atomstore, "Atom Store", "Component: Radix", "Optimises DB access for Radix (e.g. through Bloomfilters)")
+    Component(db, "Key/Value Database", "Component: Berkeley DB JE", "Swappable K/V database which stores Atoms and various metadata.")
+}
+
+Rel(ws_app1, nginx, "uses", "HTTPS port 443")
+Rel(nginx, api, "forwards to", "HTTP port 8080")
+
+Rel(api, atom_controller, "queries/submits Atoms to/from")
+Rel(api, rtp, "gets current time from")
+
+Rel(atom_controller, cm, "uses")
+Rel(cm, crypto, "uses")
+
+Rel(tempo, atom_controller, "queries/submits Atoms to/from")
+
+Rel(atom_controller, atomstore, "write/read Atoms to/from")
+
+Rel(atomstore, db, "write/read Atoms to/from")
+Rel(db, ledger, "write/read data and index to/from")
+Rel(tempo, atomsync, "reads/writes Atoms to/from")
+Rel(tempo, gossip_service, "reads/writes data to/from")
+Rel(tempo, crypto, "uses")
+Rel(rtp, gossip_service, "reads/writes time to/from")
+
+
+Rel(crypto, secrets, "write/read node.key")
+Rel(rtp, ntp1, "syncs time from", "NTP port 123")
+Rel(gossip_service, peermanager, "queries/updates Peers from/to")
+Rel(gossip_service, node3, "gossips to", "UDP port 10000")
+Rel(atomsync, node2, "syncs to", "UDP port 10000")
+Rel(atomsync, peermanager, "queries/updates Peers from/to")
+Rel(peermanager, db, "write/read peer info to")
+
+Rel(node1, iptables, "gossips to", "UDP port 10000")
+Rel(iptables, gossip_service, "forwards to", "UDP port 10000")
+
+@enduml

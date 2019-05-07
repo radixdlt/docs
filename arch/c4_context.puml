@@ -1,0 +1,69 @@
+@startuml c4_context
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+
+!define Rel_Sync(e_from, e_to, e_rel) Rel_(e_from, e_to, "sync", e_rel)
+!define Rel_Gossip(e_from, e_to, e_rel) Rel_(e_from, e_to, "gossip", e_rel)
+!define Rel_Use(e_from, e_to, e_rel) Rel_(e_from, e_to, "use", e_rel)
+!define Rel_Submit(e_from, e_to, e_rel) Rel_(e_from, e_to, "WebSocket", e_rel)
+
+LAYOUT_TOP_DOWN
+'LAYOUT_AS_SKETCH
+LAYOUT_WITH_LEGEND
+
+title The RadixDLT Network
+
+Person_Ext(pers_ext1, "Desktop Wallet User")
+System_Ext(desk_wallet1, "Desktop Wallet", "[[https://github.com/radixdlt/RadixWallet Desktop Wallet]] Application using the [[https://github.com/radixdlt/radixdlt-js radixdlt-js]] library")
+Rel_Use(pers_ext1, desk_wallet1, "-DOWN->")
+
+Person_Ext(pers_ext2, "Android Wallet User")
+System_Ext(android_wallet1, "Android Wallet", "[[https://github.com/radixdlt/radixdlt-wallet-android Android Wallet]] Application using the [[https://github.com/radixdlt/radixdlt-kotlin radixdlt-kotlin]] library")
+Rel_Use(pers_ext2, android_wallet1, "-DOWN->")
+
+Person_Ext(pers_ext3, "iOS Wallet User")
+System_Ext(ios_wallet1, "iOS Wallet", "iOS Wallet (WIP) Application using the [[https://github.com/radixdlt/radixdlt-swift radixdlt-swift]] library")
+Rel_Use(pers_ext3, ios_wallet1, "-DOWN->")
+
+System_Boundary(core_nodes, "Core Nodes") {
+    Boundary(shard1, "Shard 1") {
+        SystemDb(boot_node1, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
+        SystemDb_Ext(core_node1, "Core Node", "Core Node hosted by external node-runner. Static entrypoint into the network.")
+        Rel_Sync(boot_node1, core_node1, "<-UP->")
+    }
+    Boundary(shard2, "Shard 2") {
+        SystemDb(boot_node2, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
+        SystemDb(boot_noden, "Boot Node", "Core Node (higher mass) hosted by Radix DLT. Static entrypoint into the network.")
+        Rel_Sync(boot_node2, boot_noden, "<-UP->")
+    }
+    Boundary(shardn, "Shard N") {
+        SystemDb_Ext(core_node2, "Core Node", "Core Node hosted by external node-runner. Static entrypoint into the network.")
+        SystemDb_Ext(core_noden, "Core Node", "Core Node hosted by external node-runner. Static entrypoint into the network.")
+        Rel_Sync(core_node2, core_noden, "<-UP->")
+    }
+    Rel_Gossip(core_noden, boot_node2, "<-RIGHT-")
+    Rel_Gossip(core_noden, core_node1, "-RIGHT->")
+    Rel_Gossip(core_noden, boot_node1, "-RIGHT->")
+    Rel_Gossip(boot_node1, boot_node2, "-RIGHT->")
+    Rel_Gossip(boot_noden, core_node1, "-RIGHT->")
+}
+
+Rel_Submit(desk_wallet1, core_noden, "-DOWN->")
+Rel_Submit(android_wallet1, boot_noden, "-DOWN->")
+Rel_Submit(ios_wallet1, core_node1, "-DOWN->")
+
+System_Ext(abt1, "Asset Backet Toket Provider", "Java Application based on the [[https://github.com/radixdlt/radixdlt-abt radixdlt-abt]] Service")
+Rel_Submit(abt1, boot_node2, "-UP->")
+
+System_Ext(asset_custodian1, "Asset Custodian", "Third-party asset custodian (e.g. [[https://primetrust.com/ PrimeTrust]])")
+Rel_Use(abt1, asset_custodian1, "-DOWN->")
+
+System_Ext(java_app1, "Custom Java App", "Custom Java Application using the [[https://github.com/radixdlt/radixdlt-java radixdlt-java]] library")
+Rel_Submit(java_app1, core_node2, "-UP->")
+
+System_Ext(js_app1, "In-Browser Javascript", "Custom In-browser Javascript using the [[https://github.com/radixdlt/radixdlt-js radixdlt-js]] library")
+Rel_Submit(js_app1, boot_node1, "-UP->")
+
+System_Ext(ws_app1, "WebSocket Application", "Custom Application using the the WebSocket API directly")
+Rel_Submit(ws_app1, boot_node1, "-UP->")
+
+@enduml
