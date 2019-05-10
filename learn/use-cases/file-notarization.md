@@ -1,4 +1,4 @@
-# File notarization
+# File notarization \(Live\)
 
 ## Introduction
 
@@ -24,7 +24,7 @@ All transactions in Radix are timestamped, both by [multiple logical clocks](htt
 
 Data transactions, therefore, allow the [storage of information on the ledger](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#storing-an-application-payload), which can be easily [read by any client that requests it](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#reading-atoms-from-a-public-address), and timestamps those transactions in a human-readable way.
 
-### Setup
+## Setup
 
 The following steps use the publicly available Radix tools, with an imagined simple web application built on top of it.
 
@@ -48,7 +48,7 @@ The 'Claimed' message may also include Alice's public key so that she can prove 
 
 Alice shares the file \(plus, optionally, her public key and signature\) with Bob. He performs Steps 0 and 1 as well, but the web app will now return Alice's 'Claimed' message, plus the timestamp of the original transaction. If Bob also supplies Alice's public key and signature, it's simple to verify that Alice was definitely the claimer.
 
-### Extensions
+## Extensions
 
 This example can be extended by Bob also sending a 'Claimed' message to the document Account, with his public key included. Now both Bob and Alice can verify they have copies of the original documents, and on what time/date those copies were notarized.
 

@@ -1,4 +1,14 @@
-# Fiat tokens
+# Fiat tokens \(Beta\)
+
+{% hint style="warning" %}
+**Beta Access Required**
+
+This Radix application is currently in pre-release testing and the code is not yet available on our github, if you would like early access to start testing immediately, or would just like to be informed when it is ready to use, please sign up via this form:
+
+[https://radixdlt.typeform.com/to/QUOiQJ](https://radixdlt.typeform.com/to/QUOiQJ)
+
+We currently expect this code to be public by end of July 2019.
+{% endhint %}
 
 ## Introduction
 
