@@ -1,4 +1,4 @@
-# Atom model
+# Atom structure
 
 ## Introduction <a id="docs-internal-guid-56228459-7fff-5555-6d11-e1cc63d3c66c"></a>
 
@@ -72,7 +72,7 @@ Using the index of the Particle Group a Particle resides in, and the Particle's 
 <atomId>/groups/<groupIndex>/particles/<particleIndex>
 ```
 
-Note that 'atomId' is computed using the hash of the Atom. See [Formal Definition](atom-model.md#formal-definition) for further explanation. For example, the Particle identifier
+Note that 'atomId' is computed using the hash of the Atom. See [Formal Definition](atom-structure.md#formal-definition) for further explanation. For example, the Particle identifier
 
 ```text
 123/groups/1/particles/2
@@ -100,7 +100,7 @@ Besides state changes in the form of Particles, grouped into particle Groups, an
 
 #### Metadata
 
-Atoms also contain a string-based key-value store of metadata. This metadata is not validated or otherwise constrained in any way \(besides size restrictions of an Atom, see [Formal Definition](atom-model.md#formal-definition)\) and can be freely used. Note that since all Atoms contain metadata and it does not influence other aspects of the Atom Model in any way, metadata will be omitted for the rest of this document.
+Atoms also contain a string-based key-value store of metadata. This metadata is not validated or otherwise constrained in any way \(besides size restrictions of an Atom, see [Formal Definition](atom-structure.md#formal-definition)\) and can be freely used. Note that since all Atoms contain metadata and it does not influence other aspects of the Atom Model in any way, metadata will be omitted for the rest of this document.
 
 #### Atomicity
 

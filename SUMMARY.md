@@ -9,7 +9,7 @@
   * [Buildability](learn/platform/buildability.md)
   * [Predictability](learn/platform/token.md)
 * [Architecture](learn/architecture/README.md)
-  * [Atom model](learn/architecture/atom-model.md)
+  * [Atom structure](learn/architecture/atom-structure.md)
   * [Particle types](learn/architecture/particle-types.md)
 * [Use Cases](learn/use-cases/README.md)
   * [Alias system \(Live\)](learn/use-cases/alias-system.md)
