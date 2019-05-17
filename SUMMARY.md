@@ -37,6 +37,13 @@
   * [Decentralized Identity](learn/future-developments/decentralized-identity.md)
   * [Radix Name Service](learn/future-developments/radix-name-service.md)
 
+## Arch
+
+* [System Architecture](arch/README.md)
+  * [Context Diagram](arch/c4_context.md)
+  * [Container Diagrams](arch/c4_container.md)
+  * [Component Diagrams](arch/c4_component.md)
+
 ## Develop
 
 * [Network](develop/network/README.md)
