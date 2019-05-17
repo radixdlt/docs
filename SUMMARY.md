@@ -10,6 +10,7 @@
   * [Predictability](learn/platform/token.md)
 * [Architecture](learn/architecture/README.md)
   * [Atom structure](learn/architecture/atom-structure.md)
+  * [Constraint Machine](learn/architecture/constraint-machine.md)
   * [Particle types](learn/architecture/particle-types.md)
 * [Use Cases](learn/use-cases/README.md)
   * [Alias system \(Live\)](learn/use-cases/alias-system.md)
