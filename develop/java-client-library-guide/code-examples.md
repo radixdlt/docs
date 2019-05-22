@@ -7,11 +7,20 @@ These code examples are divided into several topics:
 * **General**
   * [Initializing a Universe](code-examples.md#initializing-a-universe)
   * [Initializing the DApp API](code-examples.md#initializing-the-dapp-api)
+* **Manage atoms**
+  * [Signing an atom](code-examples.md#docs-internal-guid-57047dd8-7fff-3eed-f01d-8e2d3fbcf21d)
+  * [Submitting an atom to the ledger](code-examples.md#submitting-an-atom-to-the-ledger)
+  * [Sending an atom as a message](code-examples.md#sending-an-atom-as-message)
 * **Manage identities**
   * [Creating an Identity](code-examples.md#creating-an-identity)
   * [Generating an Address](code-examples.md#generating-an-address)
 * **Manage transactions**
-  * [Storing and retrieving data](code-examples.md#storing-and-retrieving-data)
+  * [Storing data](code-examples.md#storing-data)
+  * [Retrieving data](code-examples.md#retrieving-data)
+* **Manage tokens**
+  * [Creating a token](code-examples.md#docs-internal-guid-3b764101-7fff-8baf-1c30-62c69f61072e)
+  * [Minting tokens](code-examples.md#minting-tokens)
+  * [Getting a token's resource identifier](code-examples.md#getting-a-tokens-resource-identifier)
 
 {% hint style="success" %}
 **Tip:** if you're new to our Java library, we suggest you begin with our [Get Started guide](get-started.md).
@@ -42,7 +51,51 @@ RadixUniverse.bootstrap(Bootstrap.ALPHANET); // This must be called before Radix
 RadixApplicationAPI api = RadixApplicationAPI.create(identity);
 ```
 
+## Manage atoms
+
+### Signing an Atom <a id="docs-internal-guid-57047dd8-7fff-3eed-f01d-8e2d3fbcf21d"></a>
+
+To sign an unsigned atom using the current account's signature, use the Identity’s `sign(...)` method:
+
+```java
+Atom mySignedAtom = api.getMyIdentity().sign(<my_unsigned_atom>);
+```
+
+### Submitting an Atom to the ledger
+
+To submit an atom to the ledger, just use the API’s `submitAtom(...)` method:
+
+```java
+api.submitAtom(<my_atom>);
+```
+
+### Sending an Atom as message
+
+In the following example, we serialize an atom and send it as a message to a destination address:
+
+```java
+String address = “JHB89drvftPj6zVCNjnaijURk8D8AMFw4mVja19aoBGmRXWchnJ”;
+byte[] data = atom.toDson();
+RadixAddress receiver = RadixAddress.from(address);
+
+api.sendMessage(data, false, receiver);
+```
+
+{% hint style="info" %}
+**Note:** this method does not submit the atom to the ledger. It only sends it as an arbitrary data byte array. There is no validation performed on the atom.
+{% endhint %}
+
 ## Manage identities
+
+### Creating an Identity
+
+To create or load an identity from a file:
+
+```java
+RadixIdentity identity = RadixIdentities.loadOrCreateEncryptedFile("filename.key", "password");
+```
+
+This will either create or load a file with a public/private key and encrypted with the given password.
 
 ### Generating an Address
 
@@ -60,19 +113,9 @@ Or from a base58 string:
 RadixAddress anotherAddress = RadixAddress.fromString("JHB89drvftPj6zVCNjnaijURk8D8AMFw4mVja19aoBGmRXWchnJ");
 ```
 
-### Creating an Identity
-
-To create or load an identity from a file:
-
-```java
-RadixIdentity identity = RadixIdentities.loadOrCreateEncryptedFile("filename.key", "password");
-```
-
-This will either create or load a file with a public/private key and encrypted with the given password.
-
 ## Manage transactions
 
-### Storing and retrieving data
+### Storing data
 
 Immutable data can be stored on the ledger. The data can be encrypted so that only selected identities can read the data.
 
@@ -103,7 +146,9 @@ The returned `Result` object exposes RXJava interfaces from which you can get no
 result.toCompletable().subscribe(<on-success>, <on-error>);
 ```
 
-To then read \(and decrypt if necessary\) all the readable data at an address:
+### Retrieving data
+
+To read \(and decrypt if necessary\) all the readable data at an address:
 
 ```java
 Observable<UnencryptedData> readable = api.getReadableData(<address>);
@@ -112,5 +157,41 @@ readable.subscribe(data -> { ... });
 
 {% hint style="info" %}
 **Note:** data that can't be decrypted by the user's key is simply ignored.
+{% endhint %}
+
+## Manage tokens
+
+{% hint style="warning" %}
+**NOTE:** these examples requires **BETANET** network access.
+{% endhint %}
+
+### Creating a token <a id="docs-internal-guid-3b764101-7fff-8baf-1c30-62c69f61072e"></a>
+
+To create your own token on Radix, you can use the `createToken(...)` method provided by the Java DApp API:
+
+```java
+api.createToken(<token_name>, <iso_name>, <description>, 
+    BigDecimal.ZERO, TokenUnitConversions.getMinimumGranularity(), 
+    TokenSupplyType.MUTABLE);
+```
+
+### Minting tokens
+
+When you need to mint new tokens, you can simply call the `mintTokens(...)` method as shown below:
+
+```java
+api.mintTokens(<iso_token_name>, <amount_to_mint>);
+```
+
+### Getting a token’s Resource Identifier
+
+To get the Radix Resource Identifier \(RRI\) for a token created by a previous call to `createToken(...)`, we have to:
+
+```java
+RRI myRRid = RRI.of(api.getMyAddress(), <iso_token_name>);
+```
+
+{% hint style="info" %}
+**Note:** no validation is made whether the returned RRI actually points to a valid token in the internal address space of the client.
 {% endhint %}
 

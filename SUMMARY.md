@@ -39,10 +39,10 @@
 
 ## Arch
 
-* [System Architecture](arch/README.md)
-  * [Context Diagram](arch/c4_context.md)
-  * [Container Diagrams](arch/c4_container.md)
-  * [Component Diagrams](arch/c4_component.md)
+* [System Architecture](arch/arch/README.md)
+  * [Context Diagram](arch/arch/c4_context.md)
+  * [Container Diagrams](arch/arch/c4_container.md)
+  * [Component Diagrams](arch/arch/c4_component.md)
 
 ## Develop
 
