@@ -2,17 +2,17 @@
 
 ## History
 
-\_\_[_Daniel Hughes_](https://radixdlt.com/team)_, founder & CTO of Radix DLT invented the Radix platform and ‘Tempo’ - its underlying engine comprised of the consensus algorithm and data architecture._
+\_\_[_Daniel Hughes_](https://radixdlt.com/team)_, founder & CTO of Radix DLT invented the Radix platform and ‘_[_Tempo_](../whitepapers/tempo.md)_’ - its underlying engine comprised of the consensus algorithm and data architecture._
 
 In 2011, he discovered Bitcoin and was instantly hooked by the underlying elegance of its decentralized protocol. As he dug deep, he quickly realized its limitations and proposed various solutions on the Bitcoin Talk Forum, only to be met with criticism. Ultimately, he decided to build his own decentralized ledger that could scale to support mass market decentralized applications with millions of users simultaneously. This obsession with creating a truly scalable distributed ledger led him to build and test various suitable consensus algorithms and data architectures like blockchains, block-trees, directed acyclic graphs \(DAG\) and state channels.  
   
-Having tested their limits, he found they all had a fundamental inability to scale. So he dedicated his time to develop a new architecture and consensus algorithm. Five years in R&D and after many iterations, he eventually invented ‘Tempo’ - a novel distributed ledger architecture and consensus algorithm for decentralized systems, that is sharded to scale in an efficient, unbounded linear fashion. It uses vector clocks for generating a partial ordering of events in a distributed system to detect and prevent causality violations.
+Having tested their limits, he found they all had a fundamental inability to scale. So he dedicated his time to develop a new architecture and [consensus algorithm](https://www.radixdlt.com/post/simple-consensus-in-radix/). Five years in R&D and after many iterations, he eventually invented ‘[Tempo](../whitepapers/tempo.md)’ - a novel distributed ledger architecture and consensus algorithm for decentralized systems, that is [sharded to scale](http://www.radixdlt.com/post/sharding-in-radix/) in an efficient, unbounded linear fashion. It uses vector clocks for generating a [partial ordering of events](http://www.radixdlt.com/videos/creating-relative-order-of-events-on-the-radix-ledger/) in a distributed system to detect and prevent causality violations.
 
-This system is both _asynchronous_, meaning there is no block time, and Byzantine fault-tolerant, meaning that it can detect and stop false transactions and double spends within a system that anyone can join.
+This system is both _asynchronous_, meaning there is no block time, and [Byzantine fault-tolerant](https://www.radixdlt.com/post/simple-consensus-in-radix/), meaning that it can detect and stop false transactions and double spends within a system that anyone can join.
 
-Tempo does this by preserving the total order of events, allowing the trustless transfer of value, timestamping and other functionalities. It is a semi-structured, shardable architecture that limits state transfer information only to those members of the network that need it. This reduces overhead and increases performance.
+[Tempo](../whitepapers/tempo.md) does this by preserving the total order of events, allowing the trustless transfer of value, timestamping and other functionalities. It is a semi-structured, [shardable architecture](http://www.radixdlt.com/post/sharding-in-radix/) that limits state transfer information only to those members of the network that need it. This reduces overhead and increases performance.
 
-It does not require large amounts of computing power \(PoW\) or large amounts of capital \(PoS\) to secure it. It is suitable for both public and private deployments, without modification, and requires no special hardware or equipment. Combined with a vast, overlapping shard space, the scalability of Radix is only constrained by the number of nodes operating within the network.
+It does not require large amounts of computing power \([PoW](http://www.radixdlt.com/post/what-is-proof-of-work/)\) or large amounts of capital \([PoS](http://www.radixdlt.com/post/why-proof-of-stake-is-a-powerful-alternative/)\) to secure it. It is suitable for both public and private deployments, without modification, and requires no special hardware or equipment. Combined with a vast, overlapping [shard space](http://www.radixdlt.com/post/what-is-sharding/), the scalability of Radix is only constrained by the number of nodes operating within the network.
 
 {% hint style="success" %}
 **Tip:** discuss the Radix History on our [developer forum](https://forum.radixdlt.com/t/the-radix-history/34).
@@ -20,7 +20,7 @@ It does not require large amounts of computing power \(PoW\) or large amounts of
 
 ## What is Radix?
 
-Radix is a new platform, like Bitcoin or Ethereum, but scalable and easy to build on. Instead of using blockchain, we started from scratch with an entirely new design so that every person and device in the world could use the Radix ledger without centralization or compromise. We created building blocks for developers, making applications, tokens, and coins as easy to deploy as possible. It’s fast, it works, and our [test net](https://explorer.radixdlt.com/) is already live.
+Radix is a new platform, like Bitcoin or Ethereum, but scalable and easy to build on. Instead of using blockchain, we started from scratch with an entirely new design so that every person and device in the world could use the Radix ledger without centralization or compromise. We created [building blocks](../architecture/atom-structure.md) for developers, making applications, tokens, and coins as easy to deploy as possible. It’s fast, it works, and our [test net](https://explorer.radixdlt.com/) is already live.
 
 It's a speedy alternative to [blockchains](https://www.radixdlt.com/post/blockchains-are-broken-here-is-why) and [DAGs](https://www.radixdlt.com/post/dags-dont-scale-without-centralization). It uses both the [passage of logical time](https://youtu.be/wfsZuN6NaJo) and database sharding to create an immensely secure and scalable system for the storage and accessing of immutable data and decentralized logic.
 
@@ -34,7 +34,7 @@ This has not been a significant problem for the relative niche use cases that it
 
 Limitations of current decentralized ledger solutions:-
 
-1. They cannot scale to meet demand
+1. [They cannot scale](http://www.radixdlt.com/videos/introduction-to-radix-blockchain-scaling-issues/) to meet demand
 2. A consensus is inefficient and resource intensive
 3. Networks are prone to miner centralization
 4. Smart Contracts are complex and expensive to use
@@ -52,9 +52,9 @@ It has been the result of 6 years of research and development into many unsolved
 
 For a decentralized protocol to be mass adopted, it should be designed to be **fast**, **scalable**, **efficient** and **secure,** but without compromising on **security** or **decentralization.** It is also critical to incentivize network participants with a low volatile crypto currency that eventually becomes **stable** and thus **usable** as a peer-to-peer version of electronic cash, as originally envisioned by **Satoshi Nakamoto**. Finally, it is crucial to build a **developer-friendly** platform that everyone can rely on. 
 
-To achieve this, Radix created 'Tempo' a combined distributed ledger architecture and consensus algorithm that is massively sharded to scale to 7 billion people and 30 billion devices simultaneously. 
+To achieve this, Radix created [Tempo](../whitepapers/tempo.md) a combined distributed ledger architecture and consensus algorithm that is massively sharded to scale to 7 billion people and 30 billion devices simultaneously. 
 
-Radix is both asynchronous Byzantine fault tolerant \(**aBFT**\) to guard against 51% network split attacks and asynchronous Byzantine fault detective \(**aBFD**\) to detect malicious activity even with 99% bad actors in a system \(or on a shard\).   
+Radix is both asynchronous Byzantine fault tolerant \(**aBFT**\) to guard against 51% [network split attacks](http://www.radixdlt.com/post/what-are-network-splits/) and asynchronous Byzantine fault detective \(**aBFD**\) to detect malicious activity even with [99% bad actors in a system](https://www.radixdlt.com/post/simple-consensus-in-radix/) \(or on a shard\).   
   
 It does this using the theory of sharding and the [passage of logical time](https://youtu.be/wfsZuN6NaJo). 
 
@@ -74,19 +74,19 @@ Tempo aims to create a secure and reliable consensus on a decentralized public l
 
 To achieve this, Tempo relies on two simple ideas and one logical leap:
 
-1. The use of a basic digital clock called a “logical clock”
-2. Telling your neighbors what has been happening, a process called “Gossip”
+1. The use of a basic digital clock called a “[logical clock](https://www.youtube.com/watch?v=wfsZuN6NaJo)”
+2. Telling your neighbors what has been happening, a process called “[Gossip](https://www.youtube.com/watch?v=9kPyyOIn6Bo)”
 3. To stop double spends across shards, your shard address should be based on your wallet public key
 
 A logical clock is a counter that is incremented by 1 every time something new happens. On Radix, “_something new_” is when one Node speaks to another in the Radix network. This gives every Node their own relative time, based on network activity, and one they can use to create a simple order of events.
 
-Gossip protocols are well established in computer science and are one of the fastest ways in which information can be reliably shared across a network. It works simply by a Node choosing a couple of other Nodes to tell something new to, and they, in turn, telling two other Nodes, and so on and so on. This causes information to spread at an exponential rate.
+[Gossip protocols](http://www.radixdlt.com/videos/updates-about-new-events-via-gossip/) are well established in computer science and are one of the fastest ways in which information can be reliably shared across a network. It works simply by a Node choosing a couple of other Nodes to tell something new to, and they, in turn, telling two other Nodes, and so on and so on. This causes information to spread at an exponential rate.
 
-On Tempo, we add the Node logical clocks, signed by the Nodes in question, to the gossip they are spreading around the network. This allows everyone to see both new information, and at what logical clock time that information was seen by other members of the net.
+On [Tempo](../whitepapers/tempo.md), we add the Node logical clocks, signed by the Nodes in question, to the gossip they are spreading around the network. This allows everyone to see both new information, and at what logical clock time that information was seen by other members of the net.
 
-To allow high scalability a Tempo ledger is split into a vast shard space, allowing a massive degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
+To allow high scalability a [Tempo](../whitepapers/tempo.md) ledger is split into a vast shard space, allowing a massive degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
 
-When combined with logical clocks and gossip protocols, the Tempo consensus algorithm will always find the total ordering of related events, allowing double spends to be quickly detected and ignored.
+When combined with logical clocks and [gossip protocols](http://www.radixdlt.com/videos/updates-about-new-events-via-gossip/), the Tempo consensus algorithm will always find the total ordering of related events, allowing double spends to be quickly detected and ignored.
 
 {% hint style="success" %}
 **Tip:** [Discuss this topic on our developer forum](https://forum.radixdlt.com/t/how-does-radix-work/59?u=angad).
@@ -100,13 +100,13 @@ Radix is used by decentralized applications that demand fast transactions with n
 
 ### Fast, Scalable & Cheap
 
-* Asynchronous, &lt;5 seconds transaction finality time. Transactions settle as fast as fiat transactions.
+* Asynchronous, ~0.2 transaction time, &lt;10 seconds transaction finality time. Transactions settle as fast as fiat transactions, due to the fact that by design Radix groups related transactions together.
 * Massive sharded to scale linearly with no upper bound - solves the trilemma of decentralization
 * Negligible transaction fees projected to cost up to 1¢
 
 ### Efficient & Secure
 
-* A secure algorithm that achieves consensus with even 99% malicious nodes on a shard 
+* A secure algorithm that achieves consensus with even [99% malicious nodes on a shard](https://www.radixdlt.com/post/simple-consensus-in-radix/) 
 * Reduces energy footprint by 98% as the algorithm is not based on Proof of Work
 
 ### Truly Decentralized and Fair
@@ -125,36 +125,18 @@ Radix is used by decentralized applications that demand fast transactions with n
 * Private and Public Network deployments use the same technology.
 * Constraints Machine allows for validating state transitions instead of computing them
 * Modular - allows for multiple layer constraints and development opportunities
-* Constraints - enable accounts and tokens to have multiple layers of permission sets on functions of account ownership, account recovery, send/receive tokens
-* API - allows for building most DLT use-cases without the use of smart contracts
-* All token types are first class citizens - allows paying for services without having XRD token via the decentralized exchange
-* Decentralized exchange for price discovery and allowing peer-to-peer trading of assets
+* High-level API - allows for building most DLT use-cases without the use of smart contracts
+* All token types are first class citizens - allows paying for services without having XRD tokens
 
 ### **Client Libraries**
 
-* Java library
-* Kotlin library
-* JavaScript library
-
-### **Scrypto**
-
-Scrypto is a state machine which provides security and functional abstraction to virtual-machines that live on top of it. This enables any VM to interact \(providing it can\) and execute any script in any language.
-
-The planned JavaScript module will merely be a VM that interacts with the Scrypto state machine. Radix makes it easier than ever for established sectors and legacy institutions to deploy self-executing agreements in a standardized environment, verified and tested for stability.
-
-It's a natural, user-friendly way which will allow anybody with little to no development experience to write their own DApps on the Radix distributed ledger.
-
-### Decentralized Identity
-
-The [Decentralized Identifiers \(DIDs\) v0.11 specification](https://w3c-ccg.github.io/did-spec/) defines a standard for a decentralized, self-sovereign identity layer on the internet that can be implemented by any DLT. It describes how identification is structured, how communications are established and permissioned. Radix is developing a decentralized identity solution based on these standards.
-
-### Radix Name Service
-
-The Radix Name service will provide flexible resolution of short, human-readable names to service and resource identifiers.
+* [Java library](../../develop/java-client-library-guide/)
+* [JavaScript library](../../develop/javascript-client-library-guide/)
+* [Kotlin library](../../develop/kotlin-client-library-guide/)
 
 ### **Radix Smart Cards**
 
-A decentralized smart/debit card compatible with existing point-of-sale systems for enabling merchants to accept Radix assets faster and helping users spend them anywhere.
+A [decentralized smart/debit card](../use-cases/card-payment-system.md) compatible with existing point-of-sale systems for enabling merchants to accept Radix assets faster and helping users spend them anywhere.
 
 ## Try it out
 
@@ -164,11 +146,9 @@ The Radix platform is now in our Alpha stage of development, with a live Alpha t
 **Tip:** start building with our GitHub projects: [https://github.com/radixdlt/](https://github.com/radixdlt/)
 {% endhint %}
 
-All our libraries are open source. The core code is not currently open-sourced, as we have not yet launched the main net. Since our [Roadmap is still quite a long one](https://www.radixdlt.com/roadmap), we have made the difficult decision not to open source immediately as we do not believe someone would not fork before we even get a chance to launch ourselves.
+All our libraries are open source. The core engine code is not currently open-sourced, as we have not yet launched the main net. However, once launched, all the Radix code \(including libraries, Engine and Tempo\) will be 100% open source. We believe that to build a platform for the world to build on, it must be an open one.
 
-However, once launched, all the Radix code will absolutely be 100% open source. We believe that to build a platform for the world to build on, it must be an open one.
-
-In the [next section](tempo.md), we discuss the design philosophy of 'Tempo' and how it works to enable a fast, scalable and straightforward DLT platform to build on.
+In the [next section](tempo.md), we discuss the design philosophy of [Tempo](../whitepapers/tempo.md) and how it works to enable a fast, scalable and straightforward DLT platform to build on.
 
 ## Join the Radix Community
 
