@@ -1,5 +1,9 @@
 # Constraint Machine
 
+{% hint style="success" %}
+**Tip:** for a quick introduction to the Constraint Machine, check [our blog post](https://www.radixdlt.com/post/chess-guardians-of-the-galaxy-vol-1/).
+{% endhint %}
+
 ## Introduction <a id="docs-internal-guid-047e2002-7fff-03af-0fbc-077c1f63e1f1"></a>
 
 This document will walk through the design logic behind the Constraint Machine, one of the two middle layers in the Radix Engine.
@@ -9,7 +13,7 @@ The Constraint Machine is a concept that takes Bitcoin's UTXO model and expands 
 The other middle layer is the [Atom Model](atom-structure.md), which takes that core generic programming language and provides much easier abstractions for developing correct state machines.
 
 {% hint style="success" %}
-**Tip:** you can read more about the Atom Model structure in [this article](atom-structure.md).
+**Tip:** you can read more about the DLT stack structure in [this blog post](https://www.radixdlt.com/post/introduction-to-the-dlt-stack/).
 {% endhint %}
 
 ![](../../.gitbook/assets/20.png)
