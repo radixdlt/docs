@@ -36,6 +36,12 @@ To bootstrap to the **ALPHANET** test network:
 RadixUniverse.bootstrap(Bootstrap.ALPHANET);
 ```
 
+To bootstrap to the **BETANET** test network:
+
+```text
+RadixUniverse.bootstrap(Bootstrap.BETANET);
+```
+
 {% hint style="info" %}
 **Note:** No network connections will be made yet until it is required.
 {% endhint %}
