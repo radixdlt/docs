@@ -12,9 +12,9 @@ We currently expect this code to be public by end of July 2019.
 
 ## Introduction
 
-In this document, we present a detailed description of a Fiat Token \(FT\) reference implementation, and we review the minting, burning, and sending processes behind it.
+Fiat Tokens are tokens that are backed by money held in a bank account, where each dollar/euro/yen held by the custodian is represented 1:1 by a token on the Radix ledger. Once created they can then be sold, traded or held by anyone in the world, and present an incredibly powerful tool for decentralised finance applications.
 
-This sample FT system showcases how simple is to enable bridging between fiat currencies and user-defined tokens using the Radix distributed ledger.
+In this document, we present a detailed description of a Fiat Token \(FT\) reference implementation, and we review the minting, burning, and sending processes behind it. This sample FT system showcases how simple is to enable bridging between fiat currencies and user-defined tokens using the Radix distributed ledger.
 
 {% hint style="info" %}
 For this use case scenario, we’ve chosen PrimeTrust as our technology partner since they’re a trusted actor in the industry and they could provide us with a powerful, sandboxed custodial bank API and [detailed technical documentation](https://primetrust.com/api_docs.html).
@@ -87,7 +87,7 @@ The Fiat token system provides simple workflows for the following user journeys:
 4. Depositing fiat tokens
 5. Offboarding cash
 
-### Onboarding cash
+### On-boarding cash
 
 If the user wants to onboard cash from his private bank account to the FT service:
 
@@ -123,7 +123,7 @@ If the user wants to deposit fiat tokens from his private wallet back to the FT 
 2. The user sends the desired amount of tokens back to his ABT Radix wallet address
 3. The ABT service receives the UST tokens and keeps them available on the user’s FT wallet for future transactions.
 
-### Offboarding cash
+### Off-boarding cash
 
 If the user wants to convert the UST tokens back to USD assets, the workflow is as follows:
 
@@ -146,6 +146,21 @@ To keep it simple we are only dealing with PrimeTrust internal cash transfers in
 In a production-ready service, these assumptions wouldn’t necessarily be true, and there would, therefore, be a need for some well-defined way for the user to provide a transaction reference serving as a pseudo-identification method.
 
 Furthermore, any Know-Your-Customer \(KYC\) and Anti-Money-Laundry \(AML\) programs would require much more detailed information about the user before processing these transactions.
+
+### Creating Tokens
+
+Creating these on Radix is a very simple process. This is the code required to create a multi-issuance USD token:
+
+```java
+api.createToken(
+    "UST Fiat Token",                              // Name
+    "UST",                                         // ISO
+    "This is a token created by me",               // Description
+    BigDecimal.valueOf(10000),                     // Amount
+    TokenUnitConversions.getMinimumGranularity(),  // Granularity: Default is 10^18
+    TokenSupplyType.MUTABLE                        // TokenSupplyType
+)    
+```
 
 ### Minting and burning Tokens
 
