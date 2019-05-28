@@ -41,8 +41,6 @@
   * [Decentralized Identity](learn/future-developments/decentralized-identity.md)
   * [Radix Name Service](learn/future-developments/radix-name-service.md)
 
-## Arch
-
 ## Develop
 
 * [Network](develop/network/README.md)
