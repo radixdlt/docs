@@ -64,9 +64,11 @@ It does this using the theory of sharding and the [passage of logical time](http
 
 ## How does Radix work? \(Simplified\)
 
-_Radix is built on a combined architecture and consensus algorithm called Tempo, which is fully outlined in the Tempo white paper that can be found here:_ [_http://bit.ly/2ADK8LA_](http://bit.ly/2ADK8LA)
+{% hint style="info" %}
+_Radix is built on a combined architecture and consensus algorithm called Tempo, which is fully outlined in the_ [_Tempo white paper_](http://bit.ly/2ADK8LA)_._
+{% endhint %}
 
-Tempo aims to create a secure and reliable consensus on a decentralized public ledger. To do this, it must be:
+[Tempo](../whitepapers/tempo.md) aims to create a secure and reliable consensus on a decentralized public ledger. To do this, it must be:
 
 * Asynchronous - any process on the network can start or end whenever it needs to - e.g., it does not need to wait for a “block” to be mined.
 * Highly concurrent - many processes can be done simultaneously, without bottlenecks - e.g., there is not a limit to the number of transactions that can be fit into a “block”
@@ -78,11 +80,11 @@ To achieve this, Tempo relies on two simple ideas and one logical leap:
 2. Telling your neighbors what has been happening, a process called “[Gossip](https://www.youtube.com/watch?v=9kPyyOIn6Bo)”
 3. To stop double spends across shards, your shard address should be based on your wallet public key
 
-A logical clock is a counter that is incremented by 1 every time something new happens. On Radix, “_something new_” is when one Node speaks to another in the Radix network. This gives every Node their own relative time, based on network activity, and one they can use to create a simple order of events.
+A [logical clock](../glossary.md#logical-clock) is a counter that is incremented by 1 every time something new happens. On Radix, “_something new_” is when one Node speaks to another in the Radix network. This gives every Node their own relative time, based on network activity, and one they can use to create a simple order of events.
 
-[Gossip protocols](http://www.radixdlt.com/videos/updates-about-new-events-via-gossip/) are well established in computer science and are one of the fastest ways in which information can be reliably shared across a network. It works simply by a Node choosing a couple of other Nodes to tell something new to, and they, in turn, telling two other Nodes, and so on and so on. This causes information to spread at an exponential rate.
+[Gossip protocols](http://www.radixdlt.com/videos/updates-about-new-events-via-gossip/) are well established in computer science and are one of the fastest ways in which information can be reliably shared across a network. It works simply by a [Node](../glossary.md#nodes) choosing a couple of other [Nodes](../glossary.md#nodes) to tell something new to, and they, in turn, telling two other Nodes, and so on and so on. This causes information to spread at an exponential rate.
 
-On [Tempo](../whitepapers/tempo.md), we add the Node logical clocks, signed by the Nodes in question, to the gossip they are spreading around the network. This allows everyone to see both new information, and at what logical clock time that information was seen by other members of the net.
+On [Tempo](../whitepapers/tempo.md), we add the Node [logical clocks](../glossary.md#logical-clock), signed by the Nodes in question, to the gossip they are spreading around the network. This allows everyone to see both new information, and at what logical clock time that information was seen by other members of the net.
 
 To allow high scalability a [Tempo](../whitepapers/tempo.md) ledger is split into a vast shard space, allowing a massive degree of concurrency. To avoid a double spend across any of the shards, the shard a wallet lives on is determined by its public key. This makes sure that any spend from a wallet will always start on the same shard.
 

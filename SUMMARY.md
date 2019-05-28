@@ -12,6 +12,10 @@
   * [Atom structure](learn/architecture/atom-structure.md)
   * [Constraint Machine](learn/architecture/constraint-machine.md)
   * [Particle types](learn/architecture/particle-types.md)
+  * [System Architecture](learn/architecture/system/README.md)
+    * [Context Diagram](learn/architecture/system/c4_context.md)
+    * [Container Diagrams](learn/architecture/system/c4_container.md)
+    * [Component Diagrams](learn/architecture/system/c4_component.md)
 * [Use Cases](learn/use-cases/README.md)
   * [Alias system \(Live\)](learn/use-cases/alias-system.md)
   * [Card payment system \(Beta\)](learn/use-cases/card-payment-system.md)
@@ -38,11 +42,6 @@
   * [Radix Name Service](learn/future-developments/radix-name-service.md)
 
 ## Arch
-
-* [System Architecture](arch/arch/README.md)
-  * [Context Diagram](arch/arch/c4_context.md)
-  * [Container Diagrams](arch/arch/c4_container.md)
-  * [Component Diagrams](arch/arch/c4_component.md)
 
 ## Develop
 

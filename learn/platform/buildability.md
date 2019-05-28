@@ -2,9 +2,9 @@
 
 ## Building on Radix
 
-Making Radix easy, fast and secure to build on is achieved through the use of "building blocks" that are strictly controlled by a flexible set of on ledger "constraints". This combination allows developers to provide much of the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden.
+Making Radix easy, fast and secure to build on is achieved through the use of "[building blocks](../architecture/atom-structure.md)" that are strictly controlled by a flexible set of on ledger "[constraints](../architecture/constraint-machine.md)". This combination allows developers to provide much of the same functionality as smart contracts, but with minimal complexity, no error-prone user code and reduced network burden.
 
-Buildability also contributes to a more scalable protocol, making sure that popular Decentralized Applications \(DApps\) on Radix will not have a negative impact on other network activities. These building blocks are layered upon the Radix Atom Model, which will also be explained in this article.
+Buildability also contributes to a more scalable protocol, making sure that popular Decentralized Applications \(DApps\) on Radix will not have a negative impact on other network activities. These building blocks are layered upon the Radix [Atom Model](buildability.md#atom-model), which will also be explained in this article.
 
 We begin this article by providing an introduction on why we need to deliver buildability in our platform. We'll focus on how DApps have been built until now, and the three types of DApps \(protocol level, client-side and smart contracts\) commonly used.
 
@@ -55,7 +55,7 @@ Because of this, organizations can apply some of those benefits to their systems
 * Storage of value on a distributed ledger
 * Immutable data storage
 * User management \(with private keys used as passwords\)
-* Notarization and timestamping of events
+* [Notarization](../use-cases/file-notarization.md) and timestamping of events
 * Simple and safe permissions management
 
 ### Client-side DApps
@@ -114,10 +114,11 @@ Complex smart contracts work differently, as they involve several other paramete
   
 Declarative programming is different from imperative programming. Rather than the ‘if this then that’ step by step process describing how something should be achieved, it instead describes what we want to be achieved.   
   
-Declarative programming creates a more reliable code with less potential for errors because it means that:  
-  
-• Rather than having to define all of the steps that lead to the desired outcome, the program instead can work in reverse from said outcome to ultimately arrive at it  
-• There is less onus on the developer to code many specific details/for all potential eventualities  
+Declarative programming creates a more reliable code with less potential for errors because it means that:
+
+* Rather than having to define all of the steps that lead to the desired outcome, the program instead can work in reverse from said outcome to ultimately arrive at it
+* There is less onus on the developer to code many specific details/for all potential eventualities
+
   
 Declarative programming creates a default no-action permitted system, where actions only become possible at specific states. These are known as ‘constraints’.  
   
@@ -125,15 +126,15 @@ When the protocol used is versatile enough and offers adequate constraints nativ
 
 ### Constraints: a powerful tool
 
-The constraints ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.  
+The [constraints](../architecture/constraint-machine.md) ultimately run against the ‘if this then that’ process explained previously. They enable a more straightforward way to understand a contract, through which users can be better informed about what state change they can make and what the resolution of it will be. This allows the functionality of smart contracts to be created in a less technical and arguably more human-friendly manner, ultimately enabling a wide range of tasks to be solved without the need to resort to smart contracts.  
   
 Instead of a large application layer built on top of a thin protocol layer, Radix provides a large protocol layer upon which DApps can be easily and quickly deployed.
 
 ![Source: Union Square Ventures - Fat Protocols](../../.gitbook/assets/buildability-kb-2.png)
 
-By building and enforcing constraints at the protocol-level, Radix allows developers to use these constraints as they would use frameworks and libraries.
+By building and enforcing [constraints](../architecture/constraint-machine.md) at the protocol-level, Radix allows developers to use these constraints as they would use frameworks and libraries.
 
-Note that the term ‘constraints’ doesn't imply restrictions from a capability standpoint. Constraints are a powerful tool able to create most of the functionality available in smart contracts. Indeed smart contracts provide constraints too - what Radix aims to achieve is to reduce or remove the need for developers to create these constraints themselves, and instead, offer built-in and readily available constraints that developers actually want to use.
+Note that the term ‘[constraints](../architecture/constraint-machine.md)’ doesn't imply restrictions from a capability standpoint. Constraints are a powerful tool able to create most of the functionality available in smart contracts. Indeed smart contracts provide constraints too - what Radix aims to achieve is to reduce or remove the need for developers to create these constraints themselves, and instead, offer built-in and readily available constraints that developers actually want to use.
 
 Furthermore, using constraints \(rather than smart contracts\) provides several benefits:
 
@@ -189,19 +190,19 @@ There are many types of ready-to-use Particles, and the extensible design makes 
 
 ### A flexible system
 
-The Atom Model has been designed to be easy to upgrade and extend. It provides a flexible, composable system of constraints which is simple to use for developers and limits the ability to make mistakes. In short, it allows:
+The [Atom Model](../architecture/atom-structure.md) has been designed to be easy to upgrade and extend. It provides a flexible, composable system of constraints which is simple to use for developers and limits the ability to make mistakes. In short, it allows:
 
 * Developers to build DApps with flexible and powerful building objects
 * State changes to be known before execution, removing the issue of unknown state changes with smart contracts
 * State to be divided into smaller pieces \(sub-states\) that can be validated without requiring all other states, aiding with scalability and sharding
 * The provision of the bulk of functionality brought about by smart contracts while avoiding their pitfalls
 
-This model operates on top of[ Tempo](https://papers.radixdlt.com/tempo/latest/); Radix’s distributed database architecture and consensus algorithm. Tempo provides conflict resolution, ordering of events \(important for many types of DApps such as gaming, gambling, and fintech\) and fast finality, and it also provides a foundation of a decentralized network which can scale linearly without network bottlenecks. The Atom Model provides the structure on which to create, while Tempo provides the mechanism for that structure to work. Together they allow developers to create secure, scalable DApps.  
+This model operates on top of[ Tempo](https://papers.radixdlt.com/tempo/latest/); Radix’s distributed database architecture and consensus algorithm. Tempo provides conflict resolution, ordering of events \(important for many types of DApps such as gaming, gambling, and fintech\) and fast finality, and it also provides a foundation of a decentralized network which can scale linearly without network bottlenecks. The [Atom Model](../architecture/atom-structure.md) provides the structure on which to create, while Tempo provides the mechanism for that structure to work. Together they allow developers to create secure, scalable DApps.  
 
 
 ## Building blocks for developers
 
-Constraints are used to create building blocks which developers can utilize. DApps are built on top of these blocks, so developers don't have to make the underlying functionality themselves.
+[Constraints](../architecture/constraint-machine.md) are used to create building blocks which developers can utilize. DApps are built on top of these blocks, so developers don't have to make the underlying functionality themselves.
 
 Examples of these building blocks include:
 
@@ -241,9 +242,9 @@ Relevant business use cases have been built on Radix with what is currently avai
 * [Alias System](https://www.radixdlt.com/post/how-to-implement-an-alias-system-in-radix)
 * Peer-to-Peer transactions
 * Secure messaging
-* File notarization
+* [File notarization](../use-cases/file-notarization.md)
 
-Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section here.  
+Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section [here](../../develop/java-client-library-guide/).  
 
 
 .

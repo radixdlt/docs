@@ -5,7 +5,7 @@ description: Radix Economics
 # Predictability
 
 {% hint style="info" %}
-[Link to Economics Whitepaper](http://bit.ly/EconomicsWP-KB-ECONOMICS1)
+[Radix Economics Whitepaper](http://bit.ly/EconomicsWP-KB-ECONOMICS1)
 {% endhint %}
 
 ## Introduction
@@ -16,9 +16,11 @@ Having worked in the space for several years now, we believe it’s fundamental 
 
 Out of everything you will need to learn, mastering what is known as the token economics or crypto economics of a network is perhaps the most critical element. 
 
-### **What is Crypto Economics?**
+## **What is Crypto Economics?**
 
+{% hint style="success" %}
 **Crypto Economics = Cryptography + Economics**
+{% endhint %}
 
 In its simplest form, crypto economics refers to the use of economics \(through incentives\) and cryptography \(through encryption\) to design a secure system or network with predefined desired properties.
 
@@ -28,17 +30,17 @@ In its simplest form, crypto economics refers to the use of economics \(through 
 
 It is designing  favorable incentives that are both the genesis and the goal for a system to become a robust decentralized network to thrive against malicious actors attempting to disrupt the network.
 
-When Satoshi Nakamoto developed the Bitcoin blockchain, the first decentralized digital currency, and implemented a Proof of Work \(PoW\) protocol to the system he/she/they were doing so to secure the network through cryptography and using an incentive system for settlement.
+When Satoshi Nakamoto developed the Bitcoin blockchain, the first decentralized digital currency, and implemented a [Proof of Work](http://www.radixdlt.com/post/what-is-proof-of-work/) \(PoW\) protocol to the system he/she/they were doing so to secure the network through cryptography and using an incentive system for settlement.
 
 Explaining the [Proof of Work](https://www.radixdlt.com/post/what-is-proof-of-work) consensus algorithm demands an entire article by itself, but in a nutshell, it is what allows transactions on the blockchain to take place. Through it, members of the network with high levels of computing power \(called miners\) prove that a specified amount of work has been completed in order to validate transactions.
 
-### **Why is incentive design fundamental to decentralized systems?**
+## **Why is incentive design fundamental to decentralized systems?**
 
 Crypto economics enables parties who do not know one another to reach consensus about the state of a blockchain. Without the application of crypto economic principles, decentralized networks like Bitcoin and Ethereum simply cannot work. And so, it is the elements of crypto economics – cryptography and economic incentives that allow the creation of decentralized networks and the ability of these networks to reach consensus, without the need to rely on a trusted central authority.
 
-### **What are the challenges of building incentive mechanisms?**
+## **What are the challenges of building incentive mechanisms?**
 
-Building sound incentive mechanisms into a decentralized system that has no trusted or central authority is a complex task. The main reason for this is that crypto economics attempts to combine the “perfect” world of technically implemented rules with the unpredictable behaviors of human nature.
+Building sound [incentive mechanisms](../whitepapers/public-node-incentives.md) into a decentralized system that has no trusted or central authority is a complex task. The main reason for this is that crypto economics attempts to combine the “perfect” world of technically implemented rules with the unpredictable behaviors of human nature.
 
 Crypto economics of a token is a hybrid between programmatic rules implemented and the entire world of interactions real human beings have with it.
 
@@ -50,7 +52,7 @@ This is what makes cryptocurrencies so hard. We are not used to designing econom
 
 At the same time, this is the reason why crypto economics is so essential. If rules are not correctly defined, a decentralized system is bound to collapse and fail. This is where proper mechanism design comes in. Mechanism design is a field in economics and game theory focused on designing mechanisms to incentivize or disincentivize behaviors within a system toward desired objectives.
 
-### **What role do tokens have in a decentralized protocol?**
+## **What role do tokens have in a decentralized protocol?**
 
 At the core of crypto economics, a token exists as the primary tool to control a protocol’s micro-economy. A well-designed system properly manages the incentives and distribution of tokens within the corresponding network of participants. Decentralized systems thrive when tokenized incentives are accurately aligned.
 
@@ -62,11 +64,11 @@ Tokens must be an integral element of the network in which they exist to have an
   
 Conversely, decentralized networks that effectively utilize crypto economic principles to operate can offer new and innovative network constraints built with internal mandates and incentives that encourage all stakeholders to act in the interest of the network. 
 
-## Radix Node Incentives
+## Radix Node incentives
 
 The Radix core is designed to be fast, fair, and simple. Due to its highly efficient consensus mechanism, anyone can run a node on standard commercial hardware. Every network participant is a first-class citizen of the network, and you don't require high computing power or starting capital to be a helpful participant of the network. Moreover, due to its highly sharded nature, any type of device, depending on its computational and storage capacity will support the network as much as it can manage to. This reduces the barrier to entry massively, creating a fair participating ground everyone and effectively eliminating miner centralization and thus enabling conditions for maximum decentralization.  
 
-In the Radix network, each node keeps a full/partial copy of the ledger known as shards. Each node communicates and collaborates with each other to validate, secure and maintain the distributed ledger.
+In the Radix network, each node keeps a full/partial copy of the ledger known as [shards](../glossary.md#shard). Each node communicates and collaborates with each other to validate, secure and maintain the distributed ledger.
 
 If you are the submission node and you did the useful work of validating, storing and communicating a new transaction along with the other neighboring nodes in your shard, then you get the transaction fee.
 
@@ -74,8 +76,9 @@ Moreover, all nodes that generate valid temporal proofs in supporting the networ
 
 Thus, Reward is a function of adding both fees earned by validating transactions and funds earned from total supply inflation.
 
-Read the [Node Incentive White paper](https://papers.radixdlt.com/incentives/latest/) for a detailed explanation on node incentives.   
-
+{% hint style="success" %}
+**Tip:** read the [Node Incentive White paper](https://papers.radixdlt.com/incentives/latest/) for an in-depth explanation on node incentives. 
+{% endhint %}
 
 ## 
 
