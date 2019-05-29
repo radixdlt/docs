@@ -6,7 +6,7 @@ This page implement the first "C" in the [C4Model](https://c4model.com/#coreDiag
 
 All production Systems \(External and Radix\) and Users that are commonly found on Radix networks are introduced on this page.
 
-![c4\_context.puml](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/radixdlt/docs/arch/arch/c4_context.puml)
+![c4\_context.puml](../../../out/arch/c4_context/c4_context.svg)
 
 ## Universes
 
