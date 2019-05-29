@@ -22,7 +22,7 @@ Correctly implemented OCI Containers improve security vs. running the app direct
 
 At this level we do not discrimate between the Core and Boot nodes since they are identical and in normal case run the same Software stack + configuration.
 
-![c4\_node\_containers.puml](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/radixdlt/docs/arch/arch/c4_node_containers.puml)
+![c4\_node\_containers.puml](../../../out/arch/c4_node_containers/c4_node_container.svg)
 
 ### Reverse Proxy
 
