@@ -34,8 +34,8 @@
   * [Economics](learn/faq/economics.md)
   * [Security](learn/faq/security.md)
   * [Limitations of DLT](learn/faq/limitations-dlt.md)
-* [Roadmap](https://www.radixdlt.com/roadmap)
 * [Videos](learn/videos.md)
+* [Roadmap](https://www.radixdlt.com/roadmap)
 * [Glossary](learn/glossary.md)
 * [Future developments](learn/future-developments/README.md)
   * [Decentralized Identity](learn/future-developments/decentralized-identity.md)
@@ -84,7 +84,7 @@
 
 ## Links
 
+* [Contact](links/help.md)
 * [Blog](https://radixdlt.com/blog)
 * [Team](https://www.radixdlt.com/team)
-* [Contact](links/help.md)
 

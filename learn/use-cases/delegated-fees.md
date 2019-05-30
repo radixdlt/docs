@@ -12,7 +12,7 @@ One of the most common concerns when deciding whether to build applications on t
 
 ## The Radix alternative
 
-The Radix Engine supports specific features that can easily be used to solve this issue. As explained in the Atom Model article, atoms can be crafted in many ways, and they can contain many transactions inside them. Each atom can contain multiple particles and signatures, so that either they are all valid, or they are discarded.
+The Radix Engine supports specific features that can easily be used to solve this issue. As explained in the [Atom Model article](../architecture/atom-structure.md), atoms can be crafted in many ways, and they can contain many transactions inside them. Each atom can contain multiple [particles](../architecture/atom-structure.md#particles) and signatures, so that either they are all valid, or they are discarded.
 
 When building on Radix, the typical architecture would be a server running the application or game, and a client that keeps the users' keys and operates either directly to the ledger or to the server.
 

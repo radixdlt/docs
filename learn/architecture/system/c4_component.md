@@ -8,7 +8,7 @@ It recommended that you understand the [Context Model](c4_context.md) \(first "C
 
 ## The Components of the RadixCore Container
 
-![c4\_radixcore\_components.puml](../../../out/arch/c4_radixcore_components/c4_node_component.svg)
+![c4\_radixcore\_components.puml](../../../.gitbook/assets/c4_node_component.svg)
 
 ## TODO: What needs more details ?
 

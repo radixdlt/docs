@@ -177,8 +177,21 @@ To create your own token on Radix, you can use the `createToken(...)` method pro
 
 ```java
 api.createToken(<token_name>, <iso_name>, <description>, 
-    BigDecimal.ZERO, TokenUnitConversions.getMinimumGranularity(), 
+    <amount>, TokenUnitConversions.getMinimumGranularity(), 
     TokenSupplyType.MUTABLE);
+```
+
+For example, to create 10000 UST tokens:
+
+```java
+api.createToken(
+    "UST Example Token",                              // Name
+    "UST",                                         // ISO
+    "This is a token created by me",               // Description
+    BigDecimal.valueOf(10000),                     // Amount
+    TokenUnitConversions.getMinimumGranularity(),  // Granularity: Default is 10^18
+    TokenSupplyType.MUTABLE                        // TokenSupplyType
+)    
 ```
 
 ### Minting tokens

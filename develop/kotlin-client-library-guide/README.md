@@ -40,7 +40,7 @@ dependencies {
 
 ## Identities <a id="identities"></a>
 
-An Identity is the user's credentials \(or more technically the manager of the public/private key pair\) into the ledger, allowing a user to own and send tokens as well as decrypt data.
+An [Identity](../../learn/glossary.md#identity) is the user's credentials \(or more technically the manager of the public/private key pair\) into the ledger, allowing a user to own and send tokens as well as decrypt data.
 
 To create/load an identity from a file:
 
@@ -52,7 +52,7 @@ This will create a new file which stores the public/private key and encrypted wi
 
 ## Universes <a id="universes"></a>
 
-A Universe is an instance of a Radix Distributed Ledger which is defined by a genesis atom and a dynamic set of unpermissioned nodes forming a network.
+A [Universe](../../learn/glossary.md#universe) is an instance of a Radix Distributed Ledger which is defined by a genesis atom and a dynamic set of unpermissioned nodes forming a network.
 
 To bootstrap to the Alphanet test network:
 
@@ -77,7 +77,7 @@ val api: RadixApplicationAPI = RadixApplicationAPI.create(identity)
 
 ### Addresses <a id="addresses"></a>
 
-An address is a reference to an account and allows a user to receive tokens and/or data from other users.
+An [address](../../learn/glossary.md#address) is a reference to an account and allows a user to receive tokens and/or data from other users.
 
 You can get your own address by:
 

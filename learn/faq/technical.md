@@ -6,31 +6,33 @@ This document is a compilation of questions that have been asked by the Radix co
 
 ### What are logical clocks?
 
-Within Tempo, all Nodes have a local logical clock; an ever-increasing integer value representing the number of events witnessed by that node. Nodes increment their local logical clock when witnessing an event which has not been seen previously. Upon storing an event, the Node also stores its current logical clock value with it. This record can then be used to help validate the temporal order of past events if required.
+Within [Tempo](../whitepapers/tempo.md), all [Nodes](../glossary.md#nodes) have a local [logical clock](../glossary.md#logical-clock); an ever-increasing integer value representing the number of events witnessed by that node. Nodes increment their local logical clock when witnessing an event which has not been seen previously. Upon storing an event, the Node also stores its current logical clock value with it. This record can then be used to help validate the temporal order of past events if required.
 
 ### Do logical clocks increment for only consumables or all events?
 
-Logical clocks are incremented for all events, which is either protocol events \(atoms\) or protocol messages \(fault detection\)
+[Logical clocks](../glossary.md#logical-clock) are incremented for all events, which is either protocol events \([atoms](../glossary.md#atoms)\) or protocol messages \(fault detection\).
 
 ### What are vector clocks?
 
-Within Tempo, all nodes have a local logical clock \(see [Logical Clocks](https://www.radixdlt.com/faq/logical-clock)\)
+Within [Tempo](../whitepapers/tempo.md), all nodes have a local logical clock \(see [Logical Clocks](https://www.radixdlt.com/faq/logical-clock)\)
 
-These Logical Clocks can then be made into Vector Clocks, where the Logical Clock of many Nodes are collected in relation to the same event, and then used to create a comparison of order between Nodes in order to determine which event proceeded which.
+These Logical Clocks can then be made into [Vector Clocks](../glossary.md#vector-clock), where the Logical Clock of many [Nodes](../glossary.md#nodes) are collected in relation to the same event, and then used to create a comparison of order between Nodes in order to determine which event proceeded which.
 
-Note: on their own, Vector Clocks only create a partial ordering - Node Commitments are also necessary to complete the ordering of events.
+{% hint style="info" %}
+**Note:** on their own, [Vector Clocks](../glossary.md#vector-clock) only create a partial ordering - Node Commitments are also necessary to complete the ordering of events.
+{% endhint %}
 
 See the Tempo White Paper for more details: [https://papers.radixdlt.com/tempo/\#commitments](https://papers.radixdlt.com/tempo/#commitments)
 
 ### What are Merkle trees?
 
-Radix uses logical clocks to provide a simple and reliable method for nodes to record and recall events in the order they have witnessed them.  While these logical clocks are simple and reliable, they do not provide any security against nodes tampering with the logical clock values that it has assigned to events.
+Radix uses [logical clocks](../glossary.md#logical-clock) to provide a simple and reliable method for [nodes](../glossary.md#nodes) to record and recall events in the order they have witnessed them.  While these logical clocks are simple and reliable, they do not provide any security against nodes tampering with the logical clock values that it has assigned to events.
 
 To ensure the assigned logical clock values are tamper-proof, nodes produce “Commitments” which are an ordered, cryptographically secure, compact representations of the events witnessed by a node.
 
 ### What are commitments?
 
-To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a Merkle hash.
+To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a [Merkle](http://www.radixdlt.com/post/primer-on-merkle-trees/) hash.
 
 ### How often does a node present commitments to the network?
 
@@ -38,12 +40,12 @@ Commitments are produced either when a node takes part in Temporal Provisioning 
 
 ### What if the node is requested to send the commitment for a transaction that is not included in a commitment yet?
 
-Nodes don't  get asked for specific transactions. They get asked to prove prior commitments. If a node hasn't seen a transaction, it won't be in its commitment, but that's doesn't prevent it proving it's honest.
+[Nodes](../glossary.md#nodes) don't  get asked for specific transactions. They get asked to prove prior commitments. If a node hasn't seen a transaction, it won't be in its commitment, but that's doesn't prevent it proving it's honest.
 
 ### What are temporal proofs?
 
 A temporal proof is a cryptographically secure record of ordered events.  
-Before an event can be presented to the entire network for global acceptance, an initial validation of the event is performed by a subset of nodes which, if successful, results in: A Temporal Proof being constructed and associated with the Atom, and a network-wide broadcast of the Atom and its Temporal Proof. ****For more information, see: [https://papers.radixdlt.com/tempo/\#radix-tempo](https://papers.radixdlt.com/tempo/#radix-tempo) 
+Before an event can be presented to the entire network for global acceptance, an initial validation of the event is performed by a subset of nodes which, if successful, results in: A Temporal Proof being constructed and associated with the Atom, and a network-wide broadcast of the [Atom](../glossary.md#atoms) and its Temporal Proof. ****For more information, see: [https://papers.radixdlt.com/tempo/\#radix-tempo](https://papers.radixdlt.com/tempo/#radix-tempo) 
 
 ### What is Byzantine Fault Tolerance?
 
@@ -69,7 +71,7 @@ Have questions about Byzantine Fault Detection? Ask them on our [developer forum
 
 We label events within the network \(such as messages or transactions\) as '[atoms.](https://www.radixdlt.com/faq/atoms)' These atoms carry mass if they are transferring value, for example, transactions or payloads with fees. This mass is calculated in a very simple manner, simply being the quantity \(e.g., the amount of Radix being transferred\) multiplied by the amount of time it has been static for. For example, if I transferred 10 Radix to Bob which I had held for 10 days, then the mass of the atom being sent would be 100. If I had 5 Radix but had held for 20 days, then the mass would similarly be 100.
 
-The first node in the[ temporal proof](https://www.radixdlt.com/faq/temporal-proof) for a valid transaction receives this mass. Nodes then build up mass across the multiple transactions they validate. The record of this mass is stored by nodes serving the same shards as said recipient node, as they store temporal proofs from completed transactions \(known as finality\). It is important to remember that transactions don’t just have a single gossip path through the network but rather have multiple routes due to the nature of our gossip protocol, which sees nodes ‘talk’ to all of their neighbouring nodes. This means that transactions are seen by a large majority of nodes.
+The first node in the[ temporal proof](https://www.radixdlt.com/faq/temporal-proof) for a valid transaction receives this mass. [Nodes](../glossary.md#nodes) then build up mass across the multiple transactions they validate. The record of this mass is stored by nodes serving the same shards as said recipient node, as they store temporal proofs from completed transactions \(known as finality\). It is important to remember that transactions don’t just have a single [gossip](http://www.radixdlt.com/videos/updates-about-new-events-via-gossip/) path through the network but rather have multiple routes due to the nature of our [gossip protocol](../glossary.md#gossip-protocol), which sees nodes ‘talk’ to all of their neighbouring nodes. This means that transactions are seen by a large majority of nodes.
 
 This mass allows us to resolve conflicts which cannot be solved by simple resolution by letting us use mass as the determining factor. We add up the mass of all nodes involved in the temporal proof for the conflicting transactions and the atom with the most total mass associated with it is accepted. The losing transaction is meanwhile discarded.
 
@@ -79,7 +81,7 @@ Expanding upon this logically, in the event of a network split whichever network
 
 As discussed above, we use mass to defend against complex network attacks. [You can read more about it in this blog post](https://www.radixdlt.com/post/complex-conflict-resolution).
 
-**T**he principle of mass is very simple, but in practice, there are many things to consider. For example, in a large network, how do you collect enough information to determine all votes, without all nodes having to ask all other nodes \(which gets SUPER exponential very quickly\).
+The principle of mass is very simple, but in practice, there are many things to consider. For example, in a large network, how do you collect enough information to determine all votes, without all nodes having to ask all other nodes \(which gets SUPER exponential very quickly\).
 
 Dan assumed there would be a clever solution out there somewhere he could use, and so he read endless amounts of prior work, and they all go exponent after a particular network size. so it invented something else.
 

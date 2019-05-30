@@ -16,8 +16,8 @@ The guide is divided into several sections:
 As our example DApp for this guide, we'll be building a simple ChatBot that receives and replies messages sent to a specific Radix address. With our small ChatBot DApp you'll learn to:
 
 * Bootstrap and connect to the Radix Distributed Ledger
-* Create a Radix Identity
-* Create a Radix Address from this identity
+* Create a Radix [Identity](../../learn/glossary.md#identity)
+* Create a Radix [Address](../../learn/glossary.md#address) from this identity
 * Send and receive encrypted messages to other Radix addresses
 
 Don't worry if you're new to Radix's concepts, as we will review the basic building blocks along the way.
@@ -114,7 +114,7 @@ public class ChatBot {
 
 ### Creating a Radix Address
 
-Now, using the public key of the identity, we can generate a unique Radix address, which is the ChatBot's unique identifier in the Radix Universe.
+Now, using the public key of the identity, we can generate a unique Radix [address](../../learn/glossary.md#address), which is the ChatBot's unique identifier in the Radix Universe.
 
 ```java
 public class ChatBot {

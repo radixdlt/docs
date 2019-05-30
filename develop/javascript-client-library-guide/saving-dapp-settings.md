@@ -14,7 +14,7 @@ Loading and saving settings are basic activities in the workflow of any software
 
 ### Saving
 
-Before we start, your application needs to have an **identity** in the ledger. Let's assume that your dApp has an identity `appIdentity` already available and that we have the following settings to save:
+Before we start, your application needs to have an [**identity**](../../learn/glossary.md#identity) in the ledger. Let's assume that your dApp has an identity `appIdentity` already available and that we have the following settings to save:
 
 ```javascript
 const mySettings = {
@@ -31,7 +31,7 @@ const mySettings = {
 
 To save the application settings to the ledger, you have to...
 
-* open a **node** connection to the network,
+* open a [**node**](../../learn/glossary.md#nodes) connection to the network,
 * prepare the payload \(`appSettings`\) by encoding `mySettings`,
 * build a transaction using `RadixTransactionBuilder`,
 * sign and submit the transaction with the `appIdentity` identity.

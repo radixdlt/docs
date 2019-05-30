@@ -6,11 +6,11 @@
 
 ## Specification
 
-In distributed data storage, all participants must agree on a set of rules that govern how a state can be changed. As not every node can store all states, a state must be divided into smaller pieces of state that can be validated without requiring all other states. For this to work, state changes have to be explicit and need to support a mechanism that accepts or rejects a batch of state changes as a unit. In Radix, these state changes are Particles and this atomic batch of Particles is an Atom. The Atom Model describes its structure, rules and interface with Tempo.
+In distributed data storage, all participants must agree on a set of rules that govern how a state can be changed. As not every node can store all states, a state must be divided into smaller pieces of state that can be validated without requiring all other states. For this to work, state changes have to be explicit and need to support a mechanism that accepts or rejects a batch of state changes as a unit. In Radix, these state changes are [Particles](atom-structure.md#particles) and this atomic batch of Particles is an [Atom](atom-structure.md#atoms). The Atom Model describes its structure, rules and interface with [Tempo](../whitepapers/tempo.md).
 
 ### Hierarchy overview
 
-The state of the ledger is the sum of small state changes. These individual state changes of the ledger are called Particles. To submit Particles \(i.e. state changes\) to the ledger, they must be placed inside an Atom.
+The state of the ledger is the sum of small state changes. These individual state changes of the ledger are called [Particles](atom-structure.md#particles). To submit Particles \(i.e. state changes\) to the ledger, they must be placed inside an Atom.
 
 ![](../../.gitbook/assets/1.png)
 
@@ -18,17 +18,17 @@ Particles in later Atoms may update Particles that were stored as part of earlie
 
 ![](../../.gitbook/assets/2.png)
 
-When many such state changes are to be submitted at once, it's hard to discern which belong together. This is troublesome for validation \(i.e. accept / reject changes\) as well as for end-users \("which Particles represent what?"\). To provide a clear mechanism for Particle relationships, related Particles are grouped into Particle Groups.
+When many such state changes are to be submitted at once, it's hard to discern which belong together. This is troublesome for validation \(i.e. accept / reject changes\) as well as for end-users \("which Particles represent what?"\). To provide a clear mechanism for Particle relationships, related [Particles](atom-structure.md#particles) are grouped into [Particle Groups](atom-structure.md#particle-groups).
 
 ![](../../.gitbook/assets/03.png)
 
-Note that any Particle must be submitted as part of a Particle Group, Particles can't go inside an Atom directly. This explicit grouping mechanism makes developing libraries, wallets and of course Radix node implementations simpler as managing relations between Particles is natively supported.
+Note that any Particle must be submitted as part of a [Particle Group](atom-structure.md#particle-groups), Particles can't go inside an Atom directly. This explicit grouping mechanism makes developing libraries, wallets and of course Radix node implementations simpler as managing relations between Particles is natively supported.
 
-Atoms, Particle Groups and Particles are the core structural elements of the Atom Model. The following sections define them in detail.
+[Atoms](atom-structure.md#atoms), [Particle Groups](atom-structure.md#particle-groups) and [Particles](atom-structure.md#particles) are the core structural elements of the Atom Model. The following sections define them in detail.
 
 ### Particles
 
-Particles are the core component that power the Atom Model, as they can be mixed and matched with other Particles in an Atom to form arbitrarily complex actions. There are many different types of Particles for different purposes which are [explained here](particle-types.md). Therefore, when talking about Particles it is important to differentiate between Particle types, which describe a type of Particle, and Particle instances, which describe instances of a certain Particle type. Particle instances form the state of the ledger, while particle types define the particle instance's state guarantees and rules.
+Particles are the core component that power the Atom Model, as they can be mixed and matched with other Particles in an Atom to form arbitrarily complex actions. There are many different types of Particles for different purposes which are [explained here](particle-types.md). Therefore, when talking about Particles it is important to differentiate between [Particle types](particle-types.md), which describe a type of Particle, and Particle instances, which describe instances of a certain Particle type. Particle instances form the state of the ledger, while particle types define the particle instance's state guarantees and rules.
 
 ![](../../.gitbook/assets/04.png)
 
@@ -41,7 +41,7 @@ As established, Particle instances can be updated in later Atoms. Updating refer
 
 ![](../../.gitbook/assets/05.png)
 
-Updating a Particle does not change its content, but its state. In fact, the content of a Particle being equal is used to identify that a later Particle with equal content is meant to be an update. "non-existent", "valid" and "invalid" are the three possible lifecycle states of any Particle instance, and the Particle type dictates which states are permitted in which order. That is, the finite number of lifecycle states a Particle instance can assume is controlled by the lifecycle finite state machine that the Particle type describes. With Particle lifecycle states in mind, consider an example of how Particles may be updated over time:  
+Updating a Particle does not change its content, but its state. In fact, the content of a Particle being equal is used to identify that a later Particle with equal content is meant to be an update. "non-existent", "valid" and "invalid" are the three possible lifecycle states of any Particle instance, and the Particle type dictates which states are permitted in which order. That is, the finite number of lifecycle states a Particle instance can assume is controlled by the lifecycle finite state machine that the [Particle type](particle-types.md) describes. With Particle lifecycle states in mind, consider an example of how Particles may be updated over time:  
 
 
 ![](../../.gitbook/assets/12.png)
@@ -50,18 +50,17 @@ Note that each arrow marks a transition from one lifecycle state \(in this examp
 
 ### Particle Groups
 
-A Particle Group is a grouping of related particles with metadata in an Atom that represent one application-level action. An action could be issuing a transfer involving multiple particles, paying a fee, sending a message, or any logical action that a user or developer wishes to group.
+A Particle Group is a grouping of related particles with metadata in an [Atom](atom-structure.md#atoms) that represent one application-level action. An action could be issuing a transfer involving multiple particles, paying a fee, sending a message, or any logical action that a user or developer wishes to group.
 
 ![](../../.gitbook/assets/06.png)
 
 #### Metadata
 
-Similar to Atoms, Particle Groups contain a string-based key-value store of metadata. This metadata is not validated or otherwise constrained in any way \(besides size restrictions of an Atom\) and can be freely used. Note that since all Particle Groups contain metadata and it does not influence other aspects of the Atom Model in any way, it will be omitted unless explicitly discussed for the rest of this article.  
-
+Similar to Atoms, Particle Groups contain a string-based key-value store of metadata. This metadata is not validated or otherwise constrained in any way \(besides size restrictions of an Atom\) and can be freely used. Note that since all Particle Groups contain metadata and it does not influence other aspects of the Atom Model in any way, it will be omitted unless explicitly discussed for the rest of this article.
 
 #### Particle and Particle Group Indices
 
-To uniquely identify Particle Groups within an Atom, they are indexed in the order they are added to their Atom. To uniquely identify a Particle within a Particle Group, Particles are indexed in the order they are added to their Particle Group. Note that both indices are zero-based.  
+To uniquely identify Particle Groups within an Atom, they are indexed in the order they are added to their Atom. To uniquely identify a Particle within a Particle Group, [Particles](atom-structure.md#particles) are indexed in the order they are added to their Particle Group. Note that both indices are zero-based.  
 
 
 ![](../../.gitbook/assets/07.png)
@@ -83,7 +82,7 @@ refers to the Particle with index 2 in the Particle Group with index 1, as illus
 
 ![](../../.gitbook/assets/08.png)
 
-This is helpful for debugging when an Atom is rejected by a node, since it can point to a specific Particle in a human-readable way.
+This is helpful for debugging when an [Atom](atom-structure.md#atoms) is rejected by a node, since it can point to a specific Particle in a human-readable way.
 
 #### Dependencies within an Atom
 
@@ -96,7 +95,7 @@ An Atom is an atomic container of state changes on the ledger. When an Atom is s
 
 ![](../../.gitbook/assets/09.png)
 
-Besides state changes in the form of Particles, grouped into particle Groups, an Atom also contains metadata, signatures and a temporal proof. Signatures are vital to ensure legitimacy of the state changes submitted in an Atom, while the temporal proof is crucial in achieving consensus on a common state of the ledger. Note that the temporal proof is not attached by the client but by the nodes. As signatures and temporal proofs are not relevant to the Atom Model directly, they will be omitted for the remainder of this article.
+Besides state changes in the form of [Particles](atom-structure.md#particles), grouped into [particle Groups](atom-structure.md#particle-groups), an Atom also contains metadata, signatures and a temporal proof. Signatures are vital to ensure legitimacy of the state changes submitted in an Atom, while the temporal proof is crucial in achieving consensus on a common state of the ledger. Note that the temporal proof is not attached by the client but by the nodes. As signatures and temporal proofs are not relevant to the Atom Model directly, they will be omitted for the remainder of this article.
 
 #### Metadata
 
@@ -129,11 +128,11 @@ Metadata =
 
 #### Particle
 
-The structure of Particles is defined in the [Particle document](particle-types.md). As Particles do not share any required structure, there is no common base structure.
+The structure of [Particles](atom-structure.md#particles) is defined in the [Particle document](particle-types.md). As Particles do not share any required structure, there is no common base structure.
 
 #### Particle Group
 
-A Particle Group contains a non-empty indexed list of Particles with General metadata. A Particle Group's structure is
+A [Particle Group](atom-structure.md#particle-groups) contains a non-empty indexed list of Particles with General metadata. A Particle Group's structure is
 
 Formal Particle Group Structure
 
@@ -145,7 +144,7 @@ Particle Group =
 
 #### Atom
 
-An Atom contains a non-empty indexed list of Particle Groups with Atom metadata. Atom metadata is similar to General metadata, except that it has special values that must be present and  have value constraints:
+An Atom contains a non-empty indexed list of [Particle Groups](atom-structure.md#particle-groups) with Atom metadata. Atom metadata is similar to General metadata, except that it has special values that must be present and  have value constraints:
 
 <table>
   <thead>

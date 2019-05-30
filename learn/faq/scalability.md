@@ -26,13 +26,13 @@ Sharding is a way to distribute network load by cutting up the distributed datab
 
 ### Can nodes maintain parts of the ledger?
 
-Yes. The Radix ledger is divided into 18.4 quintillion shards. Depending on your node capacity \(based on CPU and bandwidth\), the node can scale down to serve only some shards/parts of the ledger. There is also a high degree of incentive for nodes to maintain under-served shards as the more shards low node count shards they maintain \(serve\), the higher the probability of getting fees. Thus every node maintains as many shards as it can; if a shard becomes too heavy for the node, it will automatically drop that shard. The more shards a node services, the more likely it is to get fees. This allows any device to be a useful participant of the network creating the trust layer for the internet of things. 
+Yes. The Radix ledger is divided into 18.4 quintillion [shards](../glossary.md#shard). Depending on your node capacity \(based on CPU and bandwidth\), the [node](../glossary.md#nodes) can scale down to serve only some shards/parts of the ledger. There is also a high degree of incentive for [nodes](../glossary.md#nodes) to maintain under-served shards as the more shards low node count shards they maintain \(serve\), the higher the probability of getting fees. Thus every node maintains as many shards as it can; if a shard becomes too heavy for the node, it will automatically drop that shard. The more shards a node services, the more likely it is to get fees. This allows any device to be a useful participant of the network creating the trust layer for the internet of things. 
 
 ### How do we ensure high availability for each shard?
 
-Incentives in the Radix network are designed such that underserved shards become an opportunity for node operators. Fewer nodes on a shard increase the possibility of earning more rewards for validating transactions. This allows the market to naturally gravitate towards supporting as many shards as possible, especially those which are underserved. Radix is designed to provide a high degree of redundancy due to its massive shard space of 18.4 quintillion shards \(2^64\).   
+[Incentives](../whitepapers/public-node-incentives.md) in the Radix network are designed such that underserved shards become an opportunity for node operators. Fewer [nodes](../glossary.md#nodes) on a [shard](../glossary.md#shard) increase the possibility of earning more rewards for validating transactions. This allows the market to naturally gravitate towards supporting as many shards as possible, especially those which are underserved. Radix is designed to provide a high degree of redundancy due to its massive shard space of 18.4 quintillion shards \(2^64\).   
   
-At the start, all nodes will hold all shards, and pretty much every node will store all the transactions provided enough time has passed for gossip. The more nodes that have been in a shard, the more secure a shard history is; due to the number of redundant copies of the shard information being maintained. 
+At the start, all nodes will hold all shards, and pretty much every node will store all the transactions provided enough time has passed for [gossip](../glossary.md#gossip-protocol). The more nodes that have been in a shard, the more secure a shard history is; due to the number of redundant copies of the shard information being maintained. 
 
 It is also possible for nodes to leave a shard, come back later and re-affirm history. This makes any attack vector, not just all the nodes in a shard now but all the nodes that have ever witnessed the event you are trying to change.
 
@@ -42,11 +42,11 @@ For shard selection incentives, see: [https://papers.radixdlt.com/incentives/\#s
 
 ### Is the number of shards constant per universe?
 
-Yes. Radix will start with a shard space of 2^64 or 18.4 quintillion shards, which will be able to support every device in the world, and then some more.
+Yes. Radix will start with a shard space of 2^64 or 18.4 quintillion [shards](../glossary.md#shard), which will be able to support every device in the world, and then some more.
 
 ### How does Radix avoid the [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem) limit?
 
-Tempo relies heavily on eventual consistency to achieve a total ordering of events. Radix avoids the CAP Theorem limit that DAGs and Blockchains suffer from by allowing transactions to be both asynchronous and concurrent. This allows it to scale out limitlessly. The Radix shard space is key to this scalability - 18.4 quintillion shards that nodes can maintain concurrently,  while the Tempo consensus makes sure double spends do not occur across these shards without being detected and rejected.
+Tempo relies heavily on eventual consistency to achieve a total ordering of events. Radix avoids the CAP Theorem limit that DAGs and Blockchains suffer from by allowing transactions to be both asynchronous and concurrent. This allows it to scale out limitlessly. The Radix [shard](../glossary.md#shard) space is key to this scalability - 18.4 quintillion shards that nodes can maintain concurrently,  while the [Tempo](../whitepapers/tempo.md) consensus makes sure double spends do not occur across these shards without being detected and rejected.
 
 ### How scalable will Radix DEX be?
 

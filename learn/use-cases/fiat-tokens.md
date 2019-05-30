@@ -61,7 +61,7 @@ When a user exchanges fiat assets and tokens, a confirmation message is sent by 
 
 ### Radix accounts
 
-An Account represents all the data stored for a user on the Radix distributed ledger. This includes tokens, but also arbitrary data, as well as more advanced types of transactions.
+An [Account](../glossary.md#account) represents all the data stored for a user on the Radix distributed ledger. This includes tokens, but also arbitrary data, as well as more advanced types of transactions.
 
 Besides the user’s private Radix account, the FT service requires its own Radix account to mint and burn tokens.
 
@@ -233,13 +233,13 @@ Again, we use the very same PrimeTrust transfer id in our send action as we did 
 
 ### Transaction finality
 
-As with all highly distributed systems, finality becomes a topic to keep in mind, e.g., the time it takes from the moment the data is first submitted to the ledger, to when it's available on all nodes in the network. Usually, about 5 seconds should be a reasonable finality time in the Radix ledger for now.
+As with all highly distributed systems, finality becomes a topic to keep in mind, e.g., the time it takes from the moment the data is first submitted to the ledger, to when it's available on all nodes in the network. Usually, about 10 seconds should be a reasonable finality time in the Radix ledger for now.
 
-If we're too eager to act on a successful result, we may - theoretically - end up in a situation where the Radix Java library for any valid reason temporarily may lose connection to the node where some tokens were minted and immediately reconnect to a different node which isn't yet aware of the successfully minted tokens. This node will then, for example, show a different wallet balance than our original node did until the successful mint action is propagated to it.
+If we're too eager to act on a successful result, we may - theoretically - end up in a situation where the Radix [Java library](../../develop/java-client-library-guide/) for any valid reason temporarily may lose connection to the node where some tokens were minted and immediately reconnect to a different node which isn't yet aware of the successfully minted tokens. This node will then, for example, show a different wallet balance than our original node did until the successful mint action is propagated to it.
 
 ## Conclusions
 
-We have seen how easily you can create a service to mint, burn and send Fiat tokens using the Radix distributed ledger and the provided Radix open-source libraries. We've also explained the basic workflows for the FT service, and how they interact with an external Custodian system \(PrimeTrust\) that holds the user's fiat assets. Additionally, we shared some code snippets to demonstrate how straightforward it is to burn, mint and transfer tokens with our Java client library.
+We have seen how easily you can create a service to mint, burn and send Fiat tokens using the Radix distributed ledger and the provided Radix open-source [libraries](../../develop/java-client-library-guide/). We've also explained the basic workflows for the FT service, and how they interact with an external Custodian system \(PrimeTrust\) that holds the user's fiat assets. Additionally, we shared some code snippets to demonstrate how straightforward it is to burn, mint and transfer tokens with our Java client library.
 
 {% hint style="success" %}
 **Tip:** to continue learning about Radix's technology and how you can create more DApps on it, check our [Java](../../develop/java-client-library-guide/), [JavaScript](../../develop/javascript-client-library-guide/) and [Kotlin](../../develop/kotlin-client-library-guide/) documentation.

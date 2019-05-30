@@ -10,13 +10,13 @@ It is new platform, similar to Bitcoin or Ethereum, but scalable and easy to bui
 
 ### How is it different from other platforms?
 
-Radix offers a novel distributed ledger architecture for decentralized applications, that is sharded to scale in an efficient, unbounded linear fashion combined with a secure consensus algorithm called ‘Tempo’.
+Radix offers a novel distributed ledger architecture for decentralized applications, that is [sharded to scale](http://www.radixdlt.com/post/sharding-in-radix/) in an efficient, unbounded linear fashion combined with a secure consensus algorithm called [Tempo](../whitepapers/tempo.md).
 
-Radix scales linearly as new nodes join the network using the theory of sharding, but without compromising on decentralization or security. It enables resource-restricted devices to run a Radix node like on the Raspberry Pi. This enables inexpensive transactions at incredible speeds with near-instant finality.[ Read more here.](../platform/#how-is-radix-different)
+Radix scales linearly as new nodes join the network using the theory of [sharding](../glossary.md#shard), but without compromising on decentralization or security. It enables resource-restricted devices to run a Radix node like on the Raspberry Pi. This enables inexpensive transactions at incredible speeds with near-instant finality.[ Read more here.](../platform/#how-is-radix-different)
 
 ### What is Tempo?
 
-Tempo is a combined data architecture and secure consensus algorithm that is both, sharded to scale linearly and secured by a novel consensus algorithm based on [Leslie Lamport's logical clock theory](https://en.wikipedia.org/wiki/Lamport_timestamps).  
+[Tempo](../whitepapers/tempo.md) is a combined data architecture and secure consensus algorithm that is both, [sharded to scale](http://www.radixdlt.com/post/sharding-in-radix/) linearly and secured by a novel consensus algorithm based on [Leslie Lamport's logical clock theory](https://en.wikipedia.org/wiki/Lamport_timestamps).  
 [Read more here](../platform/tempo.md).
 
 ### What problems does it solve?
@@ -29,30 +29,30 @@ Radix is fast, scalable, efficient, secure and highly decentralized. [Read more 
 
 ### How does it work?
 
-Radix works on Leslie Lamport's logical clock theory. [Read more here.](../platform/#how-does-radix-work-simplified)
+Radix works on Leslie Lamport's [logical clock](../glossary.md#logical-clock) theory. [Read more here.](../platform/#how-does-radix-work-simplified)
 
 ### What is the Atom Model?
 
-The atom model is an abstraction layer on top of the Tempo ledger designed to give the most power and ease of use to users of the system. More information will be published in the upcoming security white paper.
+The [atom model](../architecture/atom-structure.md) is an abstraction layer on top of the Tempo ledger designed to give the most power and ease of use to users of the system. More information will be published in the upcoming security white paper.
 
 ### Why should I build on the Radix Public Network?
 
-Radix makes it easy for developers to build most use-cases without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../../develop/network/live-platform-overview.md)
+Radix makes it easy for developers to build most [use-cases](../use-cases/) without smart-contracts and without worrying about blockchain scalability or expensive fees. It is fast, scalable, and simple to use. [Start building with Radix.](../../develop/network/live-platform-overview.md)
 
 ### Who invented Radix?
 
 _Daniel Hughes, chief technical officer of Radix DLT invented the Radix platform and ‘Tempo’ - it’s underlying engine._
 
-In 2011 Dan Hughes, the founder of Radix, discovered Bitcoin and was instantly hooked by the underlying elegance of its distributed protocol. Having tested the limits of distributed ledgers based on blockchains, block-trees, and directed acyclic graphs\(DAG\), he found they all had a fundamental inability to scale. He dedicated his time developing a highly scalable distributed ledger technology platform. Five years in R&D and after many iterations he eventually invented ‘Tempo’ - a novel distributed ledger architecture for trustless systems, that is sharded to scale in an efficient, unbounded linear fashion.  
+In 2011 Dan Hughes, the founder of Radix, discovered Bitcoin and was instantly hooked by the underlying elegance of its distributed protocol. Having tested the limits of distributed ledgers based on blockchains, block-trees, and directed acyclic graphs\(DAG\), he found they all had a fundamental inability to scale. He dedicated his time developing a highly scalable distributed ledger technology platform. Five years in R&D and after many iterations he eventually invented ‘[Tempo](../whitepapers/tempo.md)’ - a novel distributed ledger architecture for trustless systems, that is sharded to scale in an efficient, unbounded linear fashion.  
 
 
 ### How will I benefit?
 
-Radix enables **merchants** to accept cryptocurrencies without worrying about wild price swings. It helps **developers** to build applications that demand transaction rates beyond today’s blockchains. And last but not the least, it allows **everyone** to participate in ‘mining’ without special hardware and complex software setups.
+Radix enables **merchants** to [accept cryptocurrencies](../use-cases/card-payment-system.md) without worrying about wild price swings. It helps **developers** to build applications that demand transaction rates beyond today’s blockchains. And last but not the least, it allows **everyone** to participate in ‘mining’ without special hardware and complex software setups.
 
 **Merchants**
 
-Radix provides &lt;5 seconds settlement times with fixed micro fee. It provides merchants the ability to accept payments globally without friction. The Radix token is a stable cryptocurrency specifically designed to help protect merchants from wild price swings and incentivize them to accept and use Radix in their everyday business.
+Radix provides &lt;5 seconds settlement times with fixed micro fee. It provides merchants the ability to [accept payments](../use-cases/card-payment-system.md) globally without friction. The Radix token is a stable cryptocurrency specifically designed to help protect merchants from wild price swings and incentivize them to accept and use Radix in their everyday business.
 
 **Developers**
 
@@ -60,7 +60,7 @@ The Radix platform will enable developers to create, distribute and manage highl
 
 **Miners**
 
-Nodes get rewarded for maintaining the public network. As Radix does not use PoW/PoS to secure its decentralized ledger, the Radix node can run on devices like Raspberry Pi. Validators don't require special hardware, or access to capital to start. Radix reduces the barrier to entry by helping anyone with standard commercial hardware to run a node and makes it fair for everyone by eliminating mining cartels.  
+[Nodes](../glossary.md#nodes) get rewarded for maintaining the public network. As Radix does not use PoW/PoS to secure its decentralized ledger, the Radix node can run on devices like Raspberry Pi. Validators don't require special hardware, or access to capital to start. Radix reduces the barrier to entry by helping anyone with standard commercial hardware to run a node and makes it fair for everyone by eliminating mining cartels.  
 
 ### How is Radix funded?
 
@@ -96,7 +96,7 @@ The Radix stable coin is a low volatile token that is governed by a decentralize
 
 ### What is the maximum supply?
 
-The Radix Stable Token has an elastic supply. Instead of supply being fixed, the price is stabilized. This protects consumers from price manipulation and high volatility.
+To be decided ...
 
 ### How much will Radix token cost?
 

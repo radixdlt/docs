@@ -82,7 +82,7 @@ These are transitions to a different state. For example:
 
 ## Particles
 
-A particle can be defined as a "sub state of a global state", and it’s the fundamental block when developing on top of the Constraint Machine. When talking about particles there are two parts: a ParticleType and a ParticleInstance. The difference between the two is similar to the difference between State Machine Definitions and State Machine Instances. That is, a ParticleType defines the sub state and a ParticleInstance is an instance of that sub state.
+A [particle](atom-structure.md#particles) can be defined as a "sub state of a global state", and it’s the fundamental block when developing on top of the Constraint Machine. When talking about particles there are two parts: a [ParticleType](particle-types.md) and a [ParticleInstance](particle-types.md#particle-instance). The difference between the two is similar to the difference between State Machine Definitions and State Machine Instances. That is, a ParticleType defines the sub state and a ParticleInstance is an instance of that sub state.
 
 {% hint style="success" %}
 **Tip:** you can read more about Particles and Particle types in [this article](particle-types.md).
@@ -112,7 +112,7 @@ Given this, low level particle state machine transition management comes into ap
 
 ## Particles and State Machines
 
-Since particles represent a partial state which can be turned on and off, state machines are the perfect construct to manage particles.
+Since [particles](atom-structure.md#particles) represent a partial state which can be turned on and off, state machines are the perfect construct to manage particles.
 
 There are two main State Machine Instance constructions, both of which use particles in different ways to represent a state:
 
@@ -163,7 +163,7 @@ Following our “5 dollars” example, the next diagram shows the different leve
 
 ## Atom Model layer
 
-The Constraint Machine is unaware of high-level abstractions such as ParticleTypes and state machines. Instead, it's language consists of: Atoms, Particles, Spins, Indices and Shards.
+The Constraint Machine is unaware of high-level abstractions such as ParticleTypes and state machines. Instead, it's language consists of: [Atoms](atom-structure.md#atoms), [Particles](atom-structure.md#particles), Spins, Indices and [Shards](../glossary.md#shard).
 
 In order to fill the gap between high level scrypts and the constraint machine, the Atom Model layer converts the high level scrypts into two structures the Constraint Machine can understand:
 
@@ -263,14 +263,14 @@ At a high level this looks like:
 
 ### Particle groups and dependent state changes
 
-Given that there are multiple particle state transitions possible in an Atom, each of which are possibly dependent on another \(e.g. create a token and minting tokens for that token in the same atom\) there needs to be a mechanism for determining which state is relevant during validation of a constraint procedure. This is defined by the array of particle groups in an atom. Validation occurs with the following rules:
+Given that there are multiple particle state transitions possible in an [Atom](atom-structure.md#atoms), each of which are possibly dependent on another \(e.g. create a token and minting tokens for that token in the same atom\) there needs to be a mechanism for determining which state is relevant during validation of a constraint procedure. This is defined by the array of [particle groups](atom-structure.md#particle-group) in an atom. Validation occurs with the following rules:
 
 * Each particle group is validated sequentially
 * Once a particle group is validated successfully, the state change of that particle group is recorded and available for subsequent particle group validations as "virtual state" \(only in memory not persisted to AtomStore\)
 
 This means that state transitions which are dependent on each other should not go into the same particle group.
 
-An example of how particle group processing occurs follows:
+An example of how [particle group](atom-structure.md#particle-groups) processing occurs follows:
 
 ![](../../.gitbook/assets/35.png)
 
@@ -292,7 +292,7 @@ For example: maximum atom size, timestamp metadata requirement or maximum number
 
 ### Indexing and sharding
 
-Once all validation has passed the Constraint Machine then returns an AtomWrite which describes how the Atom should be indexed and stored. The Constraint Machine itself never stores state and in this way it can be seen as a purely functional component.
+Once all validation has passed the Constraint Machine then returns an AtomWrite which describes how the [Atom](atom-structure.md#atoms) should be indexed and stored. The Constraint Machine itself never stores state and in this way it can be seen as a purely functional component.
 
 The indexing and sharding of an atom is determined by the particles contained within an atom. Specifically, the particleType of the particle along with the instance maps to a set of indices and shards determined by the Atom Model layer based on the constraint scrypts which define the state machine represented by each ParticleType. This is represented by ParticleTypeDef provided by the Atom Model layer.
 

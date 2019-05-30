@@ -40,7 +40,7 @@ The web app [hashes](https://www.radixdlt.com/post/primer-on-hashes-and-hash-fun
 
 If no ‘Claimed’ message is found, the system sends its own 'Claimed' message to the Account. 
 
-The 'Claimed' message can be anything Alice wishes it to be and can either be encrypted using the Account's public key or be left as an unencrypted message. If encrypted using the Account's public key, it can be decrypted later by anyone who also has the original file, but not by someone who doesn't.
+The 'Claimed' message can be anything Alice wishes it to be and can either be encrypted using the [Account](../glossary.md#account)'s public key or be left as an unencrypted message. If encrypted using the Account's public key, it can be decrypted later by anyone who also has the original file, but not by someone who doesn't.
 
 The 'Claimed' message may also include Alice's public key so that she can prove that she was the person who claimed the account at a later date.
 
@@ -50,9 +50,9 @@ Alice shares the file \(plus, optionally, her public key and signature\) with Bo
 
 ## Extensions
 
-This example can be extended by Bob also sending a 'Claimed' message to the document Account, with his public key included. Now both Bob and Alice can verify they have copies of the original documents, and on what time/date those copies were notarized.
+This example can be extended by Bob also sending a 'Claimed' message to the document [Account](../glossary.md#account), with his public key included. Now both Bob and Alice can verify they have copies of the original documents, and on what time/date those copies were notarized.
 
-This can also be further extended by Bob and Alice sending signed messages from their own Accounts, using their Radix Identities, and encrypted using the document's account public key. Now they can also make a simple legal contractual agreement, linked to the notarized document.
+This can also be further extended by Bob and Alice sending signed messages from their own Accounts, using their Radix [Identities](../glossary.md#identity), and encrypted using the document's account public key. Now they can also make a simple legal contractual agreement, linked to the notarized document.
 
 ## Conclusion 
 

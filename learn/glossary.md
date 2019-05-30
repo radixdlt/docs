@@ -6,7 +6,7 @@ An **Account** represents all the data stored for a user on the ledger. This inc
 
 ## Address
 
-An **Address** lives in a **Shard** and is the start and end point for any **Atom** in the Radix Universe. It's also a reference to an **Account** and allows a user to receive tokens and/or data from other users. A Radix address is generated from a public key and a **Universe** checksum.
+An **Address** lives in a [**Shard**](glossary.md#shard) and is the start and end point for any [**Atom**](glossary.md#atoms) in the Radix Universe. It's also a reference to an [**Account**](glossary.md#account) and allows a user to receive tokens and/or data from other users. A Radix address is generated from a public key and a [**Universe**](glossary.md#universe) checksum.
 
 {% hint style="info" %}
 Note: The defined **Universe** affects the generated **Address**.
@@ -14,7 +14,7 @@ Note: The defined **Universe** affects the generated **Address**.
 
 ## Atoms
 
-An Atom is a collection of Particles whose properties are defined by the Quarks they are composed of. The Atom is actually nothing more than a container which contains a collection of Particles to be atomically committed to the ledger, and also acts as a receiver and carrier of consensus information relating to that Atom to be used in the event of a conflict.
+An Atom is a collection of [Particles](architecture/constraint-machine.md#particles) whose properties are defined by the Quarks they are composed of. The Atom is actually nothing more than a container which contains a collection of Particles to be atomically committed to the ledger, and also acts as a receiver and carrier of consensus information relating to that Atom to be used in the event of a conflict.
 
 Particles are instructions about a state change with certain properties, defined by its Quarks. In order to solve the state-sharding problem, the components of the state change need to be discrete elements that can hold independent state and tracked within the ledger, which the Particles assist in allowing. When a Particle is created, it is in the UP state, when it is consumed, or superseded, it is in the DOWN state. The concept is similar in its most basic operation to the Bitcoin UTXO.
 
@@ -28,7 +28,7 @@ For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tem
 
 ## Commitments
 
-To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a Merkle hash.
+To assist with total order determination of events, nodes declare to the network a periodic commitment of all events they have seen. A commitment is a [Merkle](http://www.radixdlt.com/post/primer-on-merkle-trees/) hash.
 
 ## Decentralized Applications
 
@@ -50,7 +50,7 @@ This is how Radix ensures any new transactions are quickly shared with all relev
 
 ## Identity
 
-An **Identity** represents a private key which can sign **Atoms** and read encrypted data. This private key can be stored in the application, or in the future, it might live elsewhere such as the users wallet application or hardware wallet.
+An **Identity** represents a private key which can sign [**Atoms**](glossary.md#atoms) and read encrypted data. This private key can be stored in the application, or in the future, it might live elsewhere such as the users wallet application or hardware wallet.
 
 {% hint style="info" %}
 The only type of **Identity** currently available is the _**Simple Identity,**_ and it has a private key stored in a local file.
@@ -58,7 +58,11 @@ The only type of **Identity** currently available is the _**Simple Identity,**_ 
 
 ## Logical Clock
 
-Within Tempo, all Nodes have a local logical clock; an ever-increasing integer value representing the number of events witnessed by that node. Nodes increment their local logical clock when witnessing an event which has not been seen previously. Upon storing an event the Node also stores its current logical clock value with it. This record can then be used to help validate the temporal order of past events if required.
+Within [Tempo](whitepapers/tempo.md), all Nodes have a local logical clock; an ever-increasing integer value representing the number of events witnessed by that node. [Nodes](glossary.md#nodes) increment their local logical clock when witnessing an event which has not been seen previously. Upon storing an event the Node also stores its current logical clock value with it. This record can then be used to help validate the temporal order of past events if required.
+
+## Mass
+
+[Atoms](glossary.md#atoms) carry mass if they are transferring value, for example transactions or payloads with fees. The mass is calculated in a very easy manner, simply being the quantity \(e.g. the amount of Radix being transferred\) multiplied by the amount of time it has been static for. For example, if I transferred 10 Radix to Bob which I had held for 10 days then the mass of the atom being sent would be 100. If I had 5 Radix but had held for 20 days then the mass would similarly be 100.
 
 ## Nodes
 
@@ -78,7 +82,7 @@ For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tem
 
 ## Shard
 
-A public Radix network \(Universe\) is segmented into a very large shard space \(currently $$2^{64}$$ shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
+A public Radix network \([Universe](glossary.md#universe)\) is segmented into a very large shard space \(currently $$2^{64}$$ shards\). The start and end point for any Atom in the Radix Universe is an address, which is formed of a public key and a Universe checksum. The shard number of an address is deterministically calculated by taking a modulo of a public key over the total shard space to derive the shard index. This makes it trivial to for anyone to correctly calculate the shard a public key lives on.
 
 For more information, check the Public Node Incentives [white paper](whitepapers/public-node-incentives.md#shard-space).
 
@@ -86,7 +90,7 @@ For more information, check the Public Node Incentives [white paper](whitepapers
 
 A temporal proof is a cryptographically secure record of ordered events.
 
-Before an event can be presented to the entire network for global acceptance, an initial validation of the event is performed by a subset of nodes which, if successful, results in: A Temporal Proof being constructed and associated with the Atom, and a network-wide broadcast of the Atom and its Temporal Proof.
+Before an event can be presented to the entire network for global acceptance, an initial validation of the event is performed by a subset of [nodes](glossary.md#nodes) which, if successful, results in: A Temporal Proof being constructed and associated with the [Atom](glossary.md#atoms), and a network-wide broadcast of the Atom and its Temporal Proof.
 
 For more information, see the [Tempo white paper](whitepapers/tempo.md#radix-tempo).
 
@@ -104,7 +108,7 @@ For more information see the [Tempo white paper](whitepapers/tempo.md#radix-temp
 
 ## Universe
 
-An instance of the Radix Tempo ledger is called a Universe.
+An instance of the Radix [Tempo](whitepapers/tempo.md) ledger is called a Universe.
 
 ## Vector Clock
 
@@ -112,7 +116,9 @@ Within Tempo, all nodes have a local logical clock \(see [Logical Clocks](glossa
 
 These Logical Clocks can then be made into Vector Clocks, where the Logical Clock of many Nodes are collected in relation to the same event, and then used to create a comparison of order between Nodes in order to determine which event proceeded which.
 
-Note: on their own, Vector Clocks only create a partial ordering - Node Commitments are also necessary to complete the ordering of events.
+{% hint style="info" %}
+**Note:** on their own, Vector Clocks only create a partial ordering - Node Commitments are also necessary to complete the ordering of events.
+{% endhint %}
 
 See the Tempo white paper for [more details](whitepapers/tempo.md#commitments).
 

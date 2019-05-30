@@ -20,7 +20,7 @@ As we stated earlier, we want to build a decentralized Alias system for our appl
 
 Assume our application wants to provide users with an alias system that supports simple alias \(in the form of `@name`\) and namespace alias \(in the form of `name@namespace`\). The implemented alias logic has to be part of the app client code so all the wallets can interpret it consistently.
 
-First, in our application, we define an Account that will be our Namespace index and another Account that will represent our Root index. In the Namespace index, we add a record that points to the Root index so we can handle any simple alias.
+First, in our application, we define an [Account](../glossary.md#account) that will be our Namespace index and another Account that will represent our Root index. In the Namespace index, we add a record that points to the Root index so we can handle any simple alias.
 
 ![Figure 1: Alias system diagram](https://uploads-ssl.webflow.com/5a5f0fc1f1856e000182ae9e/5bf6a6dd6ffe192f78a81384_Use%20cases_%20aliases%20in%20Radix.jpeg)
 

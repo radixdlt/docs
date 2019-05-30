@@ -8,9 +8,9 @@ During the final leg of our alpha launch event, Dan gives a quick primer on the 
 
 ## Preventing Double Spend Attacks
 
-_Radix uses logical clocks for generating a causal ordering of events to detect and prevent double spends._
+_Radix uses_ [_logical clocks_](../glossary.md#logical-clock) _for generating a causal ordering of events to detect and prevent double spends._
 
-The first event to gain a temporal proof will become the valid event, the second event will be automatically discarded by the nodes as soon as an earlier temporal proof is presented. As this will happen within the time it takes for both transactions to be gossiped to all Nodes in a shard, the certainty of a transaction can be generally reached within 5 seconds or less.  
+The first event to gain a temporal proof will become the valid event, the second event will be automatically discarded by the nodes as soon as an earlier temporal proof is presented. As this will happen within the time it takes for both transactions to be gossiped to all Nodes in a shard, the certainty of a transaction can be generally reached within 10 seconds or less.  
 
 
 ## Preventing Sybil Attacks
@@ -54,15 +54,15 @@ Full eclipse attacks in Radix are pretty much impossible .
 
 ### Sybil Protection for Consensus Attacks
 
-POW in Bitcoin mining is used to ensure that only one vote can be made every 10 mins \(on average\). It's a very simple Sybil protection mechanism that means no matter how many machines I have, or miners, or identities, the probability is that I can only vote \(create a block\) once every 10 mins.
+[POW](http://www.radixdlt.com/post/what-is-proof-of-work/) in Bitcoin mining is used to ensure that only one vote can be made every 10 mins \(on average\). It's a very simple Sybil protection mechanism that means no matter how many machines I have, or miners, or identities, the probability is that I can only vote \(create a block\) once every 10 mins.
 
 The issue is that POW vote Sybil is not very scalable or efficient.
 
 In Radix, Mass is used as our "POW" vote Sybil mechanism, and mass is a product of an Atoms value \(which can be monetary, data, or some other metric\) and time. The longer something is static, the more mass it achieves.
 
-This mass is then distributed to the nodes in the network depending on their position in the Temporal Proof for that Atom.
+This mass is then distributed to the nodes in the network depending on their position in the Temporal Proof for that [Atom](../glossary.md#atoms).
 
-Each Atom takes a different route than another Atom depending on its origin point, which makes predicting where and who Atoms are going to come from to you next totally unpredictable.
+Each [Atom](../glossary.md#atoms) takes a different route than another Atom depending on its origin point, which makes predicting where and who Atoms are going to come from to you next totally unpredictable.
 
 When I receive an Atom, and validate it, I "stamp" the Temporal Proof with my approval, essentially a vote, which is weighted by the amount of mass that NID controls.
 
@@ -70,7 +70,7 @@ In order for me as an attacker to control consensus and double spend, I need to 
 
 Now, a 51% attack in Bitcoin is expensive but possible, just buy lots of ASIC hardware, setup and go.
 
-Not so in Radix. To control the universe you need mass. Mass is produced by mass carrying Atoms \(transactions mainly\). The longer some funds have been in an account, the more mass they produce.
+Not so in Radix. To control the [universe](../glossary.md#universe) you need mass. Mass is produced by mass carrying Atoms \(transactions mainly\). The longer some funds have been in an account, the more mass they produce.
 
 In order to have enough mass to mount an attack, I as an attacker would have to be the initial validator for &gt; 50% of all Atoms in the universe.
 
@@ -94,11 +94,11 @@ As with eclipsing though, even if I do all that, there's a final nail that kills
 
 ## How can we measure/confirm that a shard has "enough" nodes to maintain a healthy level of security?
 
-The more nodes that have been in a shard, the more secure a shard history is due to the number of redundant copies of the shard information being maintained. 
+The more [nodes](../glossary.md#nodes) that have been in a [shard](../glossary.md#shard), the more secure a shard history is due to the number of redundant copies of the shard information being maintained. 
 
 It is also possible for nodes to leave a shard, come back later and re-affirm history. This makes any attack vector not just all the nodes in a shard now, but all the nodes that have ever witnessed the event you are trying to change.
 
-There is also a high degree of incentive for nodes to maintain under-served shards as the more shards low node count shards they maintain \(serve\) the higher the probability of getting fees.
+There is also a high degree of [incentive for nodes](../whitepapers/public-node-incentives.md) to maintain under-served shards as the more shards low node count shards they maintain \(serve\) the higher the probability of getting fees.
 
 For shard selection incentives, see: [https://papers.radixdlt.com/incentives/\#shards](https://papers.radixdlt.com/incentives/#shards)
 
@@ -108,7 +108,7 @@ For shard selection incentives, see: [https://papers.radixdlt.com/incentives/\#s
 
 ## Can a bad actor take control of a shard?
 
-With some difficulty - as the Radix universe is split into 18.4 quintillion shards, and your shard address is deterministic on your wallet address, you would need to continually cycle PGP key generation to get matching shard address keys. In addition to this there are several other sybil and spam attack prevention mechanisms to prevent even high numbers of malicious actors on a shard being able to reliably control or isolate honest nodes in a shard.
+With some difficulty - as the Radix universe is split into 18.4 quintillion shards, and your shard [address](../glossary.md#address) is deterministic on your wallet address, you would need to continually cycle PGP key generation to get matching shard address keys. In addition to this there are several other sybil and spam attack prevention mechanisms to prevent even high numbers of malicious actors on a shard being able to reliably control or isolate honest nodes in a shard.
 
 These mechanisms will be covered in more detail in the forthcoming v2 Tempo White Paper.
 
@@ -124,9 +124,9 @@ This makes the attack highly asymmetric in favor of Nodes, meaning that an attac
 
 ## How does Radix prevent nodes from suppressing transaction announcements?
 
-Nodes in the Radix network periodically commit the Merkle hash of all previously observed events. Suppressed transactions are easy to detect with the help of these periodic commitments. For example: If a Node\(A\) sends a message to Node\(B\) at logical clock 10 asking for Atoms that B might have that A does not and B responds that it has nothing then both nodes include the hash of the messages in their commitments. 
+[Nodes](../glossary.md#nodes) in the Radix network periodically commit the [Merkle](http://www.radixdlt.com/post/primer-on-merkle-trees/) hash of all previously observed events. Suppressed transactions are easy to detect with the help of these periodic commitments. For example: If a Node\(A\) sends a message to Node\(B\) at logical clock 10 asking for Atoms that B might have that A does not and B responds that it has nothing then both nodes include the hash of the messages in their commitments. 
 
-If B was withholding an Atom to present later to try and double spend, and presents it, and Node\(A\) sees it at logical clock 20 for example, Node\(A\) will have in one of its commitments that it asked Node\(B\) for Atoms it doesn't have at logical clock 10 and B said it had nothing. Node\(B\) is therefore exposed, with proof that it lied which can be broadcasted to the network.
+If B was withholding an [Atom](../glossary.md#atoms) to present later to try and double spend, and presents it, and Node\(A\) sees it at logical clock 20 for example, Node\(A\) will have in one of its commitments that it asked Node\(B\) for Atoms it doesn't have at logical clock 10 and B said it had nothing. Node\(B\) is therefore exposed, with proof that it lied which can be broadcasted to the network.
 
 {% hint style="info" %}
 [Discuss this topic on the developer forum](https://forum.radixdlt.com/t/how-does-radix-prevent-nodes-from-suppressing-transaction-announcements/49)
@@ -146,7 +146,7 @@ This relies on the network always being able to identify the difference between 
 
 ### **What are logical clocks?**
 
-In a Radix Universe, an “event” is a general term for something that the ledger has to do at the request of a user. This could be a transaction, it could be a message, or it could be the updating of a state in a Smart Contract. A Node is a computer running part or all of the Radix universe - we will discuss these components in more depth in another article.
+In a Radix [Universe](../glossary.md#universe), an “event” is a general term for something that the ledger has to do at the request of a user. This could be a transaction, it could be a message, or it could be the updating of a state in a Smart Contract. A [Node](../glossary.md#nodes) is a computer running part or all of the Radix universe - we will discuss these components in more depth in another article.
 
 [Logical clocks](https://en.wikipedia.org/wiki/Logical_clock) are essentially a counter measuring events seen by nodes; every time a node sees an unseen and valid event it adds ‘1’ to its logical clock counter as follows:
 
@@ -154,7 +154,7 @@ In a Radix Universe, an “event” is a general term for something that the led
 2. Node checks its own database to check if it has seen it before, as well as doing basic cryptographic validity checks
 3. If it is a new event for the Node, it increments its logical clock by 1 \(e.g. from 0 to 1 if it is the first new transaction it has ever seen\) and associates that value with the event in it’s own database
 4. It then stamps the event with that logical clock value, as well as its own signature \(so that it cannot be forged by other nodes\) and then passes that event on to other nodes in the network
-5. As the event moves through the network it collects the signatures and Logical Clock time stamps of all the Nodes that it touches until a threshold \(depending on network size\)
+5. As the event moves through the network it collects the signatures and [Logical Clock](../glossary.md#logical-clock) time stamps of all the Nodes that it touches until a threshold \(depending on network size\)
 
 To jump into this a bit more, see this explainer video by Dan: 
 
@@ -162,9 +162,9 @@ To jump into this a bit more, see this explainer video by Dan:
 
 ### **Determining relative order**
 
-Because [the way the ledger is constructed](https://www.radixdlt.com/post/sharding-in-radix), a spend from an address can NEVER be from two different shards - a wallet address determines the shard that wallet may spend from. This means that all related events \(such as a double spend\) MUST always be on the same shard.
+Because [the way the ledger is constructed](https://www.radixdlt.com/post/sharding-in-radix), a spend from an [address](../glossary.md#address) can NEVER be from two different shards - a wallet address determines the shard that wallet may spend from. This means that all related events \(such as a double spend\) MUST always be on the same shard.
 
-Nodes are constantly gossiping these events to each other. This gossiping of logical clock values is used in conjunction with a node’s own logical clock values to allow nodes to adjust the absolute order of transactions and slot in new events into the right place.
+[Nodes](../glossary.md#nodes) are constantly gossiping these events to each other. This [gossiping](../glossary.md#gossip-protocol) of logical clock values is used in conjunction with a node’s own logical clock values to allow nodes to adjust the absolute order of transactions and slot in new events into the right place.
 
 In most scenarios, no further action is required by the Node. A Node hears about a new event, adds that event to their database with their current logical clock value, and gossips that out. If they hear no conflicting information back, then the transaction may be considered to be truthful. It is an incredibly efficient, passive consensus mechanism that only requires the comparison of two events in the case that there are two events that conflict.
 
@@ -178,11 +178,11 @@ If Z does not exist, or Y occurred before Z, then the second stages of Radix con
 
 ### **Quick Sync**
 
-This system also allows new nodes to ascertain the correct order quickly. Imagine Node A has a logical clock value of 10 and the newly joined Node B has seen no events. Node B would ask Node A for the values from its ledger and therefore see all of the events Node A has in the order they occurred. It would then add that data to its own ledger. This can be cross checked against multiple other Nodes, allowing Node B to quickly build a complete relative ordering of past events before it can start participating in the new event consensus.
+This system also allows new [nodes](../glossary.md#nodes) to ascertain the correct order quickly. Imagine Node A has a [logical clock](../glossary.md#logical-clock) value of 10 and the newly joined Node B has seen no events. Node B would ask Node A for the values from its ledger and therefore see all of the events Node A has in the order they occurred. It would then add that data to its own ledger. This can be cross checked against multiple other Nodes, allowing Node B to quickly build a complete relative ordering of past events before it can start participating in the new event consensus.
 
 ### **Keeping nodes honest**
 
-Although this allows us to establish relative order, it does not prevent nodes from lying about when they saw a transaction. Each logical clock is locally owned and the node could falsify the timing or the order of events.
+Although this allows us to establish relative order, it does not prevent nodes from lying about when they saw a transaction. Each [logical clock](../glossary.md#logical-clock) is locally owned and the [node](../glossary.md#nodes) could falsify the timing or the order of events.
 
 To solve this, actions are associated with the node responsible for creating it to prove the node is faulty in the event of a failure \(which provides [aBFD](https://pdfs.semanticscholar.org/5c6d/70758691d8d15137794acadbc7742a801e2b.pdf)\). Radix uses what are known as Commitments to audit the logical clock output of nodes, ensure accountability and prevent tampering. A Commitment is a unique identifier created by five bits of information:
 
@@ -236,7 +236,7 @@ A network split in Radix would similarly involve the creation of two independent
 
 The previous article looked at simple conflict resolution works when all nodes are on the same network and therefore we can easily establish a causal history. However, when a portion of nodes are no longer on the same network - as in the case of a network split attack - this will no longer work because:
 
-1. Nodes won’t have seen the same set of event activity, as the gossip that usually propagates all events would have been operating on the two different networks with no crossover. Instead of our previously structured gossip \(which gave us a causal history based off the predictable propagation of information across the network\) we find ourselves with two independent and conflicting sets of histories seen by different sets of nodes
+1. [Nodes](../glossary.md#nodes) won’t have seen the same set of event activity, as the gossip that usually propagates all events would have been operating on the two different networks with no crossover. Instead of our previously structured [gossip](../glossary.md#gossip-protocol) \(which gave us a causal history based off the predictable propagation of information across the network\) we find ourselves with two independent and conflicting sets of histories seen by different sets of nodes
 2. The network would therefore have to expend significant resources to establish a single causal history of all of these ‘new’ transactions to work out the correct order, an effort which would be time-consuming. This delay would lead to further attack vectors for a malicious actor to exploit
 
 As such, we need a new means to quickly and fairly resolve these more exotic conflicts.

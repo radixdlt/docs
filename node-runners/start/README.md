@@ -28,7 +28,7 @@ Your targeted node should have **at least**:
 
 ### Software     <a id="software"></a>
 
-You can run a Radix DLT node on any operating system that supports Docker and Docker Compose, including:
+You can run a Radix DLT [node](../../learn/glossary.md#nodes) on any operating system that supports Docker and Docker Compose, including:
 
 * Linux
 * MacOS X
@@ -139,6 +139,7 @@ volumes:
   core_ledger:
   core_config:
   nginx_secrets:
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

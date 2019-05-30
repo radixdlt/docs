@@ -47,11 +47,11 @@ To design a decentralized solution for the outlined scenario, we have identified
 
 ### 1. The Radix Ledger
 
-The easiest way to think of the Radix ledger is like a massively sharded database. This shard space is static - 18.4 quintillion shards \(2^64\), and Radix uses the account’s public key address as the only input required to determine where any given account/address lives.
+The easiest way to think of the Radix ledger is like a massively [sharded](../glossary.md#shard) database. This shard space is static - 18.4 quintillion shards \(2^64\), and Radix uses the [account](../glossary.md#account)’s public key address as the only input required to determine where any given account/[address](../glossary.md#address) lives.
 
 ![](../../.gitbook/assets/screenshot-2019-04-17-18.56.25.png)
 
-This makes the data structure incredibly efficient because any given wallet or account address only needs to return 1/\(2^64\) of the data stored on ledger during a read operation, and any data can be written directly to the correct shard without any coordination from the nodes.
+This makes the data structure incredibly efficient because any given wallet or account [address](../glossary.md#address) only needs to return 1/\(2^64\) of the data stored on ledger during a read operation, and any data can be written directly to the correct shard without any coordination from the [nodes](../glossary.md#nodes).
 
 This is very similar to how [Hash Tables](https://en.wikipedia.org/wiki/Hash_table) operate, but where each hash reference is a shard rather than a line in a database.
 
@@ -65,7 +65,7 @@ The RoT is capable of generating a key pair on the sensor device where the priva
 
 The private key is then used by the IoT device to sign every data package that it transmits to the Gateway Hub. This means that even if the data package is passed on by many intermediary parties, it is always possible to verify that the data originally came from the IoT device and that it has not been tampered with during data transit.
 
-The public part of this key also forms the sensor’s Account Address on the Radix ledger and allows efficient location for the write and retrieval of the data for a specific sensor. This also provides a global, universal unique device naming and indexing system against which data integrity can always be verified.
+The public part of this key also forms the sensor’s [Account](../glossary.md#account) address on the Radix ledger and allows efficient location for the write and retrieval of the data for a specific sensor. This also provides a global, universal unique device naming and indexing system against which data integrity can always be verified.
 
 In our truck scenario, each of the temperature sensors has its own RoT that is signing the temperature readout they produce every 10 seconds to ensure auditability and trustworthiness of the data.
 
@@ -101,18 +101,18 @@ In this scenario, when the box shipment is created, a key pair is generated for 
 
 The public key allows the box to be linked with the on ledger information about the box, but does so in a way that only the person who has access to the content of the box may actually decrypt the information that has been written to the box’s public address.
 
-This is because it is possible to scan the outside of the box, find the relevant Radix shard and address, and then write information to the ledger about the box, but encrypt it with the Box public key so that only those that have access to the packing slip \(and thus decryption key\) are able to read the content back from the ledger.
+This is because it is possible to scan the outside of the box, find the relevant Radix [shard](../glossary.md#shard) and [address](../glossary.md#address), and then write information to the ledger about the box, but encrypt it with the Box public key so that only those that have access to the packing slip \(and thus decryption key\) are able to read the content back from the ledger.
 
-By telling the Gateway Hub which box is in the truck and for what duration, as well as the relevant public key of the box, the Gateway Hub can now also send encrypted versions of the relevant IoT sensor data to the box’s Radix Address.
+By telling the Gateway Hub which box is in the truck and for what duration, as well as the relevant public key of the box, the Gateway Hub can now also send encrypted versions of the relevant IoT sensor data to the box’s Radix [address](../glossary.md#address).
 
 ![](../../.gitbook/assets/screenshot-2019-04-17-19.03.28.png)
 
-This information is constructed in such a way that anyone reading back the data written to the box’s Radix address can also verify that the sensor information has been untampered with.
+This information is constructed in such a way that anyone reading back the data written to the box’s Radix [address](../glossary.md#address) can also verify that the sensor information has been untampered with.
 
 They would do so in the following way:
 
 1. Use the packing slip QR code to construct the box’s private key
-2. Lookup the public Radix address of the box and download all encrypted data there
+2. Lookup the public Radix [address](../glossary.md#address) of the box and download all encrypted data there
 3. Decrypt the data using the box’s private key \(as per the above diagram\)
 4. Construct the public Radix address from each of the Sensor’s signatures
 5. Hash the sensor data plus signature and check the hash for a match on the Sensor’s Radix address
@@ -131,7 +131,7 @@ To make sure the box only gets the information for the duration of the trip in t
 
 As an additional optimization, it would also be good to reduce the number of writes to ledger necessary to just one per vehicle: all data for the duration of the trip, written at the point the box is checked out of the truck.
 
-This necessarily requires an on ledger truck identifier, plus a way of making sure only trusted devices can tell the Gateway Hub which boxes are on or off the truck at any given time. These are not trusted from the point of view of the ledger, but trusted from the point of view of the Gateway Hub for a specific vehicle \(e.g., am I allowed to write potentially sensitive information to this specific address\).
+This necessarily requires an on-ledger truck identifier, plus a way of making sure only trusted devices can tell the Gateway Hub which boxes are on or off the truck at any given time. These are not trusted from the point of view of the ledger, but trusted from the point of view of the Gateway Hub for a specific vehicle \(e.g., am I allowed to write potentially sensitive information to this specific address\).
 
 It's advised that the truck on-ledger identifier is cycled each time the truck is returned to the depot for reloading, to reduce the read/write burden on the ledger.
 
@@ -145,7 +145,7 @@ Basic ERP Integration Steps:
 
 1. Generate a random seed for a Hierarchical Deterministic Key \(HDK\) - one per truck
 2. Share the truck specific HDK seed with the on-truck Gateway Hub plus ERP system
-3. Generate the first key from the seeded HDK to create the Radix Address identifier
+3. Generate the first key from the seeded HDK to create the Radix [Address](../glossary.md#address) identifier
 4. The ERP system encrypts the next trip identifier using this public key and sends it to the relevant public Radix address
 5. The ERP system uses this trip identifier as the salt for the HDK seed to create the first trip specific public truck address
 6. The Gateway Hub generates the first key from the seeded HDK, decrypts and reads back the trip identifier, and then also constructs the first trip specific public truck address
@@ -201,7 +201,7 @@ The company that created these products would like the temperature chain to be t
 2. Each unit that is added to a sub-carton has the private key of the sub-carton encrypted with, and written to the public address of the unit
 3. Each sub-carton that is added to a container has the private key of the container encrypted with, and written to the public address of the sub-carton
 
-This nesting of private keys that have been encrypted with the public key of the address they have been written to means that access to the private key of the unit also gives you the private key of the sub carton and container.
+This nesting of private keys that have been encrypted with the public key of the [address](../glossary.md#address) they have been written to means that access to the private key of the unit also gives you the private key of the sub carton and container.
 
 ![](../../.gitbook/assets/iot-diagram-page-6.png)
 

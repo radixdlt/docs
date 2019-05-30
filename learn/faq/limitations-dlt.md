@@ -24,7 +24,7 @@ Despite these innovations, the low scalability of the current breed of technolog
 
 ## What problems do current distributed ledger architectures have?
 
-Current distributed ledger architectures like Blockchains and Directed Acyclic Graphs  do not  live up to the hype. They do not scale without adding some form of central authority. It is difficult and expensive to build and deploy secure applications. They are difficult for consumers to use, with a steep learning curve for even simple tokens. They are inefficient and consume massive electric power, are prone to miner centralization, and the high volatility of their token/coin have delayed adoption, either for mainstream applications or as a useful currency.
+Current distributed ledger architectures like [Blockchains](http://www.radixdlt.com/videos/introduction-to-radix-blockchain-scaling-issues/) and [Directed Acyclic Graphs](http://www.radixdlt.com/videos/radix-dag-scaling-issues-aims-of-radix/)  do not  live up to the hype. They do not scale without adding some form of central authority. It is difficult and expensive to build and deploy secure applications. They are difficult for consumers to use, with a steep learning curve for even simple tokens. They are inefficient and consume massive electric power, are prone to miner centralization, and the high volatility of their token/coin have delayed adoption, either for mainstream applications or as a useful currency.
 
 ### Existing protocols cannot scale to meet demand
 

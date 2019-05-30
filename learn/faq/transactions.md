@@ -11,14 +11,13 @@ Short answer - because if balances are stored, we cannot state shard without mak
 Long answer - to answer this question we must first establish that sharding is necessary - generally speaking there are two constraints with a DLT:
 
 1. Transaction throughput
-
 2. Storage throughput
 
-With a directed acyclic graph \(DAG\), transaction throughput is higher than on a blockchain as the transport can be optimized  - you are dealing with transactions individually rather than as a block. However, those transactions still need to be validated, and at around 2,000 transactions per second on a single shard \(assuming standard servers\) you will see the performance of the full nodes on a network start to drop significantly. Pruning the ledger does nothing to reduce this load as this is a throughput constraint, not a storage constraint.
+With a [directed acyclic graph](http://www.radixdlt.com/videos/radix-dag-scaling-issues-aims-of-radix/) \(DAG\), transaction throughput is higher than on a blockchain as the transport can be optimized  - you are dealing with transactions individually rather than as a block. However, those transactions still need to be validated, and at around 2,000 transactions per second on a single shard \(assuming standard servers\) you will see the performance of the full nodes on a network start to drop significantly. Pruning the ledger does nothing to reduce this load as this is a throughput constraint, not a storage constraint.
 
-To scale beyond the 2,000 transactions per second mark, it is necessary to start splitting the throughput load; this requires sharding the network, splitting the work amongst the nodes, rather than requiring all the nodes to do all the same work.
+To scale beyond the 2,000 transactions per second mark, it is necessary to start splitting the throughput load; this requires [sharding the network](http://www.radixdlt.com/post/sharding-in-radix/), splitting the work amongst the nodes, rather than requiring all the nodes to do all the same work.
 
-Now that you are splitting up the ledger into parts, you need a method of dealing with transactions between shards.
+Now that you are splitting up the ledger into parts, you need a method of dealing with transactions between [shards](../glossary.md#shard).
 
 Using balances, rather than UTXO can certainly reduce the storage requirements of the ledger on a given shard as you can prune the transaction history; however, one shards output is no longer another shards input without overhead. Since no TX history is being stored, just balances, the transactions between shards are not atomic, and this starts creating serious complexity. As a worked example:
 
@@ -38,7 +37,7 @@ Without that, without transaction history, and without atomicity, double spendin
 
 ### How long does it take for transaction settlement?
 
- Transactions on the Radix Network confirm and finalize in 5 seconds or less. Current test networks may experience some delays, as we test and break things. 
+ Transactions on the Radix Network confirm and finalize in 10 seconds or less. Current test networks may experience some delays, as we test and break things. 
 
 ### What is the transaction fee?
 
@@ -50,7 +49,7 @@ Yes.
 
 ### Are transactions private and/or anonymous?
 
-Radix is as private as bitcoin. It does not support complete anonymous transactions but will support pseudo-anonymous transactions in the medium term. The ledger is design as such that in the future it will be very easy to create an anonymity layer on top of it. The team will not focus on it until the basic features are stable.
+Radix is as private as bitcoin. It does not support complete anonymous transactions but will support pseudo-anonymous transactions in the medium term. The ledger is designed as such that in the future it will be very easy to create an anonymity layer on top of it. The team will not focus on it until the basic features are stable.
 
 ### Are all Tokens first-class citizens on the Radix platform?
 

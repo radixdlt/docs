@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Particle types describe the qualitative aspects of a Particle's state machine, which are a combination of the content structure of an instance and the lifecycle and content state transitions that are permitted. The Particle type further defines the data its Particle instances must contain and what constraints they must abide to be accepted and stored. Particle types often share common properties that require their constraints to work a certain way, such as the property that a Particle instance of a type can be uniquely identified. These distinct, common properties of Particles are called Quarks.
+Particle types describe the qualitative aspects of a [Particle](atom-structure.md#particles)'s [state machine](constraint-machine.md#state-machines), which are a combination of the content structure of an instance and the lifecycle and content state transitions that are permitted. The Particle type further defines the data its Particle instances must contain and what constraints they must abide to be accepted and stored. Particle types often share common properties that require their constraints to work a certain way, such as the property that a Particle instance of a type can be uniquely identified. These distinct, common properties of Particles are called Quarks.
 
 In summary, the two defining qualitative aspects of a Particle type are:
 
