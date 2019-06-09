@@ -49,7 +49,7 @@ The Universe configuration identifies a set of Boot nodes, which:
 
 ### Centralisation of Mass
 
-The goal is to give Boot nodes extra power until a nework is young and is vulnerable to 51% attacks. This additional mass is calculated such that it will dilute over time with a marginally successful \(number of Nodes\) network. The more successful network the faster the community Core nodes will gain mass and make the Boot nodes less powerful in the network.
+The goal is to give Boot nodes extra power while a nework is young and is vulnerable to 51% attacks. This additional mass is calculated such that it will dilute over time with a marginally successful \(number of Nodes\) network. The more successful network the faster the community Core nodes will gain mass and make the Boot nodes less powerful in the network.
 
 ## Core Nodes
 
