@@ -219,7 +219,7 @@ public Single<String> sendTokens(
 
     Action sendAction = TransferTokensAction.create(from, to, amount, token);
     Action uniqueIdAction = new PutUniqueIdAction(from, uniqueId);
-    Action atomicAction = new AtomicAction(mintAction, uniqueIdAction);
+    Action atomicAction = new AtomicAction(sendAction, uniqueIdAction);
 
     return radixApplicationApi
             .execute(atomicAction)
