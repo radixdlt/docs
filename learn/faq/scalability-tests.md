@@ -46,8 +46,8 @@ Sure, here’s the GitHub link - [https://github.com/radixdlt/mtps](https://gith
 
 We're bypassing the WebSocket API normally used for submitting atoms, and instead, pre-load them into memory before the test and inject them directly into the submission queue. Redundancy is around 4.2 nodes per transaction, which is low to save cost.
 
-1. **Each node receives all atoms relevant to its shards directly from the atom pump. Nodes are still trying to synchronize as normal, but only a small fraction of atoms get sent between them over the network.** 
-2. **To emulate BTC being mined \(coinbase inputs\), we allow creating tokens out of thin air** 
-3. **Since the Radix ledger doesn't support the full capabilities of BTC scripts, any advanced transactions such as timelocks have been replaced with sending the funds to a randomly-generated intermediate address** 
-4. **The test is run within the Google Cloud Platform data-centers, which means that while distributed around the world,  packet loss is lower than in the real world**
+1. Each node receives all atoms relevant to its shards directly from the atom pump. Nodes are still trying to synchronize as normal, but only a small fraction of atoms get sent between them over the network. 
+2. To emulate BTC being mined \(coinbase inputs\), we allow creating tokens out of thin air 
+3. Since the Radix ledger doesn't support the full capabilities of BTC scripts, any advanced transactions such as timelocks have been replaced with sending the funds to a randomly-generated intermediate address 
+4. The test is run within the Google Cloud Platform data-centers, which means that while distributed around the world,  packet loss is lower than in the real world
 
