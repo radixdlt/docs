@@ -135,7 +135,7 @@ The user can now choose to withdraw the assets to his private bank account.
 
 ## Technical details
 
-### Exchanging Fiat assets and Tokens <a id="docs-internal-guid-34bf3983-7fff-911e-8306-8f82a80ce5e3"></a>
+### Exchanging Fiat assets and Tokens  <a id="docs-internal-guid-34bf3983-7fff-911e-8306-8f82a80ce5e3"></a>
 
 The FT service is monitoring a dedicated PrimeTrust bank account and a corresponding dedicated Radix address. Once it detects an asset transaction to the PrimeTrust account, it looks for the sender in the user database. If the sender is found, a corresponding amount of tokens are minted and sent to said users Radix wallet.
 
@@ -159,7 +159,7 @@ api.createToken(
     BigDecimal.valueOf(10000),                     // Amount
     TokenUnitConversions.getMinimumGranularity(),  // Granularity: Default is 10^18
     TokenSupplyType.MUTABLE                        // TokenSupplyType
-)    
+)
 ```
 
 ### Minting and burning Tokens

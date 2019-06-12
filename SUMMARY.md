@@ -34,6 +34,7 @@
   * [Economics](learn/faq/economics.md)
   * [Security](learn/faq/security.md)
   * [Limitations of DLT](learn/faq/limitations-dlt.md)
+  * [Scalability Tests](learn/faq/scalability-tests.md)
 * [Videos](learn/videos.md)
 * [Roadmap](https://www.radixdlt.com/roadmap)
 * [Glossary](learn/glossary.md)
