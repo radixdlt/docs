@@ -1,4 +1,4 @@
-# Use Cases
+# Other Use Cases
 
 The Radix Ledger is currently in **Alpha** stage: the network includes only the ability to send and receive transactions and send encrypted and unencrypted messages via the client libraries. These features represent only a small number of the complete feature set that will be available on the full Radix network. However, with these simple features, some interesting applications can be built already.
 

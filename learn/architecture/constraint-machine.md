@@ -4,7 +4,7 @@
 **Tip:** for a quick introduction to the Constraint Machine, check [our blog post](https://www.radixdlt.com/post/chess-guardians-of-the-galaxy-vol-1/).
 {% endhint %}
 
-## Introduction <a id="docs-internal-guid-047e2002-7fff-03af-0fbc-077c1f63e1f1"></a>
+## Introduction  <a id="docs-internal-guid-047e2002-7fff-03af-0fbc-077c1f63e1f1"></a>
 
 This document will walk through the design logic behind the Constraint Machine, one of the two middle layers in the Radix Engine.
 
@@ -50,15 +50,13 @@ A State Machine is a device which can be in one of a set number of stable condit
 
 ### State Machine definition
 
-The definition of a state machine, defines its behavior and lifecycle. For example:  
-
+The definition of a state machine, defines its behavior and lifecycle. For example:
 
 ![](../../.gitbook/assets/21.png)
 
 ### State Machine instance
 
-A State Machine instance is an actual instance of a state machine with a particular state. There could be more than one instance for a defined State Machine. For example, here are two instances of the state machine defined above:  
-
+A State Machine instance is an actual instance of a state machine with a particular state. There could be more than one instance for a defined State Machine. For example, here are two instances of the state machine defined above:
 
 ![](../../.gitbook/assets/22.png)
 
@@ -68,15 +66,13 @@ As a State Machine designer it is also important to understand Extended State Ma
 
 #### Quantitative Transition
 
-These are transitions to the same state, where "extended state variables" of the state are updated. For example:  
-
+These are transitions to the same state, where "extended state variables" of the state are updated. For example:
 
 ![](../../.gitbook/assets/23.png)
 
 #### Qualitative Transition
 
-These are transitions to a different state. For example:  
-
+These are transitions to a different state. For example:
 
 ![](../../.gitbook/assets/24.png)
 
@@ -92,8 +88,7 @@ A [particle](atom-structure.md#particles) can be defined as a "sub state of a gl
 
 Particle spins are the key on how particles transition to other particles.
 
-Let’s take as an example, transitioning from a "5 dollars in my pocket" state to a "5 dollars in your pocket".  
-
+Let’s take as an example, transitioning from a "5 dollars in my pocket" state to a "5 dollars in your pocket".
 
 ![](../../.gitbook/assets/29.png)
 
@@ -103,8 +98,7 @@ Given that a particle represents a "sub-state", the spin of a particle represent
 
 This means that a particle transition is represented by the current particle being spun DOWN and the next particle being spun UP.
 
-Back with our example, the "5 dollars in my pocket" state becomes disabled while the "5 dollars in your pocket" state becomes enabled:  
-
+Back with our example, the "5 dollars in my pocket" state becomes disabled while the "5 dollars in your pocket" state becomes enabled:
 
 ![](../../.gitbook/assets/30.png)
 
@@ -233,13 +227,11 @@ interface ParticleTypeDef<T extends Particle> {
   SpinStateMachine lifecycle();
   ParticleWrite mapToWrite(T t);
 }
-
 ```
 
 ### System Calls to Particle Type definitions
 
-The system calls are the mechanism to define the creation and management of state machines using particles. The Atom Model layer creates ParticleTypeDef's dynamically based on all the system calls issued. That is, it can tell which indices and destinations are required by the scrypts alone.  
-
+The system calls are the mechanism to define the creation and management of state machines using particles. The Atom Model layer creates ParticleTypeDef's dynamically based on all the system calls issued. That is, it can tell which indices and destinations are required by the scrypts alone.
 
 ![](../../.gitbook/assets/33.png)
 
