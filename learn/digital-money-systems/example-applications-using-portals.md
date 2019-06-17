@@ -25,7 +25,7 @@ Key Features:
 * Fast, cheap and secure payments both between users and with the business
 * Easy to integrate into an existing platform
 
-![](../../../.gitbook/assets/screen-shot-2019-04-09-at-9.49.11-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-09-at-9.49.11-am.png)
 
 Radix in-Universe User Flow:
 
@@ -54,7 +54,7 @@ Key Features:
   * Secure reputation & transaction tracking
   * Secure escrow of payments during transactions
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.23.58-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.23.58-am.png)
 
 Radix In-Universe User Flow:
 
@@ -83,7 +83,7 @@ Key Features:
   * Connect users through app on both ends to arrange, initiate, and verify payment
   * Optionally enable owners of non-bank local shop fronts within each region to join the system
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.28.30-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.28.30-am.png)
 
 Radix In-Universe User Flow \(example including shop fronts\):
 
@@ -112,7 +112,7 @@ Key Features:
   * App portal to user the service and access gift/points/account balance
   * Provides simple integrations for payments to partner companies participating in point system
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.33.11-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.33.11-am.png)
 
 Radix In-Universe User Flow \(example loyalty point system\):
 
@@ -140,7 +140,7 @@ Key Features:
   * Secure internal management and tracking of funds throughout the business, including departmental budgeting, accounts payable/receivable, and employee compensation
   * External company UI for employees and suppliers to manage accounts, etc.
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.36.16-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.36.16-am.png)
 
 Radix In-Universe User Flow \(example manufacturing company\):
 
@@ -171,7 +171,7 @@ Key Features:
   * App UI for creators and patrons/contributors
   * Secure tracking of work attribution and distribution share splits
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.41.37-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.41.37-am.png)
 
 Radix In-Universe User Flow \(example music royalty distribution\):
 
@@ -194,7 +194,7 @@ Key Features:
   * App UI for donor interaction and viewing of distribution information
   * Logic to ensure funds are distributed only when the correct corresponding aid has been provided
 
-![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.01.56-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.01.56-am.png)
 
 Radix In-Universe User Flow:
 
