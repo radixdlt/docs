@@ -130,7 +130,7 @@ In an indexed State machine instance, every particle has an index associated wit
 ![](../../.gitbook/assets/25.png)
 
 {% hint style="info" %}
-**Use case:** used mostly for cases where the states of a state machine definition are all located in the same shard \(they never moves in space\). For example, TokenDefinitions.
+**Use case:** used mostly for cases where the states of a state machine definition are all located in the same shard \(they never move in space\). For example, TokenDefinitions.
 {% endhint %}
 
 ### Transition State Machine instance
