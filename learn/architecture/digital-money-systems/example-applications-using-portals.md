@@ -25,7 +25,7 @@ Key Features:
 * Fast, cheap and secure payments both between users and with the business
 * Easy to integrate into an existing platform
 
-![](https://lh5.googleusercontent.com/YnfC6qNnY24Q8IuqMkavsCr9G9sJf7kxRVssL8RJbCnU8G6_g2CJkIl0hbOAl9x_5uR-sKrLf0g56J5lflh173LY5zpCQsFRR7vSfer2tj3BH4i3LeUOF20KAUJgT_XYnsyjcws2)
+![](../../../.gitbook/assets/screen-shot-2019-04-09-at-9.49.11-am.png)
 
 Radix in-Universe User Flow:
 
@@ -54,7 +54,7 @@ Key Features:
   * Secure reputation & transaction tracking
   * Secure escrow of payments during transactions
 
-![](https://lh6.googleusercontent.com/_KOSxMn6vm1Yn1BR4rXvdsIDmTaq1QYcNDOJfwzQf2CNO4NicVpsSkJDQuBwShOqidH09a-tGoRtb5RFVpacOfMQzqiz4oQN5O7_3rU8hRuPQQFijjbSqflKiSZSq6SL3h4hBKG4)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.23.58-am.png)
 
 Radix In-Universe User Flow:
 
@@ -83,7 +83,7 @@ Key Features:
   * Connect users through app on both ends to arrange, initiate, and verify payment
   * Optionally enable owners of non-bank local shop fronts within each region to join the system
 
-![](https://lh6.googleusercontent.com/Bl91IwhP_UO9bEdwriVEmg_YazindulQ12fEklckSmy5deq0saqlmP8phkhUYW7RFiSXIyHJaBgGMQBJkSMxEzaTPSRJu1st6k-0QN8KtFD6C-kHSmz2_IVJ6nu-8WvycTm7umy9)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.28.30-am.png)
 
 Radix In-Universe User Flow \(example including shop fronts\):
 
@@ -112,7 +112,7 @@ Key Features:
   * App portal to user the service and access gift/points/account balance
   * Provides simple integrations for payments to partner companies participating in point system
 
-![](https://lh6.googleusercontent.com/ph0B9RZR4Td9YHM9iyOD_BrDF2qzhyHRumDspe2bXvXA0AA7psiRupFFcGWpGJakEpnVj-CQyUnixpv_mqYSAGyfaCDTXPKPhLuGVBFNlNofr2WphZIQt4H9hDWre_pW_num-1_5)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.33.11-am.png)
 
 Radix In-Universe User Flow \(example loyalty point system\):
 
@@ -140,7 +140,7 @@ Key Features:
   * Secure internal management and tracking of funds throughout the business, including departmental budgeting, accounts payable/receivable, and employee compensation
   * External company UI for employees and suppliers to manage accounts, etc.
 
-![](https://lh3.googleusercontent.com/hAPjykpAApkiycAgqrSJLwd77AfMD2-toofoVhrnpijzJdBlztqdOm4EEYpvlnNlAjdC9AlZvUr_dUw2Ipgb8DoekKm9MNcZSlpGkmbmoWR3Ny88tcFV2XkxNNNBOKzgFkWrJ7yW)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.36.16-am.png)
 
 Radix In-Universe User Flow \(example manufacturing company\):
 
@@ -171,7 +171,7 @@ Key Features:
   * App UI for creators and patrons/contributors
   * Secure tracking of work attribution and distribution share splits
 
-![](https://lh6.googleusercontent.com/G03im2Hxjw_85D50meoHs_rzN2yv6St2UrQ8ulSHLC5bu7qoRM-SdrwuEN_F6_5v6tAUSi5AhhfhOZW2gmXtNhelHWxiz8QuIwh3pLLB-MYF8V9197BuBtFvkLjBA-EmFop3Bf9u)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.41.37-am.png)
 
 Radix In-Universe User Flow \(example music royalty distribution\):
 
@@ -194,7 +194,7 @@ Key Features:
   * App UI for donor interaction and viewing of distribution information
   * Logic to ensure funds are distributed only when the correct corresponding aid has been provided
 
-![](https://lh3.googleusercontent.com/o_wgnG4SUpdaMkrD8Ky_UqfDYwRP3hjGkIcMbAXflou3vPu5Oca_at_44jkG_wvuNasA2c87bT7Riq1jWRVnZkHue_McRwstbDTk-IHJlTOD727oGpoTh4grTt7Ra3VgrJTis3AA)
+![](../../../.gitbook/assets/screen-shot-2019-04-08-at-10.01.56-am.png)
 
 Radix In-Universe User Flow:
 

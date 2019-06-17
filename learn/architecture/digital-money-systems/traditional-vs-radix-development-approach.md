@@ -4,7 +4,7 @@
 
 Today, developing an application with a financial component creates an imposing set of development and infrastructure hurdles beyond just the development of the application itself. Typically the solution requires the use of a Merchant Bank and a custom accounting sub-system sitting behind the application. The Merchant Bank account is generally just one big bucket of money, with a single beneficiary: your company. Your users can send and receive funds from this bucket through the application. As a developer, you must now build a system that turns that single pot of money into the actual balances of all your users and the methods to control those balances through your application’s business rules.
 
-![](https://lh3.googleusercontent.com/yqmTl2lTCm73YAlp1NK042qyzGrEtI8xvfDBqIE1QRUs5laOPw9aJUKKLCQeKu73BnE4SOoH9UxHFUf91iyFBxA90J12OgaWwWg2o-MR1XnpsRiNTzulnkYg2dHpOQs6lwgCEU3v)
+![](../../../.gitbook/assets/screen-shot-2019-04-01-at-10.28.48-am.png)
 
 Building an application with a fintech component the traditional non-Radix way bears significant development responsibility in order to ensure secure, reliable transactions between users and interactions with a traditional merchant bank managing funds.
 
@@ -22,7 +22,7 @@ The Currency Infrastructure functionality of Portals means that once Fiat Tokens
 
 To take a simple example, an application can effect a financial transaction between two users by simply moving Fiat Tokens, via API, between two Radix Accounts representing those users.
 
-![](https://lh3.googleusercontent.com/AJb99AhS4ERXradpeeA596teyp9W6pWU0lWARZM8lAMBCzuuFy-lziiFOh2qaP35jO0GF-0SgtRmEMbjilY5ChIyzXu0r7ri8Octe-Y8rNeAFIScF6z9ZWsRF2hTcnTzwu7B2Nzr)
+![](../../../.gitbook/assets/screen-shot-2019-04-01-at-10.30.05-am.png)
 
 Building an “Accessible Fintech” application using Radix Portals and Fiat Tokens, significantly reducing development burden to provide secure, reliable financial transactions.
 
@@ -30,13 +30,13 @@ A Radix Account can be constructed over API, is trivial and free to create, but 
 
 Once an application is “plumbed for Radix” and is using Fiat Tokens, an application can even move beyond what is possible with a traditional merchant bank system. In the Radix Universe value may move between applications securely and directly without complex intermediary banking systems. Much like the world wide web created a universal communication layer between users and applications on the internet, the public Radix Universe creates a universal financial layer. Using Radix, an application may easily conduct instant global cross-application payments at virtually no cost using Fiat Tokens.
 
-![](https://lh4.googleusercontent.com/FVAPMlm5VF9hq06wcMA9FoAZhm2oFtedLyWFI9tmnCCdtM4efvR8kTUzNjBkm9riKo1URojNLt6s3_NjeFCrRpfT1NLX1tn7oKddakZryPq5GbBqNC8iwomnZiwiLDPwTi2e4qPs)
+![](../../../.gitbook/assets/screen-shot-2019-04-01-at-10.30.38-am.png)
 
 Transacting value between users and businesses with a Radix-enabled universal payments ecosystem.
 
 For applications where privacy is a primary concern, business can also create their own Private Universes using Radix technology. Connecting a Portal to a company’s Private Universe allows it to manage funds as Fiat Tokens with the ease, security, and power of Radix’ development tools – but without exposing those transactions on the public internet. Portals allow those same Fiat Tokens to move seamlessly to/from the Public Universe where they may be freely sent, spent, or saved by anyone.
 
-![](https://lh3.googleusercontent.com/gRi3-AOa8LhlzVkSFzY_WQKruZAPunGh_WJ69NFzff1nC0gB-mz3PwpI6FwYs2UkrtNfA0HWRbvSZoqhRzQSwSnfoCHmBhwIHN2RIojs0jgbpvCOKNOcRoiIF4_ju5LD7emsMy_h)
+![](../../../.gitbook/assets/screen-shot-2019-04-01-at-10.31.09-am.png)
 
 Radix allows the application developer to use Radix in both public and private fashion, as dictated by the business need, using a Portal to move funds seamlessly between these Universes.  
 

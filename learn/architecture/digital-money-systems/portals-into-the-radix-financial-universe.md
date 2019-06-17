@@ -4,7 +4,7 @@ A full instance of the Radix platform running on a network of nodes is called a 
 
 Portals transform money outside the Radix Universe into money within it. Portals accomplish this by accepting and holding everyday “fiat” funds, and issuing corresponding Fiat Tokens into the Radix Universe. These Fiat Tokens are programmable representations of money that can be freely used by applications, businesses, and individuals within the Universe.
 
-![Now you&#x2019;re thinking with Portals.](https://lh6.googleusercontent.com/wK6gmLlkiX82MpAEVgbgKrtBSlRzVRL--TOjpieZgfdKbDq0Q7GNaxA1own9VH5Q2ii9cEHOZ_2HT7nyVPwjZWXsvLouIyRcxxokGdvn0_yUC1U5MRo3O8BnWrqYNFWy9dU-dpN6)
+![](../../../.gitbook/assets/screen-shot-2019-04-01-at-10.28.15-am.png)
 
 Radix Portals are independent service providers connected to the Radix Universe. A Portal can be any company with a bank account that is able to hold customer/client money on behalf of those customers or clients. Portals hold money on behalf of the Radix Universe itself, where the corresponding Fiat Tokens may freely circulate between users. As the Portals are the interface between the Radix Universe and the real banking system, Portals also deal with much of the KYC/AML requirements around handling money. In most cases Portals will be regulated financial institutions, such as custodial trusts, but not necessarily in all cases.
 
