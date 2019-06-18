@@ -115,7 +115,7 @@ The Java Card API is compatible with international standards for secure elements
 
 ## Implementation
 
-Radix is primarily written in Java, both the node core and the mature [Java client library](../../develop/java-client-library-guide/). Transacting on Radix fundamentally means building, signing and submitting an [Atom](../glossary.md#atoms) \(an atomic container of state\) containing the relevant data to a Radix node and thereby to the Radix ledger. Once enough time has passed \(~10 seconds\) with no evidence to the contrary, it can be assumed as certain that a submitted Atom has been accepted and confirmed by the Radix ledger. 
+Radix is primarily written in Java, both the node core and the mature [Java client library](../../develop/java-client-library/). Transacting on Radix fundamentally means building, signing and submitting an [Atom](../glossary.md#atoms) \(an atomic container of state\) containing the relevant data to a Radix node and thereby to the Radix ledger. Once enough time has passed \(~10 seconds\) with no evidence to the contrary, it can be assumed as certain that a submitted Atom has been accepted and confirmed by the Radix ledger. 
 
 ### Submitting a transaction
 

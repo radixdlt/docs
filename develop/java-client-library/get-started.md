@@ -6,10 +6,10 @@ In this guide, we'll build a small distributed App \(DApp\) from the ground up u
 
 The guide is divided into several sections:
 
-* **​**[**Basic Setup**](../javascript-client-library-guide/quick-start.md#basic-setup) will give you a starting point to follow the tutorial.
-* **​**[**Overview**](../javascript-client-library-guide/quick-start.md#overview) will teach you the fundamentals of Radix's architecture.
+* **​**[**Basic Setup**](../javascript-client-library/quick-start.md#basic-setup) will give you a starting point to follow the tutorial.
+* **​**[**Overview**](../javascript-client-library/quick-start.md#overview) will teach you the fundamentals of Radix's architecture.
 * **​**[**Building a ChatBot**](get-started.md#building-a-chatbot) will show you how to make your first basic DApp.
-* **​**[**Beyond the basics**](../javascript-client-library-guide/quick-start.md#beyond-the-basics) will give you additional examples to acquire a deeper understanding of the Java library.
+* **​**[**Beyond the basics**](../javascript-client-library/quick-start.md#beyond-the-basics) will give you additional examples to acquire a deeper understanding of the Java library.
 
 ### About our example DApp
 

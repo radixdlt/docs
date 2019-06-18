@@ -244,7 +244,7 @@ Relevant business use cases have been built on Radix with what is currently avai
 * Secure messaging
 * [File notarization](../use-cases/file-notarization.md)
 
-Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section [here](../../develop/java-client-library-guide/).  
+Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section [here](../../develop/java-client-library/).  
 
 
 .
