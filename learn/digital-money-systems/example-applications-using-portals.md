@@ -41,18 +41,18 @@ Description: A global marketplace \(C2C/B2C/B2B\) enabling a mass market of user
 
 Example Application Use-cases:
 
-* * P2P product sales \(aliexpress/ebay/craigslist\)
-  * Direct-to-consumer advertising payments
-  * User data/demographics/location monetisation
-  * Gaming asset exchange
-  * Direct photo/music licensing
+* P2P product sales \(aliexpress/ebay/craigslist\)
+* Direct-to-consumer advertising payments
+* User data/demographics/location monetisation
+* Gaming asset exchange
+* Direct photo/music licensing
 
 Key Features:
 
-* * Payments sent/received in local currency
-  * App UI to interact with the marketplace
-  * Secure reputation & transaction tracking
-  * Secure escrow of payments during transactions
+* Payments sent/received in local currency
+* App UI to interact with the marketplace
+* Secure reputation & transaction tracking
+* Secure escrow of payments during transactions
 
 ![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.23.58-am.png)
 
@@ -71,17 +71,17 @@ Description: A global cash remittance system for individuals with instant global
 
 Example Application Use-cases:
 
-* * Western union style international cash remittance
-  * International bank wire transfers
-  * PayPal/Monzo-style P2P payments
+* Western union style international cash remittance
+* International bank wire transfers
+* PayPal/Monzo-style P2P payments
 
 Key Features:
 
-* * Senders and recipients may use exclusively local currency.
-  * Secure reputation tracking for all participants
-  * Ability to convert between currencies during transactions
-  * Connect users through app on both ends to arrange, initiate, and verify payment
-  * Optionally enable owners of non-bank local shop fronts within each region to join the system
+* Senders and recipients may use exclusively local currency.
+* Secure reputation tracking for all participants
+* Ability to convert between currencies during transactions
+* Connect users through app on both ends to arrange, initiate, and verify payment
+* Optionally enable owners of non-bank local shop fronts within each region to join the system
 
 ![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.28.30-am.png)
 
@@ -100,28 +100,28 @@ Description: A system to manage the end-to-end life cycle of points, tickets, ac
 
 Example Application Use-cases:
 
-* * Points and repeat customer loyalty systems
-  * Event ticket purchase and redemption
-  * Account charging/top-ups \(mobile phone, transit card, etc.\)
-  * Retail gift cards
+* Points and repeat customer loyalty systems
+* Event ticket purchase and redemption
+* Account charging/top-ups \(mobile phone, transit card, etc.\)
+* Retail gift cards
 
 Key Features:
 
-* * Purchases, top-ups, redemptions, and cash-outs all possible in local currency
-  * Secure management of gift cards/points/account balances, and single-step swaps between these and with local currency
-  * App portal to user the service and access gift/points/account balance
-  * Provides simple integrations for payments to partner companies participating in point system
+* Purchases, top-ups, redemptions, and cash-outs all possible in local currency
+* Secure management of gift cards/points/account balances, and single-step swaps between these and with local currency
+* App portal to user the service and access gift/points/account balance
+* Provides simple integrations for payments to partner companies participating in point system
 
 ![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.33.11-am.png)
 
 Radix In-Universe User Flow \(example loyalty point system\):
 
-1. Customer registers with the Application provided by a Company that uses loyalty points. Application creates an in-Universe Accounts for the Customer’s $ and Points.
-2. Customer charges their account with $50, onboarding funds \(with a Portal integrated into Application\) which become 50 $ Tokens that are credited to his Customer Account.
-3. Customer makes a purchase with Company for $15. Application moves 15 $ Tokens from Customer $ Account to a Company Account. Company provides points equal to $ spent and so Application also issues 15 new Points Tokens to Customer Point Account.
-4. Company allows customers to redeem points 10:1 for Company credit; customer wishes to redeem 10 of his Points for credit. Application removes 10 Points from Customer Point Account \(destroying them\), and moves 1 $ Token from Company Account to Customer $ Account.
-5. Company has a partnership with another company where Company is willing to buy gift cards at 2:1 Points value. Partner is registered with Application and has a Partner Account. Customer wishes to redeem his remaining 5 points for a Partner gift card. Application removes 5 Points from Customer Point Account \(destroying them\), and moves 2.5 $ Tokens from Company Account to Partner Account \(along with information on Customer needed to provide gift card\).
-6. Partner may withdraw $ Tokens to $ through the Portal, either immediately or perhaps waiting for a week’s transactions to withdraw all at once to its bank account.
+1. Customer registers with the Application provided by a Company that uses loyalty points. Application creates an in-Universe Accounts for the Customer’s € and Points.
+2. Customer charges their account with €50, onboarding funds \(with a Portal integrated into Application\) which become 50 € Tokens that are credited to his Customer Account.
+3. Customer makes a purchase with Company for €15. Application moves 15 € Tokens from Customer € Account to a Company Account. Company provides points equal to € spent and so Application also issues 15 new Points Tokens to Customer Point Account.
+4. Company allows customers to redeem points 10:1 for Company credit; customer wishes to redeem 10 of his Points for credit. Application removes 10 Points from Customer Point Account \(destroying them\), and moves 1 € Token from Company Account to Customer € Account.
+5. Company has a partnership with another company where Company is willing to buy gift cards at 2:1 Points value. Partner is registered with Application and has a Partner Account. Customer wishes to redeem his remaining 5 points for a Partner gift card. Application removes 5 Points from Customer Point Account \(destroying them\), and moves 2.5 € Tokens from Company Account to Partner Account \(along with information on Customer needed to provide gift card\).
+6. Partner may withdraw € Tokens to € through the Portal, either immediately or perhaps waiting for a week’s transactions to withdraw all at once to its bank account.
 
 ## Application Class 5: Company Accounting/Payments
 
@@ -129,16 +129,16 @@ Description: A business operations system that unifies the functions of monetary
 
 Example Application Use-cases:
 
-* * Internal departmental budgeting and tracking
-  * Employee payroll
-  * Contractor/supplier payment
-  * Customer invoicing and payment
+* Internal departmental budgeting and tracking
+* Employee payroll
+* Contractor/supplier payment
+* Customer invoicing and payment
 
 Key Features:
 
-* * Incoming revenue and outgoing payments/payroll paid in local currency
-  * Secure internal management and tracking of funds throughout the business, including departmental budgeting, accounts payable/receivable, and employee compensation
-  * External company UI for employees and suppliers to manage accounts, etc.
+* Incoming revenue and outgoing payments/payroll paid in local currency
+* Secure internal management and tracking of funds throughout the business, including departmental budgeting, accounts payable/receivable, and employee compensation
+* External company UI for employees and suppliers to manage accounts, etc.
 
 ![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.36.16-am.png)
 
@@ -159,29 +159,29 @@ Description: A system to distribute revenue from a work \(whether advertising re
 
 Example Application Use-cases:
 
-* * Funding and royalty payment for music
-  * Distribution of ad revenue from videos or other creative works
-  * Musician crowdfunding and royalty payments
-  * Artistic patronage systems
+* Funding and royalty payment for music
+* Distribution of ad revenue from videos or other creative works
+* Musician crowdfunding and royalty payments
+* Artistic patronage systems
 
 Key Features:
 
-* * Payments made to creators and backers in local currency
-  * Acceptance of revenue and data streams from third party sources in local currency
-  * App UI for creators and patrons/contributors
-  * Secure tracking of work attribution and distribution share splits
+* Payments made to creators and backers in local currency
+* Acceptance of revenue and data streams from third party sources in local currency
+* App UI for creators and patrons/contributors
+* Secure tracking of work attribution and distribution share splits
 
 ![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.41.37-am.png)
 
 Radix In-Universe User Flow \(example music royalty distribution\):
 
 1. A singer and songwriter \(Creators 1 and 2\) wish to gather funding for a new album via Company’s Application. They register with Application, and Application creates an ID and Account for each in-Universe.
-2. Creators agree to provide 1% of the royalty revenue for their album for each $1000 contributed to its creation. Application creates a Distribution Account, with associated rules for how royalty revenue should be distributed: Some provided proportionally to contributors and the remainder split 50:50 between the Creators.
-3. A fan, Contributor, decides to contribute $500 to the making of the album \(giving her rights to 0.5% of revenue\). She onboards funds \(using a Portal within the Application\), with 500 $ Tokens issued and credited to a Contributor Account created in-Universe by Application.
+2. Creators agree to provide 1% of the royalty revenue for their album for each £1000 contributed to its creation. Application creates a Distribution Account, with associated rules for how royalty revenue should be distributed: Some provided proportionally to contributors and the remainder split 50:50 between the Creators.
+3. A fan, Contributor, decides to contribute £500 to the making of the album \(giving her rights to 0.5% of revenue\). She onboards funds \(using a Portal within the Application\), with 500 £ Tokens issued and credited to a Contributor Account created in-Universe by Application.
 4. Application splits the contribution 50:50 between the creators. The album is created and released.
-5. Company has a relationship with a digital music store, and has created a Revenue account for this store to flow revenue from album sales into Company’s Application \(once again via Portal\). In the first month, the Creator’s album generates $10,000 in revenue which are received as $ Tokens and moved into the Distribution Account for the album.
-6. Revenue is distributed automatically in a single step via a collected set of $ Token transfers: 50 $ Tokens for Contributor, and 4975 $ Tokens for each of the Creators.
-7. Creators and Contributor may withdraw $ Tokens to their bank account through the Portal within the Application.
+5. Company has a relationship with a digital music store, and has created a Revenue account for this store to flow revenue from album sales into Company’s Application \(once again via Portal\). In the first month, the Creator’s album generates £10,000 in revenue which are received as £ Tokens and moved into the Distribution Account for the album.
+6. Revenue is distributed automatically in a single step via a collected set of $ Token transfers: 50 £ Tokens for Contributor, and 4975 £ Tokens for each of the Creators.
+7. Creators and Contributor may withdraw £ Tokens to their bank account through the Portal within the Application.
 
 ## Application Class 7: Charitable Giving
 
@@ -189,12 +189,12 @@ Description: A system to accept donated funds and distribute them securely and c
 
 Key Features:
 
-* * Donations received in fiat currency, and aid providers able to receive funds in fiat currency
-  * App UI for local charity agents and aid recipients to register and attest to aid received
-  * App UI for donor interaction and viewing of distribution information
-  * Logic to ensure funds are distributed only when the correct corresponding aid has been provided
+* Donations received in fiat currency, and aid providers able to receive funds in fiat currency
+* App UI for local charity agents and aid recipients to register and attest to aid received
+* App UI for donor interaction and viewing of distribution information
+* Logic to ensure funds are distributed only when the correct corresponding aid has been provided
 
-![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.01.56-am.png)
+![](../../.gitbook/assets/screen-shot-2019-04-08-at-10.01.56-am%20%281%29.png)
 
 Radix In-Universe User Flow:
 
