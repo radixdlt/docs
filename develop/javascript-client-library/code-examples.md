@@ -23,6 +23,10 @@ These code examples are divided into several topics:
 * **Manage private keys**
   * [Storing private keys](code-examples.md#storing-private-keys)
   * [Loading private keys](code-examples.md#loading-private-keys)
+* **Creating Tokens**
+  * [Creating tokens](code-examples.md#)
+  * [Minting tokens](code-examples.md#)
+  * [Burning tokens](code-examples.md#)
 
 {% hint style="success" %}
 **Tip:** if you're new to our JS library, we suggest you begin with our [Get Started guide](quick-start.md).
@@ -35,12 +39,12 @@ These code examples are divided into several topics:
 
 ### Initializing a universe
 
-There are different Universes available, such as `ALPHANET`, `HIGHGARDEN`_,_ and `SUNSTONE`. Typically, for development purposes we use **ALPHANET**.
+There are different Universes available, such as `LOCAL`, `SUNSTONE`_,_ and `BETANET`. Typically, for development purposes we use **BETANET**.
 
 To bootstrap to a network we call:
 
 ```javascript
-radixUniverse.bootstrap(RadixUniverse.ALPHANET)
+radixUniverse.bootstrap(RadixUniverse.BETANET)
 ```
 
 ### Setting a log level
@@ -67,13 +71,14 @@ Let's review some code examples on how to manage **Atoms**:
 
 ### Reading atoms from a public address
 
-In the following code snippet, we read **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by opening a **Node** connection and subscribing to the transaction updates.
+In the following code snippet, we read **Atoms** from the public address `JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB`, by opening a **Node** connection and subscribing to the transaction updates.
 
 ```javascript
-const account = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM')
+const account = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB')
 account.openNodeConnection()
 ​
 account.transferSystem.balance // This is the account balance
+account.transferSystem.tokenUnitsBalance // This is the account balance in token units
 account.transferSystem.transactions // This is a list of transactions 
 ​
 // Subscribe for any new incoming transactions
@@ -121,18 +126,18 @@ account.dataSystem.applicationDataSubject.subscribe(...)
 // Subscribe for all previous messages as well as new ones
 account.dataSystem.getApplicationData('my-test-application').subscribe(...)
 
-// Subscribe for all previous messages as well as new ones signed by a specific address or more
-account.dataSystem.getApplicationData('my-test-application', ['9iKq87ZvC1pdYC26qem4WQTtofNRje9c133vAvBgQnRdpAsHExR']).subscribe(...)
+// Subscribe for all previous messages as well as new ones signed by a specific addresses
+account.dataSystem.getApplicationData('my-test-application', ['JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB']).subscribe(...)
 ```
 
 ### Caching atoms
 
-In the following code snippet, we cache **Atoms** from the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by defining a `'path/to/file'` and enabling the account's cache.
+In the following code snippet, we cache **Atoms** from the public address `JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB`, by defining a `'path/to/file'` and enabling the account's cache.
 
 ```javascript
 import {RadixNEDBAtomCache} from 'radixdlt'
 ​
-const account = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM')
+const account = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB')
 const atomCache = new RadixNEDBAtomCache('path/to/file')
 account.enableCache(atomCache) // This will read all atoms in cache, as well as store new ones in the future
 ​
@@ -157,9 +162,17 @@ export default class CustomAccountSystem implements RadixAccountSystem {
   
   public async processAtomUpdate(atomUpdate: RadixAtomUpdate) {
     const atom: RadixAtom = atomUpdate.atom
-    
+
+    // This is either 'STORE' or 'DELETE'
+    const action = atomUpdate.action
+
     // Do whatever you want with your atom here
-    console.log(atom.getHID().toString())
+    console.log(atom.getAidString())
+    if (action === 'STORE') {
+      // Add atom contents to state
+    } else {
+      // Remove atom contents from state
+    }
   }
 }
 ```
@@ -173,7 +186,7 @@ A **DELETE** can occur when an **Atom** fails to validate or is rejected by the 
 Once you have your custom account system, you can simply add it to the account using the _addAccountSystem\(\)_ method:
 
 ```javascript
-const account = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM')
+const account = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB')
 const myAccountSystem = new CustomAccountSystem()
 ​
 account.addAccountSystem(myAccountSystem)
@@ -188,7 +201,7 @@ Let's review some code examples on how to manage **Identities**:
 * [Creating a simple identity](code-examples.md#creating-a-simple-identity)
 
 {% hint style="success" %}
-**Tip:** using a _RemoteIdentity_ allows the JavaScript application to access an existing account that the user already has on a Wallet while keeping the private keys secure.
+**Tip:** using a _RemoteIdentity_ allows the JavaScript application to use a user's existing private key in their Desktop Wallet application, without the user exposing their private key to your app.
 {% endhint %}
 
 ### Creating a simple identity
@@ -269,7 +282,7 @@ Let's review a few code examples related to _RadixTransactionBuilder_, and see h
 
 ### Sending a transaction
 
-In the following code snippet, we send a transaction from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a transfer **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
+In the following code snippet, we send a transaction from an owned address to the public address `JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB`, by creating a transfer **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -279,8 +292,8 @@ myAccount.openNodeConnection()
 // Wait for the account to sync data from the ledger
 ​
 // No need to load data from the ledger for the recipient account
-const toAccount = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM', true)
-const token = 'TEST' // The Radix TEST token
+const toAccount = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB', true)
+const token = radixUniverse.nativeToken // The default platform token
 const amount = 123.12
 ​
 const transactionStatus = RadixTransactionBuilder
@@ -299,7 +312,7 @@ transactionStatus.subscribe({
 
 ### Sending a message
 
-In the following code snippet, we send a **Message** from an owned address to the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a message **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
+In the following code snippet, we send a **Message** from an owned address to the public address `JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB`, by creating a message **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -309,14 +322,14 @@ myAccount.openNodeConnection()
 // Wait for the account to sync data from the ledger
 ​
 // No need to load data from the ledger for the recipient account
-const toAccount = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM', true)
+const toAccount = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB', true)
 ​
 const message = 'Hello World!'
 ​
 const transactionStatus = RadixTransactionBuilder
   .createRadixMessageAtom(myAccount, toAccount, message)
   .signAndSubmit(myIdentity)
-                    
+
 transactionStatus.subscribe({
   next: status => {
     console.log(status) 
@@ -329,7 +342,7 @@ transactionStatus.subscribe({
 
 ### Storing an application payload
 
-In the following code snippet, we store a **Payload** to the application _my-test-app_ for an owned address and the public address `9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM`, by creating a payload **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
+In the following code snippet, we store a **Payload** to the application _my-test-app_ for an owned address and the public address `JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB`, by creating a payload **Atom** and signing it with our **Identity**. Finally, we get the results by subscribing to the transaction updates.
 
 ```javascript
 const myIdentity = identityManager.generateSimpleIdentity()
@@ -339,7 +352,7 @@ myAccount.openNodeConnection()
 // Wait for the account to sync data from the ledger
 ​
 // No need to load data from the ledger for the recipient account
-const toAccount = RadixAccount.fromAddress('9i9hgAyBQuKvkw7Tg5FEbML59gDmtiwbJwAjBgq5mAU4iaA1ykM', true)
+const toAccount = RadixAccount.fromAddress('JEaSfBftmFdseSRKfTm6hJNhQi3FAEqmVzAPTxsf55wPqXvBxRB', true)
 ​
 const applicationId = 'my-test-app'
 const payload = JSON.stringify({
@@ -348,9 +361,9 @@ const payload = JSON.stringify({
 })
 ​
 const transactionStatus = RadixTransactionBuilder
-  .createPayloadAtom([myAccount, toAccount], applicationId, payload)
+  .createPayloadAtom(myAccount, [toAccount], applicationId, payload)
   .signAndSubmit(myIdentity)
-                    
+
 transactionStatus.subscribe({
   next: status => {
     console.log(status) 
@@ -403,3 +416,97 @@ RadixKeyStore.decryptKey(encryptedKey, password).then((keyPair) => {
 })
 ```
 
+## Managing Token Definitions
+
+### Creating tokens
+
+Tokens can be single or multi-issuance. Multi-issuance tokens can be minted after token creation, while single issuance tokens are limited to the amount specified in the token definition.
+
+A token is uniquely identified by its symbol and the account that owns it. It can be referred to with a unique URI in the form of `/address/symbol`. We call these URIs Radix Resource Identifiers or RRIs for short.
+
+Token amounts on the ledger are stored as integer values in subunits. All tokens have 10^18 subunits.
+
+Granularity defines the minimum increment of tokens that can be transacted, in subunits. For example, if we set granularity to 10^18, then 1 or 2 are valid token amounts, but, 1.5 is not.
+
+```javascript
+const symbol = 'EXMP'
+const name = 'Example Coin'
+const description = 'My example coin'
+const granularity = new BN(1) // In subunits
+const amount = 1000 // In token units
+const iconUrl = 'http://a.b.com/icon.png'
+
+new RadixTransactionBuilder().createTokenSingleIssuance(
+  myIdentity.account,
+  name,
+  symbol,
+  description,
+  granularity,
+  amount,
+  iconUrl,
+).signAndSubmit(myIdentity)
+.subscribe({
+  next: status => {console.log(status)},
+  complete: () => { console.log('Token defintion has been created') },
+  error: error => { console.error('Error submitting transaction', error) }
+})
+
+```
+
+After that you can observe the token in the accounts `tokenDefinitionSystem`
+
+```javascript
+const tokenReference = `/${myIdentity.account.getAddress()}/${symbol}`
+
+
+myIdentity.account.transferSystem.tokenUnitsBalance[RLAU_URI] // will be equal to amount
+myIdentity.account.tokenDefinitionSystem.getTokenDefinition(symbol) // will return token defintion
+```
+
+### Querying the ledger for token definitons
+It is possible to query the ledger for token information such as the total supply without manually managing the account using the `radixTokenManager`
+
+```javascript
+import {radixTokenManager} from 'radixdlt'
+
+const tokenReference = `/${myIdentity.account.getAddress()}/${symbol}`
+radixTokenManager.getTokenDefinition(tokenReference).then(tokenDefinition => {
+  tokenDefinition.totalSupply // Check the total supply
+}).catch(error => {
+  // Token wasn't found for some reason
+})
+```
+
+### Minting tokens
+For multi-issuance tokens, it is possible to mint more tokens after they have been created
+
+```javascript
+const tokenReference = `/${myIdentity.account.getAddress()}/${symbol}`
+const amount = 10
+
+RadixTransactionBuilder.createMintAtom(myIdentity.account, tokenReference, amount)
+.signAndSubmit(myIdentity)
+.subscribe({
+  next: status => {console.log(status)},
+  complete: () => { console.log('Tokens have been minted') },
+  error: error => { console.error('Error submitting transaction', error) }
+})
+
+```
+
+### Burning tokens
+For multi-issuance tokens, it is possible to burn tokens after they have been created
+The account that owns the token definiton must also hold the tokens to be burned
+
+```javascript
+const tokenReference = `/${myIdentity.account.getAddress()}/${symbol}`
+const amount = 10
+
+RadixTransactionBuilder.createBurnAtom(myIdentity.account, tokenReference, amount)
+.signAndSubmit(myIdentity)
+.subscribe({
+  next: status => {console.log(status)},
+  complete: () => { console.log('Tokens have been burned') },
+  error: error => { console.error('Error submitting transaction', error) }
+})
+```

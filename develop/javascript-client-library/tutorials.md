@@ -40,7 +40,7 @@ This is an example server using Express.js
 
 Install dependencies using `npm install` or `yarn install`
 
-Start the server by running `npm server` or `yarn serve`
+Start the server by running `npm serve` or `yarn serve`
 
 The default port is set to 3000
 
