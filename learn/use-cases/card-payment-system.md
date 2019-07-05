@@ -1,5 +1,7 @@
 # Card payment system \(Beta\)
 
+{% embed url="https://www.youtube.com/watch?v=5TPCC1F5VKw" %}
+
 {% hint style="warning" %}
 **Beta Access Required**
 
