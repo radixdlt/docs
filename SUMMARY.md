@@ -67,6 +67,7 @@
   * [Saving dApp settings](develop/javascript-client-library/saving-dapp-settings.md)
   * [GitHub JavaScript Library](https://github.com/radixdlt/radixdlt-js)
 * [Sprint reviews](develop/sprint-reviews/README.md)
+  * [Sprint \#14 - 2019-07-05](develop/sprint-reviews/sprint-14-2019-07-05.md)
   * [Sprint \#13 - 2019-06-21](develop/sprint-reviews/sprint-13-2019-06-21.md)
   * [Sprint \#12 - 2019-06-07](develop/sprint-reviews/sprint-12-2019-06-07.md)
   * [Sprint \#11 - 2019-05-24](develop/sprint-reviews/sprint-11-2019-05-24.md)
