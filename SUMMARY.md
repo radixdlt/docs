@@ -51,6 +51,7 @@
 
 ## Develop
 
+* [Betanet Emulator](develop/betanet-emulator.md)
 * [Network](develop/network/README.md)
   * [Alpha Network](develop/network/live-platform-overview.md)
   * [Network Explorer](https://explorer.radixdlt.com)

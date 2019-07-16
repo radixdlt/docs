@@ -24,6 +24,11 @@ If you are a **developer** who wants to learn how to build on the **Radix Networ
 
 The [developer section](develop/network/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various [use-cases](learn/use-cases/) that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
 
+## [Run the Betanet Emulator](develop/betanet-emulator.md)
+
+If you want to run a local single-node Betanet Emulator, go to the [Betanet Emulator section](develop/betanet-emulator.md).  
+ It will walk you through the system requirements and dependencies of the docker container, as well as comprehensive step-by-step instructions which outline how to configure your network environment for running the Betanet Emulator.
+
 ## [Operate a Radix Node](node-runners/start/)
 
 If you want to run a Radix Node and connect to the Testnet go to the [node runner section](node-runners/start/).  
