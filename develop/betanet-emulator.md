@@ -98,6 +98,7 @@ volumes:
   core_config:
 networks:
   single_node:
+  
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
