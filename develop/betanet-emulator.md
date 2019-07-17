@@ -83,8 +83,8 @@ services:
     image: radixdlt/faucet:1.0.0-beta
     init: true
     environment:
-      FAUCET_TOKEN_RRI: /9ecjMNCFDSbLZxVpfbFwFTLWuL7SH3Q49uzGrpK3bUcze6CJtDr/XRD
-      RADIX_IDENTITY_UNENCRYPTED_KEY: XfodcnhdYtZj1ohBISa6EJwPK1SGrJDVXw1VobuVNLo=
+      FAUCET_TOKEN_RRI: /JH1P8f3znbyrDj8F4RWpix7hRkgxqHjdW2fNnKpR3v6ufXnknor/XRD
+      RADIX_IDENTITY_UNENCRYPTED_KEY: JI41zTPZ+DW0JMUBlLciuyrSqT0/Gj9/Oz3+J9MhNL4=
       RADIX_BOOTSTRAP_TRUSTED_NODE: http://core:8080
       JAVA_OPTS: -server
     logging:
