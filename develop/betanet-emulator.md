@@ -8,6 +8,15 @@ This is a quick start guide aimed for non-technical users, to run a Radix DLT Be
 2. [Creating a configuration file](../#creating-a-docker-composeyml-configuration-file)
 3. [Launching the Radix DLT Betanet Emulator](../#launching-emulator)
 
+{% hint style="info" %}
+### Emulator limitations
+
+* The betanet emulator works in a stand-alone mode.
+* There is no network or connection between nodes.
+* Throughput is limited, as all workload is concentrated on a single node.
+* Network API endpoints always return an empty set.
+{% endhint %}
+
 ## Pre-requisites  <a id="pre-requisites"></a>
 
 ### Hardware  <a id="hardware"></a>
@@ -16,7 +25,7 @@ Your host computer should have **at least**:
 
 * 2 CPU cores
 * 8 GB memory
-* 256 GB disk
+* 20 GB disk
 
 {% hint style="info" %}
 **Note:** the actual disk size requirement will grow over time as the ledger grows.
