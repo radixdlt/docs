@@ -6,6 +6,10 @@ description: >-
 
 # Economic Model
 
+{% hint style="info" %}
+**Note:** the model presented in this whitepaper is outdated and has been deprecated. Radix is currently working on a new economic model that will solve many concerns raised by the community and independent reviewers.
+{% endhint %}
+
 {% file src="../../.gitbook/assets/2019-01-31-radix-economic-white-paper-v1.pdf" caption="Download as PDF" %}
 
 #### ISSUED BY RADIX DLT LIMITED
