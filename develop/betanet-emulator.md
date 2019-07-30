@@ -179,6 +179,10 @@ docker-compose -p radixdlt -f betanet-emulator.yml pull
 
 This is optional, but if you are running the Betanet Emulator on a Mac or Windows computer, you can download [Kitematic](https://kitematic.com/) to add a UI to your Docker container. If you want access to nice buttons and a live log view this is definitely for you!
 
+## Development libraries
+
+Last, but not least, you can start your own DApp development using our [Java](https://docs.radixdlt.com/radixdlt-java/) and [JavaScript](https://docs.radixdlt.com/radixdlt-js/) client libraries:
+
 ## Join the Radix Community
 
 * ​[Telegram](https://t.me/radix_dlt) for general chat
