@@ -18,8 +18,8 @@ Radix uses the theory of [database sharding](http://www.radixdlt.com/post/shardi
 
 If you are a **developer** who wants to learn how to build on the **Radix Network,** you can get started with your preferred library of choice:
 
-* [Java client library](develop/java-client-library/)
-* [JavaScript client library](develop/javascript-client-library/quick-start.md)
+* [Java client library](https://docs.radixdlt.com/radixdlt-java/)
+* [JavaScript client library](https://docs.radixdlt.com/radixdlt-js/)
 * [Kotlin client library](develop/kotlin-client-library/)
 
 The [developer section](develop/network/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various [use-cases](learn/use-cases/) that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
