@@ -1,6 +1,6 @@
 # Betanet Emulator
 
-## Introduction  <a id="introduction"></a>
+## Introduction <a id="introduction"></a>
 
 This is a quick start guide aimed for non-technical users, to run a Radix DLT Betanet Emulator on your computer. The following steps are covered:
 
@@ -17,9 +17,9 @@ This is a quick start guide aimed for non-technical users, to run a Radix DLT Be
 * Network API endpoints always return an empty set.
 {% endhint %}
 
-## Pre-requisites  <a id="pre-requisites"></a>
+## Pre-requisites <a id="pre-requisites"></a>
 
-### Hardware  <a id="hardware"></a>
+### Hardware <a id="hardware"></a>
 
 Your host computer should have **at least**:
 
@@ -31,7 +31,7 @@ Your host computer should have **at least**:
 **Note:** the actual disk size requirement will grow over time as the ledger grows.
 {% endhint %}
 
-### Software  <a id="software"></a>
+### Software <a id="software"></a>
 
 You can run the Radix DLT Betanet Emulator on any operating system that supports Docker and Docker Compose, including:
 
@@ -39,7 +39,7 @@ You can run the Radix DLT Betanet Emulator on any operating system that supports
 * MacOS X
 * Windows 10
 
-## Installing Docker  <a id="installing-docker"></a>
+## Installing Docker <a id="installing-docker"></a>
 
 You can download the right Docker Engine \(Community Edition\) for your system here: [https://hub.docker.com/search/?type=edition&offering=community](https://hub.docker.com/search/?type=edition&offering=community)
 
@@ -53,7 +53,7 @@ If you are running Linux, after you completed the Docker setup you need to insta
 **Tip:** Docker Compose is bundled with Docker CE for the Mac and Windows versions.
 {% endhint %}
 
-## Creating a configuration file  <a id="creating-a-docker-composeyml-configuration-file"></a>
+## Creating a configuration file <a id="creating-a-docker-composeyml-configuration-file"></a>
 
 The Radix DLT software stack is composed of a single docker image, `radixdlt/radixdlt-core:emulator-1.0.0-beta`.
 
@@ -116,7 +116,7 @@ networks:
 2. Use your favorite text editor to create the `betanet-emulator.yml`.
 3. Copy and paste the content above.
 
-## Launching the Betanet Emulator  <a id="launching-emulator"></a>
+## Launching the Betanet Emulator <a id="launching-emulator"></a>
 
 Open up a Terminal \(Mac/Linux\) or a Command Prompt \(on Windows\). Navigate to the directory where you've placed your `betanet-emulator.yml` file. Launch the Docker containers with:
 
@@ -176,7 +176,7 @@ docker-compose -p radixdlt -f betanet-emulator.yml down
 docker-compose -p radixdlt -f betanet-emulator.yml pull
 ```
 
-### Kitematic  <a id="kitematic"></a>
+### Kitematic <a id="kitematic"></a>
 
 This is optional, but if you are running the Betanet Emulator on a Mac or Windows computer, you can download [Kitematic](https://kitematic.com/) to add a UI to your Docker container. If you want access to nice buttons and a live log view this is definitely for you!
 
