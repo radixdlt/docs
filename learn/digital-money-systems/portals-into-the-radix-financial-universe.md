@@ -23,7 +23,7 @@ For the majority of developers, companies and users, Fiat Tokens remove the need
 
 #### Example:
 
-A Euro Portal accepts accept Euros via bank transfer, credit card, or cash. It then issues Euro Fiat Tokens into the Radix Universe in a 1:1 ratio. These Euro Fiat Tokens can simply be thought of as “Euros” within the Radix Universe. A business might use them to; operate a thriving marketplace application; conduct its own accounting; or pay its employees.
+A Euro Portal accepts Euros via bank transfer, credit card, or cash. It then issues Euro Fiat Tokens into the Radix Universe in a 1:1 ratio. These Euro Fiat Tokens can simply be thought of as “Euros” within the Radix Universe. A business might use them to operate a thriving marketplace application, conduct its own accounting, or pay its employees.
 
 A user of that application can then opt to use the Euro Tokens they receive from one user to buy from another user. That user may then use those Euro Fiat Tokens to repay a colleague for lunch, or maybe send some Euros to a friend on the other side of the globe instantly. Those Euro Tokens may then be exchanged for Dollar Tokens and then withdrawn locally from a US based Portal.
 
