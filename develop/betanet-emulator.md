@@ -70,7 +70,7 @@ Start with this docker compose file:
 version: '2.2'
 services:
   core:
-    image: radixdlt/radixdlt-core:emulator-1.0.0-beta
+    image: radixdlt/radixdlt-core-emulator:1.0.0-beta
     init: true
     ports:
       - "8080:8080"
