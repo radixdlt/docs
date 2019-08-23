@@ -55,7 +55,7 @@ If you are running Linux, after you completed the Docker setup you need to insta
 
 ## Creating a configuration file <a id="creating-a-docker-composeyml-configuration-file"></a>
 
-The Radix DLT software stack is composed of a single docker image, `radixdlt/radixdlt-core:emulator-1.0.0-beta`.
+The Radix DLT software stack is composed of a single docker image, `radixdlt/radixdlt-core-emulator:1.0.0-beta`.
 
 Your `betanet-emulator.yml` determines the software components you will run. In particular, the following settings are specified:
 
@@ -70,7 +70,7 @@ Start with this docker compose file:
 version: '2.2'
 services:
   core:
-    image: radixdlt/radixdlt-core:emulator-1.0.0-beta
+    image: radixdlt/radixdlt-core-emulator:1.0.0-beta
     init: true
     ports:
       - "8080:8080"
@@ -131,7 +131,7 @@ If successful, it should pull down and look something like this when completed:
 Creating network "radixdlt_single_node" with the default driver
 Creating volume "radixdlt_core_ledger" with default driver
 Creating volume "radixdlt_core_config" with default driver
-Pulling core (radixdlt/radixdlt-core:emulator-1.0.0-beta)...
+Pulling core (radixdlt/radixdlt-core-emulator:1.0.0-beta)...
 emulator-1.0.0-beta: Pulling from radixdlt/radixdlt-core
 c87736221ed0: Pull complete
 a0d980c21713: Pull complete
