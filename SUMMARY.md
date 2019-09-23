@@ -63,6 +63,7 @@
   * [GitHub - Kotlin Library](https://github.com/radixdlt/radixdlt-kotlin)
 * [Node API](https://docs.radixdlt.com/node-api/)
 * [Sprint reviews](develop/sprint-reviews/README.md)
+  * [Sprint \#18 - 2019-09-06](develop/sprint-reviews/sprint-18-2019-09-06.md)
   * [Sprint \#17 - 2019-08-16](develop/sprint-reviews/sprint-17-2019-08-16.md)
   * [Sprint \#16 - 2019-08-02](develop/sprint-reviews/sprint-16-2019-08-02.md)
   * [Sprint \#15 - 2019-07-19](develop/sprint-reviews/sprint-15-2019-07-19.md)
