@@ -59,8 +59,6 @@
   * [Network Explorer](https://explorer.radixdlt.com)
 * [Java Client Library](https://docs.radixdlt.com/radixdlt-java/)
 * [JavaScript Client Library](https://docs.radixdlt.com/radixdlt-js/)
-* [Kotlin Client Library](develop/kotlin-client-library/README.md)
-  * [GitHub - Kotlin Library](https://github.com/radixdlt/radixdlt-kotlin)
 * [Node API](https://docs.radixdlt.com/node-api/)
 * [Sprint reviews](develop/sprint-reviews/README.md)
   * [Sprint \#18 - 2019-09-06](develop/sprint-reviews/sprint-18-2019-09-06.md)

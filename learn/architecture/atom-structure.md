@@ -204,8 +204,7 @@ The Radix Core implementation is currently only accessible to Radix Core develop
 
 | Language | Status | Library |
 | :--- | :--- | :--- |
-| [Java]() | Available | [radixdlt-java](https://github.com/radixdlt/radixdlt-java) |
-| [JavaScript]() | Available | [radixdlt-js](https://github.com/radixdlt/radixdlt-js) |
-| [Kotlin](../../develop/kotlin-client-library/) | Available | [radixdlt-kotlin](https://github.com/radixdlt/radixdlt-kotlin) |
+| [Java](https://docs.radixdlt.com/radixdlt-java/) | Available | [radixdlt-java](https://github.com/radixdlt/radixdlt-java) |
+| [JavaScript](https://docs.radixdlt.com/radixdlt-js/) | Available | [radixdlt-js](https://github.com/radixdlt/radixdlt-js) |
 | Swift | Available | [radixdlt-swift](https://github.com/radixdlt/radixdlt-swift/) |
 

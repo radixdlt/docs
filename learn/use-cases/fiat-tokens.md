@@ -240,6 +240,6 @@ If we're too eager to act on a successful result, we may - theoretically - end u
 We have seen how easily you can create a service to mint, burn and send Fiat tokens using the Radix distributed ledger and the provided Radix open-source [libraries](). We've also explained the basic workflows for the FT service, and how they interact with an external Custodian system \(PrimeTrust\) that holds the user's fiat assets. Additionally, we shared some code snippets to demonstrate how straightforward it is to burn, mint and transfer tokens with our Java client library.
 
 {% hint style="success" %}
-**Tip:** to continue learning about Radix's technology and how you can create more DApps on it, check our [Java](), [JavaScript]() and [Kotlin](../../develop/kotlin-client-library/) documentation.
+**Tip:** to continue learning about Radix's technology and how you can create more DApps on it, check our [Java](), [JavaScript]() and [Kotlin]() documentation.
 {% endhint %}
 

@@ -61,5 +61,5 @@ Learn the basics of interacting with the Radix ledger, and build a decentralized
 
 * [JavaScript Client Library](https://docs.radixdlt.com/radixdlt-js/) 
 * [Java Claent Library](https://docs.radixdlt.com/radixdlt-java/)
-* [Kotlin Client Library](../../develop/kotlin-client-library/)
+* [Kotlin Client Library]()
 

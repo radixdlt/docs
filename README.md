@@ -20,7 +20,6 @@ If you are a **developer** who wants to learn how to build on the **Radix Networ
 
 * [Java client library](https://docs.radixdlt.com/radixdlt-java/)
 * [JavaScript client library](https://docs.radixdlt.com/radixdlt-js/)
-* [Kotlin client library](develop/kotlin-client-library/)
 
 The [developer section](develop/network/live-platform-overview.md) will get you started with building on the Radix Test Network using client libraries with full break-downs on simple code examples for various [use-cases](learn/use-cases/) that the Radix technology is suitable for. These are intended to give dApp developers a real-world understanding of the underlying logic and potential of the network in their development process.
 

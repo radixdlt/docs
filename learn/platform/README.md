@@ -134,7 +134,7 @@ Radix is used by decentralized applications that demand fast transactions with n
 
 * [Java library]()
 * [JavaScript library]()
-* [Kotlin library](../../develop/kotlin-client-library/)
+* [Kotlin library]()
 
 ### **Radix Smart Cards**
 
