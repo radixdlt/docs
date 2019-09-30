@@ -48,11 +48,11 @@ In 2011 Dan Hughes, the founder of Radix, discovered Bitcoin and was instantly h
 
 ### How will I benefit?
 
-Radix enables **merchants** to [accept cryptocurrencies](../use-cases/card-payment-system.md) without worrying about wild price swings. It helps **developers** to build applications that demand transaction rates beyond today’s blockchains. And last but not the least, it allows **everyone** to participate in ‘mining’ without special hardware and complex software setups.
+Radix enables **merchants** to [accept cryptocurrencies](../use-cases/card-payment-system/) without worrying about wild price swings. It helps **developers** to build applications that demand transaction rates beyond today’s blockchains. And last but not the least, it allows **everyone** to participate in ‘mining’ without special hardware and complex software setups.
 
 **Merchants**
 
-Radix provides &lt;5 seconds settlement times with fixed micro fee. It provides merchants the ability to [accept payments](../use-cases/card-payment-system.md) globally without friction. The Radix token is a stable cryptocurrency specifically designed to help protect merchants from wild price swings and incentivize them to accept and use Radix in their everyday business.
+Radix provides &lt;5 seconds settlement times with fixed micro fee. It provides merchants the ability to [accept payments](../use-cases/card-payment-system/) globally without friction. The Radix token is a stable cryptocurrency specifically designed to help protect merchants from wild price swings and incentivize them to accept and use Radix in their everyday business.
 
 **Developers**
 

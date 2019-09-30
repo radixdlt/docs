@@ -12,7 +12,7 @@ We are currently in the private testing phase of the **Betanet** - if you would 
 
 {% page-ref page="alias-system.md" %}
 
-{% page-ref page="card-payment-system.md" %}
+{% page-ref page="card-payment-system/" %}
 
 {% page-ref page="delegated-fees.md" %}
 

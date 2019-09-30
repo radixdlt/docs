@@ -138,7 +138,7 @@ Radix is used by decentralized applications that demand fast transactions with n
 
 ### **Radix Smart Cards**
 
-A [decentralized smart/debit card](../use-cases/card-payment-system.md) compatible with existing point-of-sale systems for enabling merchants to accept Radix assets faster and helping users spend them anywhere.
+A [decentralized smart/debit card](../use-cases/card-payment-system/) compatible with existing point-of-sale systems for enabling merchants to accept Radix assets faster and helping users spend them anywhere.
 
 ## Try it out
 

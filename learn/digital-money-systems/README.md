@@ -30,5 +30,5 @@ The topic of this section of the Radix knowledge base is for DLT applications wi
 
 {% page-ref page="../use-cases/fiat-tokens.md" %}
 
-{% page-ref page="../use-cases/card-payment-system.md" %}
+{% page-ref page="../use-cases/card-payment-system/" %}
 
