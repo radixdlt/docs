@@ -4,7 +4,7 @@ description: Join the Radix community or get in touch with us
 
 # Contact
 
-* [Telegram](https://t.me/radixdlt) for general chat
+* [Telegram](https://t.me/radix_dlt) for general chat
 * [Telegram](https://t.me/RadixAnnouncements) for announcements
 * ​[Discord](https://discord.gg/7Q7HSZZ) for developer chat
 * ​[Reddit](https://reddit.com/r/radix) for general discussion

@@ -24,29 +24,29 @@ All transactions in Radix are timestamped, both by [multiple logical clocks](htt
 
 Data transactions, therefore, allow the [storage of information on the ledger](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#storing-an-application-payload), which can be easily [read by any client that requests it](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#reading-atoms-from-a-public-address), and timestamps those transactions in a human-readable way.
 
-## Setup
+## Workflow
 
 The following steps use the publicly available Radix tools, with an imagined simple web application built on top of it.
 
-#### Step 0
+### Step 1
 
 Alice has a file that she wants to notarize. She opens a web app and uploads the file to it.
 
-#### Step 1
+### Step 2
 
-The web app [hashes](https://www.radixdlt.com/post/primer-on-hashes-and-hash-functions) the file and uses that hash as the deterministic [seed](https://en.wikipedia.org/wiki/Random_seed) for the file’s [Account](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/quick-start#account)/[Identity](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/quick-start#identity) on the ****Radix ledger. The web app then [queries that account address](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#reading-atoms-from-a-public-address) on the ledger to see whether there is a ‘Claimed’ message going on that account.
+The web app [hashes](https://www.radixdlt.com/post/primer-on-hashes-and-hash-functions) the file and uses that hash as the deterministic [seed](https://en.wikipedia.org/wiki/Random_seed) for the file’s [Account](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/quick-start#account)/[Identity](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/quick-start#identity) on the ****Radix ledger. The web app then [queries that account address](https://docs.radixdlt.com/alpha/developer/javascript-client-library-guide/code-examples#reading-atoms-from-a-public-address) on the ledger to see whether there is a `‘Claimed’` message going on that account.
 
-#### Step 2
+### Step 3
 
-If no ‘Claimed’ message is found, the system sends its own 'Claimed' message to the Account. 
+If no `‘Claimed’` message is found, the system sends its own 'Claimed' message to the Account. 
 
-The 'Claimed' message can be anything Alice wishes it to be and can either be encrypted using the [Account](../glossary.md#account)'s public key or be left as an unencrypted message. If encrypted using the Account's public key, it can be decrypted later by anyone who also has the original file, but not by someone who doesn't.
+The `'Claimed'` message can be anything Alice wishes it to be and can either be encrypted using the [Account](../glossary.md#account)'s public key or be left as an unencrypted message. If encrypted using the Account's public key, it can be decrypted later by anyone who also has the original file, but not by someone who doesn't.
 
-The 'Claimed' message may also include Alice's public key so that she can prove that she was the person who claimed the account at a later date.
+The `'Claimed'` message may also include Alice's public key so that she can prove that she was the person who claimed the account at a later date.
 
-#### Step 3
+### Step 4
 
-Alice shares the file \(plus, optionally, her public key and signature\) with Bob. He performs Steps 0 and 1 as well, but the web app will now return Alice's 'Claimed' message, plus the timestamp of the original transaction. If Bob also supplies Alice's public key and signature, it's simple to verify that Alice was definitely the claimer.
+Alice shares the file \(plus, optionally, her public key and signature\) with Bob. He performs [Steps 1](file-notarization.md#step-1) and [2](file-notarization.md#step-2) as well, but the web app will now return Alice's `'Claimed'` message, plus the timestamp of the original transaction. If Bob also supplies Alice's public key and signature, it's simple to verify that Alice was definitely the claimer.
 
 ## Extensions
 

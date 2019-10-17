@@ -184,6 +184,9 @@ This is optional, but if you are running the Betanet Emulator on a Mac or Window
 
 Last, but not least, you can start your own DApp development using our [Java](https://docs.radixdlt.com/radixdlt-java/) and [JavaScript](https://docs.radixdlt.com/radixdlt-js/) client libraries:
 
+* [Java client library](https://docs.radixdlt.com/radixdlt-java/)
+* [JavaScript client library](https://docs.radixdlt.com/radixdlt-js/)
+
 ## Join the Radix Community
 
 * ​[Telegram](https://t.me/radix_dlt) for general chat

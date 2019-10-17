@@ -237,14 +237,18 @@ At launch, Radix will provide the ability to:
 * Read & write data
 * Encrypted messaging
 
-Relevant business use cases have been built on Radix with what is currently available, for example:
+Relevant business [use cases](../use-cases/) have been built on Radix with what is currently available, for example:
 
 * [Alias System](https://www.radixdlt.com/post/how-to-implement-an-alias-system-in-radix)
 * Peer-to-Peer transactions
 * Secure messaging
 * [File notarization](../use-cases/file-notarization.md)
 
-Our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap). Those looking to get started building on Radix can find our developer section [here]().  
+{% hint style="success" %}
+**Tip:** our roadmap detailing progress on further functionality can be viewed[ here](https://www.radixdlt.com/roadmap).
+{% endhint %}
+
+  
 
 
 .

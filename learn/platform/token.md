@@ -4,10 +4,6 @@ description: Radix Economics
 
 # Predictability
 
-{% hint style="info" %}
-[Radix Economics Whitepaper](http://bit.ly/EconomicsWP-KB-ECONOMICS1)
-{% endhint %}
-
 ## Introduction
 
 Understanding the design mechanics of decentralized systems can be challenging – especially if you don’t come from a computer science background. Most people struggle to comprehend [how a blockchain works](https://www.youtube.com/watch?v=sW8nWeUnkK0) and that doesn’t bode well for the industry.

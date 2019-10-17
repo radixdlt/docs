@@ -78,7 +78,7 @@ To incentivise a network of economic participants in powering the decentralized 
 
 ### Ease of use
 
-The Radix Network is a peer to peer network of computers that together make up a decentralized state machine. The significant difference as compared to other public networks like Ethereum/EOS is that nodes validate [state transitions](../architecture/constraint-machine.md) instead of computing it. This reduces errors and allows for protocol programmability. Developers build applications using their preferred choice of programming language like [Java](), [Kotlin]() and [JavaScript]() to interact with the Radix Alpha Network using native protocol API calls, without using a smart contract language or needing a Turing complete computational machine.
+The Radix Network is a peer to peer network of computers that together make up a decentralized state machine. The significant difference as compared to other public networks like Ethereum/EOS is that nodes validate [state transitions](../architecture/constraint-machine.md) instead of computing it. This reduces errors and allows for protocol programmability. Developers build applications using their preferred choice of programming language like [Java](https://docs.radixdlt.com/radixdlt-java/), and [JavaScript](https://docs.radixdlt.com/radixdlt-js/) to interact with the Radix Alpha Network using native protocol API calls, without using a smart contract language or needing a Turing complete computational machine.
 
 Thus, the Radix platform is what Bitcoin and Ethereum should have been; fast, scalable, secure, wholly decentralized and powered by a cryptocurrency which is usable and relatively stable.
 
