@@ -1,20 +1,20 @@
 # Card payment system \(Beta\)
 
-{% embed url="https://www.youtube.com/watch?v=5TPCC1F5VKw" %}
-
-{% hint style="warning" %}
-**Beta Access Required**
-
-This Radix application is currently in pre-release testing and the code is not yet available on our GitHub. If you would like early access to start testing immediately, or would just like to be informed when it is ready to use, please sign up via this form:
-
-[https://radixdlt.typeform.com/to/Hw7F5y](https://radixdlt.typeform.com/to/Hw7F5y)
-{% endhint %}
-
 ## Introduction
 
 In this article, we present a simple card payment system using the Radix distributed ledger, that allows international retailers to increase sales, loyalty and cash flow by simplifying complex card ecosystems while lowering operating costs and transaction fees.
 
 This proposed card payment system provides secure card-based transactions with PoS terminals, and requires that the card holder presents the Radix-enabled card to the terminal, enters their PIN, and then the smart card signs the transaction for the terminal to submit it to the ledger.
+
+{% embed url="https://www.youtube.com/watch?v=5TPCC1F5VKw" %}
+
+{% hint style="success" %}
+**Tip:** check out the Android PoS App source code on [GitHub](https://github.com/radixdlt/radixdlt-pos-android).
+{% endhint %}
+
+{% hint style="success" %}
+**Tip:** get the [Radix Java card](radix-java-card.md) sorce code from our [GitHub repository](https://github.com/radixdlt/radixdlt-card-applet).
+{% endhint %}
 
 ## Overview
 
