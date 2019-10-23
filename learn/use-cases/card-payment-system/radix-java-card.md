@@ -78,6 +78,10 @@ Install parameter format is as follows:
 * 1 byte public key length
 * n byte public key \(uncompressed\)
 
+{% hint style="info" %}
+**Note:** to install the applet onto cards Global Platform Pro can be used using the default AID of - `DEADBEEF7900`
+{% endhint %}
+
 ### Select
 
 This method is called by the JCRE to indicate that the applet has been selected. It performs necessary initialization which is required to process the subsequent APDU messages.
@@ -213,7 +217,7 @@ private void status(APDU apdu)
 *      APDU.P2 = UNUSED
 *      APDU.CDATA = UNUSED
 
-## Source code <a id="docs-internal-guid-a009c672-7fff-52f1-a963-439eb185f28a"></a>
+## Conclusion <a id="Analysis:Prototypecard-basedCryptoWalletforAndroidPoSonRadix-5.Recommendation&amp;Conclusion"></a>
 
 After reading this article, with the provided sample [source code](https://github.com/radixdlt/radixdlt-card-applet) a developer with enough knowledge of the Java Card technology and the Java Card API should be able to develop its own Java smart card capable of interacting with the Radix ledger.
 
@@ -221,9 +225,7 @@ After reading this article, with the provided sample [source code](https://githu
 **Tip:** get the Radix Java card sorce code from our [GitHub repository](https://github.com/radixdlt/radixdlt-card-applet).
 {% endhint %}
 
-{% hint style="info" %}
-**Note:** to install the applet onto cards Global Platform Pro can be used using the default AID of - `DEADBEEF7900`
-{% endhint %}
+For this simple card payment system use case, signing just the hash of the transaction is enough and substantially easier, as it can be done with little special-purpose Java Card code on the smart card.
 
-
+For a proper commercial implementation, Atom serialising and signing should be done on the Radix-enabled card, otherwise transactions could be compromised outside a prototype environment.
 
