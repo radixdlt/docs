@@ -84,8 +84,7 @@ Your `docker-compose.yml` determines the software components you will run. In pa
 
 Start with this docker compose file:
 
-{% code-tabs %}
-{% code-tabs-item title="basic-node.yml" %}
+{% code title="basic-node.yml" %}
 ```yaml
 version: '2.2'
 services:
@@ -141,8 +140,7 @@ volumes:
   nginx_secrets:
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 1. Create a directory on your computer for storing docker compose files \(e.g., `radixdlt`\).
 2. Use your favorite text editor to create the `basic-node.yml`.

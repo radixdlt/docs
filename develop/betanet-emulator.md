@@ -64,8 +64,7 @@ Your `betanet-emulator.yml` determines the software components you will run. In 
 
 Start with this docker compose file:
 
-{% code-tabs %}
-{% code-tabs-item title="betanet-emulator.yml" %}
+{% code title="betanet-emulator.yml" %}
 ```yaml
 version: '2.2'
 services:
@@ -109,8 +108,7 @@ volumes:
 networks:
   single_node:
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 1. Create a directory on your computer for storing docker compose files \(e.g., `radixdlt`\).
 2. Use your favorite text editor to create the `betanet-emulator.yml`.

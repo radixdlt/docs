@@ -38,7 +38,6 @@
   * [Technical](learn/faq/technical.md)
   * [Scalability](learn/faq/scalability.md)
   * [Transactions](learn/faq/transactions.md)
-  * [Economics](learn/faq/economics.md)
   * [Security](learn/faq/security.md)
   * [Limitations of DLT](learn/faq/limitations-dlt.md)
   * [Scalability Tests](learn/faq/scalability-tests.md)
