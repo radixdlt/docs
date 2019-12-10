@@ -32,6 +32,7 @@
   * [Fiat tokens \(Beta\)](learn/use-cases/fiat-tokens.md)
   * [File notarization \(Live\)](learn/use-cases/file-notarization.md)
 * [Whitepapers](learn/whitepapers/README.md)
+  * [Economy](learn/whitepapers/economy.md)
   * [Tempo](learn/whitepapers/tempo.md)
   * [Public Node Incentives](learn/whitepapers/public-node-incentives.md)
 * [FAQ](learn/faq/README.md)
