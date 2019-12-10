@@ -89,7 +89,11 @@ Firstly, it was a strong point brought up by the community as an additional ince
 | **Radix DLT Limited** | **2.4Bn XRD** | **1 year lock, then 1/1095 daily** |
 | **Stable Token Reserve** | **2.4Bn XRD** | **Locked until the release of Stable Value Token** |
 
-##  
+## Important links
 
+[Economic model](https://www.radixdlt.com/wp-content/uploads/Radix%20Economic%20Model%205.pdf)
 
+[Economic model announcement post](https://www.radixdlt.com/post/radix-economics-proposal-v2-announcement/)
+
+[Economic model overview](https://www.radixdlt.com/post/radix-economics-proposal-v2/)
 
