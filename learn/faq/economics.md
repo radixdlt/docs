@@ -87,7 +87,7 @@ Firstly, it was a strong point brought up by the community as an additional ince
 | **Radix Network Subsidy** | **0.6Bn XRD** | **None** |
 | **Radix Foundation Lock** | **3Bn XRD** | **1 year lock, then 1/2190 daily** |
 | **Radix DLT Limited** | **2.4Bn XRD** | **1 year lock, then 1/1095 daily** |
-| **Stable Token Reserve** | **2.4Bn XRD** | **Locked until the release of Stable Value Token** |
+| **Stable Token Reserve** | **3Bn XRD** | **Locked until the release of Stable Value Token** |
 
 ## Important links
 
