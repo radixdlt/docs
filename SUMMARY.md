@@ -5,9 +5,6 @@
 ## Develop
 
 * [Betanet Emulator](develop/betanet-emulator.md)
-* [Network](develop/network/README.md)
-  * [Alpha Network](develop/network/live-platform-overview.md)
-  * [Network Explorer](https://explorer.radixdlt.com)
 * [Java Client Library](https://docs.radixdlt.com/radixdlt-java/)
 * [JavaScript Client Library](https://docs.radixdlt.com/radixdlt-js/)
 * [Node API](https://docs.radixdlt.com/node-api/)
