@@ -5,11 +5,11 @@ Last updated: Thursday February 27, 2020
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
-Project              | Latest Update      | Last Captain | Current Release | Dependencies                        | Next Release Candidate | Next Captain | Notes
--------------------- | -------------      | ------------ | --------------- | ----------------------------------- | ---------------------- | ------------ | -----
-radixdlt-core        | January 29, 2020   | @clstrfsck   | 1.0-beta.5      | radix-engine-library 1.0-beta.4     | 1.0-beta.6             | @clstrfsck   | 
-radix-engine-library | January 29, 2020   | @clstrfsck   | 1.0-beta.4      | -                                   | 1.0-beta.5             | @clstrfsck   | 
-radixdlt-java        | January 29, 2020   | @clstrfsck   | 1.0-beta.5      | Works with radixdlt-core 1.0-beta.5 | 1.0-beta.6             | @clstrfsck   |
+Project              | Latest Update      | Last Captain | Current Release | Dependencies                        | Next Captain | Notes
+-------------------- | -------------      | ------------ | --------------- | ----------------------------------- | ------------ | -----
+radixdlt-core        | January 29, 2020   | @clstrfsck   | 1.0-beta.5      | radix-engine-library 1.0-beta.4     | @clstrfsck   | 
+radix-engine-library | January 29, 2020   | @clstrfsck   | 1.0-beta.4      | -                                   | @clstrfsck   | 
+radixdlt-java        | January 29, 2020   | @clstrfsck   | 1.0-beta.5      | Works with radixdlt-core 1.0-beta.5 | @clstrfsck   |
 
 ## radixdlt-core
 Release Date       | Version      | Dependencies                    | Captain       | Notes
