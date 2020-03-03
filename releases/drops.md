@@ -1,6 +1,8 @@
 # Delivery Milestones for Radix Public Network 1 (RPN-1)
 
-Last updated: Thursday, February 27, 2020
+Last updated: Friday, March 3, 2020
+
+(A consensus roadmap for RPN-1, RPN-2, and RPN-3 can be found [here](https://github.com/radixdlt/docs/blob/master/releases/consensus-roadmap.md).)
 
 When we looked at our development plan for our first public network (RPN-1),
 we decided to adopt an approach that would have four major milestones,
