@@ -1,19 +1,20 @@
 # Radix Versions
 
-Last updated: Thursday February 27, 2020
+Last updated: Friday March 6, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                        | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ----------------------------------- | ------------ | -----
-radixdlt-core        | Jan 29, 2020  | @clstrfsck   | 1.0-beta.5      | radix-engine-library 1.0-beta.4     | @clstrfsck   | 
-radix-engine-library | Jan 29, 2020  | @clstrfsck   | 1.0-beta.4      | -                                   | @clstrfsck   | 
-radixdlt-java        | Jan 29, 2020  | @clstrfsck   | 1.0-beta.5      | Works with radixdlt-core 1.0-beta.5 | @clstrfsck   |
+radixdlt-core        | Mar 6, 2020   | @flotothemoon | 1.0-beta.6      | radix-engine-library 1.0-beta.6     | @clstrfsck   | 
+radix-engine-library | Mar 6, 2020   | @clstrfsck    | 1.0-beta.6      | -                                   | @clstrfsck   | 
+radixdlt-java        | Mar 1, 2020   | @clstrfsck    | 1.0-beta.6      | Works with radixdlt-core 1.0-beta.6 | @clstrfsck   |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 6, 2020  | 1.0-beta.6   | radix-engine-library 1.0-beta.6 | @flotothemoon |	
 Jan 29, 2020 | 1.0-beta.5   | radix-engine-library 1.0-beta.4 | @clstrfsck    |	
 Sep 8, 2019  | 1.0-beta.4   | radix-engine-library 1.0-beta.3 | @talekhinezh  |	
 Aug 28, 2019 | 1.0.0-beta.3 | radixdlt-engine 1.0-beta.2      | @talekhinezh  |
@@ -24,6 +25,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                               | -             | 
 ## radix-engine-library
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 6, 2020  | 1.0-beta.6   | -                               | @flotothemoon |
 Jan 29, 2020 | 1.0-beta.4   | -                               | @clstrfsck    |
 Sep 8, 2019  | 1.0-beta.3   | -                               | @talekhinezh  | Tic Tac Toe example
 Aug 28, 2019 | 1.0-beta.2   | -                               | @talekhinezh  | Release for audit #1
@@ -33,6 +35,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                               | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 1, 2020  | 1.0-beta.6   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.6
 Jan 29, 2020 | 1.0-beta.5   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.5
 Sep 8, 2019  | 1.0-beta.4   | -                               | @talekhinezh  | Works with RadixCore 1.0-beta.4
 Aug 28, 2019 | 1.0.0-beta.3 | -                               | @talekhinezh  | Works with RadixCore 1.0.0-beta.3
