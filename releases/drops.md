@@ -1,6 +1,6 @@
 # Delivery Milestones for Radix Public Network 1 (RPN-1)
 
-Last updated: Thursday, February 27, 2020
+Last updated: Thursday, March 12, 2020
 
 When we looked at our development plan for our first public network (RPN-1),
 we decided to adopt an approach that would have four major milestones,
@@ -23,7 +23,7 @@ I'll use 🤔 to show which features are work-in-progress.
 - Basic mempool 🤔
 - Basic client functionality through simple explorer 🤔
 - No Sybil protection
-- Fixed validator list at genesis
+- Fixed validator list at genesis ✅
 
 ## Second drop
 - Improved consensus functionality
