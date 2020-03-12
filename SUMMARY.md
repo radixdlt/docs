@@ -11,7 +11,7 @@
 
 ## Roadmaps
 
-* [Consensus Roadmap](roadmaps/consensus-roadmap.md)
+* [Consensus Roadmap for Radix Public Network](roadmaps/consensus-roadmap.md)
 
 ## FAQs <a id="faqs-1"></a>
 
