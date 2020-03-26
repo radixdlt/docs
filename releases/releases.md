@@ -7,24 +7,26 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                        | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ----------------------------------- | ------------ | -----
-radixdlt-core        | Mar 6, 2020   | @flotothemoon | 1.0-beta.6      | radix-engine-library 1.0-beta.6     | @clstrfsck   | 
-radix-engine-library | Mar 6, 2020   | @clstrfsck    | 1.0-beta.6      | -                                   | @clstrfsck   | 
-radixdlt-java        | Mar 1, 2020   | @clstrfsck    | 1.0-beta.6      | Works with radixdlt-core 1.0-beta.6 | @clstrfsck   |
+radixdlt-core        | Mar 27, 2020  | @talekhinezh  | 1.0-beta.7      | radix-engine-library 1.0-beta.7     | @talekhinezh   | 
+radix-engine-library | Mar 27, 2020  | @talekhinezh  | 1.0-beta.7      | -                                   | @talekhinezh   | 
+radixdlt-java        | Mar 1, 2020   | @clstrfsck    | 1.0-beta.7      | Works with radixdlt-core 1.0-beta.7 | @clstrfsck   |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 27, 2020 | 1.0-beta.7   | radix-engine-library 1.0-beta.7 | @talekhinezh  | Initial BFT Implementation
 Mar 6, 2020  | 1.0-beta.6   | radix-engine-library 1.0-beta.6 | @flotothemoon |	
 Jan 29, 2020 | 1.0-beta.5   | radix-engine-library 1.0-beta.4 | @clstrfsck    |	
 Sep 8, 2019  | 1.0-beta.4   | radix-engine-library 1.0-beta.3 | @talekhinezh  |	
 Aug 28, 2019 | 1.0.0-beta.3 | radixdlt-engine 1.0-beta.2      | @talekhinezh  |
 Aug 19, 2019 | 1.0.0-beta.2 | radixdlt-engine 1.0-beta.1      | @talekhinezh  |	
 Aug 3, 2019  | 1.0.0-beta.1 | radixdlt-engine 1.0.0-beta      | @talekhinezh  |	
-Jul 22, 2019 | 1.0.0-beta   | -                               | -             |  Used for Betanet Emulator
+Jul 22, 2019 | 1.0.0-beta   | -                               | -             | Used for Betanet Emulator
 
 ## radix-engine-library
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 27, 2020 | 1.0-beta.7   | -                               | @talekhinezh  | 
 Mar 6, 2020  | 1.0-beta.6   | -                               | @flotothemoon |
 Jan 29, 2020 | 1.0-beta.4   | -                               | @clstrfsck    |
 Sep 8, 2019  | 1.0-beta.3   | -                               | @talekhinezh  | Tic Tac Toe example
