@@ -46,6 +46,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                               | -             | 
 ## radixdlt-js
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 26, 2020 | 2.0.0-beta.9 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.6
 Feb 11, 2020 | 2.0.0-beta.8 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.5
 Nov 12, 2019 | 2.0.0-beta.7 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.3
 Oct 28, 2019 | 2.0.0-beta.6 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.3
@@ -58,4 +59,5 @@ Jul 17, 2019 | 2.0.0-beta.1 | -                               | -             | 
 ## Radix Desktop Wallet
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Mar 26, 2020 | 2.0.0-beta   | radxdlt-js/2.0.0-beta.9         |  -            | Works with RadixCore 1.0.0-beta.6
 Jul 18, 2019 | 1.4.0-beta   | radxdlt-js/2.0.0-beta.1         |  -            | Used for Betanet Emulator
