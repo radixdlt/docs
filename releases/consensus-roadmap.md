@@ -1,6 +1,6 @@
 # Consensus Roadmap for Radix Public Network
 
-Last updated: Friday, March 3, 2020
+Last updated: Friday, April 2, 2020
 
 Cerberus is the consensus protocol designed for the Radix Public Network. The full Cerberus protocol will enable a parallelized network capable of very high transaction throughput. Our first Radix Public Network release, RPN-1, will not implement the full Cerberus protocol, but instead a simplified, unsharded version that will allow us to deploy a network with maximum confidence.
 
@@ -12,7 +12,7 @@ Our current plan is to follow RPN-1 with network releases RPN-2 and RPN-3 that w
 
 *This roadmap is a current snapshot of thinking and is very likely to change in the course of development.*
 
-## RPN-1 (in progress)
+## RPN-1 ([in progress](https://github.com/radixdlt/docs/blob/master/releases/drops.md))
 
 ![RPN-1 summary](images/RPN-1.png)
 
@@ -28,9 +28,9 @@ Our current plan is to follow RPN-1 with network releases RPN-2 and RPN-3 that w
 
 ![RPN-2 summary](images/RPN-2.png)
 
-| Goal | Deploy sharding of Atoms within Cerberus, increase throughput |
+| Goal | Deploy sharding of Atoms within Cerberus, but continuing to require all nodes to validate all shards |
 | ---- | ----------- |
-| Data Structure | *Fully sharded to introduce parallelization of consensus* |
+| Data Structure | *Fully sharded to enable dependency-driven parallelization* |
 | Validator Node Set Size | Fixed, minimum 100 |
 | Node Mapping | All nodes mapped to all shards |
 | Sybil Protection | DPoS |
@@ -39,7 +39,7 @@ Our current plan is to follow RPN-1 with network releases RPN-2 and RPN-3 that w
 
 ![RPN-3 summary](images/RPN-3.png)
 
-| Goal | Deploy full Cerberus, achieve linear scalability |
+| Goal | Deploy full Cerberus with consensus parallelized across many physical nodes, achieve linear scalability |
 | ---- | ----------- |
 | Data Structure | Fully sharded, as in RPN-2 |
 | Validator Node Set Size | *Unlimited* |
