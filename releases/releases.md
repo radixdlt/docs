@@ -51,6 +51,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                               | -             | 
 ## radixdlt-js
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+Apr 23, 2020 | 2.0.0-beta.10| -                               | @alexmedkex   | Works with RadixCore 1.0.0-beta.8
 Mar 26, 2020 | 2.0.0-beta.9 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.6
 Feb 11, 2020 | 2.0.0-beta.8 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.5
 Nov 12, 2019 | 2.0.0-beta.7 | -                               | @MuncleUscles | Works with RadixCore 1.0.0-beta.3
