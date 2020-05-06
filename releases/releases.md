@@ -71,4 +71,5 @@ Jul 18, 2019 | 1.4.0-beta   | radxdlt-js/2.0.0-beta.1         |  -            | 
 ## Radix Explorer
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+May 6, 2020  | 2.0.0-beta.1 | radxdlt-js/2.0.0-beta.8         | @alexmedkex   | Works with RadixCore 1.0.0-beta.8
 Apr 24, 2020 | 2.0.0-beta.0 | radxdlt-js/2.0.0-beta.8         | @alexmedkex   | Works with RadixCore 1.0.0-beta.8
