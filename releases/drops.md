@@ -1,6 +1,6 @@
 # Delivery Milestones for Radix Public Network 1 (RPN-1)
 
-Last updated: Friday, March 27, 2020
+Last updated: Friday, May 8, 2020
 
 For folks looking for a higher-level roadmap of our overall journey to
 a massively scaleable public network (releases RPN-1, RPN-2 and RPN-3),
@@ -24,21 +24,21 @@ features at the end of each 3-week sprint.
 
 I'll use 🤔 to show which features are work-in-progress.
 
-## First drop
+## First drop (done!) ✅
 - Basic consensus ✅
 - Basic mempool ✅
 - Basic client functionality through simple explorer ✅
 - No Sybil protection ✅
 - Fixed validator list at system start ✅
-- System testing 🤔
+- System testing ✅
 
-## Second drop
-- Improved consensus functionality
+## Second drop 🤔
+- Improved consensus functionality 🤔
 - Improved mempool
-- Proof of Stake Sybil protection
+- Proof of Stake Sybil protection 🤔
 - Validator registration and unregistration
 - Basic fees
-- System testing
+- System testing 🤔
 
 ## Third drop
 - Distributed Proof of Stake implementation
