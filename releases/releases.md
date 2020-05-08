@@ -7,13 +7,14 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                        | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ----------------------------------- | ------------ | -----
-radixdlt-core        | Apr 16, 2020  | @talekhinezh  | 1.0-beta.8      | radix-engine-library 1.0-beta.8     | @talekhinezh   | 
-radix-engine-library | Apr 16, 2020  | @talekhinezh  | 1.0-beta.8      | -                                   | @talekhinezh   | 
-radixdlt-java        | Apr 16, 2020   | @talekhinezh    | 1.0-beta.7      | Works with radixdlt-core 1.0-beta.8 | @talekhinezh   |
+radixdlt-core        | May 8, 2020  | @talekhinezh  | 1.0-beta.9      | radix-engine-library 1.0-beta.9     | @talekhinezh   | 
+radix-engine-library | May 8, 2020  | @talekhinezh  | 1.0-beta.9      | -                                   | @talekhinezh   | 
+radixdlt-java        | May 8, 2020   | @talekhinezh    | 1.0-beta.8      | Works with radixdlt-core 1.0-beta.9 | @talekhinezh   |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+May 8, 2020 | 1.0-beta.9   | radix-engine-library 1.0-beta.9 | @talekhinezh  | 
 Apr 16, 2020 | 1.0-beta.8   | radix-engine-library 1.0-beta.8 | @talekhinezh  | 
 Mar 27, 2020 | 1.0-beta.7   | radix-engine-library 1.0-beta.7 | @talekhinezh  | Initial BFT Implementation
 Mar 6, 2020  | 1.0-beta.6   | radix-engine-library 1.0-beta.6 | @flotothemoon |	
@@ -27,6 +28,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                               | -             | 
 ## radix-engine-library
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+May 8, 2020  | 1.0-beta.9   | -                               | @talekhinezh  | 
 Apr 16, 2020 | 1.0-beta.8   | -                               | @talekhinezh  | 
 Mar 27, 2020 | 1.0-beta.7   | -                               | @talekhinezh  | 
 Mar 6, 2020  | 1.0-beta.6   | -                               | @flotothemoon |
@@ -39,6 +41,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                               | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
+May 8, 2020  | 1.0-beta.8   | -                               | @talekhinezh    | Works with RadixCore 1.0-beta.9
 Apr 16, 2020  | 1.0-beta.7   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.8
 Mar 1, 2020  | 1.0-beta.6   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.6
 Jan 29, 2020 | 1.0-beta.5   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.5
