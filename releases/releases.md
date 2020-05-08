@@ -41,8 +41,8 @@ Aug 3, 2019  | 1.0.0-beta   | -                               | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
-May 8, 2020  | 1.0-beta.8   | -                               | @talekhinezh    | Works with RadixCore 1.0-beta.9
-Apr 16, 2020  | 1.0-beta.7   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.8
+May 8, 2020  | 1.0-beta.8   | -                               | @talekhinezh  | Works with RadixCore 1.0-beta.9
+Apr 16, 2020  | 1.0-beta.7  | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.8
 Mar 1, 2020  | 1.0-beta.6   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.6
 Jan 29, 2020 | 1.0-beta.5   | -                               | @clstrfsck    | Works with RadixCore 1.0-beta.5
 Sep 8, 2019  | 1.0-beta.4   | -                               | @talekhinezh  | Works with RadixCore 1.0-beta.4
