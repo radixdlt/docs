@@ -71,7 +71,8 @@ Jul 17, 2019 | 2.0.0-beta.1 | -                               | -             | 
 ## Radix Desktop Wallet
 Release Date | Version      | Dependencies                    | Captain       | Notes
 ------------ | ------------ | ------------------------------- | ------------- | -----
-Mar 26, 2020 | 2.0.0-beta   | radxdlt-js/2.0.0-beta.9         |  -            | Works with RadixCore 1.0.0-beta.6
+Jun 4, 2020  | 2.0.0-beta.2 | radxdlt-js/2.0.0-beta.10        | @alexmedkex   |
+Mar 26, 2020 | 2.0.0-beta.1 | radxdlt-js/2.0.0-beta.9         |  -            | Works with RadixCore 1.0.0-beta.6
 Jul 18, 2019 | 1.4.0-beta   | radxdlt-js/2.0.0-beta.1         |  -            | Used for Betanet Emulator
 
 ## Radix Explorer
