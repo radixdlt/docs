@@ -7,9 +7,9 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radix-engine-library 1.0-beta.11     | @talekhinezh | Epochs
-radix-engine-library | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radixdlt-java-common 1.0-beta.4      | @talekhinezh | Staking
-radixdlt-java        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.11     | Works with radixdlt-core 1.0-beta.10 | @talekhinezh |
+radixdlt-core        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radix-engine-library 1.0-beta.12     | @talekhinezh | Epochs
+radix-engine-library | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radixdlt-java-common 1.0-beta.5      | @talekhinezh | Staking
+radixdlt-java        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.11     | Works with radixdlt-core 1.0-beta.12 | @talekhinezh |
 radixdlt-java-common | Jul 9, 2020  | @talekhinezh    | 1.0-beta.5      | -                                    | @talekhinezh |
 
 ## radixdlt-core
