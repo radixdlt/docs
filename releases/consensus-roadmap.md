@@ -18,7 +18,7 @@ Our current plan is to follow RPN-1 with network releases RPN-2 and RPN-3 that w
 
 | Goal | Deploy BFT 3-phase commit foundation for Cerberus |
 | ---- | ----------- |
-| Data Structure | Functiontionally unsharded, with Atoms (structured for later sharding) grouped into global blocks |
+| Data Structure | Functionally unsharded, with Atoms (structured for later sharding) grouped into global blocks |
 | Validator Node Set Size | Fixed, minimum 100 |
 | Node Mapping | All nodes mapped to all shards |
 | Sybil Protection | DPoS |
