@@ -1,20 +1,21 @@
 # Radix Versions
 
-Last updated: Thursday July 9, 2020
+Last updated: Thursday July 29, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radix-engine-library 1.0-beta.12     | @talekhinezh | Epochs
-radix-engine-library | Jul 9, 2020  | @talekhinezh    | 1.0-beta.12     | radixdlt-java-common 1.0-beta.5      | @talekhinezh | Staking
-radixdlt-java        | Jul 9, 2020  | @talekhinezh    | 1.0-beta.11     | Works with radixdlt-core 1.0-beta.12 | @talekhinezh |
-radixdlt-java-common | Jul 9, 2020  | @talekhinezh    | 1.0-beta.5      | -                                    | @talekhinezh |
+radixdlt-core        | Jul 29, 2020  | @talekhinezh | 1.0-beta.13     | radix-engine-library 1.0-beta.13     | @talekhinezh | Cleanup
+radix-engine-library | Jul 29, 2020  | @talekhinezh | 1.0-beta.13     | radixdlt-java-common 1.0-beta.5      | @talekhinezh |
+radixdlt-java        | Jul 29, 2020  | @talekhinezh | 1.0-beta.12     | Works with radixdlt-core 1.0-beta.13 | @talekhinezh |
+radixdlt-java-common | Jul 9, 2020   | @talekhinezh | 1.0-beta.5      | -                                    | @talekhinezh |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Jul 29, 2020 | 1.0-beta.13  | radix-engine-library 1.0-beta.13 | @talekhinezh  | Cleanup
 Jul 9, 2020  | 1.0-beta.12  | radix-engine-library 1.0-beta.12 | @talekhinezh  | Epochs
 Jun 18, 2020 | 1.0-beta.11  | radix-engine-library 1.0-beta.11 | @clstrfsck    | Bug fixes and testing
 Jun 4, 2020  | 1.0-beta.10  | radix-engine-library 1.0-beta.10 | @talekhinezh  | Initial Sync Implementation
@@ -32,6 +33,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                                | -             |
 ## radix-engine-library
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Jul 29, 2020 | 1.0-beta.13  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | 
 Jul 9, 2020  | 1.0-beta.12  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Staking
 Jun 18, 2020 | 1.0-beta.11  | radixdlt-java-common 1.0-beta.4  | @clstrfsck    | Bugfixes and testing
 Jun 4, 2020  | 1.0-beta.10  | -                                | @talekhinezh  | Initial ValidatorSet State Implementation
@@ -48,6 +50,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                                | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Jul 29, 2020 | 1.0-beta.12  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Works with RadixCore 1.0-beta.13
 Jul 9, 2020  | 1.0-beta.11  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Works with RadixCore 1.0-beta.12
 Jun 18, 2020 | 1.0-beta.10  | radixdlt-java-common 1.0-beta.4  | @clstrfsck    | Works with RadixCore 1.0-beta.11
 Jun 4, 2020  | 1.0-beta.9   | -                                | @talekhinezh  | Works with RadixCore 1.0-beta.10
