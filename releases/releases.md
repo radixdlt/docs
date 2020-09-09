@@ -1,6 +1,6 @@
 # Radix Versions
 
-Last updated: Thursday August 19, 2020
+Last updated: Thursday September 9, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
@@ -10,7 +10,7 @@ Project              | Latest Update | Last Captain | Current Release | Dependen
 radixdlt-core        | Aug 19, 2020  | @talekhinezh | 1.0-beta.14     | radix-engine-library 1.0-beta.14     | @talekhinezh | Modules
 radix-engine-library | Aug 19, 2020  | @talekhinezh | 1.0-beta.14     | radixdlt-java-common 1.0-beta.5      | @talekhinezh | More validator logic
 radixdlt-java        | Aug 19, 2020  | @talekhinezh | 1.0-beta.13     | Works with radixdlt-core 1.0-beta.14 | @talekhinezh |
-radixdlt-java-common | Jul 9, 2020   | @talekhinezh | 1.0-beta.5      | -                                    | @talekhinezh |
+radixdlt-java-common | Sep 9, 2020   | @talekhinezh | 1.0-beta.6      | -                                    | @talekhinezh |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
@@ -70,6 +70,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                                | -             |
 ## radixdlt-java-common
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Sep 9, 2020  | 1.0-beta.6   | -                                | @talekhinezh  |
 Jul 9, 2020  | 1.0-beta.5   | -                                | @talekhinezh  |
 Jun 18, 2020 | 1.0-beta.4   | -                                | @clstrfsck    | Bugfixes and testing
 
