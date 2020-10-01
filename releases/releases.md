@@ -7,14 +7,15 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Sep 9, 2020   | @talekhinezh | 1.0-beta.15     | radix-engine-library 1.0-beta.15     | @talekhinezh | Validator registration
-radix-engine-library | Sep 9, 2020   | @talekhinezh | 1.0-beta.15     | radixdlt-java-common 1.0-beta.7      | @talekhinezh | Application state
-radixdlt-java        | Sep 9, 2020   | @talekhinezh | 1.0-beta.15     | Works with radixdlt-core 1.0-beta.15 | @talekhinezh |
-radixdlt-java-common | Sep 9, 2020   | @talekhinezh | 1.0-beta.7      | -                                    | @talekhinezh |
+radixdlt-core        | Oct 1, 2020   | @siy | 1.0-beta.16     | radix-engine-library 1.0-beta.16     | @talekhinezh | 
+radix-engine-library | Oct 1, 2020   | @siy | 1.0-beta.16     | radixdlt-java-common 1.0-beta.8      | @talekhinezh | 
+radixdlt-java        | Oct 1, 2020   | @siy | 1.0-beta.16     | Works with radixdlt-core 1.0-beta.16 | @talekhinezh |
+radixdlt-java-common | Oct 1, 2020   | @siy | 1.0-beta.8      | -                                    | @talekhinezh |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct  1, 2020 | 1.0-beta.16  | radix-engine-library 1.0-beta.16 | @siy          | Fees and verification
 Sep  9, 2020 | 1.0-beta.15  | radix-engine-library 1.0-beta.15 | @talekhinezh  | Validator registration
 Aug 19, 2020 | 1.0-beta.14  | radix-engine-library 1.0-beta.14 | @talekhinezh  | Modules
 Jul 29, 2020 | 1.0-beta.13  | radix-engine-library 1.0-beta.13 | @talekhinezh  | Cleanup
@@ -35,6 +36,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                                | -             |
 ## radix-engine-library
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct  1, 2020 | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Token fees, Java 11
 Sep  9, 2020 | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Application State
 Aug 19, 2020 | 1.0-beta.14  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | More validator logic
 Jul 29, 2020 | 1.0-beta.13  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | 
@@ -54,6 +56,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                                | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct 1, 2020  | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Works with RadixCore 1.0-beta.16
 Sep 9, 2020  | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Works with RadixCore 1.0-beta.15
 Aug 19, 2020 | 1.0-beta.13  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Works with RadixCore 1.0-beta.14
 Jul 29, 2020 | 1.0-beta.12  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Works with RadixCore 1.0-beta.13
@@ -73,6 +76,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                                | -             |
 ## radixdlt-java-common
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct 1, 2020  | 1.0-beta.8   | -                                | @siy          |
 Sep 9, 2020  | 1.0-beta.7   | -                                | @talekhinezh  |
 Jul 9, 2020  | 1.0-beta.5   | -                                | @talekhinezh  |
 Jun 18, 2020 | 1.0-beta.4   | -                                | @clstrfsck    | Bugfixes and testing
