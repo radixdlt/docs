@@ -1,6 +1,6 @@
 # Radix Versions
 
-Last updated: Thursday October 21, 2020
+Last updated: October 21, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
