@@ -1,20 +1,21 @@
 # Radix Versions
 
-Last updated: Thursday September 9, 2020
+Last updated: Thursday October 21, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Oct 1, 2020   | @siy | 1.0-beta.16     | radix-engine-library 1.0-beta.16     | @talekhinezh | 
-radix-engine-library | Oct 1, 2020   | @siy | 1.0-beta.16     | radixdlt-java-common 1.0-beta.8      | @talekhinezh | 
-radixdlt-java        | Oct 1, 2020   | @siy | 1.0-beta.16     | Works with radixdlt-core 1.0-beta.16 | @talekhinezh |
-radixdlt-java-common | Oct 1, 2020   | @siy | 1.0-beta.8      | -                                    | @talekhinezh |
+radixdlt-core        | Oct 21, 2020   | @talekhinezh | 1.0-beta.17     | radix-engine-library 1.0-beta.17     | @talekhinezh | 
+radix-engine-library | Oct 21, 2020   | @talekhinezh | 1.0-beta.17     | radixdlt-java-common 1.0-beta.9      | @talekhinezh | 
+radixdlt-java        | Oct 21, 2020   | @talekhinezh | 1.0-beta.17     | Works with radixdlt-core 1.0-beta.17 | @talekhinezh |
+radixdlt-java-common | Oct 21, 2020   | @talekhinezh | 1.0-beta.9      | -                                    | @talekhinezh |
 
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct  21, 2020 | 1.0-beta.17  | radix-engine-library 1.0-beta.17 | @talekhinezh | Update pacemaker and system updates
 Oct  1, 2020 | 1.0-beta.16  | radix-engine-library 1.0-beta.16 | @siy          | Fees and verification
 Sep  9, 2020 | 1.0-beta.15  | radix-engine-library 1.0-beta.15 | @talekhinezh  | Validator registration
 Aug 19, 2020 | 1.0-beta.14  | radix-engine-library 1.0-beta.14 | @talekhinezh  | Modules
@@ -36,6 +37,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                                | -             |
 ## radix-engine-library
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct 21, 2020 | 1.0-beta.17  | radixdlt-java-common 1.0-beta.9  | @talekhinezh  | Epoch/View system update logic
 Oct  1, 2020 | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Token fees, Java 11
 Sep  9, 2020 | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Application State
 Aug 19, 2020 | 1.0-beta.14  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | More validator logic
@@ -56,6 +58,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                                | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct 21, 2020 | 1.0-beta.17  | radixdlt-java-common 1.0-beta.9  | @talekhienzh  | Works with RadixCore 1.0-beta.17
 Oct 1, 2020  | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Works with RadixCore 1.0-beta.16
 Sep 9, 2020  | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Works with RadixCore 1.0-beta.15
 Aug 19, 2020 | 1.0-beta.13  | radixdlt-java-common 1.0-beta.5  | @talekhinezh  | Works with RadixCore 1.0-beta.14
@@ -76,6 +79,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                                | -             |
 ## radixdlt-java-common
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Oct 21, 2020 | 1.0-beta.9   | -                                | @talekhinezh  | Guava hashcode
 Oct 1, 2020  | 1.0-beta.8   | -                                | @siy          |
 Sep 9, 2020  | 1.0-beta.7   | -                                | @talekhinezh  |
 Jul 9, 2020  | 1.0-beta.5   | -                                | @talekhinezh  |
