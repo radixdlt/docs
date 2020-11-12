@@ -15,6 +15,7 @@ radixdlt-java-common | Oct 21, 2020   | @talekhinezh | 1.0-beta.9      | -      
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Nov 12, 2020 | 1.0-beta.19  | radix-engine-library 1.0-beta.18 | @siy          | Fee calculation/validation updates, reworked deterministic tests
 Oct 22, 2020 | 1.0-beta.18  | radix-engine-library 1.0-beta.17 | @talekhinezh  | Fix tests
 Oct 21, 2020 | 1.0-beta.17  | radix-engine-library 1.0-beta.17 | @talekhinezh  | Update pacemaker and system updates
 Oct  1, 2020 | 1.0-beta.16  | radix-engine-library 1.0-beta.16 | @siy          | Fees and verification
@@ -38,6 +39,7 @@ Jul 22, 2019 | 1.0.0-beta   | -                                | -             |
 ## radix-engine-library
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Nov 12, 2020 | 1.0-beta.18  | radixdlt-java-common 1.0-beta.10 | @siy          | Fix application state load compute 
 Oct 21, 2020 | 1.0-beta.17  | radixdlt-java-common 1.0-beta.9  | @talekhinezh  | Epoch/View system update logic
 Oct  1, 2020 | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Token fees, Java 11
 Sep  9, 2020 | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Application State
@@ -59,6 +61,7 @@ Aug 3, 2019  | 1.0.0-beta   | -                                | @talekhinezh  |
 ## radixdlt-java
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Nov 12, 2020 | 1.0-beta.18  | radixdlt-java-common 1.0-beta.10 | @siy          | Works with RadixCore 1.0-beta.18
 Oct 21, 2020 | 1.0-beta.17  | radixdlt-java-common 1.0-beta.9  | @talekhienzh  | Works with RadixCore 1.0-beta.17
 Oct 1, 2020  | 1.0-beta.16  | radixdlt-java-common 1.0-beta.8  | @siy          | Works with RadixCore 1.0-beta.16
 Sep 9, 2020  | 1.0-beta.15  | radixdlt-java-common 1.0-beta.7  | @talekhinezh  | Works with RadixCore 1.0-beta.15
@@ -80,6 +83,7 @@ Jul 23, 2019 | 1.0.0-beta   | -                                | -             |
 ## radixdlt-java-common
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Nov 12, 2020 | 1.0-beta.10  | -                                | @siy          | Interface serializationd/deserialization
 Oct 21, 2020 | 1.0-beta.9   | -                                | @talekhinezh  | Guava hashcode
 Oct 1, 2020  | 1.0-beta.8   | -                                | @siy          |
 Sep 9, 2020  | 1.0-beta.7   | -                                | @talekhinezh  |
