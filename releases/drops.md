@@ -1,6 +1,6 @@
 # Delivery Milestones for Radix Public Network 1 (RPN-1)
 
-Last updated: Thursday, Oct 1, 2020
+Last updated: Thursday, Dec 10, 2020
 
 For folks looking for a higher-level roadmap of our overall journey to
 a massively scaleable public network (releases RPN-1, RPN-2 and RPN-3),
@@ -34,14 +34,14 @@ I'll use 🤔 to show which features are work-in-progress.
 
 ## Second drop 🤔
 - Improved consensus functionality 🤔
-- Improved mempool 🤔
-- Proof of Stake Sybil protection 🤔
+- Improved mempool ✅
+- Proof of Stake Sybil protection ✅
 - Validator registration and unregistration ✅
 - Basic fees ✅
 - System testing 🤔
 
 ## Third drop
-- Distributed Proof of Stake implementation
+- Distributed Proof of Stake implementation 🤔
 - Finalised fees and rewards
 - Desktop wallet 🤔
 - Exchange integration starts
