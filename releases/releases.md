@@ -1,13 +1,13 @@
 # Radix Versions
 
-Last updated: November 12, 2020
+Last updated: December 16, 2020
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Dec 7, 2020   | @talekhinezh | 1.0-beta.20     | radix-engine-library 1.0-beta.19     | @talekhinezh | POS and recovery
+radixdlt-core        | Dec 16, 2020  | @siy         | 1.0-beta.21     | radix-engine-library 1.0-beta.19     | @talekhinezh | Drop 2
 radix-engine-library | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | radixdlt-java-common 1.0-beta.10     | @talekhinezh | 
 radixdlt-java        | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | Works with radixdlt-core 1.0-beta.20 | @talekhinezh |
 radixdlt-java-common | Nov 12, 2020  | @siy         | 1.0-beta.10     | -                                    | @talekhinezh |
@@ -15,6 +15,7 @@ radixdlt-java-common | Nov 12, 2020  | @siy         | 1.0-beta.10     | -       
 ## radixdlt-core
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Dec 16, 2020 | 1.0-beta.21  | radix-engine-library 1.0-beta.19 | @siy          | Drop 2
 Dec 7, 2020  | 1.0-beta.20  | radix-engine-library 1.0-beta.19 | @talekhinezh  | POS and recovery
 Nov 12, 2020 | 1.0-beta.19  | radix-engine-library 1.0-beta.18 | @siy          | Fee calculation/validation updates, reworked deterministic tests
 Oct 22, 2020 | 1.0-beta.18  | radix-engine-library 1.0-beta.17 | @talekhinezh  | Fix tests
