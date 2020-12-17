@@ -97,6 +97,7 @@ Jun 18, 2020 | 1.0-beta.4   | -                                | @clstrfsck    |
 ## radixdlt-js
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
+Dec 17, 2020 | 2.0.0-beta.13| -                                | @AbstractFruitFactory   | Works with RadixCore 1.0.0-beta.21
 Dec 8, 2020  | 2.0.0-beta.12| -                                | @AbstractFruitFactory   | Works with RadixCore 1.0.0-beta.19
 Jul 5, 2020  | 2.0.0-beta.11| -                                | @AbstractFruitFactory   | Works with RadixCore 1.0.0-beta.8
 Apr 23, 2020 | 2.0.0-beta.10| -                                | @AbstractFruitFactory   | Works with RadixCore 1.0.0-beta.8
