@@ -8,10 +8,6 @@ NOTE: All current releases should be compatible with each other.
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
 radixdlt             | Jan 7, 2021   | @siy         | 1.0-beta.22     | (monorepo, all deps are internal)    |              | Transition to monorepo
-radixdlt-core        | Dec 16, 2020  | @siy         | 1.0-beta.21     | radix-engine-library 1.0-beta.19     | @talekhinezh | Drop 2
-radix-engine-library | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | radixdlt-java-common 1.0-beta.10     | @talekhinezh | 
-radixdlt-java        | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | Works with radixdlt-core 1.0-beta.20 | @talekhinezh |
-radixdlt-java-common | Nov 12, 2020  | @siy         | 1.0-beta.10     | -                                    | @talekhinezh |
 
 ## radixdlt
 Release Date | Version      |  Captain       | Notes
