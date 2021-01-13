@@ -23,7 +23,7 @@ If you want to run a local single-node Betanet Emulator, go to the [Betanet Emul
 
 * [Telegram](https://t.me/radix_dlt) for general chat
 * [Telegram](https://t.me/RadixAnnouncements) for announcements
-* ​[Discord](https://discord.gg/7Q7HSZZ) for developers chat
+* ​[Discord](https://discord.com/invite/WkB2USt) for developers chat
 * ​[Reddit](https://reddit.com/r/radix) for general discussion
 * [Forum](https://forum.radixdlt.com) for technical discussion
 * ​[Twitter](https://twitter.com/radixdlt) for announcements
