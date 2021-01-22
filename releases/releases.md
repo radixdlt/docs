@@ -1,18 +1,21 @@
 # Radix Versions
 
-Last updated: December 16, 2020
+Last updated: January 7, 2021
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Dependencies                         | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------------------------------ | ------------ | -----
-radixdlt-core        | Dec 16, 2020  | @siy         | 1.0-beta.21     | radix-engine-library 1.0-beta.19     | @talekhinezh | Drop 2
-radix-engine-library | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | radixdlt-java-common 1.0-beta.10     | @talekhinezh | 
-radixdlt-java        | Dec 7, 2020   | @talekhinezh | 1.0-beta.19     | Works with radixdlt-core 1.0-beta.20 | @talekhinezh |
-radixdlt-java-common | Nov 12, 2020  | @siy         | 1.0-beta.10     | -                                    | @talekhinezh |
+radixdlt             | Jan 7, 2021   | @siy         | 1.0-beta.22     | (monorepo, all deps are internal)    |              | Transition to monorepo
 
-## radixdlt-core
+## radixdlt
+Release Date | Version      |  Captain       | Notes
+------------ | ------------ |  ------------- | -----
+Jan 7, 2021  | 1.0-beta.22  |  @siy          | Transition to monorepo
+
+
+## radixdlt-core (archived)
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
 Dec 16, 2020 | 1.0-beta.21  | radix-engine-library 1.0-beta.19 | @siy          | Drop 2
@@ -38,7 +41,7 @@ Aug 19, 2019 | 1.0.0-beta.2 | radixdlt-engine 1.0-beta.1       | @talekhinezh  |
 Aug 3, 2019  | 1.0.0-beta.1 | radixdlt-engine 1.0.0-beta       | @talekhinezh  |	
 Jul 22, 2019 | 1.0.0-beta   | -                                | -             | Used for Betanet Emulator
 
-## radix-engine-library
+## radix-engine-library (archived)
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
 Dec 7, 2020  | 1.0-beta.19  | radixdlt-java-common 1.0-beta.10 | @talekhinehz  |
@@ -61,7 +64,7 @@ Aug 28, 2019 | 1.0-beta.2   | -                                | @talekhinezh  |
 Aug 19, 2019 | 1.0-beta.1   | -                                | @talekhinezh  |	
 Aug 3, 2019  | 1.0.0-beta   | -                                | @talekhinezh  |	
 
-## radixdlt-java
+## radixdlt-java (archived)
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
 Dec 7, 2020  | 1.0-beta.19  | radixdlt-java-common 1.0-beta.10 | @talekhinezh  | Works with RadixCore 1.0-beta.19
@@ -84,7 +87,7 @@ Aug 19, 2019 | 1.0.0-beta.2 | -                                | @talekhinezh  |
 Aug 3, 2019  | 1.0.0-beta.1 | -                                | @clstrfsck    | Works with RadixCore 1.0.0-beta.1
 Jul 23, 2019 | 1.0.0-beta   | -                                | -             | Used for Betanet Emulator
 
-## radixdlt-java-common
+## radixdlt-java-common (archived)
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
 Nov 12, 2020 | 1.0-beta.10  | -                                | @siy          | Interface serializationd/deserialization
@@ -94,7 +97,7 @@ Sep 9, 2020  | 1.0-beta.7   | -                                | @talekhinezh  |
 Jul 9, 2020  | 1.0-beta.5   | -                                | @talekhinezh  |
 Jun 18, 2020 | 1.0-beta.4   | -                                | @clstrfsck    | Bugfixes and testing
 
-## radixdlt-js
+## radixdlt-js (archived)
 Release Date | Version      | Dependencies                     | Captain       | Notes
 ------------ | ------------ | -------------------------------- | ------------- | -----
 Dec 17, 2020 | 2.0.0-beta.13| -                                | @AbstractFruitFactory   | Works with RadixCore 1.0.0-beta.21
