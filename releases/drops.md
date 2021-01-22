@@ -1,9 +1,9 @@
-# Delivery Milestones for Radix Public Network 1 (RPN-1)
+# Delivery Milestones for Radix Public Network 1 (Olympia)
 
 Last updated: Friday, January 22, 2021
 
 This document shows the status of the steps we are taking to reach the
-first of our releases of the Radix public network: Olympia (also called RPN-1).
+first of our mainnet releases of the Radix public network: Olympia (also called RPN-1).
 
 For folks looking for information about our roadmap of Cerberus consensus development,
 please check [here](https://github.com/radixdlt/docs/blob/master/releases/consensus-roadmap.md).
