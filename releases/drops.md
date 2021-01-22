@@ -1,14 +1,14 @@
 # Delivery Milestones for Radix Public Network 1 (RPN-1)
 
-Last updated: Friday, Dec 18, 2020
+Last updated: Friday, January 22, 2021
 
-For folks looking for a higher-level roadmap of our overall journey to
-a massively scaleable public network (releases RPN-1, RPN-2 and RPN-3),
-please check [here](https://github.com/radixdlt/docs/blob/master/releases/consensus-roadmap.md).
 This document shows the status of the steps we are taking to reach the
-first of our higher-level milestones, RPN-1.
+first of our releases of the Radix public network: Olympia (also called RPN-1).
 
-When we looked at our development plan for our first public network (RPN-1),
+For folks looking for information about our roadmap of Cerberus consensus development,
+please check [here](https://github.com/radixdlt/docs/blob/master/releases/consensus-roadmap.md).
+
+When we looked at our development plan for our first public network (Olympia),
 we decided to adopt an approach that would have four major milestones,
 which we are calling "drops".
 
@@ -45,9 +45,11 @@ I'll use 🤔 to show which features are work-in-progress.
 - Finalised fees and rewards
 - Desktop wallet 🤔
 - Exchange integration starts
-- System testing 
+- System testing
+- Betanet release
 
 ## Fourth drop
 - Token vesting and Explorer implemented
 - Exchange integration completed
 - System testing
+- Mainnet release
