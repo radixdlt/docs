@@ -45,7 +45,7 @@ I'll use 🤔 to show which features are work-in-progress.
 - Finalised fees and rewards
 - Desktop wallet 🤔
 - Exchange integration starts
-- System testing
+- System testing 🤔
 - Betanet release
 
 ## Fourth drop
