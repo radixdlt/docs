@@ -7,11 +7,12 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------ | -----
-radixdlt             | Feb 1, 2021   | @talekhinezh | 1.0-beta.23     |              | 
+radixdlt             | Feb 9, 2021   | @talekhinezh | 1.0-beta.24     |              | 
 
 ## radixdlt
 Release Date | Version      |  Captain       | Notes
 ------------ | ------------ |  ------------- | -----
+Feb 9, 2021  | 1.0-beta.24  |  @talekhinezh  |
 Feb 1, 2021  | 1.0-beta.23  |  @talekhinezh  |
 Jan 7, 2021  | 1.0-beta.22  |  @siy          | Transition to monorepo
 
