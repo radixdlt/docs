@@ -1,17 +1,18 @@
 # Radix Versions
 
-Last updated: Feb 1, 2021
+Last updated: Feb 17, 2021
 
 ## Latest
 NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------ | -----
-radixdlt             | Feb 9, 2021   | @talekhinezh | 1.0-beta.24     |              | 
+radixdlt             | Feb 17, 2021  | @lukasz      | 1.0-beta.25     |              | 
 
 ## radixdlt
 Release Date | Version      |  Captain       | Notes
 ------------ | ------------ |  ------------- | -----
+Feb 17, 2021 | 1.0-beta.25  |  @lukasz       |
 Feb 9, 2021  | 1.0-beta.24  |  @talekhinezh  |
 Feb 1, 2021  | 1.0-beta.23  |  @talekhinezh  |
 Jan 7, 2021  | 1.0-beta.22  |  @siy          | Transition to monorepo
