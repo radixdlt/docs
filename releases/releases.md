@@ -7,11 +7,12 @@ NOTE: All current releases should be compatible with each other.
 
 Project              | Latest Update | Last Captain | Current Release | Next Captain | Notes
 -------------------- | ------------- | ------------ | --------------- | ------------ | -----
-radixdlt             | Apr 6, 2021   | @Theoklitos  | 1.0-beta.28     |              | 
+radixdlt             | Apr 25, 2021  | @Theoklitos  | 1.0-beta.29     |              | 
 
 ## radixdlt
 Release Date | Version      |  Captain       | Notes
 ------------ | ------------ |  ------------- | -----
+Apr 25, 2021 | 1.0-beta.28  |  @Theoklitos   |
 Apr 6, 2021  | 1.0-beta.28  |  @Theoklitos   |
 Mar 11, 2021 | 1.0-beta.27  |  @Theoklitos   |
 Mar 2, 2021  | 1.0-beta.26  |  @Theoklitos   | 
